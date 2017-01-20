@@ -1,0 +1,100 @@
+﻿/* Targeting both first and second level menus */
+#nav li {
+	float: left;
+	position: relative;
+	list-style: none;
+}
+#nav li a {
+	/*background: #d6cfbd;*/
+	background: #39638D;
+	/*border: 1px solid #4f4026;*/
+	border: 1px solid #FFF;
+	color: #333;
+	/*color: #FFF;*/
+	display: block;
+	margin: 0 5px 0 0;
+	padding: 2px 8px 0px;
+	list-style: none;
+}
+#nav li a:hover {
+	/*background: #f7f7f7;*/
+	border: 1px solid #4f4026;
+	background: #d6cfbd;
+	text-decoration: none;
+}
+
+/* Targeting the first level menu */
+#nav {
+	display: block;
+	height: 35px;
+	/*padding: 10px 0;*/
+	padding-bottom:2px;
+	/*background: #d6cfbd;*/
+	width: 500px;
+	z-index: 100;
+	position: absolute;
+}
+#nav > li > a {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+
+}
+
+/* Targeting the second level menu */
+#nav li ul {
+	/*background: #e1ddd3;*/
+	background: #FFFFFF;
+	border: 1px solid #4f4026;
+	color: #333;
+	display: none;
+	margin: -3px 0 0 0;
+	width: 200px;
+	/*position: absolute;*/
+	position: fixed;
+}
+#nav li ul li {
+	width: 100%
+}
+#nav li ul li a {
+	background: none;
+	border: none;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 0 0 5px;
+}
+#nav li ul li a:hover {
+	/*background: #f7f7f7;*/
+}
+
+/* Third level menu */
+#nav li ul li ul{
+	right: -200px; top: 0;
+}
+
+/* A class of current will be added via jQuery */
+#nav li.current > a {
+	/*background: #f7f7f7;*/
+	color:#000;
+	background: #d6cfbd;
+}
+/* CSS fallback */
+#nav li:hover > ul.child {
+	display: block;
+	
+}
+#nav li:hover > ul.grandchild  { 
+	display: block; 
+	
+}

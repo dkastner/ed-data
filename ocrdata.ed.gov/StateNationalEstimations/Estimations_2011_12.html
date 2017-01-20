@@ -1,0 +1,3071 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><title>
+	
+	Estimations_2011_12
+
+</title><link href="../CSS/Site.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    
+    
+
+    <link href="../CSS/Navmenu.css" rel="stylesheet" type="text/css" />
+
+    <!-- jquery css -->
+    <link href="../CSS/themes/custom-theme/jquery-ui-1.7.3.custom.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/themes/jquery-ui-1.11.2.css" rel="stylesheet" type="text/css" />
+
+    <link href="../CSS/accordion.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/jquery.quickselect.css" rel="stylesheet" type="text/css" />
+    <link href="../Scripts/CeeBox/css/ceebox-min.css" rel="stylesheet" type="text/css" />
+    
+    <!--jquery-->
+    <script src='../Scripts/lib/jquery-1.11.2.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/jquery-migrate-1.2.1.min.js' type="text/javascript"></script>
+
+    
+    <script src='../Scripts/lib/jquery-ui-1.11.3.js' type="text/javascript"></script>
+    
+
+    <!-- template plugin -->
+    <script src='../Scripts/lib/jquery.tmpl.js' type="text/javascript"></script>
+
+    <script src='../Scripts/CeeBox/js/jquery.ceebox-min.js' type="text/javascript"></script>
+    <script src='../Scripts/CeeBox/js/jquery.color.js' type="text/javascript"></script>
+    <script src='../Scripts/CeeBox/js/jquery.metadata.js' type="text/javascript"></script>
+
+    
+    
+    
+
+    <!-- plugins -->
+    
+    <script src='../Scripts/lib/jquery.format-1.1.min.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/jquery.watermark.min.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/json2-min.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/jquery.json-2.2.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/jquery.validate.min.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/jquery.maskedinput-1.2.2.min.js' type="text/javascript"></script>
+    <script src='../Scripts/plugins/jquery.custom_radio_checkbox.js' type="text/javascript"></script>
+    <script src='../Scripts/lib/numberformat.min.js' type="text/javascript"></script>
+
+    <!-- layout -->
+    <script src='../Scripts/lib/jquery.layout.js' type="text/javascript"></script>
+
+        
+    <script src='../Scripts/charts/highcharts.js' type="text/javascript"></script>
+    <script src='../Scripts/charts/modules/exporting.js' type="text/javascript"></script>
+    <script src='../Scripts/charts/themes/grid.js' type="text/javascript"></script>
+
+
+    <script src='../Scripts/app.js' type="text/javascript"></script>
+    
+    <script src='../Scripts/utility.js' type="text/javascript"></script>
+    <link href="../CSS/multiple-select.css" rel="stylesheet" type="text/css" />
+    <script src='../Scripts/plugins/jquery.multiple.select.js' type="text/javascript"></script>
+
+    
+    <script src='../Scripts/plugins/jquery.blockUI.js' type="text/javascript"></script>
+
+	<style type="text/css">
+	html, body {
+		background:	#E3E1E4;
+		width:		1020px;
+		padding:	0;
+		margin:		0;
+		overflow:hidden; /* when page gets too small for container min-width/height */
+        font-family: Geneva, Arial, Helvetica, sans-serif, Arial;
+        font-size: 12px;
+	}
+
+	#container {
+		background:	#FFF;
+		position:	absolute;
+		top:		0px;	/* margins in pixels */
+		bottom:		0px;	/* could also use a percent */
+		left:		0px;
+		right:		0px;
+	}
+	.pane {
+		display:	none; /* will appear when layout inits */ 
+	}
+    .selected {
+	    background-position: 0 -52px;
+    }
+    .block {
+	    width: 50%;
+	    float: left;
+    }
+	</style>
+
+    <script type="text/javascript">
+        var IsSiteSuppressed = true;
+        var hasAccessRights = false;
+        var isViewingSuppressed = true;
+        var surveyYearKey = '';
+
+        $(document).ready(function () {
+            if(IsSiteSuppressed == false && hasAccessRights == true){ // if this is the internal site and this user has the proper credintials
+                $('#btnToggleSuppressed').show();
+                if( isViewingSuppressed === true){
+                    $('#btnToggleSuppressed').button({ label: 'Click here to view<br>unsuppressed data.' });
+                }
+                else{
+                    $('#btnToggleSuppressed').button({ label: 'Current view:<br>Unsuppressed data.<br>Click here to switch<br>to suppressed data.' });
+                }
+            }
+            else {  // this is the external site or the internal user doesn't have the proper role.
+                $('#btnToggleSuppressed').remove();
+            }
+            // add toggle button handler
+            $('#btnToggleSuppressed').on('click',function(){app.toggleView();});
+
+            app.initMenu();
+            app.checkPermissions();
+            app.setChangeSchool_DistrictLink();
+            $("#btnPrintContent").button({ label: 'Print Content' })
+            .click(function () {
+                //$('#printableArea').printArea({ mode: "popup", popClose: true, popHt: 600, popWd: 900, popTitle: "Civil Rights Data Collection" });
+                app.printPage();
+            });
+
+            $("#btnLogOut").button({ label: 'Log Out' })
+            .click(function () {
+                sUrl = "../handler/AjaxHandler.ashx?cmd=LogOut";
+                $.ajax({
+                    url: sUrl,
+                    type: "GET",
+                    processData: false,
+                    dataType: "html",
+                    async: true,
+                    success: function (returnedData) {
+                        if (returnedData == 'success') {
+                            //app.alertWarning('You have successfully logged out.', 'Logout Success', true, 250, 150);
+                            $('#Role_ID').val("8");
+                            $('#User_ID').val("0");
+                            $('#Username').val("");
+                            $('#Role').val("General Public");
+                            $('#Full_Name').val("");
+                            $('#Email').val("");
+                            //$('#btnLogOut').hide();
+                            //$('#divLogin').show();
+                            app.checkPermissions();
+                            document.location.href = '../Home';
+                        }
+                        else {
+                            app.alertWarning('There was a problem. You were not successfully logged out.', 'Logout Failure', true, 250, 150);
+                        }
+                    },
+                    complete: function () { }
+                });
+
+                $('.breadcrumbLink').click(function (i, e) {
+                    var loc = $(e).attr('href');
+                    $.blockUI({
+                        message: 'Processing...',
+                        fadeIn: 10,
+                        css: {
+                            border: 'none',
+                            padding: '15px',
+                            backgroundColor: '#000',
+                            '-webkit-border-radius': '10px',
+                            '-moz-border-radius': '10px',
+                            opacity: .5,
+                            color: '#fff'
+                        },
+                        onBlock: function () {
+                            window.location.href = loc
+                        }
+                    });
+                });
+            });
+
+            var loc = document.location.href.toString();
+            $('#menuReports').on('click', function(){ 
+                menuAloneClick('DistrictSchoolSearch')});
+            if (loc.indexOf('Page') == -1) {
+                $('#menuReports').attr('href', '../DistrictSchoolSearch');
+                $('#ul_menuReports').remove();
+                if (loc.indexOf('print') != -1) {
+                    $('.ui-layout-west').hide();
+                }
+            }
+            else {
+                var syk = app.requestQuerystring('syk');
+                var t = app.requestQuerystring('t');
+                var sr = app.requestQuerystring('sr');
+                
+                if (sr == 1) {
+                    var report = app.requestQuerystring('Report');
+                    app.Specialreportmenu(report);
+                    return;
+                }
+
+                var sUrl = "../handler/AjaxHandler.ashx?cmd=getDataSet_By_ID_Survey_Year_Key&Survey_Year_Key=" + syk + "&SchoolOrDistrict=" + t + "&ID=2&sp=R_GetLeftMenuItems";
+                $.ajax({
+                    url: sUrl,
+                    type: "GET",
+                    processData: false,
+                    async: true,
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (returnedData) {
+                        //alert(JSON.stringify(returnedData));
+                        $('#LeftMenuItemsTemplate').tmpl(returnedData.Table).appendTo('#ul_menuReports');
+                        var pageIDArray = [];
+                        $(PageInfo.Table2).each(function (i, j) {
+                            pageIDArray.push($(j)[0].Page_ID);
+                        });
+                        $('.reportMenu').each(function (i, e) {
+                            var thisLinksID = $(e).attr('id');
+                            var splitArr = thisLinksID.split('_')
+                            var thisLinksPageID = splitArr[1];
+                            if (pageIDArray.indexOf(parseInt(thisLinksPageID)) != -1) {
+                                $(this).children("a:first").addClass('selectedLeftMenu');
+                                return;
+                            }
+                        });
+                    },
+                    complete: function () { }
+                });
+
+            }
+
+            $('.number').each(function () {
+                app.formatWithCommas($(this).text());
+            });
+            $('#menuReports').focus();
+        });
+
+        function menuAloneClick(view) { 
+            
+            $.blockUI({
+                message: 'Processing...',
+                fadeIn: 10,
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: .5,
+                    color: '#fff'
+                },
+                onBlock: function () {
+                    $.cookie('StartPageID', null, { path: '/' }); // get rid of the StartPageID cookie
+                    window.location.href = '../' + view;
+                } 
+            });
+
+        }
+
+        function openDocInWindow(doc){
+            window.location.href = '../' + doc;
+        }
+
+        function menuItemClick(sectionToShow) { 
+            $.blockUI({
+                message: 'Processing...',
+                fadeIn: 10,
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: .5,
+                    color: '#fff'
+                },
+                onBlock: function () {
+                    var pid = $.cookie('StartPageID'); // we stored the StartPageID in this cookie when the initial StartPage was first loaded
+                    if (pid == '' || pid == null) {
+                        showSection(sectionToShow);
+                        return;
+                    }
+                    var thisPages_pid = app.requestQuerystring('pid');
+                    var loc = window.location.toString();
+                    if (thisPages_pid == pid) {
+                        showSection(sectionToShow);
+                    }
+                    else {
+                        loc = loc.split('&el')[0];
+                        //alert('thisPages_pid=' + thisPages_pid + ' - pid=' + pid + ' - sectionToShow=' + sectionToShow);
+                        loc = '../' + loc.replace('#', '').replace('pid=' + thisPages_pid, 'pid=' + pid) + '&el=' + sectionToShow;
+                        window.location.href = loc;
+                    }
+                }
+            });
+        }
+
+        function showSection(sectionToShow) {
+            $('.spAccord li a').each(
+                function () {
+                    $(this).attr('title', "Open Section");
+                    $(this).next().hide();
+                    var span = $('.upDn', this)[0];
+                    var txt = $(span).attr('t');
+                    $(span).removeAttr('t');
+                    $(span).html(o);
+                    $(span).attr('t', 'o')
+
+                });
+            $("#ul_container" + sectionToShow).slideDown('normal');
+            var span = $('.upDn', '#container' + sectionToShow)[0];
+            $(span).html(c);
+            $(span).removeAttr('t');
+            $(span).attr('t', 'c')
+            $(span).parent().attr('title', "Close Section");
+        }
+
+        function leftMenuClick(pgId){
+            //Page?t=s&eid=235206&syk=5&pid=1
+            var eid = app.requestQuerystring('eid');
+            var syk = app.requestQuerystring('syk');
+            var t = app.requestQuerystring('t');
+            var url = 'Page?t=' + t + '&eid=' + eid + '&syk=' + syk + '&pid=' + pgId;
+            location.href = url;
+        }
+    </script>
+
+    <script id='LeftMenuItemsTemplate' type='text/x-jquery-tmpl'>
+        <li tabindex="1" class="reportMenu" style="text-align:left;" id="li_${Link_Page_ID}"><a href="javascript:void(0);" onclick="leftMenuClick(${Link_Page_ID})" title="${Item_Text}">${Item_Text}</a></li>
+    </script>
+    <style type="text/css">
+        #skiplink
+        {
+            color: #E3E1E4;
+        }
+        li
+        {
+            margin-left:2px;
+        }
+        .divmenu
+        {
+            height:40px; 
+            background-color:#39638D;
+            color:#ffffff; 
+            cursor:pointer; 
+            text-align:center;
+            font-size:0.7em;
+            /*background-image:url(images/release%202.0/SideNavButton-light-blue.png)*/
+        }
+        .limenu
+        {
+            height:40px;
+            font-size:0.7em;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://www2.ed.gov/style/federated-analytics.js"></script>
+    
+    <style type="text/css">
+        .padtop
+        {
+            padding-top:10px;
+        }
+        .titlecollapse
+        {
+            border:1px solid #39638D;
+            cursor:pointer; margin:0px 10px 0px 10px;
+            color: #000000;
+            background-color: #E0E0E0;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            font-weight:bold;
+            margin-bottom:1px;
+        }
+        .titleexpand
+        {
+            border:1px solid #39638D;
+            /*border-top:1px solid black; border-left:1px solid black; border-right: 1px solid black;*/
+            cursor:pointer; margin:0px 10px 0px 10px;
+            color: #000000;
+            background-color: #E0E0E0;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            font-weight:bold;
+        }
+        .iconcollapse
+        {
+            margin:3px 0px 3px 3px; 
+            /*border: 1px solid black; */
+            padding-left:3px; 
+            padding-right:4px;
+            border-radius: 3px;
+        }
+        .iconexpand
+        {
+            margin:3px 0px 3px 3px; 
+            /*border: 1px solid black; */
+            padding-left:3px; 
+            padding-right:4px;
+            border-radius: 3px;
+        }
+        .accordiontitle
+        {
+            margin:0px 10px 1px 10px; 
+            border-bottom:1px solid #39638D; border-left:1px solid #39638D; border-right: 1px solid #39638D;
+        }
+        .accordionheader
+        {
+            text-align:center; font-size:12pt; font-weight:bold; text-align:center; width:95%; padding:10px;
+        }
+        .tablerow
+        {
+            /*border-top:1px solid black;*/
+        }
+        .divcell
+        {
+            float:left; width:33%; font-size:14px; padding-left:5px;
+        }
+        .divcellright
+        {
+            float:left; width:31%; font-size:14px; padding-left:5px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#container").layout({
+                //west__initClosed: true,
+                //west__spacing_closed: 0,
+                //north__spacing_open: 0
+            });
+        });
+    </script>
+</head>
+<body class="body">
+    <a id='skiplink' tabindex="1" href='Estimations_2011_12.html#Main'><img src='../images/5.gif' alt='skip menu' /></a>
+
+    <form method="post" action="Estimations_2011_12.html" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzEwMjY4MjM1ZGT3bdRkHG48no2kMWyFuupVkV7BZ3bqWxRKM/dDohfjlA==" />
+
+    <div id="container">
+        
+	    <div class="pane ui-layout-center" id="printableArea">
+            
+
+        
+<div id="maincontent">
+    <div style="text-align:center; font-size:12pt; font-weight:bold; text-align:center; width:95%; padding:10px;">
+             2011-12 State and National Estimations
+    </div>
+
+    <div style="width:95%; padding:10px;">
+            <p>The 2011-12 estimations are based on data collected from all of the nation’s school districts and schools—approximately 16,500 school districts and 96,500 schools. Documentation for the 2011-12 estimations is available through these  
+            <a href="../Downloads/Data&#32;Notes&#32;CRDC&#32;2011-12&#32;2.9.pdf" target="_blank">data notes</a>.</p>
+    </div>
+    <br />
+    
+    <div>
+        <span style="padding-left:20px; font-weight:bold;">Student Enrollment</span>
+        <div id="enrollment" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="enrollmenticon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="All Enrollment" id="enrollmenttitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">All Enrollment</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="enrollmentcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Estimations for Enrollment
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This set of Excel files contains data for all states on overall enrollment, enrollment of students served under IDEA, 
+                    enrollment of students served under Section 504, and enrollment of students with limited English proficiency (LEP). 
+                    For each category, there are three spreadsheets: total students, male students, and female students.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/enrollment/SCH-0005&#32;Overall&#32;Enrollment.xlsx" target="_blank">Enrollment</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/enrollment/SCH-0101&#32;Enrollment&#32;of&#32;Students&#32;with&#32;Disabilities&#32;Served&#32;under&#32;IDEA.xlsx" target="_blank">IDEA enrollment</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/enrollment/SCH-0102&#32;Enrollment&#32;of&#32;Students&#32;with&#32;Disabilities&#32;Served&#32;under&#32;Section&#32;504&#32;only.xlsx" target="_blank">Section 504 enrollment</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/enrollment/SCH-0009&#32;Limited&#32;English&#32;Proficient&#32;Students&#32;by&#32;state.xlsx" target="_blank">LEP enrollment</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    
+    <div>
+        <span style="padding-left:20px; font-weight:bold;">Pathways to College and Career Readiness</span>
+        <div id="childhood" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="childhoodicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Early Childhood and Prekindergarten Enrollment" id="childhoodtitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Early Childhood and Prekindergarten Enrollment</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="childhoodcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Early Childhood and Prekindergarten Enrollment Estimations
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This Excel file contains early childhood and prekindergarten student enrollment data for all states.
+                    The file contains three spreadsheets: total children, male children, and female children.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/Early&#32;Childhood&#32;and&#32;PreK&#32;Enrollment/Total&#32;Enrollment&#32;in&#32;Early&#32;Childhood&#32;and&#32;Prekindergarten.xlsx" target="_blank">Early childhood and prekindergarten enrollment</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="english" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="englishicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="English Language Instruction Educational Programs" id="englishtitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">English Language Instruction Educational Programs</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="englishcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 English Language Instruction Program Enrollment Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                    <p style="padding-left:5px;">This set of Excel files contains data for English language learners enrolled in English language instruction educational programs,
+                    presented for the nation and by state. For the nation and each state, there is one spreadsheet for total students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/US.xls" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/AL.xls" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/KY.xls" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/ND.xls" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/AK.xls" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/LA.xls" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/OH.xls" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/AZ.xls" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/ME.xls" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/OK.xls" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/AR.xls" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MD.xls" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/OR.xls" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/CA.xls" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MA.xls" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/PA.xls" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/CO.xls" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MI.xls" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/RI.xls" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/CT.xls" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MN.xls" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/SC.xls" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/DE.xls" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MS.xls" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/SD.xls" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/DC.xls" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MO.xls" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/TN.xls" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/FL.xls" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/MT.xls" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/TX.xls" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/GA.xls" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NE.xls" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/UT.xls" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/HI.xls" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NV.xls" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/VT.xls" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/ID.xls" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NH.xls" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/VA.xls" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/IL.xls" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NJ.xls" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/WA.xls" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/IN.xls" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NM.xls" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/WV.xls" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/IA.xls" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NY.xls" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/WI.xls" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/KS.xls" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/NC.xls" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/by&#32;state/WY.xls" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+
+            <div class="accordionheader">
+                2011-12 English Language Instruction Enrollment Estimations
+            </div>
+            <div style="width:100%;">
+                <p style="padding:5px;">This Excel file contains data for English language learners enrolled in English language instruction educational programs for all states.
+                    The file contains three spreadsheets: total students, male students, and female students.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/English&#32;Language&#32;Instuction&#32;Program/All&#32;states/English&#32;Language&#32;Instruction&#32;Programs.all&#32;states.xlsx" target="_blank">English language instruction educational program enrollment</a>
+                </div>
+            </div>
+        </div>
+        <div id="gifted" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse" style="margin-top:1px;">
+            <div style="float:left;" class="giftedicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Gifted and Talented" id="giftedtitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Gifted and Talented</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="giftedcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Gifted and Talented Enrollment Estimations
+            </div>
+            <div style="width:100%; padding:5px;">
+                    <p>This Excel file contains data on students enrolled in gifted and talented programs for all states. 
+                        The file contains three spreadsheets: total students, male students, and female students.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/Gifted&#32;and&#32;Talented/Gifted-Talented&#32;Programs.xlsx" target="_blank">Gifted and talented enrollment</a>
+                </div>
+            </div>
+        </div>
+        <div id="retention" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="retentionicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Retention" id="retentiontitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Retention</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="retentioncontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Retention Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                <p style="padding-left:5px;">This set of Excel files contains student retention data for all grade levels, presented for the nation and by state. For the nation and each state, there is one spreadsheet for total students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/US.xlsx" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/AL.xls" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/KY.xls" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/ND.xls" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/AK.xls" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/LA.xls" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/OH.xls" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/AZ.xls" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/ME.xls" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/OK.xls" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/AR.xls" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MD.xls" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/OR.xls" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/CA.xls" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MA.xls" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/PA.xls" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/CO.xls" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MI.xls" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/RI.xls" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/CT.xls" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MN.xls" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/SC.xls" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/DE.xls" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MS.xls" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/SD.xls" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/DC.xls" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MO.xls" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/TN.xls" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/FL.xls" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/MT.xls" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/TX.xls" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/GA.xls" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NE.xls" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/UT.xls" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/HI.xls" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NV.xls" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/VT.xls" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/ID.xls" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NH.xls" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/VA.xls" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/IL.xls" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NJ.xls" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/WA.xls" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/IN.xls" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NM.xls" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/WV.xls" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/IA.xls" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NY.xls" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/WI.xls" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/KS.xls" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/NC.xls" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;state/WY.xls" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Retention Estimations by Grade
+            </div>
+            <div style="width:100%;">
+                <p style="padding-left:5px;">This set of Excel files contains student retention data for all states, presented by grade. For each grade, there are three spreadsheets: total students, male students, and female students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Kindergarten.xlsx" target="_blank">Kindergarten</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;1.xlsx" target="_blank">Grade 1</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;2.xlsx" target="_blank">Grade 2</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;3.xlsx" target="_blank">Grade 3</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;4.xlsx" target="_blank">Grade 4</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;5.xlsx" target="_blank">Grade 5</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;6.xlsx" target="_blank">Grade 6</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;7.xlsx" target="_blank">Grade 7</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;8.xlsx" target="_blank">Grade 8</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;9.xlsx" target="_blank">Grade 9</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;10.xlsx" target="_blank">Grade 10</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;11.xlsx" target="_blank">Grade 11</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Retention/by&#32;grade/Retention&#32;in&#32;Grade&#32;12.xlsx" target="_blank">Grade 12</a>
+                </div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    
+    <div>
+        <span style="padding-left:20px; font-weight:bold;">College and Career Readiness</span>
+        <div id="science" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="scienceicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Mathematics and Science" id="sciencetitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Mathematics and Science</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="sciencecontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Mathematics and Science Enrollment Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                <p style="padding-left:5px;">This set of Excel files contains student enrollment data for all mathematics and science courses, presented for the nation and by state. 
+                    For the nation and each state, there is one spreadsheet for total students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/US.xls" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/AL.xls" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/KY.xls" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/ND.xls" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/AK.xls" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/LA.xls" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/OH.xls" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/AZ.xls" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/ME.xls" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/OK.xls" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/AR.xls" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MD.xls" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/OR.xls" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/CA.xls" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MA.xls" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/PA.xls" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/CO.xls" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MI.xls" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/RI.xls" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/CT.xls" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MN.xls" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/SC.xls" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/DE.xls" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MS.xls" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/SD.xls" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/DC.xls" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MO.xls" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/TN.xls" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/FL.xls" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/MT.xls" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/TX.xls" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/GA.xls" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NE.xls" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/UT.xls" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/HI.xls" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NV.xls" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/VT.xls" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/ID.xls" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NH.xls" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/VA.xls" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/IL.xls" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NJ.xls" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/WA.xls" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/IN.xls" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NM.xls" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/WV.xls" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/IA.xls" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NY.xls" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/WI.xls" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/KS.xls" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/NC.xls" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Enrollment&#32;by&#32;State/WY.xls" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Schools Offering Mathematics and Science Classes Estimations 
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This Excel file contains data for schools offering classes in mathematics and science for all states. The file contains one spreadsheet for total schools.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;and&#32;Science&#32;Classes/Classes&#32;in&#32;Mathematics&#32;and&#32;Science.xlsx" target="_blank">Schools offering mathematics and science classes</a>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Mathematics Estimations by Course 
+            </div>
+            <div style="width:100%;">
+                <p style="padding-left:5px;">This set of Excel files contains student enrollment data for all states, presented by mathematics course. 
+                    For the Algebra I course, there are nine spreadsheets: students in grade 7 or 8, male students in grade 7 or 8, female students in grade 7 or 8, students in grade 9 or 10, 
+                    male students in grade 9 or 10, female students in grade 9 or 10, students in grade 11 or 12, male students in grade 11 or 12, and 
+                    female students in grade 11 or 12. For each of the other mathematics courses, there are three spreadsheets: total students, male students, and female students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;by&#32;Course/Enrollment&#32;in&#32;Algebra&#32;I.xlsx" target="_blank">Algebra I (grades 7-8, 9-10, 11-12)</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;by&#32;Course/Enrollment&#32;in&#32;Geometry.xlsx" target="_blank">Geometry</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;by&#32;Course/Enrollment&#32;in&#32;Algebra&#32;II.xlsx" target="_blank">Algebra II</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;by&#32;Course/Enrollment&#32;in&#32;Advanced&#32;Mathematics.xlsx" target="_blank">Advanced mathematics</a>
+                </div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Math&#32;by&#32;Course/Enrollment&#32;in&#32;Calculus.xlsx" target="_blank">Calculus</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Science Estimations by Course 
+            </div>
+            <div style="width:100%;">
+                <p style="padding:5px;">This set of Excel files contains student enrollment data for all states, presented by science course. For each science course, there are three spreadsheets: 
+                    total students, male students, and female students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Science&#32;by&#32;Course/Enrollment&#32;in&#32;Biology.xlsx" target="_blank">Biology</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Science&#32;by&#32;Course/Enrollment&#32;in&#32;Chemistry.xlsx" target="_blank">Chemistry</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Mathematics&#32;and&#32;Science/Science&#32;by&#32;Course/Enrollment&#32;in&#32;Physics.xlsx" target="_blank">Physics</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="advanced" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="advancedicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Advanced Placement and International Baccalaureate Diploma Programme" id="advancedtitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Advanced Placement and International Baccalaureate Diploma Programme</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="advancedcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Advanced Placement and International Baccalaureate Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                <p style="padding-left:5px;">This set of Excel files contains student enrollment data for Advanced Placement (AP) courses and the International Baccalaureate (IB) Diploma Programme, 
+                    presented for the nation and by state. For the nation and each state, there are two spreadsheets: total students in AP courses and total students in the IB Diploma Programme.</p>
+                <div style="margin-left:100px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/US-AP&#32;and&#32;IB.xlsx" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/AL-AP&#32;and&#32;IB.xlsx" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/KY-AP&#32;and&#32;IB.xlsx" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/ND-AP&#32;and&#32;IB.xlsx" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/AK-AP&#32;and&#32;IB.xlsx" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/LA-AP&#32;and&#32;IB.xlsx" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/OH-AP&#32;and&#32;IB.xlsx" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/AZ-AP&#32;and&#32;IB.xlsx" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/ME-AP&#32;and&#32;IB.xlsx" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/OK-AP&#32;and&#32;IB.xlsx" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/AR-AP&#32;and&#32;IB.xlsx" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MD-AP&#32;and&#32;IB.xlsx" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/OR-AP&#32;and&#32;IB.xlsx" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/CA-AP&#32;and&#32;IB.xlsx" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MA-AP&#32;and&#32;IB.xlsx" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/PA-AP&#32;and&#32;IB.xlsx" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/CO-AP&#32;and&#32;IB.xlsx" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MI-AP&#32;and&#32;IB.xlsx" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/RI-AP&#32;and&#32;IB.xlsx" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/CT-AP&#32;and&#32;IB.xlsx" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MN-AP&#32;and&#32;IB.xlsx" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/SC-AP&#32;and&#32;IB.xlsx" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/DE-AP&#32;and&#32;IB.xlsx" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MS-AP&#32;and&#32;IB.xlsx" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/SD-AP&#32;and&#32;IB.xlsx" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/DC-AP&#32;and&#32;IB.xlsx" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MO-AP&#32;and&#32;IB.xlsx" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/TN-AP&#32;and&#32;IB.xlsx" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/FL-AP&#32;and&#32;IB.xlsx" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/MT-AP&#32;and&#32;IB.xlsx" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/TX-AP&#32;and&#32;IB.xlsx" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/GA-AP&#32;and&#32;IB.xlsx" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NE-AP&#32;and&#32;IB.xlsx" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/UT-AP&#32;and&#32;IB.xlsx" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/HI-AP&#32;and&#32;IB.xlsx" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NV-AP&#32;and&#32;IB.xlsx" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/VT-AP&#32;and&#32;IB.xlsx" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/ID-AP&#32;and&#32;IB.xlsx" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NH-AP&#32;and&#32;IB.xlsx" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/VA-AP&#32;and&#32;IB.xlsx" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/IL-AP&#32;and&#32;IB.xlsx" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NJ-AP&#32;and&#32;IB.xlsx" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/WA-AP&#32;and&#32;IB.xlsx" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/IN-AP&#32;and&#32;IB.xlsx" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NM-AP&#32;and&#32;IB.xlsx" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/WV-AP&#32;and&#32;IB.xlsx" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/IA-AP&#32;and&#32;IB.xlsx" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NY-AP&#32;and&#32;IB.xlsx" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/WI-AP&#32;and&#32;IB.xlsx" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/KS-AP&#32;and&#32;IB.xlsx" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/NC-AP&#32;and&#32;IB.xlsx" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;state/WY-AP&#32;and&#32;IB.xlsx" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Advanced Placement and International Baccalaureate Enrollment Estimations by Program Type
+            </div>
+            <div style="width:100%;">
+                <p style="padding:5px;">This set of Excel files contains student enrollment data for all states, presented by program type. For each program type, there are three spreadsheets: total students, male students, and female students.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;program&#32;type/Advanced&#32;Placement&#32;Enrollment.xlsx" target="_blank">Advanced Placement</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;program&#32;type/Enrollment&#32;in&#32;the&#32;IB&#32;Program.xlsx" target="_blank">International Baccalaureate</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Advanced Placement Enrollment Estimations, by Subject 
+            </div>
+            <div style="width:100%;">
+                <p style="padding:5px;">This set of Excel files contains student enrollment data for all states, presented by Advanced Placement (AP) subject. For each AP subject, there are three spreadsheets: total students, male students, and female students.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;subject/Advanced&#32;Placement&#32;Mathematics&#32;Enrollment.xlsx" target="_blank">AP mathematics</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;subject/Advanced&#32;Placement&#32;Science&#32;Enrollment.xlsx" target="_blank">AP science</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;subject/Advanced&#32;Placement&#32;Foreign&#32;Language&#32;Enrollment.xlsx" target="_blank">AP foreign language</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Advanced&#32;Placement&#32;and&#32;International&#32;Baccalaureate/by&#32;subject/Advanced&#32;Placement&#32;Other&#32;Subjects&#32;Enrollment.xlsx" target="_blank">AP other subjects</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="sat" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse" style="margin-top:1px;">
+            <div style="float:left;" class="saticon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="SAT/ACT" id="sattitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">SAT/ACT</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="satcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 SAT/ACT Participation Estimations
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This Excel file contains SAT/ACT student participation data for all states. The file contains three spreadsheets: total students, male students, and female students.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/SAT&#32;or&#32;ACT/SAT&#32;or&#32;ACT&#32;Participation&#32;by&#32;state.xlsx" target="_blank">SAT/ACT participation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    
+    <div>
+        <span style="padding-left:20px; font-weight:bold;">School Staff</span>
+        <div id="teachers" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="teachersicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Classroom Teachers" id="teacherstitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Classroom Teachers</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="teacherscontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Classroom Teachers Estimations
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This Excel file contains data on classroom teachers, including full-time equivalency counts, certification, and years of experience for all states. 
+                    The file contains one spreadsheet for total classroom teachers.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/School&#32;Staff/Teacher&#32;Certification&#32;and&#32;Years&#32;of&#32;Experience.xlsx" target="_blank">Classroom teachers</a>
+                </div>
+            </div>
+        </div>
+        <div id="counselors" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse" style="margin-top:1px;">
+            <div style="float:left;" class="counselorsicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="School Counselors" id="counselorstitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">School Counselors</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="counselorscontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 School Counselors Estimations
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This Excel file contains data on high school counselors for all states. The file contains one spreadsheet for total high school counselors.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <a href="../downloads/projections/2011-12/School&#32;Staff/School&#32;Counselors.xlsx" target="_blank">School counselors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    
+    <div>
+        <span style="padding-left:20px; font-weight:bold;">Discipline, Harassment or Bullying, and Restraint and Seclusion</span>
+        <div id="discipline" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="disciplineicon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Discipline" id="disciplinetitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Discipline</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="disciplinecontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Discipline Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This set of Excel files contains data for all disciplinary actions, presented for the nation and by state. 
+                    For the nation and each state, there are three spreadsheets: students with and without disabilities, students with disabilities, and students without disabilities.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/States/National&#32;Totals.xls" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Alabama.xlsx" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Kentucky.xlsx" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/North&#32;Dakota.xlsx" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Alaska.xlsx" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Louisiana.xlsx" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Ohio.xlsx" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Arizona.xlsx" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Maine.xlsx" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Oklahoma.xlsx" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Arkansas.xlsx" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Maryland.xlsx" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Oregon.xlsx" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/California.xlsx" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Massachusetts.xlsx" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Pennsylvania.xlsx" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Colorado.xlsx" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Michigan.xlsx" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Rhode&#32;Island.xlsx" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Connecticut.xlsx" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Minnesota.xlsx" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/South&#32;Carolina.xlsx" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Delaware.xlsx" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Mississippi.xlsx" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/South&#32;Dakota.xlsx" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/District&#32;of&#32;Columbia.xlsx" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Missouri.xlsx" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Tennessee.xlsx" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Florida.xlsx" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Montana.xlsx" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Texas.xlsx" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Georgia.xlsx" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Nebraska.xlsx" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Utah.xlsx" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Hawaii.xlsx" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Nevada.xlsx" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Vermont.xlsx" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Idaho.xlsx" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/New&#32;Hampshire.xlsx" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Virginia.xlsx" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Illinois.xlsx" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/New&#32;Jersey.xlsx" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Washington.xlsx" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Indiana.xlsx" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/New&#32;Mexico.xlsx" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/West&#32;Virginia.xlsx" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Iowa.xlsx" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/New&#32;York.xlsx" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Wisconsin.xlsx" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/Kansas.xlsx" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/states/North&#32;Carolina.xlsx" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/states/Wyoming.xlsx" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Discipline Estimations by Discipline Type
+            </div>
+            <div style="width:100%; padding:5px;">
+                <p>This set of Excel files contains data for all states, presented by discipline type. For each discipline type, there are nine spreadsheets: 
+                    male students with disabilities, female students with disabilities, total students with disabilities, male students without disabilities, 
+                    female students without disabilities, total students without disabilities, male students with and without disabilities, female students with and 
+                    without disabilities, and total students with and without disabilities.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Corporal&#32;Punishment.xlsx" target="_blank">Corporal punishment</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/One&#32;or&#32;more&#32;in-school&#32;suspensions.xlsx" target="_blank">In-school suspension</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Only&#32;one&#32;out-of-school&#32;suspension.xlsx" target="_blank">One out-of-school suspension</a>
+                                
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/More&#32;than&#32;one&#32;out&#32;of&#32;school&#32;suspension.xlsx" target="_blank">More than one out-of-school suspension</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/One&#32;or&#32;more&#32;out-of-school&#32;suspensions.xlsx" target="_blank">One or more out-of-school suspensions</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Expulsions&#32;with&#32;educational&#32;services.xlsx" target="_blank">Expulsions with educational services</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Expulsions&#32;without&#32;educational&#32;services.xlsx" target="_blank">Expulsions without educational services</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Expulsions&#32;with&#32;and&#32;without&#32;educational&#32;services.xlsx" target="_blank">Expulsions with and without educational services</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Expulsions&#32;under&#32;zero&#32;tolerance&#32;policies.xlsx" target="_blank">Expulsions under zero tolerance policies</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/Referral&#32;to&#32;law&#32;enforcement.xlsx" target="_blank">Referrals to law enforcement</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/discipline/School-related&#32;arrests.xlsx" target="_blank">School-related arrests</a>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Discipline Estimations by Disability Status
+            </div>
+            <div style="width:100%; padding:5px;">
+                <p>This set of Excel files contains data for all states, presented by disability status. Each Excel file contains 11 spreadsheets, organized by discipline type.</p>
+                <div style="margin-left:20px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <table style="width:100%;" class="estimation">
+                    <tr>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Students&#32;with&#32;Disabilities.xlsx" target="_blank">Students with disabilities</a>
+                        </td>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Students&#32;without&#32;Disabilities.xlsx" target="_blank">Students without disabilities</a>
+                        </td>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Students&#32;with&#32;and&#32;without&#32;Disabilities.xlsx" target="_blank">Students with and without disabilities</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Male&#32;Students&#32;with&#32;Disabilities.xlsx" target="_blank">Male students with disabilities</a>
+                        </td>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Male&#32;Students&#32;without&#32;Disabilities.xlsx" target="_blank">Male students without disabilities</a>
+                        </td>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Male&#32;Students&#32;with&#32;and&#32;without&#32;Disabilities.xlsx" target="_blank">Male students with and without disabilities</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Female&#32;Students&#32;with&#32;Disabilities.xlsx" target="_blank">Female students with disabilities</a>
+                        </td>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Female&#32;Students&#32;without&#32;Disabilities.xlsx" target="_blank">Female students without disabilities</a>
+                        </td>
+                        <td>
+                            <a href="../downloads/projections/2011-12/disability/Female&#32;Students&#32;with&#32;and&#32;without&#32;Disabilities.xlsx" target="_blank">Female students with and without disabilities</a>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Preschool Discipline Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                <p style="padding-left:5px;">This set of Excel files contains data for all preschool disciplinary actions, presented for the nation and by state. 
+                    For the nation and each state, there is one spreadsheet for total preschool children.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/US.xlsx" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/AL.xls" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/KY.xls" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/ND.xls" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/AK.xls" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/LA.xls" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/OH.xls" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/AZ.xls" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/ME.xls" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/OK.xls" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/AR.xls" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MD.xls" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/OR.xls" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/CA.xls" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MA.xls" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/PA.xls" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/CO.xls" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MI.xls" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/RI.xls" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/CT.xls" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MN.xls" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/SC.xls" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/DE.xls" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MS.xls" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/SD.xls" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/DC.xls" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MO.xls" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/TN.xls" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/FL.xls" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/MT.xls" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/TX.xls" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/GA.xls" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NE.xls" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/UT.xls" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/HI.xls" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NV.xls" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/VT.xls" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/ID.xls" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NH.xls" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/VA.xls" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/IL.xls" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NJ.xls" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/WA.xls" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/IN.xls" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NM.xls" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/WV.xls" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/IA.xls" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NY.xls" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/WI.xls" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/KS.xls" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/NC.xls" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;state/WY.xls" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Preschool Discipline Estimations by Discipline Type
+            </div>
+            <div style="width:100%;">
+                <p style="padding:5px;">This set of Excel files contains data for all states, presented by discipline type. For each discipline type, there are three spreadsheets: 
+                    total preschool children, male preschool children, and female preschool children.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;discipline&#32;type/Preschool.One&#32;Out&#32;of&#32;School&#32;Suspension.xlsx" target="_blank">One out-of-school suspension</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;discipline&#32;type/Preschool.More&#32;than&#32;One&#32;Out&#32;of&#32;School&#32;Suspension.xlsx" target="_blank">More than one out-of-school suspension</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;discipline&#32;type/Preschool.One&#32;or&#32;More&#32;Out&#32;of&#32;School&#32;Suspensions.xlsx" target="_blank">One or more out-of-school suspensions</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Preschool&#32;Discipline/by&#32;discipline&#32;type/Preschool.Expulsions.xlsx" target="_blank">Expulsions </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="harassment" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse" style="margin-top:1px;">
+            <div style="float:left;" class="harassmenticon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Harassment or Bulling" id="harassmenttitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Harassment or Bullying</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="harassmentcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Harassment or Bullying Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This set of Excel files contains data for all harassment or bullying categories, presented for the nation and by state. For the nation and each state, 
+                    there are two spreadsheets: students reported as harassed or bullied, and students disciplined for harassment or bullying.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/US-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/AL-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/KY-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/ND-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/AK-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/LA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/OH-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/AZ-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/ME-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/OK-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/AR-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MD-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/OR-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/CA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/PA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/CO-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MI-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/RI-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/CT-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MN-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/SC-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/DE-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MS-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/SD-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/DC-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MO-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/TN-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/FL-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/MT-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/TX-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/GA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NE-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/UT-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/HI-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NV-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/VT-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/ID-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NH-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/VA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/IL-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NJ-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/WA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/IN-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NM-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/WV-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/IA-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NY-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/WI-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/KS-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/NC-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;state/WY-Bullying&#32;or&#32;Harassment.xlsx" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Harassment or Bullying Estimations by Basis
+            </div>
+            <div style="width:100%;">
+                <p style="padding:5px;">This set of Excel files contains data for all states, presented by harassment or bullying basis category. For each basis category, there are six 
+                    spreadsheets: students reported as harassed or bullied, male students reported as harassed or bullied, female students reported as harassed or 
+                    bullied, students disciplined for harassment or bullying, male students disciplined for harassment or bullying, and female students disciplined 
+                    for harassment or bullying.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;Basis/Harassment-Bullying&#32;on&#32;basis&#32;of&#32;sex.xlsx" target="_blank">On basis of sex</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;Basis/Harassment-Bullying&#32;on&#32;basis&#32;of&#32;race.xlsx" target="_blank">On basis of race</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;Basis/Harassment-Bullying&#32;on&#32;basis&#32;of&#32;disability.xlsx" target="_blank">On basis of disability</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Harassment or Bullying Estimations by Harassment or Bullying Category
+            </div>
+            <div style="width:100%; padding:5px;">
+                <p  style="padding:5px;">This set of Excel files contains data for all states, presented by harassment or bullying category (students reported as harassed or bullied or 
+                    disciplined for harassment or bullying). For each category, there are nine spreadsheets: students harassed or bullied on basis of sex, male students 
+                    on basis of sex, female students on basis of sex, students on basis of race, male students on basis of race, female students on basis of race, 
+                    students on basis of disability, male students on basis of disability, and female students on basis of disability.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;Category/Harassment-Bullying&#32;Reported.xlsx" target="_blank">Students reported as harassed or bullied</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Harrassment&#32;or&#32;Bullying/by&#32;Category/Harassment-Bullying&#32;Disciplined.xlsx" target="_blank">Students disciplined for harassment or bullying</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="restraint" en="0" onclick="util.toggleEstimations(this);" class="titlecollapse">
+            <div style="float:left;" class="restrainticon iconexpand"><img src="../images/arrow_down-11-12.png" style="margin-top:1px; margin-right:-1px;" /> </div>
+            <div title="Restraint and Seclusion" id="restrainttitle" style="float:left; padding-left:20px; margin:3px 0px 3px 0px;">Restraint and Seclusion</div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="restraintcontainer" style="display:none;" class="accordiontitle">
+            <div class="accordionheader">
+                2011-12 Restraint and Seclusion Estimations for Nation and by State
+            </div>
+            <div style="width:100%;">
+                    <p style="padding:5px;">This set of Excel files contains data for all restraint and seclusion categories, presented for the nation and by state. 
+                        For the nation and each state, there are three spreadsheets: students with and without disabilities, students served under IDEA, and students 
+                        not served under IDEA.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    &nbsp;
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/US-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">National total</a>
+                </div>
+                <div class="divcellright">
+                    &nbsp;
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow padtop"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/AL-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Alabama</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/KY-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Kentucky</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/ND-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">North Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/AK-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Alaska</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/LA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Louisiana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/OH-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Ohio</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/AZ-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Arizona</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/ME-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Maine</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/OK-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Oklahoma</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/AR-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Arkansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MD-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Maryland</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/OR-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Oregon</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/CA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">California</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Massachusetts</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/PA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Pennsylvania</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/CO-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Colorado</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MI-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Michigan</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/RI-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Rhode Island</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/CT-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Connecticut</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MN-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Minnesota</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/SC-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">South Carolina</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/DE-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Delaware</a></td>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MS-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Mississippi</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/SD-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">South Dakota</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/DC-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">District of Columbia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MO-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Missouri</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/TN-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Tennessee</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/FL-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Florida</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/MT-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Montana</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/TX-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Texas</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/GA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Georgia</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NE-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Nebraska</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/UT-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Utah</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/HI-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Hawaii</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NV-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Nevada</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/VT-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Vermont</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/ID-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Idaho</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NH-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">New Hampshire</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/VA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/IL-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Illinois</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NJ-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">New Jersey</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/WA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Washington</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/IN-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Indiana</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NM-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">New Mexico</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/WV-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">West Virginia</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/IA-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Iowa</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NY-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">New York</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/WI-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Wisconsin</a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="tablerow"></div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/KS-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Kansas</a>
+                </div>
+                <div class="divcell">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/NC-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">North Carolina</a>
+                </div>
+                <div class="divcellright">
+                    <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;state/WY-Restraint&#32;and&#32;Seclusion.xlsx" target="_blank">Wyoming</a>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Restraint and Seclusion Estimations by Restraint or Seclusion Category
+            </div>
+            <div style="width:100%; padding:5px;">
+                <p>This set of Excel files contains data for all states, presented by restraint or seclusion category. For each category, there are nine spreadsheets: 
+                    students with and without disabilities, male students with and without disabilities, female students with and without disabilities, students served 
+                    under IDEA, male students served under IDEA, female students served under IDEA, students not served under IDEA, male students not served under IDEA, 
+                    and female students not served under IDEA.</p>
+                <div style="margin-left:100px; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <div class="tablerow"></div>
+                    <div class="divcell">
+                        <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;Category/Mechanical&#32;Restraint.xlsx" target="_blank">Mechanical restraint</a>
+                    </div>
+                    <div class="divcell">
+                        <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;Category/Physical&#32;Restraint.xlsx" target="_blank">Physical restraint</a>
+                    </div>
+                    <div class="divcellright">
+                        <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;Category/Seclusion.xlsx" target="_blank">Seclusion</a>
+                    </div>
+                    <div style="clear:both;"></div>
+
+                    <div class="tablerow"></div>
+                </div>
+            </div>
+            <div class="accordionheader">
+                2011-12 Restraint and Seclusion Estimations by Disability Status
+            </div>
+            <div style="width:100%; padding:5px;">
+                <p>This set of Excel files contains restraint and seclusion data for all states, presented by disability status. Each Excel file contains nine 
+                    spreadsheets organized by restraint or seclusion category: students subjected to mechanical restraint, male students subjected to mechanical restraint, 
+                    female students subjected to mechanical restraint, students subjected to physical restraint, male students subjected to physical restraint, 
+                    female students subjected to physical restraint, students subjected to seclusion, male students subjected to seclusion, and female students 
+                    subjected to seclusion.</p>
+                <div style="text-align:center; font-size:14px; margin-bottom:10px; margin-top:5px;">
+                    <table style="width:100%;" class="estimation">
+                        <tr>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;Disability&#32;Status/Restraint&#32;or&#32;Seclusion.Students&#32;with&#32;and&#32;without&#32;Disab.xlsx" target="_blank">Students with and without disabilities</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;Disability&#32;Status/Restraint&#32;or&#32;Seclusion.Students&#32;served&#32;under&#32;IDEA.xlsx" target="_blank">Students served under IDEA</a>
+                            </td>
+                            <td>
+                                <a href="../downloads/projections/2011-12/Restraint&#32;and&#32;Seclusion/by&#32;Disability&#32;Status/Restraint&#32;or&#32;Seclusion.Students&#32;not&#32;served&#32;under&#32;IDEA.xlsx" target="_blank">Students not served under IDEA</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+	    </div>
+	    <div class="pane ui-layout-north">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="width:100%;"><img src='../images/MainHeading.png' alt="Ed.Gov Logo" /></td>
+            </tr>
+            <tr style="background-color:#999999; color:#ffffff;">
+                <td colspan="2" id="tdBreadCrumb" class="breadCrumb">
+                    <span id="spanBreadCrumb">
+</span>
+                </td>
+            </tr>
+        </table>
+        </div>
+	    <div class="pane ui-layout-south">
+            <table style="width:100%;">
+                <tr>
+                    <td></td>
+                    <td>
+</td>
+                </tr>
+            </table>
+                
+        </div>
+	    <div class="pane ui-layout-west">
+	        <ul id="menu" class="drop_Accordion" role="menubar">
+                <li id="menuHome" a='1'> 
+                    
+                    <div onclick="menuAloneClick('Home')" class="divmenu">
+                        <span style="margin-top:13px; margin-right:10px; display:inline-block; font-size:1em;">HOME</span>
+                    </div>
+                </li>
+
+                <li id="li_menuReports" a="1" style="text-align:center;">
+                    
+			            <a tabindex="1" class="limenu" style="vertical-align:middle; display:table-cell;" id="menuReports" href="javascript:void(0);"  onclick="menuAloneClick('DistrictSchoolSearch')" title="School And District Search">
+                            <span>SCHOOL & DISTRICT SEARCH</span>
+                        </a>
+                    
+                    
+			        <ul id="ul_menuReports"></ul>
+		        </li>
+                 
+		        <li id="li_menuFlexible" a="1" style="text-align:center;">
+			        <a tabindex="2" class="limenu" style="vertical-align:middle; display:table-cell;" id="menuFlexible" href="Estimations_2011_12.html#" onclick="location.href='http://ocrdata.ed.gov/flex'" title="Detailed Data Tables">DETAILED DATA TABLES</a>
+		        </li>
+
+		        <li id="li_menuDataAnalysis" a="1" style="text-align:center;">
+			        <a tabindex="3" class="limenu" style="vertical-align:middle; display:table-cell;" id="menuDataAnalysis" 
+                    href="javascript:void(0);" onclick="menuAloneClick('DataAnalysisTools')" title="Data Analysis Tools">DATA ANALYSIS TOOLS</a>
+		        </li>
+
+		        <li id="li_menuSpecialReports" a="1" style="text-align:center;">
+			        <a tabindex="4" class="limenu" id="menuSpecialReports" 
+                    href="javascript:void(0);" onclick="menuAloneClick('SpecialReports')" title="Special Reports">
+                    <span style="vertical-align:middle; display:table-cell; height: 35px; padding-left:12px;">SPECIAL REPORTS</span>  
+                    </a>
+		        </li>
+
+		        <li id="li_menuEstimations" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="5" style="vertical-align:middle; display:table-cell;" id="A3" href="javascript:void(0);" onclick="menuAloneClick('StateNationalEstimations')" title="State and National Estimations">STATE AND NATIONAL ESTIMATIONS</a>
+		        </li>
+
+		        <li id="li_menuResourses" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="6" style="vertical-align:middle; display:table-cell;" id="menuResourses" href="Estimations_2011_12.html#">ADDITIONAL RESOURCES</a>
+			        <ul id="ul_menuResourses">
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('WhatsNew')" id="A15" title="Whats New">What's New</a></li>
+				        <li><a tabindex="6" href='../downloads/AboutTheCRDC.pdf' target="_blank">About The CRDC</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataNotes')" id="A7" title="Data Notes">Data Notes</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataDefinitions')" id="A5" title="Data Definitions">Data Definitions</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataSummary')" id="A16" title="Data Summaries">Data Summaries</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('SurveyDocuments')" id="A9" title="Survey Documents">Survey Documents</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('RequestFlatFile')" id="A10" title="Request Flat File">Request Flat File</a></li>
+                        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataFileUsersManual')" id="A11" title="2013-14 Data File User's Manual">2013-14 Data File User's Manual</a></li>
+                        <li><a tabindex="6" href="http://www2.ed.gov/about/offices/list/ocr/docs/2013-14-first-look.pdf" target="_blank" id="firstLook" title="2013-14 First Look Report">2013-14 First Look Report</a></li>
+                        <li><a tabindex="6" href="http://www2.ed.gov/about/offices/list/ocr/docs/crdc-2013-14.html" target="_blank" id="AccessData" title="Access 2013-14 Data">Access 2013-14 Data</a></li>
+			        </ul>
+		        </li>
+		        <li id="li_meunFAQ" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="7" id="meunFAQ"  href="Estimations_2011_12.html#" title="Frequently asked questions and User Guide">
+                       <span style="vertical-align:middle; display:table-cell; height:35px; padding-left:12px;">FAQ/USER GUIDE</span>
+                    </a>
+			        <ul id="ul_menuFAQ">
+                        <li><a tabindex="7" href='../downloads/FAQ.pdf' target="_blank">FAQ</a></li>
+				        <li><a tabindex="7" href='../downloads/UserGuide.pdf'  target="_blank">User Guide</a></li>
+                        <li><a href="../Downloads/Outcome&#32;Rate&#32;Calculator&#32;Tutorial.pdf" target="_blank">Outcome Rate Calculator Tutorial</a></li>
+                        <li><a href="../Downloads/Entity&#32;Comparison&#32;Report&#32;Tutorial.pdf" target="_blank">Entity Comparison Report Tutorial</a></li>
+                        <li><a href="../Downloads/Entity&#32;Detail&#32;Graphs&#32;and&#32;Data&#32;Tutorial.pdf" target="_blank">Entity Detail Graphs and Data Tutorial</a></li>
+			        </ul>
+		        </li>
+		        <li id="li1" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="8" id="A4" style="vertical-align:middle; display:table-cell;" href="Estimations_2011_12.html#" title="Office for Civil Rights(OCR)">OFFICE FOR CIVIL RIGHTS (OCR)</a>
+			        <ul id="ul_menuOCRContacts">
+				        <li><a tabindex="8" href="http://www2.ed.gov/about/offices/list/ocr/index.html" id="A6" title="OCR Homepage" target="_blank">OCR Homepage</a></li>
+				        <li><a tabindex="8" href="http://www2.ed.gov/about/offices/list/ocr/data.html?src=rt" id="A13" title="Civil Rights Data Collection" target="_blank">Civil Rights Data Collection (CRDC)</a></li>
+				        <li><a tabindex="8" href="javascript:void(0);" onclick="menuAloneClick('Contact')" id="A14" title="Contact" target="_blank">Contact</a></li>
+			        </ul>
+		        </li>
+	        </ul>
+            <font style="font-size:6px;">&nbsp;</font>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td id="td1" class="AvailableMetrics">
+	                        <table class="AvailableMetrics">
+		                        <tbody>
+			                        <tr>
+				                        <th style="display: none;">&nbsp;</th>
+			                        </tr>
+		                        </tbody>
+                                <tbody id="tbody1" class="AvailableMetrics">
+			                        <tr class="MenuMetricsTr1" id="tr1">
+				                        <td class="MenuMetrics1">
+                                            <!--<a tabindex="7" href="javascript:void(0);" onclick="menuAloneClick('http://www2.ed.gov/about/offices/list/ocr/data.html?src=rt')" id="A17" title="2011-12 CRDC" style="color:black">Looking for the 2013-14 CRDC?</a>-->
+                                            <a tabindex="7" href="http://crdc.ed.gov" id="A18" title="2013-14 CRDC" style="color:black" target="_blank">Looking for the 2015-16 CRDC?</a>
+                                        </td>
+			                        </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <center>
+                <button tabindex="8" type="button" id="btnPrintContent" style="width:99%; height:20px; padding-top:1px; padding-bottom: 2px; font-size:11px; display:none;" title="Print content"></button><br />
+                
+                <button tabindex="9" type="button" style="width:99%; padding-top:1px; padding-bottom: 2px; font-size:11px;" id="btnToggleSuppressed" title="Show/Hide Suppressed Data"></button>
+            </center>
+
+            <div style="display:none;"> 
+            <input name="ctl00$Role_ID" type="hidden" id="Role_ID" value="8" /> 
+            <input name="ctl00$User_ID" type="hidden" id="User_ID" value="0" />
+            <input name="ctl00$Username" type="hidden" id="Username" />
+            <input name="ctl00$Role" type="hidden" id="Role" value="General Public" />   
+            <input name="ctl00$Full_Name" type="hidden" id="Full_Name" />
+            <input name="ctl00$Email" type="hidden" id="Email" />
+            </div>
+        </div>
+    </div>
+    
+
+    
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0304EEE9" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAeBa4QMkFHV+9hjwJLIAn1pjY9/waLeHh8aSPof57MIGEl6//Yx4XsKftqWwnlCnmqkUp5VGV5Fw+RJcXlTHwS8y8O78B3J82n6BzRn+coujjL29rK+0VDeKJTJk9ZkGDiTCGXPxdHeaZBTX4T4O1t3s2Tiv/yZxhCbJt0MjgLghCECDgLW3jysLz9K3x4qpJk=" /></form>
+
+<!--CRAZYEGG CODE-->
+<script type="text/javascript" src="https://s3.amazonaws.com/new.cetrk.com/pages/scripts/0009/9201.js"> </script>
+<!--END CRAZYEGG CODE-->
+<!--GOOGLE ANALYTICS CODE-->
+<script src="https://www.google-analytics.com/ga.js" type="text/javascript" language="JavaScript"></script>
+<script type="text/javascript"> 
+try {
+        var _gaq = _gaq || [];
+         _gaq.push(['_setAccount', 'UA-10911895-22']);
+         _gaq.push(['_trackPageview']);
+} catch(err) {}
+</script>
+<!-- END GOOGLE ANALYTICS CODE-->
+
+</body>
+</html>
+<script type="text/javascript">
+    var disregardRegularPrintingRules = false; // this is so if we want to use special printing pagebreaks we can do so by setting this to true in a javascript function on the page
+    $().ready(function () {
+        if ($.browser.msie && parseInt($.browser.version, 10) < 8) {
+            app.centerDivVertical('container');
+            $(window).resize(function () {
+                setTimeout(function () { app.adjustLegands(); }, 2000);
+            });
+        }
+        if (app.weArePrinting()) {
+            $('.ui-layout-pane').css('overflow', 'visible').css('height', '6000px').css('float','none').css('margin','0').css('width','100%'); 
+            //adjustPrintableAreaSizeIfPrintPage();
+        }
+    });
+
+    function adjustPrintableAreaSizeIfPrintPage() {
+
+        if (WeAreReadyToPrint == true) {
+            var myHtml = $('#printableArea').html();
+            setTimeout(function () {
+                $('.body').html(myHtml);
+            }, 50);
+        }
+        else {
+            if (disregardRegularPrintingRules == false) {
+                setTimeout(function () {
+                    $('.roundtopcorners').each(function (i, e) {
+                        if (i == 2) $(this).parent().addClass('pgBreak');
+                    });
+                    adjustPrintableAreaSizeIfPrintPage();
+                }, 500);
+            }
+            else {
+                alert('m');
+            }
+        }
+    }
+</script>

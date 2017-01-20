@@ -1,0 +1,1178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        
+    Reports
+
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/banner.css" />
+    <link rel="stylesheet" type="text/css" href="css/crdc.css" />
+    <link rel="stylesheet" type="text/css" href="css/edlite.css" />
+    <script src="javascript/jquery-1.6.1.min.js" type="text/javascript"></script>
+    <script src="javascript/crdc.js" type="text/javascript"></script>
+    <script src="javascript/jquery.address-1.3.2.js" type="text/javascript"></script>
+    <script src="javascript/jquery.ui.core.js" type="text/javascript"></script>
+    <script src="javascript/jquery-ui-1.8.5.custom.js" type="text/javascript"></script>
+    <link href="javascript/redmond/jquery-ui-1.8.2.custom.css" rel="stylesheet" type="text/css" />
+    <script src="javascript/jquery.metadata.js" type="text/javascript"></script>
+    <script src="javascript/jquery.tablesorter.js" type="text/javascript"></script>
+    <script src="javascript/jquery.tablesorter.pager.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $().ready(function () {
+            setModalSize();
+        });
+        $(window).resize(function () {
+            setTimeout('setModalSize();', 500);
+        });
+
+        window.onbeforeunload = confirmExit;
+        function confirmExit() {
+            $ClearSession();
+        };
+
+
+        function setModalSize() {
+            $("#blur").css("height", $(document).height());
+            $('#reportContent').css('height', $('#divReportViewer').height() - 50);
+        }
+    </script>
+</head>
+<body id="body">
+    <div id="blur"></div>
+    <div class="divHeader">
+        <!-- Accessibility link for 508 compliance -->
+        <div id="skip"><a href="Reports.aspx@type=school.html#maincontent">Skip to Main Content</a></div>
+        <!-- Header Area -->
+        <div id="banner" >
+           	<span class="HeaderImageLeft"><a href="http://www.ed.gov" ><img src="images/Ed-gov.png" 
+                    alt="Department of Education Logo" width="94" height="42" border="0" align="left" /></a></span>
+           	<span class="HeaderImage"><img src="images/CRDC.png" 
+                    alt="Civil Rights Data Collection" width="456" height="41" border="0" align="right" /></span>
+        </div>
+    </div>
+    <form name="aspnetForm" method="post" action="Reports.aspx@type=school.html" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="ScriptResource.axd@d=EXZeP1of1otGR7DKfGgf3tl7gEw5a-pmdnD2aBF8NbavAQJBw3WMwp4PI8qMSg54MT7aOPv9SqDIbxG1diU450VEydQ9Br2tiwhBdg-6tR0mH5SmbJ8fqMRSLVAeeehlYTbvVG3h8MBXnXELYJvuY_4YhVjYp31EBkSIJv2wXEc1&amp;t=4794f07b" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FB310EBF" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+        <input name="ctl00$hfSession" type="hidden" id="ctl00_hfSession" value="17267246-08aa-4160-bf8a-eef617afe97b" />
+        <div id="ctl00_ucToolbar_divToolbar" class="divToolbar">
+    <a href="http://ocrdata.ed.gov/" class="menubar left" style="padding-left:12px"><img src="images/OCR_Main_Nav_Arrow.png" alt="Link to Home" width="11" height="11" 
+        border="0" style="padding-right:2px"/>Home</a>
+    <a href="Reports.aspx@type=district.html" title="District Search" class="menubar right" style="padding-right:8px"><img src="images/OCR_Main_Nav_Arrow.png" alt="Link to District Search" width="11" height="11" 
+        border="0" style="padding-right:2px"/>District Search</a>
+    <a href="Reports.aspx@type=school.html" title="School Search" class="menubar right" style="padding-right:15px">
+        <img src="images/OCR_Main_Nav_Arrow.png" alt="Link to School Search" width="11" height="11" border="0" style="padding-right:2px"/>School Search</a>
+
+</div>
+
+        
+
+    <script language="javascript" type="text/javascript">
+        var ua = $.browser;
+        var schoolOrDistrictSearch = $.query.get('type');
+        var existingAddress = '';
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        var userClickedButton = true;
+        var buttonHasBeenClicked = false;
+
+        var postBackElement;
+        var postBackElementID;
+
+        function CancelAsyncPostBack() {
+            if (prm.get_isInAsyncPostBack()) {
+                prm.abortPostBack();
+            }
+        }
+
+        prm.add_initializeRequest(InitializeRequest);
+        prm.add_endRequest(EndRequest);
+        
+        function InitializeRequest(sender, args) {
+            if (prm.get_isInAsyncPostBack()) {
+                args.set_cancel(true);
+            }
+            postBackElement = args.get_postBackElement();
+            postBackElementID = postBackElement.id;
+            if (postBackElementID == 'ctl00_div_ucSearch_aSearchText' || postBackElementID == 'ctl00_ucToolbar_aSchoolSearch' || postBackElementID == 'ctl00_ucToolbar_aDistrictSearch') {
+                initializeToolBar();
+            }
+            else if (postBackElementID == 'ctl00_div_ucSearch_btnSearchParams') {
+                initializeButtonClick();
+            }
+            else if ($(postBackElement).hasClass('pReport')) {
+                initializeReport();
+            }
+        }
+
+        function initializeToolBar() {
+            $(".messagesLabel").first().hide();
+            $('#ctl00_div_ucSearch_upSearchParams').hide();
+            $('#divResultsContainer').hide();
+            $('#divSearchControl').show();
+            $('#divReportViewer').hide();
+            $(".upSPProgress").each(function (i, e) {
+                $(e).show();
+            });
+            $('#divSearchButtons').hide();
+            $('#divProfile').hide();
+        }
+
+        function initializeButtonClick() {
+            $('#divResultsContainer').show();
+            $('#ctl00_div_ucSearchResults_upSearchResults').hide();
+            $('#upSRProgress').show();
+            if ($('#divReportsList') != undefined && $('#divReportsList') != null) $('#divReportsList').hide();
+            $(".messagesLabel").first().hide();
+            $('#ctl00_div_ucSearch_btnSearchParams').attr('disabled', 'disabled');
+        }
+
+        function initializeReport() {
+
+        }
+
+        function EndRequest(sender, args) {
+            var postBackElementID = postBackElement.id;
+            if (postBackElementID == 'ctl00_div_ucSearch_aSearchText' || postBackElementID == 'ctl00_ucToolbar_aSchoolSearch' || postBackElementID == 'ctl00_ucToolbar_aDistrictSearch') {
+                endRequestToolbar();
+            }
+            else if (postBackElementID == 'ctl00_div_ucSearch_btnSearchParams') {
+                endRequestButtonClick();    
+            }
+            else if ($(postBackElement).hasClass('pReport')) {
+                endRequestReport();
+            }
+            $(':text:visible:enabled:first').delay(2000).focus();
+            showHideSearchDetails();
+        }
+
+        function endRequestToolbar() {
+            $('#ctl00_div_ucSearch_upSearchParams').show();
+            $(".upSPProgress").each(function (i, e) {
+                $(e).hide();
+            });
+            $('#divSearchButtons').show();
+        }
+
+        function endRequestButtonClick() {
+            setButtonClicked(false);
+            $('#divResultsContainer').show();
+            $('#ctl00_div_ucSearchResults_upSearchResults').show();
+            $('#upSRProgress').hide();
+            if ($('#divReportsList') != undefined && $('#divReportsList') != null) $('#divReportsList').show();
+            $(".messagesLabel").first().show();
+            $('#ctl00_div_ucSearch_btnSearchParams').removeAttr('disabled');
+            $('.nullValue').each(function (i, e) {
+                $(this).parent().css('background-color', 'silver');
+            });
+            showHideSearchDetails();
+        }
+
+        function endRequestReport() {
+            $('#divReportViewer').show();
+            var ht = $(document).height();
+            var wt = $(document).width();
+            $('#ctl00_div_ucReportViewer_upReportViewer').show();
+            $("#blur").show().css("height", ht);
+            $('#reportContent').css('height', $('#divReportViewer').height() - 50);
+            $('#CoverControls').show().removeAttr('style').attr('style', 'height:' + ht + 'px; width:' + wt + 'px; border-style:none; position:fixed;position:absolute;z-index:3; top:0; left:0;')
+
+            var returnedContent = $('#ctl00_div_ucReportViewer_upReportViewer').text();
+            if (returnedContent.indexOf('No report data exists') != -1) { // if there is no report content
+                $('.noShowOnEmpty').hide();
+            }
+            else {
+                $('.noShowOnEmpty').show();
+                setButtonToolTip();
+                // set the background color for fields that have null values
+                $('.nullValue').each(function (i, e) {
+                    $(this).parent().css('background-color', 'silver');
+                });
+            }
+        }
+
+        function showHideSearchDetails() {
+            var WeHaveAdditionalSearchCriteria = doWeHaveAdditionalSearchCriteria();
+            if (WeHaveAdditionalSearchCriteria == true) {
+                if (schoolOrDistrictSearch == 'school') {
+                    $('#divSchoolSearchDetail').show();
+                }
+
+                else if (schoolOrDistrictSearch == 'district') {
+                    $('#divDistrictSearchDetail').show();
+                }
+            }
+            else {
+                if (schoolOrDistrictSearch == 'school') {
+                    $('#divSchoolSearchDetail').hide();
+                }
+
+                else if (schoolOrDistrictSearch == 'district') {
+                    $('#divDistrictSearchDetail').hide();
+                }
+            }
+        }
+
+        function ErrorHandler(sender, args) {
+           if (args.get_error() != undefined)
+               alert("There was an error" + args.get_error().message);
+        }
+
+        function setUpReportLink(a) {
+            $('#divPleaseWait').show();
+            scroll(0, 0);
+        }
+
+        function DoSearch() {
+            var params = '';
+            var weHaveValues = false;
+            var cnt = 1;
+            $('#ctl00_div_ucSearch_upSearchParams :input').each(function () {
+                var elemID = $(this).attr('id');
+                if ($(this).attr('type') == 'checkbox') {
+                    // we don't want to do anything here with checkboxes
+                }
+                else if (elemID.indexOf('ddlSchoolNumber') != -1 || elemID.indexOf('ddlStudentNumber') != -1) {
+                    // we don't want to do anything with the More than or Less than ddl
+                }
+                else if ($(this).val() != '') {
+                    weHaveValues = true;
+                    if (cnt == 1) {
+                        params = $(this).attr('id').replace('ctl00_div_ucSearch_', '') + '=' + $(this).val();
+                        cnt = 2;
+                    }
+                    else {
+                        params += '&' + $(this).attr('id').replace('ctl00_div_ucSearch_', '') + '=' + $(this).val();
+                    }
+                }
+            });
+
+            $('#ctl00_div_ucSearch_upSearchParams input:checked').each(function () {
+                if (cnt == 1) {
+                    params = $(this).attr('id').replace('ctl00_div_ucSearch_', '') + '=1';
+                    cnt = 2;
+                }
+                else {
+                    params += '&' + $(this).attr('id').replace('ctl00_div_ucSearch_', '') + '=1';
+                }
+                weHaveValues = true;
+
+            });
+
+            if (weHaveValues == false) {
+                alert('You must make at least one (1) selection before attempting to perform a search.');
+                return false;
+            }
+            else {
+                if (userClickedButton == true) { 
+                    if (ua.msie && ua.version < 7) { }
+                    else { $.address.value('action=addSearchParams&' + params); }
+                }
+                else {
+                    userClickedButton = true;
+                }
+                return true;
+            }
+        }
+        if (ua.msie && ua.version < 7) {
+            // doesn't work with IE6
+        }
+        else {
+            // Event handlers
+            var isInternalChange = false;
+            $.address.init(function (event) {
+                //$('#ctl00_div_ucSearch_btnSearchParams').click().address(function () { return DoSearch(); });
+            }).internalChange(function (event) {
+                //alert('ic=' + event.value)
+                isInternalChange = true; // we need to test to see if this is an internal change (link/button click). if so we take different action in the externalChange handler
+            }).externalChange(function (event) {
+                existingAddress = event.value;
+                //alert('ec=' + event.value);
+
+                // clear all the form fields
+                $(':input', '#ctl00_div_ucSearch_upSearchParams').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+                //$("#ctl00_div_ucSearch_cblYears INPUT[type='checkbox']").last().attr('checked', true); // automatically check the last school year check box
+
+                var qStringArray = populateQueryStringArray(event.value); // create an array to hold the name/value pairs
+                var action = qStringArray['action']; // we need an action for each address so we know how to handle it below
+                var doPostBack = true; // if we are doing an internalChange (link/button click) then we don't want to undo it below
+                if (action == 'getReport' && isInternalChange == false) { // if we were getting a report and the user clicked back button (not the report link)
+                    doPostBack = true; // we want to do the proceede with the rest of this handler
+                }
+                else { // this is a result of a link/button click, so we don't want to do the rest of this handler
+                    doPostBack = false;
+                    isInternalChange = false; // set it back to default and get ready for the next time.
+                }
+                if (action == 'addSearchParams' || doPostBack == true) { // if the user clicked the back button that was put into the address as a result of the Search button click or as a result of clicking on a report link
+                    doPostBack = true; // get ready for the next time
+                    for (i in qStringArray) {
+                        if (i == 'action') { // just move on
+                        }
+                        else if (i.indexOf('cblYears') != -1) { // populate the school year check boxes
+                            $('input[id=ctl00_div_ucSearch_' + i + ']').attr('checked', true);
+                        }
+                        else if (i.indexOf('schoolOptions_cb') != -1) { // populate the additional search options check boxes
+                            $('input[id=ctl00_div_ucSearch_' + i + ']').attr('checked', true);
+                        }
+                        else if (i.indexOf('districtOptions_cb') != -1) { // populate the additional search options check boxes
+                            $('input[id=ctl00_div_ucSearch_' + i + ']').attr('checked', true);
+                        }
+                        else { // populate the search fields
+                            $('#ctl00_div_ucSearch_' + i).val(qStringArray[i]);
+                        }
+                    };
+                    userClickedButton = false; // done so we don't add the address to history again when we trigger the click event below via code.
+                    if (buttonHasBeenClicked == false) $('#ctl00_div_ucSearch_btnSearchParams').trigger('click'); // simulate a button click on the Search button
+                    document.title = "Search Results";
+                    showHideSearchDetails();
+                }
+                else { // hide everything but what shows by default on the base search page.
+                    $(".messagesLabel").first().hide();
+                    $('#ctl00_div_ucSearch_upSearchParams').show();
+                    $('#divSearchControl').show();
+                    doWeHaveSearchCriteria() == true ? $('#divResultsContainer').show() : $('#divResultsContainer').hide();
+                    $('#divReportViewer').hide();
+                    $('#divProfile').hide();
+                    document.title = 'Reports Search';
+                    showHideSearchDetails();
+                }
+                $(':text:visible:enabled:first').delay(4000).focus();
+                setTimeout('checkBoxes(\'' + event.value + '\');', 3000);
+                if ($('#ctl00_div_ucSearch_cblYears input:checked').length == 0) {
+                    $("#ctl00_div_ucSearch_cblYears INPUT[type='checkbox']").last().attr('checked', true);
+                }
+            });
+        }
+        $().ready(function () {
+            $(':text:visible:enabled:first').focus();
+        });
+
+        function checkBoxes(_Address) {
+            _Address = $.URLDecode(_Address);
+            var qStringArray = populateQueryStringArray(_Address);
+            var action = qStringArray['action'];
+            if (action == 'getReport') {
+                for (i in qStringArray) {
+                    if (i == 'cbs') {
+                        var cbArray = qStringArray[i].split(',');
+                        $('.cbHeader').first().children(':first-child').attr('checked', false);
+
+                        $('.cbRow').each(function (i, row) {
+                            $(row).children(':first-child').attr('checked', false);
+                        });
+                        $(cbArray).each(function (i, e) {
+                            //ctl00_div_ucSearchResults_schoolSearchResults_gvSearchResults_ctl
+                            $('#ctl00_div_ucSearchResults_schoolSearchResults_gvSearchResults_ctl' + e + '_cbRow').attr('checked', true);
+                        });
+                    }
+                }
+            }
+        }
+
+        function populateQueryStringArray(_Address) {
+            var qString = (_Address).replace('/', ''); // remove the leading slash (/)
+            var qStringSplit = qString.split('&'); // split the querystring
+            var qStringArray = []; // create an array to hold the name/value pairs
+            $(qStringSplit).each(function (i, e) {
+                var s1 = e.split('=');
+                qStringArray[s1[0]] = s1[1]; // populate the array with the name and value
+            });
+            return qStringArray;
+        }
+    </script>
+
+    <div id="maincontent">
+        
+        <div id="ctl00_div_contentPanel">
+	
+                <div>
+                    
+<div id="divSearchControl">
+    <div id="ctl00_div_ucSearch_upSearchParams">
+		
+            <div id="divSearchParams" style="width:900px;">
+                <div class="divSearchText">
+                    <b>Search for
+                        schools</b> or
+                    <a href="Reports.aspx@type=district.html" id="ctl00_div_ucSearch_aSearchText">search for
+                        districts</a>
+                </div>
+                <ul class="control-list">
+                    <li>
+                        <label for="ctl00_div_ucSearch_tbSearchSchool" id="ctl00_div_ucSearch_nameLabel" class="optionLabel">School Name:</label>
+                        <input name="ctl00$div$ucSearch$tbSearchSchool" type="text" id="ctl00_div_ucSearch_tbSearchSchool" tabindex="1" class="tbSearchOption school district" />
+                    </li>
+                    <li id="ctl00_div_ucSearch_divSearchDistrict">
+                        <label for="ctl00_div_ucSearch_tbSearchDistrict" id="ctl00_div_ucSearch_districtLabel" class="optionLabel">District:</label>
+                        <input name="ctl00$div$ucSearch$tbSearchDistrict" type="text" id="ctl00_div_ucSearch_tbSearchDistrict" tabindex="1.1" class="tbSearchOption school district" />
+                    </li>
+                    <li>
+                        <label for="ctl00_div_ucSearch_tbSearchCity" id="ctl00_div_ucSearch_cityLabel" class="optionLabel">City:</label>
+                        <input name="ctl00$div$ucSearch$tbSearchCity" type="text" id="ctl00_div_ucSearch_tbSearchCity" tabindex="2" class="tbSearchOption school district" />
+                    </li>
+                    <li>
+                        <label for="ctl00_div_ucSearch_tbSearchZip" id="ctl00_div_ucSearch_zipLabel" class="optionLabel">Zip Code:</label>
+                         <input name="ctl00$div$ucSearch$tbSearchZip" type="text" id="ctl00_div_ucSearch_tbSearchZip" class="tbSearchOption school district" />
+                    </li>
+                    <li id="ctl00_div_ucSearch_countyListItem">
+                        <label for="ctl00_div_ucSearch_tbSearchCounty" id="ctl00_div_ucSearch_countyLabel" class="optionLabel">County:</label>
+                        <input name="ctl00$div$ucSearch$tbSearchCounty" type="text" id="ctl00_div_ucSearch_tbSearchCounty" tabindex="3" class="tbSearchOption school district" />
+                    </li>
+                    <li>
+                        <label for="ctl00_div_ucSearch_ddlSearchState" id="ctl00_div_ucSearch_stateLabel" class="optionLabel">State:</label>
+                        <select name="ctl00$div$ucSearch$ddlSearchState" id="ctl00_div_ucSearch_ddlSearchState" tabindex="4" class="ddlStates school district">
+			<option value="">Select a state</option>
+			<option value="AL">Alabama</option>
+			<option value="AK">Alaska</option>
+			<option value="AZ">Arizona</option>
+			<option value="AR">Arkansas</option>
+			<option value="CA">California</option>
+			<option value="CO">Colorado</option>
+			<option value="CT">Connecticut</option>
+			<option value="DE">Delaware</option>
+			<option value="DC">District of Columbia</option>
+			<option value="FL">Florida</option>
+			<option value="GA">Georgia</option>
+			<option value="HI">Hawaii</option>
+			<option value="ID">Idaho</option>
+			<option value="IL">Illinois</option>
+			<option value="IN">Indiana</option>
+			<option value="IA">Iowa</option>
+			<option value="KS">Kansas</option>
+			<option value="KY">Kentucky</option>
+			<option value="LA">Louisiana</option>
+			<option value="ME">Maine</option>
+			<option value="MD">Maryland</option>
+			<option value="MA">Massachusetts</option>
+			<option value="MI">Michigan</option>
+			<option value="MN">Minnesota</option>
+			<option value="MS">Mississippi</option>
+			<option value="MO">Missouri</option>
+			<option value="MT">Montana</option>
+			<option value="NE">Nebraska</option>
+			<option value="NV">Nevada</option>
+			<option value="NH">New Hampshire</option>
+			<option value="NJ">New Jersey</option>
+			<option value="NM">New Mexico</option>
+			<option value="NY">New York</option>
+			<option value="NC">North Carolina</option>
+			<option value="ND">North Dakota</option>
+			<option value="OH">Ohio</option>
+			<option value="OK">Oklahoma</option>
+			<option value="OR">Oregon</option>
+			<option value="PA">Pennsylvania</option>
+			<option value="RI">Rhode Island</option>
+			<option value="SC">South Carolina</option>
+			<option value="SD">South Dakota</option>
+			<option value="TN">Tennessee</option>
+			<option value="TX">Texas</option>
+			<option value="UT">Utah</option>
+			<option value="VT">Vermont</option>
+			<option value="VA">Virginia</option>
+			<option value="WA">Washington</option>
+			<option value="WV">West Virginia</option>
+			<option value="WI">Wisconsin</option>
+			<option value="WY">Wyoming</option>
+
+		</select>
+                    </li>
+                    <li>
+                        <div style="float: left; width: 160px;">
+                            <span id="ctl00_div_ucSearch_yearLabel" class="optionLabel">Survey Year(s):</span>
+                        </div>
+                        <div style="float: left;">
+                            <span id="ctl00_div_ucSearch_cblYears"><input id="ctl00_div_ucSearch_cblYears_0" type="checkbox" name="ctl00$div$ucSearch$cblYears$0" tabindex="5" /><label for="ctl00_div_ucSearch_cblYears_0">2000</label><input id="ctl00_div_ucSearch_cblYears_1" type="checkbox" name="ctl00$div$ucSearch$cblYears$1" tabindex="5" /><label for="ctl00_div_ucSearch_cblYears_1">2004</label><input id="ctl00_div_ucSearch_cblYears_2" type="checkbox" name="ctl00$div$ucSearch$cblYears$2" tabindex="5" /><label for="ctl00_div_ucSearch_cblYears_2">2006</label><input id="ctl00_div_ucSearch_cblYears_3" type="checkbox" name="ctl00$div$ucSearch$cblYears$3" tabindex="5" /><label for="ctl00_div_ucSearch_cblYears_3">2009</label><input id="ctl00_div_ucSearch_cblYears_4" type="checkbox" name="ctl00$div$ucSearch$cblYears$4" tabindex="5" /><label for="ctl00_div_ucSearch_cblYears_4">2011</label><input id="ctl00_div_ucSearch_cblYears_5" type="checkbox" name="ctl00$div$ucSearch$cblYears$5" checked="checked" tabindex="5" /><label for="ctl00_div_ucSearch_cblYears_5">2013</label></span>
+                        </div>
+                    </li>
+                </ul>
+                <div id="divSearchButtons" style ="width :400px; padding-right :10px;">
+                    <input type="submit" name="ctl00$div$ucSearch$btnSearchParams" value="Search" onclick="return hideExpandedSearchFields(&#39;School&#39;);" id="ctl00_div_ucSearch_btnSearchParams" tabindex="15" title="Search" class="left" onmousedown="setButtonClicked(true);" />
+                    <!--<a id="ctl00_div_ucSearch_clearFieldsButton" href="javascript:__doPostBack(&#39;ctl00$div$ucSearch$clearFieldsButton&#39;,&#39;&#39;)">Clear search fields</a>-->
+                    <div class ="left" style ="width :120px; padding-left :20px;">
+                       <a href="javascript:void(0);"  onclick="ClearForm()">Clear search fields</a>
+                    </div>
+                    <div class ="left" style ="width :150px;">
+                        <literal class ="left"> <strong>Reset all search boxes</strong> </literal>
+                    </div>
+                    <div class ="left" style ="width :120px; padding-left :20px; padding-top :20px;">
+                           <a id="ctl00_div_ucSearch_deleteList" href="javascript:__doPostBack(&#39;ctl00$div$ucSearch$deleteList&#39;,&#39;&#39;)">Delete List</a>
+                    </div>
+                    <div class ="left" style ="width :150px;padding-top :20px;">
+                        <literal class ="left"> <strong>Delete list of schools/districts</strong> </literal>
+                    </div>
+                    <div id="upSRProgress" style="display: none; margin-top: 5px;">
+                        <div class="divWaitImage">
+                            <img alt="Please Wait..." class="imgSpinner" src="images/ajax_spinner.gif" />
+                        </div>
+                        <div class="divWaitText">
+                            Searching...</div>
+                    </div>
+                </div>
+                <div style="float: right; width: 45%; padding: 5px;">
+                    <ul>
+                    <strong>Search Tip:</strong>
+                    <li>
+                    You do not need to enter information for all fields,
+                    but you must enter information for at least one field. After specifying your search
+                    criteria, click the Search button. A maximum of 2500 schools or districts can be
+                    displayed.
+                    </li>
+                    </ul>&nbsp;
+                    <a href="javascript:void(0);" onclick="showHideSearchTip(this,'divSearchTip');" class="at" title="View or hide search tips">Show Additional Search Tips</a>
+
+                </div>
+            </div>
+            <div class="divSearchText" style="width:900px;">
+                <div style="clear: both; float: left; padding: 5px 5px 5px 0px;">
+                    <a id="ctl00_div_ucSearch_aToggle" class="aToggle" title="Toggle additional search options" onclick="ToggleSearchOptions(&#39;School&#39;);" style="cursor: pointer;">
+                        <img id="imgToggle" class="imgToggle" src="images/expand.gif" alt="Toggle additional search options" />
+                    </a>
+                </div>
+                <div style="float: left; padding: 5px 0px 5px 0px;">
+                    <a id="ctl00_div_ucSearch_aSearchOptions" title="Toggle additional search options" onclick="ToggleSearchOptions(&#39;School&#39;);" style="cursor: pointer;">Additional Search Options </a>
+                </div>
+
+            </div>
+          
+            
+<div id="divSchoolSearchDetail" style="display: none;">
+    <div class="searchOptions">
+        <ul class="optionsList">
+            <li>
+                <label for="ctl00_div_ucSearch_schoolOptions_tbSearchDistrictNCES" id="ctl00_div_ucSearch_schoolOptions_ncesDistrictLabel" class="optionLabel">District ID:</label>
+                <input name="ctl00$div$ucSearch$schoolOptions$tbSearchDistrictNCES" type="text" id="ctl00_div_ucSearch_schoolOptions_tbSearchDistrictNCES" class="tbSchoolNumber" />
+            </li>
+            <li>
+                <label for="ctl00_div_ucSearch_schoolOptions_tbSearchSchoolNCES" id="ctl00_div_ucSearch_schoolOptions_ncesSchoolLabel" class="optionLabel">School ID:</label>
+                <input name="ctl00$div$ucSearch$schoolOptions$tbSearchSchoolNCES" type="text" id="ctl00_div_ucSearch_schoolOptions_tbSearchSchoolNCES" class="tbSchoolNumber" />
+            </li>
+            <li>
+                <label for="ctl00_div_ucSearch_schoolOptions_tbSearchStreet" id="ctl00_div_ucSearch_schoolOptions_streetLabel" class="optionLabel">School Street Address:</label>
+                <input name="ctl00$div$ucSearch$schoolOptions$tbSearchStreet" type="text" id="ctl00_div_ucSearch_schoolOptions_tbSearchStreet" class="tbSchoolNumber" />
+            </li>
+            <li>
+                <label for="ctl00_div_ucSearch_schoolOptions_ddlOCR" id="ctl00_div_ucSearch_schoolOptions_OCRLabel" class="optionLabel">OCR Field Office:</label>
+                <select name="ctl00$div$ucSearch$schoolOptions$ddlOCR" id="ctl00_div_ucSearch_schoolOptions_ddlOCR" class="ddlOCR">
+			<option value="">Select a region</option>
+			<option value="Eastern - Boston">Eastern - Boston</option>
+			<option value="Eastern - New York">Eastern - New York</option>
+			<option value="Eastern - Philadelphia">Eastern - Philadelphia</option>
+			<option value="Midwestern - Chicago">Midwestern - Chicago</option>
+			<option value="Midwestern - Cleveland">Midwestern - Cleveland</option>
+			<option value="Midwestern - Kansas City">Midwestern - Kansas City</option>
+			<option value="Southern - Atlanta">Southern - Atlanta</option>
+			<option value="Southern - Dallas">Southern - Dallas</option>
+			<option value="Southern - District of Columbia">Southern - District of Columbia</option>
+			<option value="Western - Denver">Western - Denver</option>
+			<option value="Western - San Francisco">Western - San Francisco</option>
+			<option value="Western - Seattle">Western - Seattle</option>
+
+		</select>
+            </li>
+            <li>
+                <label for="ctl00_div_ucSearch_schoolOptions_tbStudentNumber" id="ctl00_div_ucSearch_schoolOptions_studentNumberLabel" class="optionLabel"># of Students:</label>
+                <input name="ctl00$div$ucSearch$schoolOptions$tbStudentNumber" type="text" id="ctl00_div_ucSearch_schoolOptions_tbStudentNumber" class="tbStudentNumber" />
+                <label for="ctl00_div_ucSearch_schoolOptions_ddlStudentNumber" id="ctl00_div_ucSearch_schoolOptions_ddlStudentNumberLabel" class="hidden"># of students operator</label>
+                <select name="ctl00$div$ucSearch$schoolOptions$ddlStudentNumber" id="ctl00_div_ucSearch_schoolOptions_ddlStudentNumber">
+			<option value=">=">or more</option>
+			<option value="&lt;=">or less</option>
+
+		</select>
+            </li>
+        </ul>
+        <ul class="optionsList">
+            <li>
+                <div>
+                    <div style="float: left; width: 160px;">
+                        <span id="ctl00_div_ucSearch_schoolOptions_gradesLabel" class="optionLabel">Show only schools with Grades:</span>
+                    </div>
+                    <div style="float: left;">
+                        <span id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool" class="cblGrades"><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_0" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$0" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_0">Preschool</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_1" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$1" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_1">K</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_2" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$2" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_2">1</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_3" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$3" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_3">2</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_4" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$4" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_4">3</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_5" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$5" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_5">4</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_6" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$6" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_6">5</label><br /><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_7" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$7" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_7">6</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_8" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$8" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_8">7</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_9" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$9" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_9">8</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_10" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$10" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_10">9</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_11" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$11" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_11">10</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_12" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$12" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_12">11</label><input id="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_13" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cblGradesSchool$13" /><label for="ctl00_div_ucSearch_schoolOptions_cblGradesSchool_13">12</label><br /></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div style="float: left; width: 160px;">
+                    <span class="optionLabel">Show only schools that have ALL of the following: </span>
+                </div>
+                <div style="float: left; margin-left: 3px;">
+                    <ul>
+                        <li>
+                            <input id="ctl00_div_ucSearch_schoolOptions_cbSpecialEd" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cbSpecialEd" /><label for="ctl00_div_ucSearch_schoolOptions_cbSpecialEd">Provide only special education services</label></li>
+                        <li>
+                            <input id="ctl00_div_ucSearch_schoolOptions_cbAbilityGrouping" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cbAbilityGrouping" /><label for="ctl00_div_ucSearch_schoolOptions_cbAbilityGrouping">Provide ability grouping</label></li>
+                        <li>
+                            <input id="ctl00_div_ucSearch_schoolOptions_cbMagnets" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cbMagnets" /><label for="ctl00_div_ucSearch_schoolOptions_cbMagnets">Are magnet schools or offer magnet programs</label></li>
+                        <li>
+                            <input id="ctl00_div_ucSearch_schoolOptions_cbCharterSchools" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cbCharterSchools" /><label for="ctl00_div_ucSearch_schoolOptions_cbCharterSchools">Are charter schools</label></li>
+                        <li>
+                            <input id="ctl00_div_ucSearch_schoolOptions_cbAltSchools" type="checkbox" name="ctl00$div$ucSearch$schoolOptions$cbAltSchools" /><label for="ctl00_div_ucSearch_schoolOptions_cbAltSchools">Are alternative schools</label></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+            
+        
+	</div>
+        <div id="divSearchTip" style="clear: both; float: left; display:none; width:95%;" class="st">
+            
+            <ul>
+            <li> Except for Survey Year, adding additional data in the
+            search form will narrow your search and return fewer results, because you will only
+            see results that meet ALL your criteria. For example, if you enter data into the
+            School Name field and the City field, your results will only include schools that
+            match the criteria you entered for School Name and for City. The Survey Year field
+            is different: selecting more years will show you results from any of those years.
+            For example, if you select only 2011 (which is the default), your results will only
+            include schools/districts with data from the 2011 collection. If 2009 and 2011 are selected,
+            your results will also include schools/districts with data from the 2009 collection.
+            </li>
+            <li>
+            Use the Additional Search Options fields in conjunction
+            with or instead of the basic school information. Add more criteria to make the search
+            more specific. If you get no results, remove some of the criteria. Note that the
+            search will yield only schools or districts that meet ALL of the criteria you enter
+            or check.
+            <br />&nbsp;<br /><a href="javascript:void(0);" onclick="hideSearchTip();" title="Hide search tips">Hide Search Tips</a>
+            </li>
+            </ul>
+        </div>      
+    <div id="ctl00_div_ucSearch_upSPProgress" class="upSPProgress" style="display: none;">
+        <div class="divWaitImage">
+            <img id="imgSpinner" alt="Please Wait..." class="imgSpinner" src="images/ajax_spinner.gif">
+            </img>
+        </div>
+        <div class="divWaitText">
+            Loading search...</div>
+    </div>
+</div>
+
+                </div>
+                <div style="clear: both; padding: 4px;">
+                    <div id="ctl00_div_messagesPanel">
+		
+                            <span id="ctl00_div_messagesLabel" class="messagesLabel"><b><font size="3"></font></b></span>
+                        
+	</div>
+                </div>
+                <div id="divPleaseWait">
+                    <img src="images/ajax_spinner.gif" alt="Please Wait" style="vertical-align:middle;" /> &nbsp;&nbsp;&nbsp; <span style="color:red; font-weight:bold; font-size: 16px;">Gathering data for report...</span> 
+                    <br />This report could initially take up to several minutes to generate based on:
+                    <br />&nbsp;&nbsp;&nbsp;1. The number of schools/districts you selected.
+                    <br />&nbsp;&nbsp;&nbsp;2. The report you selected.
+                    <br />&nbsp;&nbsp;&nbsp;3. The number of records returned in this report.
+                    <br />&nbsp;&nbsp;&nbsp;4. Your Internet connection speed.  
+                    <br />Once the data has been downloaded you will be able to page through the resulting records quickly.
+                    </div>
+                <div id="divResultsContainer" style="clear: both;">
+                    <table style="width:100%; border-collapse:collapse; border-spacing:0">
+                        <tr>
+                            <td valign="top" width="76%">
+<div id="divSearchResults">
+    <div id="ctl00_div_ucSearchResults_upSearchResults">
+		
+            
+            
+            
+            
+        
+	</div>
+</div></td>
+                            <td valign="top" width="24%"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    
+<div id="divReportViewer" class="popup">
+
+    <div id="ctl00_div_ucReportViewer_upReportViewer">
+		
+            <div id="divReportTitle" class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"
+                style="height: 25px">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <span id="sReportTitle">
+                                
+                            </span>
+                        </td>
+                        <td>
+                            <span style="cursor:pointer" onclick="showReportInfo();">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:8px; font-weight:normal;" id="rptInfo" onclick="hideReportInfo();"></span>
+                        </td>
+                        <td align="right">
+                            <input type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only noShowOnEmpty"
+                                onclick="printReportViewer();" value=" Print " /> 
+                            <input type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                onclick="closeReportViewer();" value=" Close " />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="reportContent">
+            
+                <div id="divReportOptions">
+                    Export format:&nbsp;<select name="ctl00$div$ucReportViewer$ddlExport" id="ctl00_div_ucReportViewer_ddlExport" title="Choose format for report export" class="ddlExport">
+			<option value="csv">Comma-delimited ASCII (*.csv)</option>
+			<option value="excel">Excel 2003+ (*.xls)</option>
+			<option value="pdf">Portable document (*.pdf)</option>
+
+		</select>
+                    &nbsp;
+                    <input type="submit" name="ctl00$div$ucReportViewer$btnExport" value="Export" onclick="javascript:SetWidths();" id="ctl00_div_ucReportViewer_btnExport" />
+                    <span id="divGoBack" style="display: none;">&nbsp;|&nbsp;Go back to table:
+                        <input id="btnViewTable" class="btnExport" type="button" onclick="ViewTable();" value="Go" />
+                    </span>
+                </div>
+                <div id="divChartContainer" class="chartpopup" style="display: none;">
+                    <div id="divChartTitle" class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"
+                        style="height: 35px">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="spanChartTitle"></span>
+                                </td>
+                                <td>
+                                </td>
+                                <td align="right">
+                                    <input type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only noShowOnEmpty"
+                                        onclick="printChartViewer();" value=" Print " /> 
+                                    <input type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                        onclick="closeChartViewer();" value=" Close " />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="divChart">
+                        <div id="printChartArea">
+                            <script id="dxss_240311805" type="text/javascript">
+<!--
+window.__aspxServerFormID = 'aspnetForm';
+window.__aspxEmptyImageUrl = '/flex/WebResource.axd?d=idvUtMVq8EunDQEjl3auh0rOczAul97owbK5iL0CNjcHwv_7y2c1fEpf8y8paaHNO_xiHCX8BCKPruuSxxdw3e2aTyuQnsWO4meNR_3z6q_ZiqCg9N7mokO6WmH8aiAKahzqiAiPMsGvo_2gV84cMA2&t=636105312280000000';
+//-->
+</script>
+
+		<script id="dxis_1488814516" src="WebResource.axd@d=FVfjvv5t7zcMrwByv6wB32VmpdhIYiBXliyXXbYU688hV_F5eRiWtj4fNuQHoj7l7GYRVOuhSSVKOln5KYc1vkBzewDL9BFQGIWiOzoRX_o57LQux5dX3XHt7sojkORBVFyyUJ5vqbXevc6HlD8UTQ2&amp;t=636105312280000000" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="WebResource.axd@d=fYmyfJqRR3iyXRXQ297t3S6qVYKfdssqrzCY8ex2tTGRH-TLuxZDwZH9VYVSAQVyxWsu4ftXPLKiRTQ8esi3inWoUgaKyWXbQptGQZhMglpNY0Jnr66PCALg2ScZUoMFKqsqGNrAOqRTtoVRt4nndg2&amp;t=636105312280000000.css" />
+<div id="ctl00_div_ucReportViewer_ASPxCallbackPanel1">
+			
+                                        <img id="ctl00_div_ucReportViewer_ASPxCallbackPanel1_WebChartControl1" src="Reports.aspx@type=school&amp;DXCache=70ff066f-cab5-40b0-b135-ed4bd9c6dc97" alt="The chart." style="height:700px;width:1200px;border-width:0px;" /><input type="hidden" name="ctl00$div$ucReportViewer$ASPxCallbackPanel1$WebChartControl1$CallbackState" id="ctl00_div_ucReportViewer_ASPxCallbackPanel1_WebChartControl1_CallbackState" /><table id="ctl00_div_ucReportViewer_ASPxCallbackPanel1_WebChartControl1_LP" cellspacing="0" cellpadding="0" border="0" style="color:Black;background-color:White;border-color:#7B7B7B;border-width:1px;border-style:Solid;font-family:Tahoma;font-size:10pt;border-collapse:collapse;left:0px;top:0px;z-index:30000;display:none;">
+	<tr>
+		<td class="dx" style="padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;"><img src="WebResource.axd@d=Uyy8v3nAPJzQJXPu85pxg8REoTH40_XYcDKqZ6khjRF9IQ2V-eN_mm5OCRTqfjIenyFtEfIvegdmAafctIT308HyLTPtnTyT3JsnfIsZWls4lZxaNAeQN7Fxz9tInDqdPbMmY6nYCDgECeSs69d6uF_9GLarQR865y90rBxU5BOXoxyKdBUGSmFtZ1AtfN0m0&amp;t=636105312280000000" alt="" align="middle" style="border-width:0px;" /></td><td class="dx" style="color:Black;font-family:Tahoma;font-size:10pt;text-align:Center;padding-left:0px;padding-right:5px;padding-top:5px;padding-bottom:5px;">Loading&hellip;</td>
+	</tr>
+</table>
+                                    
+		</div><table id="ctl00_div_ucReportViewer_ASPxCallbackPanel1_LP" class="dxcpLoadingPanel" cellspacing="0" cellpadding="0" border="0" style="left:0px;top:0px;z-index:30000;display:none;">
+			<tr>
+				<td class="dx" style="padding-right:8px;"><img src="WebResource.axd@d=a2Yjo_ucOGOOAj4CpG36ZZlLFDXNl5Nsdixy2kwD_8lJFrpe9mSrvOTk10PkblTJBj5Smn_ZGS70I7J0nhmGdnBtVd8HKu-GMUcqvrfFsoBBdGXYts1-F7LltuMJsbaQ9THbYLxHQPK40aheDxvGbg2&amp;t=636105312280000000" alt="" align="middle" border="0" /></td><td class="dx" style="padding-left:0px;">Loading chart...</td>
+			</tr>
+		</table><script id="dxss_2044604086" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientCallbackPanel('ctl00_div_ucReportViewer_ASPxCallbackPanel1');
+window['panel'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('ctl00$div$ucReportViewer$ASPxCallbackPanel1',arg,aspxCallback,'ctl00_div_ucReportViewer_ASPxCallbackPanel1',aspxCallbackError,true); };
+dxo.uniqueID = 'ctl00$div$ucReportViewer$ASPxCallbackPanel1';
+dxo.BeginCallback.AddHandler(function(s, e) {ToggleButtons(false);});
+dxo.EndCallback.AddHandler(function(s, e) {ToggleButtons(true, this);});
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="reportPrintContainer">
+                    <div id="divReportViewerContainer">
+                        <script id="dxis_828960585" src="WebResource.axd@d=cLo6TmmOdvV2f6KGISnloxJbEJtDu_Z141Zp1GoIL_scjS-dtrF7NjE6aay8PKM1V9clNXsXLt5fni14_UbkL7c5QMPjDX9v9A7T-YKd2rAIcjrNyQmVxN3GQKkzoppt0NY_9xPbuXPsNP3J5mQ8V8MuxjBeujtk8ktFNwsA7D6SuGnrDRP_DPhYBcfSciUw0&amp;t=636105312280000000" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="WebResource.axd@d=wqb92MNwUI5rJpBIJW14Ytyq2PxijNqK3-fyUn9Ygu6AARFx_AoJJnMmRdVfwlKgIBIKnmCAFBVcTBSffHT-YWjBzH3633Z1DHbDlzrP4nFyQE9-42irKLJ0vl8JBUM7XGILjMR8CH9oOPHGpzGagjasD5xss1nLM3P3hiI8G6bSB2OiTmGFQRpKq_NNW5uE0&amp;t=636105312280000000.css" />
+<table class="dxpgControl" cellspacing="0" cellpadding="0" id="ctl00_div_ucReportViewer_ASPxPivotGrid1" border="0">
+			<tr>
+				<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_MTD" class="dxpgContainerCell"><table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_MT" class="dxpgMainTable" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
+					<tr>
+						<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_pgArea2" class="dxpgArea dxpgFilterArea dxpgEmptyArea" colspan="2">Drop Filter Fields Here</td>
+					</tr><tr>
+						<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_pgArea3" class="dxpgArea dxpgDataArea dxpgEmptyArea" colspan="1">Drop Data Items Here</td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_pgArea1" class="dxpgArea dxpgColumnArea dxpgEmptyArea" colspan="1">Drop Column Fields Here</td>
+					</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_ACCRowArea">
+						<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_pgArea0" class="dxpgArea dxpgRowArea dxpgEmptyArea" rowspan="1">Drop Row Fields Here</td><th id="ctl00_div_ucReportViewer_ASPxPivotGrid1_C0" class="dxpgColumnFieldValue dxpgColumnTotalFieldValue dxpgColumnGrandTotalFieldValue" scope="col" style="text-align:Center;">Grand Total</th>
+					</tr><tr>
+						<th id="ctl00_div_ucReportViewer_ASPxPivotGrid1_R0" class="dxpgRowFieldValue dxpgRowTotalFieldValue dxpgRowGrandTotalFieldValue" scope="row">Grand Total</th><td class="dxpgCell dxpgGrandTotalCell" style="border-left-style:None;border-top-style:None;">&nbsp;</td>
+					</tr>
+				</table><input type="hidden" name="ctl00$div$ucReportViewer$ASPxPivotGrid1$CallbackState" id="ctl00_div_ucReportViewer_ASPxPivotGrid1_CallbackState" value="FLDS_CBDEL_Y2JgYPgEhAA=_CBDEL_FTR_CBDEL__CBDEL_FVS_CBDEL_Y2CAAAA=_CBDEL_FITEMS_CBDEL_AAAAAgAAAAAAAAAAAQAAAAL/////AAAAAAAAAAAAAAAAAAAAAP////8A/////wAAAAIAAAAAAAAAAAEAAAAC/////wAAAAAAAAAAAAAAAAAAAAD/////AP////8=_CBDEL_DSS_CBDEL_CQ==_CBDEL_FDT_CBDEL_AAAAAA==_CBDEL_" /><div id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM" style="position:absolute;left:0px;top:0px;z-index:19998;visibility:hidden;display:none;">
+					<table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXMST_" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;position:relative;">
+						<tr>
+							<td class="dxmSubMenu"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
+								<tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI0_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_HM&#39;, &#39;0&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI0_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI0_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI0_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Refresh Data</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI0_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_IS">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td class="dxmSubMenuSeparator" align="center" colspan="1"><table cellspacing="0" cellpadding="0" border="0">
+										<tr>
+											<td></td>
+										</tr>
+									</table></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_ISI">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_HM&#39;, &#39;1&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Hide</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI1_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI2_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_HM&#39;, &#39;2&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI2_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI2_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI2_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Hide Field List</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI2_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI3_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_HM&#39;, &#39;3&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI3_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI3_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI3_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Show Field List</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI3_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI4_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_HM&#39;, &#39;4&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI4_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI4_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_HM_DXI4_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Show Prefilter</a></td>
+								</tr>
+							</table></td><td style="background:url('WebResource.axd@d=DDNToevdec9Ezq6QoxwpvITUFTmJ_DG_HtiwiYYxHKgmNEr32YFVXgi8GT9Cw-C3ItEqnuImuCMihJR4eIpms9fDAbp1oKwtbpzDbxkzeaWvv5cTUnFy65p9oQqaDe-4RiCykRNlAM08r1BiuwKckMa-JN1f4kOAJiomksMqeKE1&amp%3Bt=636105312280000000') no-repeat left top;"></td>
+						</tr><tr>
+							<td style="background:url('WebResource.axd@d=3n5MHhc6MPz3US9AG2GpX3bNazM82Zhe0Urn9_jYBEQAXA1dAEsLR8BQdG8M2O5YecH1hC66Onm6yWIlW0pF9SM5Y3WHE5W8ZnO3dfKxJHhc8OQequDACmYzJessKHJDXZW5kXxOaZFr8Hd1nFmbiPlMD9tOde4ITbDdFrlxJEI1&amp%3Bt=636105312280000000') no-repeat left top;"></td><td><img src="WebResource.axd@d=qgNfVVv6wbYCRd6fRr6CFjpFXqabmIFpy6APAPif8m1qom9M8bLwcAOfgpxIn_cM-0yCPFvIJGU3e-Z12Tev_oPTDGzgxvZRwsX02vDSOCtKFysAlw5dc_L6Y7kAu3DTyspiryiLe4-gQPi8KAJvv2a3MmWZUHvk8BqCa-z4Xs41&amp;amp%3Bt=636105312280000000" alt="" height="5" width="5" border="0" /></td>
+						</tr>
+					</table>
+				</div><script id="dxss_1478575543" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_div_ucReportViewer_ASPxPivotGrid1_HM',[['','',['DXM_','DXMBC_']],['dxmSubMenuItemHoverWithImage','',['DXI0_','DXI1_','DXI2_','DXI3_','DXI4_'],['I','N','T','P']]]);
+
+var dxo = new ASPxClientPopupMenu('ctl00_div_ucReportViewer_ASPxPivotGrid1_HM');
+window['ctl00_div_ucReportViewer_ASPxPivotGrid1_HM'] = dxo;
+dxo.uniqueID = 'ctl00$div$ucReportViewer$ASPxPivotGrid1$HM';
+aspxAddDisabledItems('ctl00_div_ucReportViewer_ASPxPivotGrid1_HM',[['dxmDisabled','',['DXI0_','DXI1_','DXI2_','DXI3_','DXI4_'],['I','N','T','P']]]);
+dxo.ItemClick.AddHandler(pivotGrid_OnHeaderMenuClick);
+dxo.CreateItems([['Refresh',,,,,[]],['Hide',,,,,[]],['HideList',,,,,[]],['ShowList',,,,,[]],['ShowPrefilter',,,,,[]]]);
+dxo.InlineInitialize();
+
+//-->
+</script>
+<div id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM" style="position:absolute;left:0px;top:0px;z-index:19998;visibility:hidden;display:none;">
+					<table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXMST_" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;position:relative;">
+						<tr>
+							<td class="dxmSubMenu"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
+								<tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI0_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM&#39;, &#39;0&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI0_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI0_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI0_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Expand</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI0_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI1_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM&#39;, &#39;1&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI1_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI1_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI1_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Collapse</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI1_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_IS">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td class="dxmSubMenuSeparator" align="center" colspan="1"><table cellspacing="0" cellpadding="0" border="0">
+										<tr>
+											<td></td>
+										</tr>
+									</table></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_ISI">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM&#39;, &#39;2&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Expand All</a></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI2_II">
+									<td class="dxmSubMenuGutter" style="cursor:pointer;"></td><td></td><td colspan="1"></td>
+								</tr><tr id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI3_" onclick="aspxMIClick(event, &#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM&#39;, &#39;3&#39;)">
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI3_I" class="dxmSubMenuGutter dxmSubMenuItemWithImage dxpgMenuItem" width="16" style="cursor:pointer;padding-right:3px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI3_N" class="dxmSubMenuItemWithImage dxpgMenuItem" height="1" width="7" style="cursor:pointer;padding-left:0px!important;border-left-width:0px!important;padding-right:0px!important;border-right-width:0px!important;"><div style="overflow:hidden;">
+
+									</div></td><td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM_DXI3_T" class="dxmSubMenuItemWithImage dxpgMenuItem" width="100%" style="cursor:pointer;border-left-width:0px!important;padding-left:0px!important;"><a onfocus="aspxUpdateFocusedState(event);" onblur="aspxClearFocusedState(event);" href="javascript:;">Collapse All</a></td>
+								</tr>
+							</table></td><td style="background:url('WebResource.axd@d=DDNToevdec9Ezq6QoxwpvITUFTmJ_DG_HtiwiYYxHKgmNEr32YFVXgi8GT9Cw-C3ItEqnuImuCMihJR4eIpms9fDAbp1oKwtbpzDbxkzeaWvv5cTUnFy65p9oQqaDe-4RiCykRNlAM08r1BiuwKckMa-JN1f4kOAJiomksMqeKE1&amp%3Bt=636105312280000000') no-repeat left top;"></td>
+						</tr><tr>
+							<td style="background:url('WebResource.axd@d=3n5MHhc6MPz3US9AG2GpX3bNazM82Zhe0Urn9_jYBEQAXA1dAEsLR8BQdG8M2O5YecH1hC66Onm6yWIlW0pF9SM5Y3WHE5W8ZnO3dfKxJHhc8OQequDACmYzJessKHJDXZW5kXxOaZFr8Hd1nFmbiPlMD9tOde4ITbDdFrlxJEI1&amp%3Bt=636105312280000000') no-repeat left top;"></td><td><img src="WebResource.axd@d=qgNfVVv6wbYCRd6fRr6CFjpFXqabmIFpy6APAPif8m1qom9M8bLwcAOfgpxIn_cM-0yCPFvIJGU3e-Z12Tev_oPTDGzgxvZRwsX02vDSOCtKFysAlw5dc_L6Y7kAu3DTyspiryiLe4-gQPi8KAJvv2a3MmWZUHvk8BqCa-z4Xs41&amp;amp%3Bt=636105312280000000" alt="" height="5" width="5" border="0" /></td>
+						</tr>
+					</table>
+				</div><script id="dxss_1957680973" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM',[['','',['DXM_','DXMBC_']],['dxmSubMenuItemHoverWithImage','',['DXI0_','DXI1_','DXI2_','DXI3_'],['I','N','T','P']]]);
+
+var dxo = new ASPxClientPopupMenu('ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM');
+window['ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM'] = dxo;
+dxo.uniqueID = 'ctl00$div$ucReportViewer$ASPxPivotGrid1$FVM';
+aspxAddDisabledItems('ctl00_div_ucReportViewer_ASPxPivotGrid1_FVM',[['dxmDisabled','',['DXI0_','DXI1_','DXI2_','DXI3_'],['I','N','T','P']]]);
+dxo.ItemClick.AddHandler(pivotGrid_OnFieldValueMenuClick);
+dxo.CreateItems([['Expand',,,,,[]],['Collapse',,,,,[]],['ExpandAll',,,,,[]],['CollapseAll',,,,,[]]]);
+dxo.InlineInitialize();
+
+//-->
+</script>
+<input type="hidden" id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFieldsWS" name="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFieldsWS" value="0:0:-1:100:100:0:0:0:" />
+				<div id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_PW-1" style="position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+					<table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_PWST-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;position:relative;">
+						<tr>
+							<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields&#39;,-1)" height="170" width="150" style="cursor:default;"><table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_CLW-1" cellspacing="0" cellpadding="0" border="0" height="170" width="150" style="border-collapse:separate;">
+								<tr>
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_PWH-1" class="dxpcHeader dxpgCustomizationFieldsHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields&#39;,-1)" style="background-image:url(WebResource.axd@d=Szu78mZOgNZRnksyHHnVGr-l1y8gunspeHibjV5laQP4xUw1YipPqAK4Zzg_-j7MfPGhisFbGdNrrVLBuov6Uv0w-oguN00LVdpEWfb22Enw5qdqb5otK_uoUy8TY8FMCkjVphmVKVTqGkthObsMGONDo0vUYPH6s1Mlsbs4XI1HEDuwX4ySaU3SD2tuFH6c3BnAj3OTYiS95ocl6JVtEhGxWq);cursor:move;padding-left:6px;padding-right:2px;padding-top:2px;padding-bottom:2px;"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse:separate;">
+										<tr>
+											<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_PWH-1T" class="dxpc" width="100%">PivotGrid Field List</td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
+												<tr>
+													<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><a href="javascript:;"><img id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_HCB-1Img" src="WebResource.axd@d=5WWqEBeJQqDXvA9E2Evsal3DPMoRAU8qjGM53XTIhkn0LWroTPx0BOayvBatrS3x4ELTp1uLDJyjAu54fOsXSKQ9B86jBtuQDlsGhlHyXzwEKeqc5-aAtW2617c0dEUIKB90tLPvemtZRSduWfDGH0PjjUY3mnn2nfqCuTTBHncqUiiRXK97vvcc6rGphBWoiVKXEzAAuX0ezAMtOAETkavUPV" alt="[Close]" height="14" width="15" border="0" style="text-decoration:none;" /></a></td>
+												</tr>
+											</table></td>
+										</tr>
+									</table></td>
+								</tr><tr>
+									<td id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_PWC-1" class="dxpcContent dxpgCustomizationFieldsContent" height="100%" style="border-top-width:0px;"><div id="ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields_ContentDiv" style="overflow:auto;">
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse:collapse;">
+											<tr>
+												<td style="padding-left:3px;padding-right:3px;padding-top:3px;padding-bottom:0px;"></td>
+											</tr>
+										</table>
+									</div></td>
+								</tr>
+							</table></td><td style="background:url('WebResource.axd@d=DDNToevdec9Ezq6QoxwpvITUFTmJ_DG_HtiwiYYxHKgmNEr32YFVXgi8GT9Cw-C3ItEqnuImuCMihJR4eIpms9fDAbp1oKwtbpzDbxkzeaWvv5cTUnFy65p9oQqaDe-4RiCykRNlAM08r1BiuwKckMa-JN1f4kOAJiomksMqeKE1&amp%3Bt=636105312280000000') no-repeat left top;"></td>
+						</tr><tr>
+							<td style="background:url('WebResource.axd@d=3n5MHhc6MPz3US9AG2GpX3bNazM82Zhe0Urn9_jYBEQAXA1dAEsLR8BQdG8M2O5YecH1hC66Onm6yWIlW0pF9SM5Y3WHE5W8ZnO3dfKxJHhc8OQequDACmYzJessKHJDXZW5kXxOaZFr8Hd1nFmbiPlMD9tOde4ITbDdFrlxJEI1&amp%3Bt=636105312280000000') no-repeat left top;"></td><td><img src="WebResource.axd@d=qgNfVVv6wbYCRd6fRr6CFjpFXqabmIFpy6APAPif8m1qom9M8bLwcAOfgpxIn_cM-0yCPFvIJGU3e-Z12Tev_oPTDGzgxvZRwsX02vDSOCtKFysAlw5dc_L6Y7kAu3DTyspiryiLe4-gQPi8KAJvv2a3MmWZUHvk8BqCa-z4Xs41&amp;amp%3Bt=636105312280000000" alt="" height="5" width="5" border="0" /></td>
+						</tr>
+					</table>
+				</div><script id="dxss_1861567592" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields',[['dxpcCloseButtonHover','',['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields');
+window['ctl00_div_ucReportViewer_ASPxPivotGrid1_DXCustFields'] = dxo;
+dxo.uniqueID = 'ctl00$div$ucReportViewer$ASPxPivotGrid1$DXCustFields';
+dxo.PopUp.AddHandler(function(s, e) { DoCustomizationFieldsVisibleChanged(s); });
+dxo.CloseUp.AddHandler(function(s, e) { DoCustomizationFieldsVisibleChanged(s); });
+dxo.Shown.AddHandler(function(s, e) { DoUpdateContentSize(s); });
+dxo.BeforeResizing.AddHandler(function(s, e) { DoResetContentSize(s); });
+dxo.AfterResizing.AddHandler(function(s, e) { DoUpdateContentSize(s); });
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.left=100;
+dxo.top=100;
+dxo.InlineInitialize();
+
+//-->
+</script>
+<script id="dxss_210411172" type="text/javascript">
+<!--
+
+pivotGrid_FieldValueCMParams["ctl00_div_ucReportViewer_ASPxPivotGrid1"] = new Array(
+new Array("C0", "", false, "", -1, true, "ColumnArea", [], -1),
+new Array("R0", "", false, "", -1, true, "RowArea", [], -1));
+pivotGrid_HeaderCMParams["ctl00_div_ucReportViewer_ASPxPivotGrid1"] = new Array(
+new Array("pgArea2", "", ""),
+new Array("pgArea3", "", ""),
+new Array("pgArea1", "", ""),
+new Array("pgArea0", "", ""));
+
+
+pivotGrid_Groups["ctl00_div_ucReportViewer_ASPxPivotGrid1"] = new Array(
+);
+pivotGrid_AfterCallBackInitialize("ctl00_div_ucReportViewer_ASPxPivotGrid1");
+
+//-->
+</script>
+</td>
+			</tr>
+		</table><table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FPW" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;z-index:29000;display:none;position:absolute;left:0px;top:0px;">
+			<tr>
+				<td class="dxpgFilterWindow"><table cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td><div id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FPC" class="dxpgFilterItemsArea" style="overflow:auto!important;Height:100px;">
+
+						</div></td>
+					</tr><tr>
+						<td><table class="dxpgFilterButtonPanel" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td style="padding-left:7px;padding-right:0px;padding-top:7px;padding-bottom:7px;"><input type="submit" name="ctl00$div$ucReportViewer$ASPxPivotGrid1$FPWOK" value="OK" onclick="pivotGrid_ApplyFilter(&#39;ctl00_div_ucReportViewer_ASPxPivotGrid1&#39;);  return false;" id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FPWOK" class="dxpgFilterButton" /></td><td style="padding-left:7px;padding-right:0px;padding-top:7px;padding-bottom:7px;"><input type="submit" name="ctl00$div$ucReportViewer$ASPxPivotGrid1$ctl10" value="Cancel" onclick="pivotGrid_HideFilter(&#39;ctl00_div_ucReportViewer_ASPxPivotGrid1&#39;); return false;" class="dxpgFilterButton" /></td><td align="right" valign="bottom" width="100%"><img id="ctl00_div_ucReportViewer_ASPxPivotGrid1_FPWR" onmousedown="return __aspxClientPopupFilterWindow.onResizerMouseDown(event)" src="WebResource.axd@d=LRZ_RYhaBrlwg779kLmThXIO0lm7-MwPXCFRkaVPL9SisHy6ejvf3lS5gWhu_hm82ZuXdFs56JPXBtu_ZjjE2OOSMgj2SYeFfBzOprqdR_IpqL4f5N0E56dBUGa7pn2G3hFj1ajE95SB5uRaAFUXD1Fg2hjmj20MlUXlhVEoPYSqLNyn65anyoS6BhY3md5yzelxZHcu8CBxbiqrG4Paqw2&amp;am" alt="[Resize]" border="0" style="cursor:NW-resize;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td><td style="background:url('WebResource.axd@d=DDNToevdec9Ezq6QoxwpvITUFTmJ_DG_HtiwiYYxHKgmNEr32YFVXgi8GT9Cw-C3ItEqnuImuCMihJR4eIpms9fDAbp1oKwtbpzDbxkzeaWvv5cTUnFy65p9oQqaDe-4RiCykRNlAM08r1BiuwKckMa-JN1f4kOAJiomksMqeKE1&amp%3Bt=636105312280000000') no-repeat left top;"></td>
+			</tr><tr>
+				<td style="background:url('WebResource.axd@d=3n5MHhc6MPz3US9AG2GpX3bNazM82Zhe0Urn9_jYBEQAXA1dAEsLR8BQdG8M2O5YecH1hC66Onm6yWIlW0pF9SM5Y3WHE5W8ZnO3dfKxJHhc8OQequDACmYzJessKHJDXZW5kXxOaZFr8Hd1nFmbiPlMD9tOde4ITbDdFrlxJEI1&amp%3Bt=636105312280000000') no-repeat left top;"></td><td><img src="WebResource.axd@d=qgNfVVv6wbYCRd6fRr6CFjpFXqabmIFpy6APAPif8m1qom9M8bLwcAOfgpxIn_cM-0yCPFvIJGU3e-Z12Tev_oPTDGzgxvZRwsX02vDSOCtKFysAlw5dc_L6Y7kAu3DTyspiryiLe4-gQPi8KAJvv2a3MmWZUHvk8BqCa-z4Xs41&amp;amp%3Bt=636105312280000000" alt="" height="5" width="5" border="0" /></td>
+			</tr>
+		</table><img id="ctl00_div_ucReportViewer_ASPxPivotGrid1_IADD" src="WebResource.axd@d=JZQnp6LBF2nTRPhgjkahlz3GXEjcnDnSN0ey6xvCmXPiiY2LFL51zwtLh9TI47wjyqR4leFM5czEJkqvSpuyVGt84KaPgMrAMSiWUxTl1WbIKlZch-5gPCm3sNAVha3PCWd-WvxYnPd0eDwXRkFRywjj4f4yxlajMmJfvkI2xadf9pRroSVb_KBisa36TyNzUso86a_jbZJ90YFQhJ7yNw2&amp;am" alt="|" border="0" style="position:absolute;visibility:hidden;" /><img id="ctl00_div_ucReportViewer_ASPxPivotGrid1_IADU" src="WebResource.axd@d=jWH2GKTWTT38oXmVcwQWzsY6vXX_oQP_3RD5QUh_hFC68DuEPxdZdm5cXYQcVv9qzoab6cMOR7ZUdFC2-EVMf7pxHJKzrxbIe-COF9HxRoGYqlVgerPkTeTvfMhfr5tnxOtjW7wBC6fPGAbz2Jfxiq4kKg3UGv5alrMSFoDLKA2m_0jznLZc0hWXuWggQ0ZXlc2u5GeNeevYpnXQvIicZA2&amp;am" alt="|" border="0" style="position:absolute;visibility:hidden;" /><img id="ctl00_div_ucReportViewer_ASPxPivotGrid1_IDHF" src="WebResource.axd@d=A2rfytydK_km7VG7-oHsE78XIkHPbJGvWkQDr7U6lbM7IZHmwV6JIAbGKA-l3_XaKe6c2TjWBGALd6NrCr004CKBJBjIblr5XRWAqqGzlHZjP9pGLBgIeV8G3ZiJuwCNPnKYI0EUkP-ErF8HlP4mTMXUd9l44gdDFuhxFz59YuxGqxPr1yZBVps4rcYAcHie7FZigbRFtNPsbFNI5QfqfQ2&amp;am" alt="Hide" border="0" style="position:absolute;visibility:hidden;" /><img id="ctl00_div_ucReportViewer_ASPxPivotGrid1_IGS" src="WebResource.axd@d=qm4m7WiwdTg9lhCxzbRvxOKmBLhVuRQgLMldULX5jdGX7MB9x4rPbB7xcHP3QKtRfwxg_ob1cltOawuPf8Ve9KsVSc5G2AFDtsZRttFFI_tHd87lVNHQWlYWlWgqACZWmJq4V9CQLiVPZQj_dw8zqe3_egZW9iVKGahB9V_nt7h2QBaWvLSxN3gqcrMd_J5jR2coKRbD0cyHC9zX1K4WSg2&amp;am" alt="-" border="0" style="position:absolute;visibility:hidden;" /><table id="ctl00_div_ucReportViewer_ASPxPivotGrid1_LP" class="dxpgLoadingPanel" cellspacing="0" cellpadding="0" border="0" style="left:0px;top:0px;z-index:30000;display:none;">
+			<tr>
+				<td class="dx" style="padding-right:8px;"><img src="WebResource.axd@d=HvVBv3ZrmQojgnl_tCKOZkkAysdlUSh3jXz1ujSK_fBejUcty4nNCa29cOA8TzbfGKShFQ54D7dg02C_BltHqnUgm53ImV4gVN1qp6yfSgFlP6uiE8QJw2hjGuomqR3qGXAqy1D83tMwqhCge_fwA0XbgYoPGg_IVXY8jDsayM4NfGSixk5nXzPBlET1veXv0&amp;t=636105312280000000" alt="" align="middle" border="0" /></td><td class="dx" style="padding-left:0px;">Loading…</td>
+			</tr>
+		</table><div id="ctl00_div_ucReportViewer_ASPxPivotGrid1_LD" class="dxpgLoadingDiv" onmousemove="pivotGrid_ClearSelection();" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+
+		</div><script id="dxss_308710689" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientPivotGrid('ctl00_div_ucReportViewer_ASPxPivotGrid1');
+window['ctl00_div_ucReportViewer_ASPxPivotGrid1'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('ctl00$div$ucReportViewer$ASPxPivotGrid1',arg,aspxCallback,'ctl00_div_ucReportViewer_ASPxPivotGrid1',aspxCallbackError,true); };
+dxo.uniqueID = 'ctl00$div$ucReportViewer$ASPxPivotGrid1';
+dxo.BeforeCallback.AddHandler(function(s, e) {ToggleButtons(false);});
+dxo.AfterCallback.AddHandler(function(s, e) {ToggleButtons(true, this);});
+dxo.callBacksEnabled = true;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+                    </div>
+                    <div id="divReportFooter" style="margin-top: 5px; font-size: 10px;">
+                        
+                    </div>
+                  
+                    <table border="0" cellpadding="0" cellspacing="0" id="tableKey" name="tableKey">
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center; font-weight: bold;">
+                                Abbreviation Key
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                AP
+                            </th>
+                            <td>
+                                Advanced Placement
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                F
+                            </th>
+                            <td>
+                                Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                GED
+                            </th>
+                            <td>
+                                General Education Development
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                IDEA
+                            </th>
+                            <td>
+                                Individuals with Disabilities Education Act
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                LEP
+                            </th>
+                            <td>
+                                Limited English Proficient
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                M
+                            </th>
+                            <td>
+                                Male
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                SWD
+                            </th>
+                            <td>
+                                Students with Disabilities
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                SWOD
+                            </th>
+                            <td>
+                                Students without Disabilities
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                    <div id="divTipContainer" style="float: left; display: inline; width: 534px; margin: 10px 0px 0px 0px;">
+                        <div class="divTip" style="margin: 0px 0px 0px 5px;">
+                            To sort data in ascending or descending order, click the up or down arrow in the
+                            column heading for which you wish to see sorted data. The data will sort according
+                            to school or district, then category, then sex (where applicable).</div>
+                        <div class="divTip" style="margin: 0px 0px 0px 5px;">
+                            To hide a row or column, click the red X in that row or column heading. That row
+                            or column will be hidden from view for all entities in the report. To restore all
+                            columns and rows to view, click the "Restore hidden rows and columns" link.</div>
+                    </div>
+                    <div style="clear: both; padding-top: 5px;">
+                    </div>
+                </div>
+            
+            
+            </div>
+        
+	</div>
+    <!-- Hidden fields used to store info for displaying the report -->
+    <input class="hdnReport" type="text" id="tbReportID" name="tbReportID" />
+    <input class="hdnReport" type="text" id="tbEntityFilter" name="tbEntityFilter" />
+    <input class="hdnReport" type="text" id="tbEducationLevelID" name="tbEducationLevelID" />
+    <input class="hdnReport" type="text" id="tbIsSwitching" name="tbIsSwitching" value="0" />
+    <input class="hdnReport" type="text" id="tbIsFiltered" name="tbIsFiltered" value="0" />
+    <input class="hdnReport" type="text" id="tbIsPaging" name="tbIsPaging" value="0" />
+    <input class="hdnReport" type="text" id="tbPageIndex" name="tbPageIndex" value="0" />
+    <input class="hdnReport" type="text" id="tbMeasureType" name="tbMeasureType" value="0" />
+    <input class="hdnReport" type="text" id="tbFilterInfo" name="tbFilterInfo" />
+    <input class="hdnReport" type="text" id="tbSortInfo" name="tbSortInfo" />
+    <input class="hdnReport" type="text" id="tbWidths" name="tbWidths" />
+    <input class="hdnReport" type="text" id="tbExportType" name="tbExportType" value="csv" />
+    <input class="hdnReport" type="text" id="tbIsExporting" name="tbIsExporting" value="0" />
+    <input class="hdnReport" type="text" id="tbChartType" name="tbChartType" value="Bar" />
+    <input class="hdnReport" type="text" id="tbAjaxCallBack" name="tbAjaxCallBack" value="0" />
+
+</div>
+
+                </div>
+                <div id="divProfile" style="display: none;">
+                </div>
+            
+</div>
+    </div>
+    <div id="testDiv"></div>
+
+    </form>
+    <iframe id="CoverControls"frameborder="0" />
+
+</body>
+</html>

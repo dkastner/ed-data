@@ -1,0 +1,91 @@
+﻿
+.accordion .header 
+{
+    cursor:pointer;
+    background-color: #D2BB87;
+    border-bottom:solid 1px #57566f;
+}
+.accordion .header DIV
+{
+    cursor:pointer;
+	margin: 0px 0px 0px 0px ;
+	padding: 0px 0px 0px 0px ;
+    background-position:center left;
+    background-repeat:no-repeat;
+}
+.accordion .header SPAN
+{
+    cursor:pointer;
+    font-weight:bold;
+    display:block;
+    padding-top:8px;
+    color:#fff;
+}        
+               
+.accordion UL        
+{
+    padding:0;
+    margin:5px 5px 5px 15px;
+    list-style-type:none;
+}
+.accordion LI
+{
+    background-color:Transparent;
+    background-repeat:no-repeat;
+    background-position:left center;
+    vertical-align:middle;
+    padding:0px 0px 0px 0px;
+    cursor:hand;
+}
+.accordion LI DIV
+{
+    padding-left:0px;
+    color:#000000;
+    cursor:hand;
+}
+.accordion LI:hover
+{
+    text-decoration:underline;
+}
+
+
+.accordion  {
+	width: 170px;
+	font-family: Arial, sans-serif, Arial;
+	border: 1px solid black;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+.accordion div 
+{
+    position:relative;
+	background-color:inherit;
+	margin: 0px 0px 0px 0px ;
+	padding: 0px 0px 0px ;
+	height: 260px;
+}
+
+.accordion p {
+	margin-bottom : 2px;
+	border: none;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 10px;
+	margin: 0px;
+	padding: 1px;
+}
+.accordion a {
+	cursor:pointer;
+	margin-top: 0;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 12px;
+	color: black;
+}
+.accordion a:hover {
+	background-color: #F5EBC8;
+}
+.accordion a.selected {
+	color: black;
+	background-color: #AC8D61;
+}

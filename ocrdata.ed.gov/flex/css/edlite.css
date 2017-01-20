@@ -1,0 +1,584 @@
+.leftNavSecondaryBGColor
+{
+    BACKGROUND-COLOR: #c0c2cb
+}
+.leftNavPrimaryBGColor
+{
+    BACKGROUND-COLOR: #b9beda
+}
+.navtitle
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.leftNavText
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.leftNavText A
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.leftNavText A:visited
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.leftNavText A:hover
+{
+    TEXT-DECORATION: underline
+}
+.leftSubNavText
+{
+    FONT-SIZE: x-small;
+    COLOR: #8692cb;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+.leftSubNavText A
+{
+    COLOR: #8692cb;
+    TEXT-DECORATION: none
+}
+.leftSubNavText A:visited
+{
+    COLOR: #8692cb;
+    TEXT-DECORATION: none
+}
+.leftSubNavText A:hover
+{
+    TEXT-DECORATION: underline
+}
+.GOLink
+{
+    FONT-SIZE: small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+.GOLink A
+{
+    FONT-SIZE: small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+.GOLink A:visited
+{
+    FONT-SIZE: small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+.footerText
+{
+    FONT-SIZE: xx-small;
+    COLOR: #81869a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.headersLevel1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: medium;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.headersLevel1 A
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.headersLevel1 A:visited
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.headersLevel1 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.headersLevel2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: small;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.headersLevel2 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.headersLevel2 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.headersLevel2 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.headersLevel3
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: small;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.headersLevel3 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.headersLevel3 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.headersLevel3 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.headersLevel4
+{
+    FONT-SIZE: small;
+    COLOR: #333333;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.headersLevel4 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.headersLevel4 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.headersLevel4 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.background1
+{
+    BACKGROUND-COLOR: #e5e7f1
+}
+.background2
+{
+    BACKGROUND-COLOR: #cccccc
+}
+.note
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.indent
+{
+    MARGIN-LEFT: 40px
+}
+.smallindent
+{
+    MARGIN-LEFT: 20px
+}
+.noUnderline
+{
+    FONT-SIZE: small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none
+}
+.noUnderline A
+{
+    COLOR: #444444;
+    TEXT-DECORATION: none
+}
+.noUnderline A:visited
+{
+    COLOR: #8f8f8f;
+    TEXT-DECORATION: none
+}
+.noUnderline A:hover
+{
+    TEXT-DECORATION: underline
+}
+.line
+{
+    BACKGROUND-IMAGE: url(http://ocrdata.ed.gov/flex/css/images/ed_c_dline.gif);
+    BACKGROUND-REPEAT: repeat-x
+}
+.border
+{
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-BOTTOM: #000000 1px solid
+}
+.contentText
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText A
+{
+    COLOR: #444444;
+    TEXT-DECORATION: underline
+}
+.contentText A:visited
+{
+    COLOR: #8f8f8f;
+    TEXT-DECORATION: underline
+}
+.contentText A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText .noInfo
+{
+    COLOR: #cccccc
+}
+.contentTextNoUnderline
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none
+}
+.contentTextNoUnderline A
+{
+    COLOR: #444444;
+    TEXT-DECORATION: none
+}
+.contentTextNoUnderline A:visited
+{
+    COLOR: #8f8f8f;
+    TEXT-DECORATION: none
+}
+.contentTextNoUnderline A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText P
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText TD
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText OL
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText UL
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText .label
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-ALIGN: right
+}
+.contentText TH
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText .navtitle
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText .leftNavText
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText .leftNavText A
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.contentText .leftNavText A:visited
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.contentText .leftNavText A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText .leftSubNavText
+{
+    FONT-SIZE: x-small;
+    COLOR: #8692cb;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+.contentText .leftSubNavText A
+{
+    COLOR: #8692cb;
+    TEXT-DECORATION: none
+}
+.contentText .leftSubNavText A:visited
+{
+    COLOR: #8692cb;
+    TEXT-DECORATION: none
+}
+.contentText .leftSubNavText A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText .GOLink
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+.contentText .GOLink A
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+.contentText .GOLink A:visited
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+.contentText H1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText H1 A
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.contentText H1 A:visited
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.contentText H1 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText H2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText H2 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText H2 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText H2 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText H3
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText H3 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText H3 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText H3 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText H4
+{
+    FONT-SIZE: x-small;
+    COLOR: #333333;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText H4 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText H4 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText H4 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText headersLevel1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText headersLevel1 A
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel1 A:visited
+{
+    COLOR: #5b638a;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel1 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText headersLevel2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText headersLevel2 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel2 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel2 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText headersLevel3
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText headersLevel3 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel3 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel3 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText headersLevel4
+{
+    FONT-SIZE: x-small;
+    COLOR: #333333;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText headersLevel4 A
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel4 A:visited
+{
+    COLOR: #333333;
+    TEXT-DECORATION: none
+}
+.contentText headersLevel4 A:hover
+{
+    TEXT-DECORATION: underline
+}
+.contentText .note
+{
+    FONT-SIZE: x-small;
+    COLOR: #5b638a;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+.contentText .noUnderline
+{
+    FONT-SIZE: x-small;
+    COLOR: #444444;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-DECORATION: none
+}
+.contentText .noUnderline A
+{
+    COLOR: #444444;
+    TEXT-DECORATION: none
+}
+.contentText .noUnderline A:visited
+{
+    COLOR: #8f8f8f;
+    TEXT-DECORATION: none
+}
+.contentText .noUnderline A:hover
+{
+    TEXT-DECORATION: underline
+}
+.lastModified
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-SIZE: xx-small;
+    PADDING-BOTTOM: 5px;
+    COLOR: #bbbbbb;
+    PADDING-TOP: 5px;
+    FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif;
+    TEXT-ALIGN: center
+}

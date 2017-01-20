@@ -1,0 +1,125 @@
+
+/**** Accessibility ****/
+
+#skip a, #skip a:hover, #skip a:visited
+{
+position:absolute;
+left:0px;
+top:-10000px;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:active, #skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+} 
+
+.divHeader 
+{
+	width: 100%;
+	min-width: 928px;
+	height: 44px;
+	background-image: url(../images/OCR_Background_Header.png);
+	background-repeat: repeat-x;
+	position: relative;
+	margin-top: 1px;
+	padding-bottom: 2px;
+	font-family: Verdana, Geneva, sans-serif;
+	padding-right: 2px;
+	padding-left: 2px;
+	background-attachment: scroll;
+}
+
+#bannerbg {
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#logo {
+	width: 112px;
+	height: 38px;
+	left: 10px;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 20px;
+}
+
+#slogan {
+	width: 254px;
+	height: 29px;
+	left: 160px;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 25px;
+}
+
+#loginbox {
+	width: 200px;
+	height: 40px;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	top: 28px;
+	right: 0px;
+}
+
+.leftNavSearchOptions A {
+	font-size: xx-small;
+	color: #131833;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
+
+.leftNavSearchOptions A:hover {
+	color: #131833;
+	text-decoration: underline;
+}
+
+.leftNavSearchOptions A:active {
+	color: #131933;
+	text-decoration: underline;
+}
+
+.leftNavSearchOptions A:visited {
+	color: #131833;
+}
+
+
+.Header {
+	height: 70px;
+	margin-top: auto;
+	margin-right: auto;
+	top: 4px;
+	margin-left: auto;
+	min-width: 928px;
+}
+.HeaderText {
+	font-size: 36px;
+	padding: 5px;
+	color: #FFF;
+	top: 12px;
+	position: relative;
+}
+.HeaderImage {
+	position: absolute;
+	top: 1px;
+	float: right;
+	right: 7px;
+}
+.HeaderImageLeft {
+	position: absolute;
+	top: 1px;
+	float: left;
+}

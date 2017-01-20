@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><title>
+	
+    State and National Estimations
+
+</title><link href="CSS/Site.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    
+    
+
+    <link href="CSS/Navmenu.css" rel="stylesheet" type="text/css" />
+
+    <!-- jquery css -->
+    <link href="CSS/themes/custom-theme/jquery-ui-1.7.3.custom.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/themes/jquery-ui-1.11.2.css" rel="stylesheet" type="text/css" />
+
+    <link href="CSS/accordion.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/jquery.quickselect.css" rel="stylesheet" type="text/css" />
+    <link href="Scripts/CeeBox/css/ceebox-min.css" rel="stylesheet" type="text/css" />
+    
+    <!--jquery-->
+    <script src='Scripts/lib/jquery-1.11.2.js' type="text/javascript"></script>
+    <script src='Scripts/lib/jquery-migrate-1.2.1.min.js' type="text/javascript"></script>
+
+    
+    <script src='Scripts/lib/jquery-ui-1.11.3.js' type="text/javascript"></script>
+    
+
+    <!-- template plugin -->
+    <script src='Scripts/lib/jquery.tmpl.js' type="text/javascript"></script>
+
+    <script src='Scripts/CeeBox/js/jquery.ceebox-min.js' type="text/javascript"></script>
+    <script src='Scripts/CeeBox/js/jquery.color.js' type="text/javascript"></script>
+    <script src='Scripts/CeeBox/js/jquery.metadata.js' type="text/javascript"></script>
+
+    
+    
+    
+
+    <!-- plugins -->
+    
+    <script src='Scripts/lib/jquery.format-1.1.min.js' type="text/javascript"></script>
+    <script src='Scripts/lib/jquery.watermark.min.js' type="text/javascript"></script>
+    <script src='Scripts/lib/json2-min.js' type="text/javascript"></script>
+    <script src='Scripts/lib/jquery.json-2.2.js' type="text/javascript"></script>
+    <script src='Scripts/lib/jquery.validate.min.js' type="text/javascript"></script>
+    <script src='Scripts/lib/jquery.maskedinput-1.2.2.min.js' type="text/javascript"></script>
+    <script src='Scripts/plugins/jquery.custom_radio_checkbox.js' type="text/javascript"></script>
+    <script src='Scripts/lib/numberformat.min.js' type="text/javascript"></script>
+
+    <!-- layout -->
+    <script src='Scripts/lib/jquery.layout.js' type="text/javascript"></script>
+
+        
+    <script src='Scripts/charts/highcharts.js' type="text/javascript"></script>
+    <script src='Scripts/charts/modules/exporting.js' type="text/javascript"></script>
+    <script src='Scripts/charts/themes/grid.js' type="text/javascript"></script>
+
+
+    <script src='Scripts/app.js' type="text/javascript"></script>
+    
+    <script src='Scripts/utility.js' type="text/javascript"></script>
+    <link href="CSS/multiple-select.css" rel="stylesheet" type="text/css" />
+    <script src='Scripts/plugins/jquery.multiple.select.js' type="text/javascript"></script>
+
+    
+    <script src='Scripts/plugins/jquery.blockUI.js' type="text/javascript"></script>
+
+	<style type="text/css">
+	html, body {
+		background:	#E3E1E4;
+		width:		1020px;
+		padding:	0;
+		margin:		0;
+		overflow:hidden; /* when page gets too small for container min-width/height */
+        font-family: Geneva, Arial, Helvetica, sans-serif, Arial;
+        font-size: 12px;
+	}
+
+	#container {
+		background:	#FFF;
+		position:	absolute;
+		top:		0px;	/* margins in pixels */
+		bottom:		0px;	/* could also use a percent */
+		left:		0px;
+		right:		0px;
+	}
+	.pane {
+		display:	none; /* will appear when layout inits */ 
+	}
+    .selected {
+	    background-position: 0 -52px;
+    }
+    .block {
+	    width: 50%;
+	    float: left;
+    }
+	</style>
+
+    <script type="text/javascript">
+        var IsSiteSuppressed = true;
+        var hasAccessRights = false;
+        var isViewingSuppressed = true;
+        var surveyYearKey = '';
+
+        $(document).ready(function () {
+            if(IsSiteSuppressed == false && hasAccessRights == true){ // if this is the internal site and this user has the proper credintials
+                $('#btnToggleSuppressed').show();
+                if( isViewingSuppressed === true){
+                    $('#btnToggleSuppressed').button({ label: 'Click here to view<br>unsuppressed data.' });
+                }
+                else{
+                    $('#btnToggleSuppressed').button({ label: 'Current view:<br>Unsuppressed data.<br>Click here to switch<br>to suppressed data.' });
+                }
+            }
+            else {  // this is the external site or the internal user doesn't have the proper role.
+                $('#btnToggleSuppressed').remove();
+            }
+            // add toggle button handler
+            $('#btnToggleSuppressed').on('click',function(){app.toggleView();});
+
+            app.initMenu();
+            app.checkPermissions();
+            app.setChangeSchool_DistrictLink();
+            $("#btnPrintContent").button({ label: 'Print Content' })
+            .click(function () {
+                //$('#printableArea').printArea({ mode: "popup", popClose: true, popHt: 600, popWd: 900, popTitle: "Civil Rights Data Collection" });
+                app.printPage();
+            });
+
+            $("#btnLogOut").button({ label: 'Log Out' })
+            .click(function () {
+                sUrl = "../handler/AjaxHandler.ashx?cmd=LogOut";
+                $.ajax({
+                    url: sUrl,
+                    type: "GET",
+                    processData: false,
+                    dataType: "html",
+                    async: true,
+                    success: function (returnedData) {
+                        if (returnedData == 'success') {
+                            //app.alertWarning('You have successfully logged out.', 'Logout Success', true, 250, 150);
+                            $('#Role_ID').val("8");
+                            $('#User_ID').val("0");
+                            $('#Username').val("");
+                            $('#Role').val("General Public");
+                            $('#Full_Name').val("");
+                            $('#Email').val("");
+                            //$('#btnLogOut').hide();
+                            //$('#divLogin').show();
+                            app.checkPermissions();
+                            document.location.href = '../Home';
+                        }
+                        else {
+                            app.alertWarning('There was a problem. You were not successfully logged out.', 'Logout Failure', true, 250, 150);
+                        }
+                    },
+                    complete: function () { }
+                });
+
+                $('.breadcrumbLink').click(function (i, e) {
+                    var loc = $(e).attr('href');
+                    $.blockUI({
+                        message: 'Processing...',
+                        fadeIn: 10,
+                        css: {
+                            border: 'none',
+                            padding: '15px',
+                            backgroundColor: '#000',
+                            '-webkit-border-radius': '10px',
+                            '-moz-border-radius': '10px',
+                            opacity: .5,
+                            color: '#fff'
+                        },
+                        onBlock: function () {
+                            window.location.href = loc
+                        }
+                    });
+                });
+            });
+
+            var loc = document.location.href.toString();
+            $('#menuReports').on('click', function(){ 
+                menuAloneClick('DistrictSchoolSearch')});
+            if (loc.indexOf('Page') == -1) {
+                $('#menuReports').attr('href', '../DistrictSchoolSearch');
+                $('#ul_menuReports').remove();
+                if (loc.indexOf('print') != -1) {
+                    $('.ui-layout-west').hide();
+                }
+            }
+            else {
+                var syk = app.requestQuerystring('syk');
+                var t = app.requestQuerystring('t');
+                var sr = app.requestQuerystring('sr');
+                
+                if (sr == 1) {
+                    var report = app.requestQuerystring('Report');
+                    app.Specialreportmenu(report);
+                    return;
+                }
+
+                var sUrl = "../handler/AjaxHandler.ashx?cmd=getDataSet_By_ID_Survey_Year_Key&Survey_Year_Key=" + syk + "&SchoolOrDistrict=" + t + "&ID=2&sp=R_GetLeftMenuItems";
+                $.ajax({
+                    url: sUrl,
+                    type: "GET",
+                    processData: false,
+                    async: true,
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (returnedData) {
+                        //alert(JSON.stringify(returnedData));
+                        $('#LeftMenuItemsTemplate').tmpl(returnedData.Table).appendTo('#ul_menuReports');
+                        var pageIDArray = [];
+                        $(PageInfo.Table2).each(function (i, j) {
+                            pageIDArray.push($(j)[0].Page_ID);
+                        });
+                        $('.reportMenu').each(function (i, e) {
+                            var thisLinksID = $(e).attr('id');
+                            var splitArr = thisLinksID.split('_')
+                            var thisLinksPageID = splitArr[1];
+                            if (pageIDArray.indexOf(parseInt(thisLinksPageID)) != -1) {
+                                $(this).children("a:first").addClass('selectedLeftMenu');
+                                return;
+                            }
+                        });
+                    },
+                    complete: function () { }
+                });
+
+            }
+
+            $('.number').each(function () {
+                app.formatWithCommas($(this).text());
+            });
+            $('#menuReports').focus();
+        });
+
+        function menuAloneClick(view) { 
+            
+            $.blockUI({
+                message: 'Processing...',
+                fadeIn: 10,
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: .5,
+                    color: '#fff'
+                },
+                onBlock: function () {
+                    $.cookie('StartPageID', null, { path: '/' }); // get rid of the StartPageID cookie
+                    window.location.href = '../' + view;
+                } 
+            });
+
+        }
+
+        function openDocInWindow(doc){
+            window.location.href = '../' + doc;
+        }
+
+        function menuItemClick(sectionToShow) { 
+            $.blockUI({
+                message: 'Processing...',
+                fadeIn: 10,
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: .5,
+                    color: '#fff'
+                },
+                onBlock: function () {
+                    var pid = $.cookie('StartPageID'); // we stored the StartPageID in this cookie when the initial StartPage was first loaded
+                    if (pid == '' || pid == null) {
+                        showSection(sectionToShow);
+                        return;
+                    }
+                    var thisPages_pid = app.requestQuerystring('pid');
+                    var loc = window.location.toString();
+                    if (thisPages_pid == pid) {
+                        showSection(sectionToShow);
+                    }
+                    else {
+                        loc = loc.split('&el')[0];
+                        //alert('thisPages_pid=' + thisPages_pid + ' - pid=' + pid + ' - sectionToShow=' + sectionToShow);
+                        loc = '../' + loc.replace('#', '').replace('pid=' + thisPages_pid, 'pid=' + pid) + '&el=' + sectionToShow;
+                        window.location.href = loc;
+                    }
+                }
+            });
+        }
+
+        function showSection(sectionToShow) {
+            $('.spAccord li a').each(
+                function () {
+                    $(this).attr('title', "Open Section");
+                    $(this).next().hide();
+                    var span = $('.upDn', this)[0];
+                    var txt = $(span).attr('t');
+                    $(span).removeAttr('t');
+                    $(span).html(o);
+                    $(span).attr('t', 'o')
+
+                });
+            $("#ul_container" + sectionToShow).slideDown('normal');
+            var span = $('.upDn', '#container' + sectionToShow)[0];
+            $(span).html(c);
+            $(span).removeAttr('t');
+            $(span).attr('t', 'c')
+            $(span).parent().attr('title', "Close Section");
+        }
+
+        function leftMenuClick(pgId){
+            //Page?t=s&eid=235206&syk=5&pid=1
+            var eid = app.requestQuerystring('eid');
+            var syk = app.requestQuerystring('syk');
+            var t = app.requestQuerystring('t');
+            var url = 'Page?t=' + t + '&eid=' + eid + '&syk=' + syk + '&pid=' + pgId;
+            location.href = url;
+        }
+    </script>
+
+    <script id='LeftMenuItemsTemplate' type='text/x-jquery-tmpl'>
+        <li tabindex="1" class="reportMenu" style="text-align:left;" id="li_${Link_Page_ID}"><a href="javascript:void(0);" onclick="leftMenuClick(${Link_Page_ID})" title="${Item_Text}">${Item_Text}</a></li>
+    </script>
+    <style type="text/css">
+        #skiplink
+        {
+            color: #E3E1E4;
+        }
+        li
+        {
+            margin-left:2px;
+        }
+        .divmenu
+        {
+            height:40px; 
+            background-color:#39638D;
+            color:#ffffff; 
+            cursor:pointer; 
+            text-align:center;
+            font-size:0.7em;
+            /*background-image:url(images/release%202.0/SideNavButton-light-blue.png)*/
+        }
+        .limenu
+        {
+            height:40px;
+            font-size:0.7em;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://www2.ed.gov/style/federated-analytics.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#container").layout({
+                //west__initClosed: true,
+                //west__spacing_closed: 0,
+                //north__spacing_open: 0
+            });
+        });
+    </script>
+</head>
+<body class="body">
+    <a id='skiplink' tabindex="1" href='StateNationalEstimations.html#Main'><img src='images/5.gif' alt='skip menu' /></a>
+
+    <form method="post" action="StateNationalEstimations.html" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg4MTAyMTU0OGRkMUIMi6+iy00zhk0r5kd0xT9pYTrlDDFAe6wGy6ykyts=" />
+
+    <div id="container">
+        
+	    <div class="pane ui-layout-center" id="printableArea">
+            
+        
+<div id="maincontent" style="width:97%;">
+    <div style="margin-bottom:20px;">
+        <br />
+        <br />
+        <div style="font-size:12pt; font-weight:bold; text-align:center; width:100%; padding:10px;">
+            Estimations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div style="padding-bottom:10px; text-align:center;">
+            2013-14 state and national estimations - COMING SOON!
+        </div>
+        <div style="padding-bottom:10px; text-align:center;">
+            <a href="StateNationalEstimations/Estimations_2011_12.html" target="_blank">2011-12 state and national estimations</a>
+        </div>
+        <div style="padding-bottom:10px; text-align:center;">
+            <a href="StateNationalEstimations/Projections_2009_10.html" target="_blank">2009-10 state and national estimations</a>
+        </div>
+        <div style="padding-bottom:10px; text-align:center;">
+            <a href="StateNationalEstimations/Projections_2006.html" target="_blank">2006 state and national estimations</a>
+        </div>
+        <div style="padding-bottom:10px; text-align:center;">
+            <a href="StateNationalEstimations/Projections_2004.html" target="_blank">2004 state and national estimations</a>
+        </div>
+        <div style="padding-bottom:10px; text-align:center;">
+            <a href="StateNationalEstimations/Projections_2000.html" target="_blank">2000 state and national estimations</a>
+        </div>
+    </div>
+    <div style="text-align: left; width: 100%; padding: 10px;">
+        <br />
+        <a href="http://get.adobe.com/reader/" target="_blank">Get PDF Reader</a> | 
+        <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyId=1CD6ACF9-CE06-4E1C-8DCF-F33F669DBC3A&displaylang=en" target="_blank">Get Excel Viewer</a> 
+    </div>
+</div>
+
+	    </div>
+	    <div class="pane ui-layout-north">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="width:100%;"><img src='images/MainHeading.png' alt="Ed.Gov Logo" /></td>
+            </tr>
+            <tr style="background-color:#999999; color:#ffffff;">
+                <td colspan="2" id="tdBreadCrumb" class="breadCrumb">
+                    <span id="spanBreadCrumb">
+</span>
+                </td>
+            </tr>
+        </table>
+        </div>
+	    <div class="pane ui-layout-south">
+            <table style="width:100%;">
+                <tr>
+                    <td></td>
+                    <td>
+</td>
+                </tr>
+            </table>
+                
+        </div>
+	    <div class="pane ui-layout-west">
+	        <ul id="menu" class="drop_Accordion" role="menubar">
+                <li id="menuHome" a='1'> 
+                    
+                    <div onclick="menuAloneClick('Home')" class="divmenu">
+                        <span style="margin-top:13px; margin-right:10px; display:inline-block; font-size:1em;">HOME</span>
+                    </div>
+                </li>
+
+                <li id="li_menuReports" a="1" style="text-align:center;">
+                    
+			            <a tabindex="1" class="limenu" style="vertical-align:middle; display:table-cell;" id="menuReports" href="javascript:void(0);"  onclick="menuAloneClick('DistrictSchoolSearch')" title="School And District Search">
+                            <span>SCHOOL & DISTRICT SEARCH</span>
+                        </a>
+                    
+                    
+			        <ul id="ul_menuReports"></ul>
+		        </li>
+                 
+		        <li id="li_menuFlexible" a="1" style="text-align:center;">
+			        <a tabindex="2" class="limenu" style="vertical-align:middle; display:table-cell;" id="menuFlexible" href="StateNationalEstimations.html#" onclick="location.href='http://ocrdata.ed.gov/flex'" title="Detailed Data Tables">DETAILED DATA TABLES</a>
+		        </li>
+
+		        <li id="li_menuDataAnalysis" a="1" style="text-align:center;">
+			        <a tabindex="3" class="limenu" style="vertical-align:middle; display:table-cell;" id="menuDataAnalysis" 
+                    href="javascript:void(0);" onclick="menuAloneClick('DataAnalysisTools')" title="Data Analysis Tools">DATA ANALYSIS TOOLS</a>
+		        </li>
+
+		        <li id="li_menuSpecialReports" a="1" style="text-align:center;">
+			        <a tabindex="4" class="limenu" id="menuSpecialReports" 
+                    href="javascript:void(0);" onclick="menuAloneClick('SpecialReports')" title="Special Reports">
+                    <span style="vertical-align:middle; display:table-cell; height: 35px; padding-left:12px;">SPECIAL REPORTS</span>  
+                    </a>
+		        </li>
+
+		        <li id="li_menuEstimations" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="5" style="vertical-align:middle; display:table-cell;" id="A3" href="javascript:void(0);" onclick="menuAloneClick('StateNationalEstimations')" title="State and National Estimations">STATE AND NATIONAL ESTIMATIONS</a>
+		        </li>
+
+		        <li id="li_menuResourses" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="6" style="vertical-align:middle; display:table-cell;" id="menuResourses" href="StateNationalEstimations.html#">ADDITIONAL RESOURCES</a>
+			        <ul id="ul_menuResourses">
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('WhatsNew')" id="A15" title="Whats New">What's New</a></li>
+				        <li><a tabindex="6" href='downloads/AboutTheCRDC.pdf' target="_blank">About The CRDC</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataNotes')" id="A7" title="Data Notes">Data Notes</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataDefinitions')" id="A5" title="Data Definitions">Data Definitions</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataSummary')" id="A16" title="Data Summaries">Data Summaries</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('SurveyDocuments')" id="A9" title="Survey Documents">Survey Documents</a></li>
+				        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('RequestFlatFile')" id="A10" title="Request Flat File">Request Flat File</a></li>
+                        <li><a tabindex="6" href="javascript:void(0);" onclick="menuAloneClick('DataFileUsersManual')" id="A11" title="2013-14 Data File User's Manual">2013-14 Data File User's Manual</a></li>
+                        <li><a tabindex="6" href="http://www2.ed.gov/about/offices/list/ocr/docs/2013-14-first-look.pdf" target="_blank" id="firstLook" title="2013-14 First Look Report">2013-14 First Look Report</a></li>
+                        <li><a tabindex="6" href="http://www2.ed.gov/about/offices/list/ocr/docs/crdc-2013-14.html" target="_blank" id="AccessData" title="Access 2013-14 Data">Access 2013-14 Data</a></li>
+			        </ul>
+		        </li>
+		        <li id="li_meunFAQ" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="7" id="meunFAQ"  href="StateNationalEstimations.html#" title="Frequently asked questions and User Guide">
+                       <span style="vertical-align:middle; display:table-cell; height:35px; padding-left:12px;">FAQ/USER GUIDE</span>
+                    </a>
+			        <ul id="ul_menuFAQ">
+                        <li><a tabindex="7" href='downloads/FAQ.pdf' target="_blank">FAQ</a></li>
+				        <li><a tabindex="7" href='downloads/UserGuide.pdf'  target="_blank">User Guide</a></li>
+                        <li><a href="Downloads/Outcome&#32;Rate&#32;Calculator&#32;Tutorial.pdf" target="_blank">Outcome Rate Calculator Tutorial</a></li>
+                        <li><a href="Downloads/Entity&#32;Comparison&#32;Report&#32;Tutorial.pdf" target="_blank">Entity Comparison Report Tutorial</a></li>
+                        <li><a href="Downloads/Entity&#32;Detail&#32;Graphs&#32;and&#32;Data&#32;Tutorial.pdf" target="_blank">Entity Detail Graphs and Data Tutorial</a></li>
+			        </ul>
+		        </li>
+		        <li id="li1" a="1" style="text-align:center;">
+			        <a class="limenu" tabindex="8" id="A4" style="vertical-align:middle; display:table-cell;" href="StateNationalEstimations.html#" title="Office for Civil Rights(OCR)">OFFICE FOR CIVIL RIGHTS (OCR)</a>
+			        <ul id="ul_menuOCRContacts">
+				        <li><a tabindex="8" href="http://www2.ed.gov/about/offices/list/ocr/index.html" id="A6" title="OCR Homepage" target="_blank">OCR Homepage</a></li>
+				        <li><a tabindex="8" href="http://www2.ed.gov/about/offices/list/ocr/data.html?src=rt" id="A13" title="Civil Rights Data Collection" target="_blank">Civil Rights Data Collection (CRDC)</a></li>
+				        <li><a tabindex="8" href="javascript:void(0);" onclick="menuAloneClick('Contact')" id="A14" title="Contact" target="_blank">Contact</a></li>
+			        </ul>
+		        </li>
+	        </ul>
+            <font style="font-size:6px;">&nbsp;</font>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td id="td1" class="AvailableMetrics">
+	                        <table class="AvailableMetrics">
+		                        <tbody>
+			                        <tr>
+				                        <th style="display: none;">&nbsp;</th>
+			                        </tr>
+		                        </tbody>
+                                <tbody id="tbody1" class="AvailableMetrics">
+			                        <tr class="MenuMetricsTr1" id="tr1">
+				                        <td class="MenuMetrics1">
+                                            <!--<a tabindex="7" href="javascript:void(0);" onclick="menuAloneClick('http://www2.ed.gov/about/offices/list/ocr/data.html?src=rt')" id="A17" title="2011-12 CRDC" style="color:black">Looking for the 2013-14 CRDC?</a>-->
+                                            <a tabindex="7" href="http://crdc.ed.gov" id="A18" title="2013-14 CRDC" style="color:black" target="_blank">Looking for the 2015-16 CRDC?</a>
+                                        </td>
+			                        </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <center>
+                <button tabindex="8" type="button" id="btnPrintContent" style="width:99%; height:20px; padding-top:1px; padding-bottom: 2px; font-size:11px; display:none;" title="Print content"></button><br />
+                
+                <button tabindex="9" type="button" style="width:99%; padding-top:1px; padding-bottom: 2px; font-size:11px;" id="btnToggleSuppressed" title="Show/Hide Suppressed Data"></button>
+            </center>
+
+            <div style="display:none;"> 
+            <input name="ctl00$Role_ID" type="hidden" id="Role_ID" value="8" /> 
+            <input name="ctl00$User_ID" type="hidden" id="User_ID" value="0" />
+            <input name="ctl00$Username" type="hidden" id="Username" />
+            <input name="ctl00$Role" type="hidden" id="Role" value="General Public" />   
+            <input name="ctl00$Full_Name" type="hidden" id="Full_Name" />
+            <input name="ctl00$Email" type="hidden" id="Email" />
+            </div>
+        </div>
+    </div>
+    
+
+    
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A85E0D71" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAdU+bMkWZicfNyvzOovG/gdjY9/waLeHh8aSPof57MIGEl6//Yx4XsKftqWwnlCnmqkUp5VGV5Fw+RJcXlTHwS8y8O78B3J82n6BzRn+coujjL29rK+0VDeKJTJk9ZkGDiTCGXPxdHeaZBTX4T4O1t39VrzVks0SS+2t6b55vF4mVwas9J/NE7lu7/QmE+S4Ws=" /></form>
+
+<!--CRAZYEGG CODE-->
+<script type="text/javascript" src="https://s3.amazonaws.com/new.cetrk.com/pages/scripts/0009/9201.js"> </script>
+<!--END CRAZYEGG CODE-->
+<!--GOOGLE ANALYTICS CODE-->
+<script src="https://www.google-analytics.com/ga.js" type="text/javascript" language="JavaScript"></script>
+<script type="text/javascript"> 
+try {
+        var _gaq = _gaq || [];
+         _gaq.push(['_setAccount', 'UA-10911895-22']);
+         _gaq.push(['_trackPageview']);
+} catch(err) {}
+</script>
+<!-- END GOOGLE ANALYTICS CODE-->
+
+</body>
+</html>
+<script type="text/javascript">
+    var disregardRegularPrintingRules = false; // this is so if we want to use special printing pagebreaks we can do so by setting this to true in a javascript function on the page
+    $().ready(function () {
+        if ($.browser.msie && parseInt($.browser.version, 10) < 8) {
+            app.centerDivVertical('container');
+            $(window).resize(function () {
+                setTimeout(function () { app.adjustLegands(); }, 2000);
+            });
+        }
+        if (app.weArePrinting()) {
+            $('.ui-layout-pane').css('overflow', 'visible').css('height', '6000px').css('float','none').css('margin','0').css('width','100%'); 
+            //adjustPrintableAreaSizeIfPrintPage();
+        }
+    });
+
+    function adjustPrintableAreaSizeIfPrintPage() {
+
+        if (WeAreReadyToPrint == true) {
+            var myHtml = $('#printableArea').html();
+            setTimeout(function () {
+                $('.body').html(myHtml);
+            }, 50);
+        }
+        else {
+            if (disregardRegularPrintingRules == false) {
+                setTimeout(function () {
+                    $('.roundtopcorners').each(function (i, e) {
+                        if (i == 2) $(this).parent().addClass('pgBreak');
+                    });
+                    adjustPrintableAreaSizeIfPrintPage();
+                }, 500);
+            }
+            else {
+                alert('m');
+            }
+        }
+    }
+</script>

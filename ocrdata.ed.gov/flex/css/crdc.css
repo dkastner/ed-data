@@ -1,0 +1,735 @@
+﻿/**** Toolbar - Begin ****/
+
+#divPleaseWait
+{
+    padding:10px 10px 10px 10px; 
+    display:none;
+    position: absolute; 
+    top: 45%; right:50%; 
+    font-size:14px; 
+    font-weight:lighter; 
+    z-index:5;
+    background-color: White; 
+    border: 1px solid #444444;
+    height: auto; 
+    width: 450px; 
+}
+ #blur 
+ {
+        position:absolute; 
+        top:0; left:0; 
+        width:100%; z-index:4; 
+        height: 100%;
+        background-color:silver;
+        /* for IE */
+        filter:alpha(opacity=30);
+        /* CSS3 standard */
+        opacity:0.3;
+        display:none; 
+        text-align:left; 
+ } 
+.tableNullValue
+{
+    background-color: Silver;   
+}
+.popup
+{
+     padding:10px 10px 10px 10px; 
+     z-index:6;
+     display:none;
+     position:absolute;
+     height:90%; 
+     width: 96%; 
+     overflow:hidden; 
+     left:1%;
+     top:5%; 
+     right:1%; 
+     background-color: White; 
+     border: 2px solid #444444;
+     position:fixed;
+
+}
+.chartpopup
+{
+     padding:10px 10px 10px 10px; 
+     z-index:20;
+     display:none;
+     position:absolute;
+     overflow:hidden;
+     height:90%; 
+     width: 96%; 
+     left:1%;
+     top:5%; 
+     right:1%;
+     background-color: White; 
+     border: 2px solid #444444;
+     position:fixed;
+}
+#reportContent, #divChart
+{
+    position:relative;
+    overflow:auto;
+    width: 100%;
+}
+.hdnReport
+{
+    display:none;
+}
+.divToolbar
+{
+	font-size: 12px;
+	background-color: #E8E6EE;
+	height: 16px;
+	vertical-align: middle;
+	padding-top: 2px;
+	margin-right: 5px;
+	text-decoration: none;
+	min-width: 928px;
+	margin-top: 0px;
+	width: 100%;
+	border-top: solid 1px #666;
+	border-bottom: solid 1px #666;
+}
+
+.tblToolbar
+{
+	margin-left: 3px;
+}
+
+.tblToolbar td
+{
+	vertical-align: middle;
+	padding-right: 50px;
+}
+
+.tblToolbar td a
+{
+	color: Blue;
+}
+
+a.menubar:link {
+	color : #295D95;
+	text-decoration:none
+}
+a.menubar:visited {
+	color : #295D95;
+	text-decoration:none
+}
+a.menubar:active {
+	color : #295D95;
+	text-decoration:none
+}
+a.menubar:hover {
+	color : #295D95;
+	text-decoration:none
+}
+
+.right { float: right }
+
+.left { float: left }
+
+
+
+/**** Toolbar - End ****/
+
+/**** Search - Begin ****/
+
+/* Search Layout Styles */
+#divSearchControl { min-width: 840px; padding: 5px; border-bottom: 0px dotted #aab; }
+#divSearchParams { width:100%;}
+#ctl00_div_ucSearch_upProgressParams { width: 540px; }
+#divSearchButtons { float: left; width: 200px; }
+#divInstructions { float: right; width: 400px; border: black 1px solid; padding: 5px; }
+
+
+.aToggle { color: #000000; padding: 0; outline: none; }
+.imgToggle { cursor: pointer; border: 0; padding: 0; }
+
+.divSearchText { padding-bottom: 15px; width:900px; }
+.tbSearchOption { width: 200px; }
+
+.searchOptions { clear: both; width:900px;}
+.searchOptions ul { float: left; list-style: none; margin: 0; padding: 0; }
+.searchOptions .optionsList li { clear: both; margin-bottom: 4px;}
+.searchOptions .optionsList li li { clear: both; margin-bottom: 4px; }
+.searchOptions .optionsList table { margin: 0; padding: 0; }
+
+
+#divSearchControl .control-list { float: left; width:50%; list-style: none; margin: 0; padding: 0; padding-right: 10px; }
+
+#divSearchControl .control-list li { padding-bottom: 3px; }
+
+.optionLabel { float: left; width: 160px; padding-right: 10px;}
+/* .divSearchOption { width: 290px; height: 28px; text-align: left; vertical-align: middle; } */
+
+/* Search Font and Text Styles */
+.optionLabel { font-weight: bold; height: 19px; line-height: 19px; text-align: right; }
+
+/**** Search - End ****/
+
+/**** Search Results - Begin ****/
+
+
+#divResultsContainer
+{
+	min-width: 840px;
+}
+
+* html #divResultsContainer
+{
+	width: 840px;
+}
+
+#divReportsList
+{
+	float: right;
+	display: inline;
+	border: solid 1px black;
+	margin: 0px 0px 0px -1px;
+	padding: 0px 6px 0px 0px;
+}
+
+#divSearchResults
+{
+	clear: both;
+	float: left;
+	display: inline;
+	margin: 0px 0px 0px 0px;
+}
+
+.gvResults
+{
+	border: 1px dotted green;
+	border-top: solid 1px black;
+	border-right: solid 1px black;
+	width: 100%;
+}
+
+.gvResults th
+{
+	font-weight: bold;
+	text-align: left;
+	background-color: #DBD9CA;
+	padding: 4px 4px 4px 0px;
+}
+
+.gvResults td
+{
+	border: 0;
+	padding: 4px 4px 4px 0px;
+}
+
+.gvResults .thCheck,
+.gvResults .tdCheck
+{
+	width: 4%;
+	padding-right: 0px;
+}
+
+.gvResults .thSchool,
+.gvResults .tdSchool,
+.gvResults .thDistrict,
+.gvResults .tdDistrict
+{
+	width: 30%;
+}
+
+.gvResults .thCity,
+.gvResults .tdCity
+{
+	width: 19%;
+}
+
+.gvResults .thState,
+.gvResults .tdState
+{
+	width: 8%;
+}
+
+.gvResults .thYear,
+.gvResults .tdYear
+{
+	width: 9%;
+}
+
+.gvResults .thDistrict2,
+.gvResults .tdDistrict2
+{
+	width: 40.5%;
+}
+
+.gvResults .thCity2,
+.gvResults .tdCity2
+{
+	width: 26.5%;
+}
+
+.gvResults .thState2,
+.gvResults .tdState2
+{
+	width: 14%;
+}
+
+.gvResults .thYear2,
+.gvResults .tdYear2
+{
+	width: 15%;
+}
+
+/**** Search Results - End ****/
+
+/**** Reports List - Begin ****/
+
+
+.pReportsList
+{
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 0px 0px 5px;
+}
+
+.pReportGroup
+{
+	padding-left: 5px;
+}
+
+/**** Reports List - End ****/
+
+/**** Report Viewer - Begin ****/
+
+
+#divReportTitle
+{
+	padding-bottom: 12px;
+}
+
+#sReportTitle, #spanChartTitle
+{
+	font-size: 16px;
+}
+
+#divReportOptions
+{
+	padding-bottom: 5px;
+}
+
+.btnExport
+{
+	height: 22px;
+	font-size: 13px;
+}
+
+#divChartType
+{
+	padding-bottom: 5px;
+}
+
+#divGoBack
+{
+	padding-bottom: 5px;
+}
+
+.td_controls
+{
+	padding: 3px;
+	background-color: #DBD9CA;
+	vertical-align: top;
+	text-align: left;
+	border: solid 1px black;
+}
+
+#divView,
+#divRestore
+{
+	padding-bottom: 5px;
+}
+
+#sView
+{
+	color: #808080;
+	text-decoration: underline;
+}
+
+#aView,
+#aRestore
+{
+	color: Blue;
+}
+
+.div_showing
+{
+	white-space: nowrap;
+	padding-bottom: 2px;
+}
+
+.ddlMeasureType
+{
+	cursor: pointer;
+}
+
+.entity_info
+{
+	padding-bottom: 3px;
+}
+
+/* IE 6 hack for absolute positioned elements
+in relative positioned containers */
+* html .field_container,
+* html .field_container_span,
+* html .field_container_icon,
+* html .field_container_span_icon,
+* html .field_container_icon_sort
+{
+	height: 1%;
+}
+
+.field_container,
+.field_container_icon,
+.field_container_icon_sort
+{
+	position: relative;
+	text-align: left;
+}
+
+.field_container_span,
+.field_container_span_icon
+{
+	position: relative;
+	text-align: center;
+}
+
+.field_container_icon,
+.field_container_span_icon
+{
+	padding-right: 20px;
+}
+
+.field_container_icon_sort
+{
+	padding-right: 35px;
+}
+
+.field_remove img,
+.field_unsorted img,
+.field_sorted img
+{
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	border: 0;
+}
+
+.field_unsorted img,
+.field_sorted img
+{
+	top: 4px;
+	right: 17px;
+	clear: both;
+}
+
+#divKeyContainer
+{
+	float: left;
+	display: inline;
+	width: 314px;
+	margin: 10px 0px 0px 0px;
+}
+
+#tableKey
+{
+	border: solid 1px black;
+	border-collapse: collapse;
+	padding: 3px;
+}
+
+#tableKey th,
+#tableKey td
+{
+	border: solid 1px black;
+	padding: 3px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.divTip
+{
+	float: left;
+	display: inline;
+	width: 250px;
+	padding: 5px;
+	border: solid 1px black;
+}
+
+/**** Report Viewer - End ****/
+
+/**** Ajax Wait - Begin ****/
+
+#ctl00_div_upProgress
+{
+	margin-left: 5px;
+}
+
+.divWaitImage
+{
+	clear: both;
+	float: left;
+}
+
+.divWaitText
+{
+	float: left;
+	font-weight: bold;
+	height: 22px;
+	line-height: 22px;
+	margin-left: 7px;
+}
+
+/**** Ajax Wait - End ****/
+
+/**** Reports List - Begin ****/
+
+.divReportsList
+{
+	padding-left: 45px;
+}
+
+.divReportsTitle
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000; 
+	text-align: left;
+	padding: 15px 0px 5px 0px;
+	margin-left: 0px;
+}
+
+.divReportsMessage
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+	font-size: 10pt;
+	font-style: italic;
+	color: #000000; 
+	text-align: left;
+	padding: 5px 0px 0px 0px;
+	margin-left: 0px;
+}
+
+.divReportsWait
+{
+	text-align: left;
+	padding: 12px 0px 0px 0px;
+	margin-left: -32px;
+}
+
+.tdPleaseWait
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.ReportGroup
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000; 
+	text-align: left; 
+}
+
+.ReportName a
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: normal;
+	font-size: 10pt;
+	text-decoration: none;
+	color: #444444;
+}
+
+.ReportName a:hover
+{
+	text-decoration: underline;
+	color: #D4A017;
+}
+
+.ReportName a:active
+{
+	color: #D4A028;
+}
+
+/**** Reports List - End ****/
+
+/**** Divs - Begin ****/
+
+.divPopup
+{
+	background-color: #E7E7F7;
+}
+
+/**** Divs - End ****/
+
+/**** Please Wait - Begin ****/
+
+.imgSpinner
+{
+	width: 22px;
+	height: 22px;
+}
+
+.imgPleaseWait
+{
+	width: 120px;
+	height: 40px;
+}
+
+/**** Please Wait - End ****/
+
+/**** Misc - End ****/
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+}
+
+.hidden 
+{
+	display: none;
+}
+
+.cb
+{
+	cursor: pointer;
+}
+
+.cbLabel
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt;
+	cursor: pointer;
+}
+
+.btnOk
+{
+	width: 35px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt;
+    color: #000000;
+}
+
+.btReturn
+{
+    background-color:Yellow; 
+    height:25px; 
+    color:Red; 
+    font-weight:bold   
+}
+
+.btnCancel
+{
+	width: 58px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10pt;
+    color: #000000;
+}
+
+/**** Misc - End ****/
+
+/**** Profile ****/
+#divProfile{ position: relative; min-width: 600px; max-width: 900px; padding: 0px; margin: 0px 5px 5px 5px; background-color: white; }
+* html #divProfile{ position: relative; width: 900px; }
+.profile-content{ position: relative; padding: 3px; border: 1px solid #000; }
+h1.profile-header { font-size: 11px; background: #DDD; }
+.profile-content table { width: 98%; }
+.profile-content table .header-row td { font-weight: bold; font-size:11px;}
+.profile-content table .header-row th { text-align:left; font-weight: bold; font-size:11px;}
+.profile-content table td { font-weight: normal; font-size:11px;}
+.profile-content table th { text-align:left; font-weight: normal; font-size:11px;}
+
+.profile-content hr { border: 1px solid black; }
+
+.list-container ul { float: left; width: 236px; list-style: none; margin: 0; padding: 0; font-size:11px;}
+.list-container li { padding: 4px; clear: both; border-bottom: 1px dotted #ccd; font-size:11px;}
+.list-container li .label { font-weight: bold; font-size:11px;}
+
+.characteristics {  width: 100%; }
+.characteristics td { border-bottom: 1px dotted #CCD; padding: 3px; padding-right: 10px; font-size:11px;}
+.characteristics td.value { padding-right: 15px; text-align: right; width: 130px; border-right: 1px dotted #CCD; font-size:11px;}
+.characteristics td.rightvalue { padding-right: 6px; text-align: right; width: 130px; font-size:11px;}
+.characteristics td .label { font-weight: normal; font-size:11px;}
+
+.profile-grid { width: 100%; text-align: center; font-size:11px;}
+.profile-grid th { width: 11.1%; text-align: center; vertical-align: bottom; font-size:11px;}
+.profile-grid td { text-align: center;  vertical-align: middle; font-size:11px;}
+.profile-options { position: absolute; right: 30px; font-size: 9pt; margin-top: 1px;}
+
+.aProfile { font-size: 9px; }
+
+/**** New for 2011 ****/
+
+.BodyLargeText {
+	font-size: 14px;
+	color: #FFF;
+	top: 4px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	padding-top: 10px;
+	width: 928px;
+}
+
+.BodyImages {
+	top: 4px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	min-width: 928px;
+	padding: 0 0 0 0;
+}
+
+.notice {
+	font-size: 12px;
+	padding: 20px 0px 0px 0px;
+	color: #333;
+	top: 20px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	width: 928px;
+}
+
+.BorderLine {
+	height: 10px;
+	margin-top: 30px;
+	min-width: 940px;
+	width: 100%;
+ 	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #666;
+	border-top-width: thin;
+}
+
+.Footer {
+	height: 50px;
+	min-width: 940px;
+	width: 100%;
+	border:none
+}
+
