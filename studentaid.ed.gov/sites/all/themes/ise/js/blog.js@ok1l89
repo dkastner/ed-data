@@ -1,0 +1,196 @@
+jQuery(document).ready(function($) {
+
+
+       //RHT this snippet of code adds the open and close feature for the sharethis functionality on every blog related page
+
+    $(".toggler").click(function () {
+          $(this).next(".sharelinks").show();
+          $(this).next(".sharelinks").slideToggle(1);
+          $(this).hide();
+    });
+    $(".closeshare").click(function () {
+        $(this).parent(".sharelinks").hide();
+          $(this).parent(".sharelinks").slideToggle(1);
+          $(this).parent(".sharelinks").prev(".toggler").show();
+    });
+
+	$(window).load(function() {
+
+		if ($('.featuredblogs', '#region-content').length || $('.blogpostlist', '#region-content').length){
+
+			$('.sharelinks', '#region-content').each(function() {
+				var emailShareThis = $(this).children('.sharethis-wrapper').children('.st_email_hcount');
+				var emailCustom = $(this).children('.sharethis-email-wrapper');
+				$(emailShareThis).replaceWith(emailCustom);
+			});
+
+			// Prevent page from jumping to top when "share" or "close" links with hash in href are clicked
+			var sharelinkFeatured = $('.featuredblogs a.toggler', '#region-content');
+			var sharelinkList = $('.blogpostlist a.toggler', '#region-content');
+			var closeFeatured = $('.featuredblogs a.closeshare', '#region-content');
+			var closeList = $('.blogpostlist a.closeshare', '#region-content');
+			$(sharelinkFeatured)
+				.add(sharelinkList)
+				.add(closeFeatured)
+				.add(closeList)
+				.click(function(e) {
+				e.preventDefault();
+			});
+
+		};
+
+        if ($('.sharethis-wrapper', '#region-content').length){
+        	$('.sharethis-wrapper', '#region-content').each(function() {
+
+        		// Make OOTB Sharethis buttons accessible/focusable/triggerable
+        		$(this).find('.stButton').attr('role','button').attr('tabindex','0');
+
+        		// trigger click when enter or space key used on direct spans of .sharethis-wrapper
+        		$(this).find('>span').keyup(function (e) {
+        			if (e.which == 13 || e.which == 32) {
+        				$(this).find('.stButton').trigger( "click" );
+        			}
+        		});
+        	});
+    	};
+
+	});
+
+
+	$('.blogsearch').html('');
+	$('.context-blog .blogtopic, .context-blog .blogheaderlinks, .context-blog .blogsearchform, .blogtop').appendTo('.blogsearch');
+	
+	if( $('.node-type-blog .pane-node-comment-count').length > 0){
+		$('.node-type-blog .pane-node-comment-count').each(function(){
+			var count = $.trim($(this).find('.pane-content').text());
+			$(this).find('h2').html('<a href="#" class="commentopener">Comments ('+count+')</a>');
+		});
+	}
+	else{
+		$('.pane-node-comment-form').addClass('defaultshow');
+              $('.commentpolicy').addClass('defaultshow');
+	}
+	$('.commentopener').click(function(){
+		$(this).toggleClass('open');
+		$('.pane-node-comment-form, .pane-node-comments, .commentpolicy').toggle();
+		return false;
+	});
+	$('.node-type-blog .layout-responsive-region-header_a, .context-blog .blogsearch').wrapInner('<div class="stickywrap"></div>');
+	$('.layout-responsive-region-sidebar_b .blogsearchright .form-text').attr('placeholder', 'Search the Blog');
+	$('.node-type-blog .layout-responsive-region-sidebar_b .blogtopic form select option:first-child').html('Select a Topic');
+	$('.node-type-blog .layout-responsive-region-sidebar_b .view-all-blog-views form select option:first-child').html('Select a Date');
+	
+	var stickyTop = 0;
+	if( $('.node-type-blog .layout-responsive-region-header_a').length > 0){ stickyTop = $('.node-type-blog .layout-responsive-region-header_a').offset().top; }
+	if( $('.context-blog .blogsearch').length > 0){ stickyTop = $('.context-blog .blogsearch').offset().top; }
+	$(window).scroll(function(){
+		if( $(window).scrollTop() > stickyTop ) { 
+			$('.node-type-blog .layout-responsive-region-header_a, .context-blog .blogsearch').css({position: 'fixed', top: '0px'}).addClass('floating-block-active'); 
+			short_title=$(".short_title").text();
+			//RHT test to see if there is a short title, if not continue displaying the long title
+
+			if (short_title.length>5) {
+				$(".long_title").removeClass('enabled');
+				$(".short_title").removeClass('disabled');
+				$(".long_title").addClass('disabled');
+				$(".short_title").addClass('enabled');
+			}
+		}else { 
+			$(".long_title").removeClass('disabled');
+			$(".short_title").removeClass('enabled');
+			$(".long_title").addClass('enabled');
+			$(".short_title").addClass('disabled');
+
+			$('.node-type-blog .layout-responsive-region-header_a, .context-blog .blogsearch').css({position: 'static', top: '0px'}).removeClass('floating-block-active'); 
+		}
+	});
+
+	// If it exceeds 70 chars, trim long blog post titles to 67 chars and add append ellipsis
+	if ($('.long_title', '#region-content').length){
+		var longTitle = $('.long_title', '#region-content').html();
+		var longTitleTrimmed = $.trim(longTitle);
+		if(longTitleTrimmed.length > 70){
+			var newTitle = longTitleTrimmed.substring(0, 67)+'...';
+			$('.long_title', '#region-content').html(newTitle);
+		}
+	};
+
+	$('.sharethis-wrapper button:not(".email-button"), .sharelinks button:not(".email-button")').keyup(function (e) {
+        // The enter key code (13).
+	    if (e.which == 13 || e.which == 32) {
+
+          // Find innermost span
+          var target = $(this).children('span');
+          while (target.length) {
+            target = target.children('span');
+          }
+          var button = target.end()[0];
+
+          if (typeof button !== 'undefined') {
+			button.click();
+          }
+
+          return false;
+        }
+      });
+	  
+
+	  
+	  // KM [08/20/2015] -> Commenting this code out to remediate double windows opening when user clicks on social media icons from the Blog home page
+	   $('.sharethis-wrapper button:not(".email-button"), .sharelinks button:not(".email-button")').unbind("click").bind("click",function(){
+          // Find innermost span
+          var target = $(this).children('span');
+          while (target.length) {
+            target = target.children('span');
+          }
+          var button = target.end()[0];
+          if (typeof button !== 'undefined') {
+		//alert(navigator.userAgent.toLowerCase());
+
+		//Have to test browser type.  There is an error in the jquery here that is causing this routine to fire multiple times.
+		//I believe this is because jquery $(document) is being loaded multiple times...that is, this routine fires at least twice.
+		//Due to time constraints, we need to avoid this routine for browsers that donnot self-regulate disallow double pass-thru on JQUERY.
+		//Address this in future versions.  Nov 2015
+
+		//MOZILLA is the setting for both IE and Firefox.  Chrome is Chrome
+		isSafari=/safari/.test(navigator.userAgent.toLowerCase());
+		isChrome=/chrome/.test(navigator.userAgent.toLowerCase());
+		isMSIE=/mozilla/.test(navigator.userAgent.toLowerCase());
+		isFireFox=/firefox/.test(navigator.userAgent.toLowerCase());
+		if(!(isSafari || isChrome)) {
+			button.click();
+			return false;
+		}
+		return false;
+          }
+		  
+		  return false;
+	  }); 
+
+	  
+	   $('button.email-button').click(function(){
+          // Find innermost span
+          var target = $(this).attr('target');
+		window.location.href = target;
+		  
+		  return false;
+	  });
+
+	  
+	  //KM -> Function to toggle Mobile ShareThis button display  
+
+		$(".mtoggler").click(function() {
+		  $(".mobile-sharelinks").slideToggle("slow");
+		});	   
+		
+		$(".mobile-sharelinks a.closeshare").click(function() {
+		  $(".mobile-sharelinks").slideToggle("slow");
+		});	 			
+
+	// Move the "Exposed form: all_blog_views_CD-page_1" block
+	// from the content region to top of tile sidebar
+	if (($('body.node-type-blog').length || $('body.node-type-author-profile').length) && ($('.blogsearchform','#region-content').length)){
+		$('.blogsearchform','#region-content').prependTo('.layout-responsive-region-sidebar_b','#block-system-main');
+	};
+
+});

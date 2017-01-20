@@ -1,0 +1,116 @@
+/* Normal: Loaded after global (mobile), default, and narrow. */
+body.logged-in.alpha-grid-debug #zone-user-wrapper {
+  background: yellow;
+}
+
+body {
+    font-size: 100%;
+}
+
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level {
+  width: 187px; /* based on 940px total; 188px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level.first {
+  width: 186px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-6 li.ise-megamenu-top-level {
+  width: 156px; /* based on 940px total; 156px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-6 li.ise-megamenu-top-level.first {
+  width: 153px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-7 li.ise-megamenu-top-level {
+  width: 133px; /* based on 940px total; 133px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-7 li.ise-megamenu-top-level.first {
+  width: 134px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-8 li.ise-megamenu-top-level {
+  width: 116px; /* based on 940px total; 116px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-8 li.ise-megamenu-top-level.first {
+  width: 119px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-9 li.ise-megamenu-top-level {
+  width: 103px; /* based on 940px total; 103px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-9 li.ise-megamenu-top-level.first {
+  width: 106px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-10 li.ise-megamenu-top-level {
+  width: 93px; /* based on 940px total; 93px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-10 li.ise-megamenu-top-level.first {
+  width: 92px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level span small {
+    display: inherit;
+}
+
+ul.ise-megamenu a.ise-megamenu-link-level1 * {
+    width: 156px;
+}
+
+div.ise-megamenu-dropdown-links-menu {
+  /*  width: 663px; /* 940px width - 277px feature image */
+}
+
+div.ise-megamenu-dropdown-links-menu ul {
+  width: 100%;
+}
+
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown,
+li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: -91px;
+}
+
+.self-selection-tab {
+    height: 360px;
+    width: 178px; /* 180px per box, -2px for border */
+}
+
+#block-views-preface-block .views-field-field-preface-text .field-content {
+    width: 722px; /* 940px - 178px image - 40px leeway for margins/padding */
+}
+
+/* IBR Calculator */
+#ibr-calculator #general { 
+   min-height: 130px;
+}
+
+#ibr-calculator div#married, #ibr-calculator div#filed, #ibr-calculator div#num-of-dep, #ibr-calculator div#choose-state {
+   max-width: 20%;
+   width: auto;
+}
+
+#ibr-calculator div#your-loan-amount, #ibr-calculator div#spouse-loan-amount {
+   min-height: 350px;
+}
+
+/* PAYE Calculator */
+#paye-calculator #general { 
+   min-height: 130px;
+}
+
+#paye-calculator div#married, #paye-calculator div#filed, #paye-calculator div#num-of-dep, #paye-calculator div#choose-state {
+   max-width: 20%;
+   width: auto;
+}
+
+#paye-calculator div#your-loan-amount, #paye-calculator div#spouse-loan-amount {
+   min-height: 350px;
+}
+/* Budget Calculator */
+#budget label {
+}
+
+form#search-block-form .form-text {
+	width: 200px;
+}

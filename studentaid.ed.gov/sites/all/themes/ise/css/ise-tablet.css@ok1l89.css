@@ -1,0 +1,392 @@
+body.logged-in.alpha-grid-debug #zone-user-wrapper {
+  background: purple;
+}
+
+
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: -139px;
+}
+
+a#ise-megamenu-mobile-menu-toggle {
+  display:  block;
+  margin-right: -5px;
+  width:93px;
+  height: 40px;
+}
+
+#block-search-form {
+  width: 80%;
+  float: left;
+}
+
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown {
+  left: 0px;
+}
+
+div.ise-megamenu-dropdown {
+  width: 100%;
+}
+
+
+div.ise-megamenu-dropdown-links-menu ul,
+div.ise-megamenu-dropdown-links-menu ul li,
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+  width: auto;
+  min-height:0;
+}
+
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+  padding: 25px 5px; /* makes the sub menu items the same height as the main menu item */
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level {
+  max-height: none;
+}
+ul.ise-megamenu li.ise-megamenu-top-level.hover {
+  height: auto;
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level.hover {
+  max-height: none;
+}
+
+div.ise-megamenu-dropdown-links-menu ul li ul li {
+  padding-left: 10px;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li a, .ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li a {
+  /* padding-left: 30px; */
+}
+
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown, li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: 0;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a, .ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-right.png);
+  background-position: 97% center;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2, .ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+  width:auto;
+  min-height:0;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li a, .ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li a {
+  /* padding: 2px 14px 6px 4px; */
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-bg.png) !important;
+}
+ul.ise-megamenu li.ise-megamenu-top-level.hover {
+  position: relative;
+}
+ul.ise-megamenu a.ise-megamenu-link-level1 {
+  /*background-image: url(../images/menu-bg.png);*/
+  display: block;
+}
+ul.ise-megamenu li.ise-megamenu-top-level.hover,
+ul.ise-megamenu li.ise-megamenu-top-level.hover h2,
+ul.ise-megamenu li.ise-megamenu-top-level.hover small,
+ul.ise-megamenu li.ise-megamenu-top-level:hover,
+ul.ise-megamenu li.ise-megamenu-top-level:hover h2,
+ul.ise-megamenu li.ise-megamenu-top-level:hover small {
+  color: white;
+}
+ul.ise-megamenu li.ise-megamenu-top-level span {
+  margin-left: 30px;
+}
+ul.ise-megamenu li.ise-megamenu-top-level span h2{
+  width: 100%;
+  padding: 25px 5px;
+}
+
+/* left megamenu arrow */
+ul.ise-megamenu .ise-megamenu-top-level.hover a.ise-megamenu-arrow {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  border-right: solid 1px #ccc;
+  padding-right:15px;
+}
+
+
+li.ise-megamenu-top-level div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  color: white;
+  background-color: brown;
+  background-image: none;
+  padding-left: 67px;
+}
+
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #618e3c;
+}
+
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #b38b30;
+}
+
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #438c81;
+}
+
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #99973a;
+}
+
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #994640;
+}
+
+li.ise-megamenu-top-level div.ise-megamenu-dropdown-links-menu li.hover a.sub-menu-close-link {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-left-hover.png);
+  text-indent: -999em;
+  position: absolute;
+  left: 0;
+  padding-right:4px;
+
+  /* creates the box for the left arrow to sit in */
+  width:51px;
+  border-right: solid 1px #ccc;
+  background-position: 50% 50%;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded ul li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded ul li a {
+  /* padding: inherit; */
+  padding: 25px 5px;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded.hover a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded.hover a:hover {
+  background-image: none;
+}
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded.hover a.sub-menu-close-link:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded.hover a.sub-menu-close-link:hover {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-left-hover.png);
+  background-position: 50% 50%; /* centers the arrow in the toggle box */
+
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-right-hover.png);
+  background-position: 97% center; /* keeps the right arrow in the correct position on hover */
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded ul li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded ul li a {
+  padding: 25px 5px;
+  /*margin-left: -20px; /* moves the 3rd lvl item to run parallel with the parent item, affects last 2 menus*/
+}
+
+/* clones the height of the level 3 menu item box  to its parent*/
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3{
+  padding: 25px 5px;
+  margin-left: -10px; /* moves the 3rd lvl item to run parallel with the parent item, affects first 3 menus */
+  max-height:16px;
+  min-height:16px;
+}
+
+/* removes the .selected title from mobile view */
+li.ise-megamenu-top-level-item-1 .selected,
+li.ise-megamenu-top-level-item-2 .selected,
+li.ise-megamenu-top-level-item-3 .selected,
+li.ise-megamenu-top-level-item-4 .selected,
+li.ise-megamenu-top-level-item-5 .selected{
+  display:none;
+}
+
+/* centers the left arrow for first 3 items */
+div.ise-megamenu-dropdown-links-menu a{
+  padding: 25px 5px;
+}
+
+/* fix highlighting the entire UL for tablet */
+li.ise-megamenu-top-level-item-1 ul:hover,
+li.ise-megamenu-top-level-item-2 ul:hover,
+li.ise-megamenu-top-level-item-3 ul:hover,
+li.ise-megamenu-top-level-item-4 ul:hover,
+li.ise-megamenu-top-level-item-5 ul:hover{
+    color: white;
+    background-color: white;
+}
+
+/* removes line height from tablet view */
+div.ise-megamenu-dropdown-links-menu ul li,
+div.ise-megamenu-dropdown-links-menu ul li ul li{
+  line-height:100%;
+}
+
+/* removes bottom border on tablet */
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown{
+  border-bottom: none;
+}
+
+/* adds spacing when first level menu is expanded */
+ul.ise-megamenu li.ise-megamenu-top-level.hover span h2{
+  padding-left: 40px;
+}
+
+/* redefines the right arrow used on mobile */
+div.ise-megamenu-dropdown-links-menu li.expanded a {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-right.png);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+}
+
+
+div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-right-hover.png);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+}
+
+/* moves the menu button farther right */
+a#ise-megamenu-mobile-menu-toggle{
+  float: right;
+  margin-right: -5px;
+  width:82px;
+}
+
+/* moves the megamenu up closer to the menu button */
+ul.ise-megamenu{
+  margin-top: -10px;
+}
+
+ul.ise-megamenu a.ise-megamenu-arrow {
+position: relative;
+display: block;
+top: -70px;
+text-align: center;
+right: -60px;
+}
+
+a.ise-megamenu-sub-arrow {
+  display:block;
+  right: 0px;
+  position:absolute;
+  float: right;
+  top: 0;
+  border-left:solid 1px ccc;
+  text-align: center;
+  width:50px;
+  background-image: none;
+}
+
+/* removes default background arrow as seen on pc view */
+div.ise-megamenu-dropdown-links-menu li.expanded a,
+div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a,
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a:hover{
+  background-image: none;
+}
+
+/* right megamenu arrow */
+ul.ise-megamenu .ise-megamenu-top-level:not(.hover) a.ise-megamenu-arrow{
+  right:0px;
+  width: 60px;
+  border-left: solid 1px #ccc;
+}
+
+/* keeps the entire list highlighted on hover */
+li.ise-megamenu-top-level-item-1 li.expanded:hover{
+  /* background-color: #618e3c; */
+  color:white;
+}
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu li.expanded:hover{
+  /*background-color: #b38b30; */
+}
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu li.expanded:hover{
+  /* background-color: #438c81; */
+}
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu li.expanded:hover{
+  /* background-color: #99973a; */
+}
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu li.expanded:hover{
+  /* background-color: #994640; */
+}
+
+/* fix location of arrow on mobile */
+li.ise-megamenu-top-level.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: 0px;
+  top:0!important;
+}
+
+div.ise-megamenu-dropdown-links-menu ul li{
+  border-bottom: solid 1px #ccc;
+  /*border-right: solid 1px ;*/
+  /*border-left: solid 1px ; */
+}
+
+li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul li a.ise-megamenu-link-level3,
+li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul li a.ise-megamenu-link-level3{
+  left: -291px;
+  padding-left:15px;
+}
+
+li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul,
+li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul{
+  margin-left:0;
+}
+
+/* create box shadow for menu*/
+#block-ise-megamenu-ise-megamenu{
+  box-shadow: 7px 7px 7px grey;
+  margin-left:5px;
+  margin-right:5px;
+  border-left: solid 1px grey;
+}
+
+/* removes padding the text on level 3 menu */
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3{
+  padding-top:none;
+}
+
+li.ise-megamenu-top-level-item-1 .ise-megamenu-sub-arrow{
+  background-color:#618e3c;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+
+li.ise-megamenu-top-level-item-2 .ise-megamenu-sub-arrow{
+  background-color:#b38b30;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+li.ise-megamenu-top-level-item-3 .ise-megamenu-sub-arrow{
+  background-color:#438c81;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+li.ise-megamenu-top-level-item-4 .ise-megamenu-sub-arrow{
+  background-color:#99973a;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+li.ise-megamenu-top-level-item-5 .ise-megamenu-sub-arrow{
+  background-color:#994640;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+
+/* redefine level 1 items */
+ul.ise-megamenu li.ise-megamenu-top-level span {
+  display: block;
+  text-align:left;
+}
+
+/* adds a border to expanded 2nd level */
+li.ise-megamenu-top-level .ise-megamenu-dropdown-links li.hover ul{
+  border-top: solid 1px #ccc;
+}

@@ -1,0 +1,212 @@
+var ise = ise || {};
+
+ise.loadWebFonts = function() {
+    WebFontConfig = {
+        google: { families: [ 'News+Cycle::latin', 'Droid+Serif:400,700,400italic,700italic:latin' ] }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+           '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+};
+
+ise.preloadImage = function(src) {
+    var img = new Image();
+    img.src = src;
+};
+
+ise.equalHeights = function(element) {
+    var $ = jQuery;
+    var highest = 0;
+    $(element).height('auto');
+    $(element).each(function() {
+        if ($(this).height() > highest) {
+            highest = $(this).height();
+        }
+    });
+    $(element).height(highest);
+};
+
+jQuery(document).ready(function($) {
+    //ise.loadWebFonts();
+    
+    ise.preloadImage("/sites/all/themes/ise/images/aid-5x5.png");
+    ise.preloadImage("/sites/all/themes/ise/images/applying-5x5.png");
+    ise.preloadImage("/sites/all/themes/ise/images/eligibility-5x5.png");
+    ise.preloadImage("/sites/all/themes/ise/images/preparing-5x5.png");
+    ise.preloadImage("/sites/all/themes/ise/images/repaying-5x5.png");
+    
+    function resizeYouTubeVideos() {
+        $("div.media-youtube-outer-wrapper").each(function() {
+            $this = $(this);
+            var orig_width = $this.width();
+            var orig_height = $this.height();
+            var aspect_ratio = orig_height / orig_width;
+            var new_width = $this.parents(".region-content-inner").width();
+            var new_height = new_width * aspect_ratio;
+            $this.width(new_width).height(new_height);
+            $this.find("object").attr("width", new_width).attr("height", new_height);
+            $this.find("embed").attr("width", new_width).attr("height", new_height);
+        });
+    }
+    /** defect 9825***/
+    $( "p:has(a.anchor)" ).addClass( "list_anchorlink" );
+    /********/
+    //resizeYouTubeVideos();
+    //$(window).resize(function() {
+    //    resizeYouTubeVideos();
+    //});
+    
+    /* Dynamic behavior for the site survey/feedback webform */
+    $("[name='submitted[typegroup][visitor_type]']").change(function() {
+        var state = $(this).val() === "other" ? "show" : "hide";
+        $("#webform-component-typegroup--visitor-type-specify").animate({height: state, duration: 'fast'});
+    });
+
+    $("[name='submitted[sourcegroup][source]']").change(function() {
+        var sourceValue = $(this).val();
+        var state = "hide";
+        if (sourceValue === "other" || sourceValue === "other_social_media" || sourceValue === "other_website") {
+            state = "show";
+        }
+        $("#webform-component-sourcegroup--source-specify").animate({height: state});
+    });
+    
+    $("[name='submitted[infogroup][looking_for][other]']").change(function() {
+        var state = $(this).is(":checked") ? "show" : "hide";
+        $("#webform-component-infogroup--looking-for-specify").animate({height: state});
+    });
+    
+    $("[name='submitted[foundgroup][found_info]']").change(function() {
+        var state = $(this).val() === "no" ? "show" : "hide";
+        $("#webform-component-foundgroup--found-info-specify").animate({height: state});
+    });
+    
+    // Lightbox for the event photos section on Event Detail pages
+    //$("div.event-gallery a.gallery-photo").colorbox({rel: 'event'});
+
+    // IE7 should die
+    if($.browser.msie && (parseInt($.browser.version, 10) === 7) && (document.documentMode == undefined )) {
+        $('a.anchor').before("<img alt='' src='/sites/all/themes/ise/images/bullet-down.png'> ");
+        $('a.top').before("<img alt='' src='/sites/all/themes/ise/images/bullet-up.png' style='float: right; padding-left: 0.25em;'>");
+       
+        $('.topic-preparing').find('#block-views-preface-block').find('.views-field-field-preface-text').find('.field-content').before(
+                       "<img src='/sites/all/themes/ise/images/heads/prepare_for_college.png' alt='' style='float: left;'>");
+       
+        $('.topic-types-of-aid').find('#block-views-preface-block').find('.views-field-field-preface-text').find('.field-content').before(
+                       "<img src='/sites/all/themes/ise/images/heads/types_of_aid.png' alt='' style='float: left;'>");
+       
+        $('.topic-eligibility').find('#block-views-preface-block').find('.views-field-field-preface-text').find('.field-content').before(
+                       "<img src='/sites/all/themes/ise/images/heads/qualify_for_aid.png' alt='' style='float: left;'>");
+       
+        $('.topic-applying').find('#block-views-preface-block').find('.views-field-field-preface-text').find('.field-content').before(
+                       "<img src='/sites/all/themes/ise/images/heads/apply_for_aid.png' alt='' style='float: left;'>");
+       
+        $('.topic-repaying').find('#block-views-preface-block').find('.views-field-field-preface-text').find('.field-content').before(
+                       "<img src='/sites/all/themes/ise/images/heads/manage_my_loans.png' alt='' style='float: left;'>");
+
+    //Defect 16508    
+        $('.topic-how-to-repay').find('#block-views-preface-block').find('.views-field-field-preface-text').find('.field-content').before(
+                       "<img src='/sites/all/themes/ise/images/heads/manage_my_loans.png' alt='' style='float: left;'>");
+    }
+    
+    // Clery Act page
+    $("body.page-node-118 .school").hide();
+    if (window.location.hash) $(window.location.hash).show();
+    $("body.page-node-118 #yearDD").change(function(){
+        $(".school").hide();
+        window.location.hash = '';
+        $("#" + this.value).show().siblings().hide();
+        $("#schoolDD").value = this.value;
+        window.location.hash = ("#" + this.value);
+    });
+    $("body.page-node-118 #schoolDD").change(function(){
+        $(".school").hide();
+        window.location.hash = '';
+        $("#" + this.value).show().siblings().hide();
+        $("#schoolDD").value = this.value;
+        window.location.hash = ("#" + this.value);
+    });
+// Clery Act page
+    $("body.page-node-704 .school").hide();
+    if (window.location.hash) $(window.location.hash).show();
+    $("body.page-node-704 #yearDD").change(function(){
+        $(".school").hide();
+        window.location.hash = '';
+        $("#" + this.value).show().siblings().hide();
+        $("#schoolDD").value = this.value;
+        window.location.hash = ("#" + this.value);
+    });
+    $("body.page-node-704 #schoolDD").change(function(){
+        $(".school").hide();
+        window.location.hash = '';
+        $("#" + this.value).show().siblings().hide();
+        $("#schoolDD").value = this.value;
+        window.location.hash = ("#" + this.value);
+    });
+
+
+
+});
+
+jQuery(window).bind("load", function() {
+    // Equal heights needs to wait until after the webfonts have a chance to load.
+    ise.equalHeights('.self-selection-tab');
+    ise.equalHeights('#block-menu-menu-footer-menu li.top');
+    jQuery(window).resize(function() {
+        ise.equalHeights('.self-selection-tab');
+        ise.equalHeights('#block-menu-menu-footer-menu li.top');
+    });
+});
+
+var pageLangInd;
+(function ($) {
+  Drupal.behaviors.glossaryLangSwitch = {
+     attach: function(context, settings) {
+	   $('dt').filter('[langind]').each(
+        function(i) {
+		   if ( i == 0 ) {
+            if ( $('html').has('[lang]') ) {
+              pageLangInd = $('html').attr('lang');
+			  if (!pageLangInd){
+			     if(window.location.href.indexOf("/es/")> -1){
+				    pageLangInd="es";
+				 }else{
+				    pageLangInd="en";
+                 }				 
+			  }
+			//  alert ("pagelangind "+pageLangInd);
+            }
+          }
+          if ( $(this).attr('langind') != pageLangInd ) {
+            $(this).remove();
+          }
+        }
+      );
+      $('dd').filter('[langind]').each(
+        function(i) {
+          if ( i == 0 ) {
+            if ( $('html').has('[lang]') ) {
+              pageLangInd = $('html').attr('lang');
+			  if (!pageLangInd){
+			     if(window.location.href.indexOf("/es/")> -1){
+				    pageLangInd="es";
+				 }else{
+				    pageLangInd="en";
+                 }				 
+			  }
+            }
+          }
+          if ( $(this).attr('langind') != pageLangInd ) {
+            $(this).remove();
+          }
+        }
+      );
+    } //attach
+  } //behaviors
+})(jQuery);

@@ -1,0 +1,73 @@
+/**
+ * @file
+ *
+ * message specific Js code
+ */
+
+(function($) {
+
+
+Drupal.NSLDS = Drupal.NSLDS || {};
+/**
+ * Display a message to the user
+ *
+ * @param (string) the message, preferably localized
+ * @param (string) the type of message, default is 'status'
+ */
+ Drupal.NSLDS.nsldsMessage = function (message,type) {
+
+
+	//alert ("in nslds messages the message is "+message);
+
+	// set the type to the default if it is not passed
+
+
+  if (typeof type === 'undefined' || !type) {
+    type = 'status';
+  }
+
+
+  // make sure that a message was passed
+  if (typeof message !== 'undefined' && message) {
+    $('.nslds-messages').replaceWith('<div class="nslds nslds-messages login"></div>');
+
+
+    $('.nslds-messages').append('<div id="err_msg" class="messages ' + type + '">' + message + '</div>');
+	//<a href="#" class="remove-message" title="' + Drupal.t('Remove this message from the list.') + '"><span class="hidden-text">' + Drupal.t('Remove') + '</span></a>
+   	// $( ".messages" ).focus();
+	
+	var el = document.getElementById('nslds-login-form');
+
+
+	//alert ("the div is "+el);
+
+
+    el.scrollIntoView(true);
+	 document.getElementById('edit-submit').className = "form-submit";
+	 
+  }
+  
+  Drupal.attachBehaviors();
+}
+
+$(document).ready(function() {
+  //nsldsMessage(Drupal.t('This is a test status message'));
+  //nsldsMessage(Drupal.t('This is a test warning message'), 'warning');
+  //nsldsMessage(Drupal.t('This is a test error message'), 'error');
+});
+
+
+
+Drupal.behaviors.iseNsldsMessages = {
+  'attach': function(context) {
+    $('.nslds-messages .messages a.remove-message:not(.nslds-processed)')
+      .addClass('nslds-processed')
+      .click(function() {
+	     
+        $(this).parent().remove();
+      return false;
+    });
+  }
+}
+
+})(jQuery);

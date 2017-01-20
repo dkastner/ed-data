@@ -1,0 +1,600 @@
+var ise = ise || {};
+
+ise.MENU_CLOSED = 0;
+ise.MENU_OPEN = 1;
+
+
+function log(item, title) {
+  if (typeof console !== 'undefined') {
+    if (typeof title !== 'undefined') {
+      console.log(title);
+    }
+    console.log(item);
+  }
+}
+
+
+/**
+ * determine whether or not the menu item is open at present or closed
+ */
+ise.menuIsOpen = function(element) {
+  if (jQuery(element).hasClass('hover')) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+/**
+ * Determines whether the user is using a touchscreen device.
+ */
+ise.isTouchDevice = function() {
+  try {
+    document.createEvent("TouchEvent");
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+/**
+ * Determines what flavor of menus the adaptive theme is serving the user:
+ * full-width blocks with one menu item per row versus side-by-side menu items.
+ */
+ise.usingFullWidthMenus = function() {
+  //return jQuery("ul.ise-megamenu").width() === jQuery("ul.ise-megamenu li.ise-megamenu-top-level").width();
+  //if the menu toggle button is visible -> the menu is set to mobile, return false
+  if (jQuery('#ise-megamenu-mobile-menu-toggle').is(':visible')) {
+    return false;
+  }
+  else{
+    return true;
+  }
+};
+
+
+/**
+  * resets menu state
+  */
+
+ise.resetMenuState = function() {
+
+    //refresh the menu list by collapsing all items
+    jQuery('.ise-megamenu-top-level').each(function(i){
+      jQuery(this).show(); //shows siblings
+      jQuery(this).removeClass('hover'); //remove hover (collapse second level)
+      jQuery(this).find('ul li').removeClass('hover'); //removes hover on third menu item
+      jQuery(this).find('.sub-menu-close-link').remove(); //removes the sub menu close button
+      jQuery(this).find('ul').show(); //resets level 2 items to be visible if it was hidden from expanding to level 3
+      jQuery(this).find('ul li ul').hide(); //hides level 3 items
+      jQuery(this).find('a.ise-megamenu-link-level2').removeClass('white'); //default the item back to white background
+
+      var arrow = jQuery(this).find("a.ise-megamenu-arrow img").get(0);
+      //resets arrow image
+      if (ise.usingFullWidthMenus()) {
+        arrow.src = arrow.src.replace('menu-left.png', 'menu-down.png');
+        arrow.src = arrow.src.replace('menu-right.png', 'menu-down.png');
+      }
+      else{
+        arrow.src = arrow.src.replace('menu-left.png', 'menu-right.png');
+      }
+
+
+    });
+
+};
+
+ise.eventPreventDefault = function(event) {
+  if (typeof event.preventDefault === 'function') {
+    event.preventDefault();
+  }
+  else {
+    event.returnValue = false;
+  }
+}
+
+/**
+  * loads by pc, tablet, mobile views
+  * loads level 2 items
+  **/
+ise.showDropdown = function(target, isMobile) {
+  if (typeof isMobile === 'undefined') {
+    isMobile = false;
+  }
+
+  //console.log("showDropdown called");
+  jQuery("li.ise-megamenu-top-level.hover").each(function() {
+    ise.hideDropdown(jQuery(this), isMobile);
+  });
+  $dropdown = target.children("div.ise-megamenu-dropdown");
+  $hover = target.find('li');
+
+
+  //$dropdown.css("left", 0);
+  if (ise.usingFullWidthMenus()) {
+    //target.css("margin-bottom", $dropdown.height() + "px");
+  }
+  target.addClass("hover");
+
+  //target.child.append("SOME TEXT");
+  var arrow = target.find("a.ise-megamenu-arrow img").get(0);
+  if (arrow) {
+    //console.log("Arrow element found");
+    if (isMobile || ise.isTouchDevice() || jQuery(window).width() < 740) {
+
+      //for ipad
+      if (ise.usingFullWidthMenus()==true) {
+        arrow.src = arrow.src.replace('menu-down.png', 'menu-up.png');
+
+      }
+      //other mobile devices
+      else{
+        arrow.src = arrow.src.replace('menu-right.png', 'menu-left.png');
+        target.siblings().slideUp("slow"); //hides all other level 1 items
+        //target.children().show();
+
+        //if the menu is expanded, hide the right arrow
+        if ($hover.hasClass("hover")) {
+          jQuery("a.ise-megamenu-sub-arrow").hide();
+        }
+        else{
+          jQuery("a.ise-megamenu-sub-arrow").show();
+        }
+        //console.log("Inside is mobile");
+      }
+    }
+    else {
+      arrow.src = arrow.src.replace('menu-down.png', 'menu-up.png');
+    }
+  }
+};
+
+/**
+  * loads by pc, tablet, mobile views
+  * hides to level 2 items
+  **/
+ise.hideDropdown = function(target, isMobile) {
+  if (typeof isMobile === 'undefined') {
+    isMobile = false;
+  }
+  //console.log("hidedropdown called");
+  //console.log("target"+target.attr('name'));
+
+  //target.children("div.ise-megamenu-dropdown").css("left", "-9999px");
+  // check to make sure this isn't still being hovered over before closing it
+  if (jQuery('ul li.hover', target).length && !(ise.isTouchDevice()  || jQuery(window).width() < 740)) {
+
+  }
+  else {
+    if (ise.usingFullWidthMenus()) {
+      target.css("margin-bottom", 0);
+    }
+    target.removeClass("hover");
+    var arrow = target.find("a.ise-megamenu-arrow img").get(0);
+    if (arrow) {
+      if (isMobile || ise.isTouchDevice() || jQuery(window).width() < 740) {
+        //for ipad
+        if (ise.usingFullWidthMenus()==true) {
+          arrow.src = arrow.src.replace('menu-up.png', 'menu-down.png');
+          ise.resetMenuState(); //***8262
+        }
+
+        //for mobile
+        else{
+          arrow.src = arrow.src.replace('menu-left.png', 'menu-right.png');
+          target.siblings().slideDown("slow"); //shows all other menu level 1 items
+          jQuery("a.ise-megamenu-sub-arrow").show(); //shows the right arrow
+          jQuery(target).find('a.ise-megamenu-link-level2').removeClass('white');
+          ise.resetMenuState(); //resets menu state, collapses 3rd level items
+
+        }
+      }
+      else {
+        arrow.src = arrow.src.replace('menu-up.png', 'menu-down.png');
+      }
+
+    }
+  }
+};
+
+/**
+ * loads only by mobile settings
+ * Show the sub menu items
+ */
+ise.showSubMenu = function(target, isMobile) {
+  if (typeof isMobile === 'undefined') {
+    isMobile = false;
+  }
+
+  //console.log("Inside showSubMenu");
+  //hides all other siblings
+  if (!ise.usingFullWidthMenus()) {
+      target.parent().siblings().slideUp("slow");
+      jQuery(target).find('a.ise-megamenu-link-level2').removeClass('white'); //default the item back to white background
+  }
+
+  jQuery("div.ise-megamenu-dropdown-links li.hover").each(function() {
+    ise.hideSubMenu(jQuery(this), isMobile);
+  });
+
+  var $dropdown = jQuery('ul', target).show();
+
+
+  //$dropdown.css("left", 0);
+
+  if (ise.usingFullWidthMenus()) {
+    //target.parents('div.ise-megamenu-dropdown').css("margin-bottom", $dropdown.height() + "px");
+
+    var topLevelHeightDifference = target.height() + $dropdown.height();
+    var topLevelMenuItem = target.parents('li.ise-megamenu-top-level');
+  }
+  target.addClass("hover");
+  //var arrow = target.find("a.ise-megamenu-arrow img").get(0);
+  //arrow.src = arrow.src.replace('menu-down.png', 'menu-up.png');
+
+  if (!ise.usingFullWidthMenus()) {
+    target.prepend('<a href="#" class="sub-menu-close-link">' + Drupal.t('Close') + '</a>');
+    jQuery("a.ise-megamenu-sub-arrow").hide();
+
+    jQuery('a.sub-menu-close-link:not(.processed)').addClass('processed').click(function() {
+      ise.hideSubMenu(target, isMobile);
+      return false;
+    });
+  }
+};
+
+ise.hideSubMenu = function(target, isMobile) {
+  if (typeof isMobile === 'undefined') {
+    isMobile = false;
+  }
+
+  if (!ise.usingFullWidthMenus()) {
+    target.parent().siblings().slideDown("slow");
+    jQuery(target).find('a.ise-megamenu-link-level2').addClass('white'); //default the item back to white background
+
+  }
+  //target siblings show
+  //target.children("div.ise-megamenu-dropdown").css("left", "-9999px");
+
+  if (ise.usingFullWidthMenus()) {
+    //target.css("margin-bottom", 0);
+  }
+  //target.removeClass("hover");
+  jQuery('ul', target).hide();
+  jQuery(target).removeClass('hover');
+
+
+  if (!ise.usingFullWidthMenus()) {
+    jQuery("a.ise-megamenu-sub-arrow").show();
+  }
+  /*
+  var arrow = target.find("a.ise-megamenu-arrow img").get(0);
+  arrow.src = arrow.src.replace('menu-up.png', 'menu-down.png');
+  */
+  if (isMobile) {
+    target.children('.sub-menu-close-link').remove();
+  }
+};
+
+jQuery(document).ready (function($) {
+  /*
+   * When the browser orientation changes, ensure the menus still look OK.
+   * If an accordion is open when switching to side-by-side format, close
+   * it.  If a menu is open when switching to full-width format, make sure
+   * an appropriate size margin is provided for the accordion.
+   */
+  $(document).bind("orientationchange", function() {
+    if (ise.usingFullWidthMenus()) {
+      var dropdownHeight = $("ul.ise-megamenu li.ise-megamenu-top-level.hover div.ise-megamenu-dropdown").height();
+      $("ul.ise-megamenu li.hover").css("margin-bottom", dropdownHeight);
+    } else {
+      $("ul.ise-megamenu li").css("margin-bottom", 0);
+    }
+  });
+
+  $(window).bind("resize", ise.resizeWindow);
+
+
+  /*
+   * Menus open/close differently based on whether the browser is on a
+   * touchscreen device or a standard device.
+   */
+  if (ise.isTouchDevice() || $(window).width() < 740) {
+    // Taps outside of megamenu should close the megamenu.
+    $("html").click(function() {
+      ise.hideDropdown($("li.ise-megamenu-top-level.hover"), true);
+    });
+    $("ul.ise-megamenu").click(function(event){
+      event.stopPropagation();
+    });
+
+    // First tap on a megamenu level 1 item should open the megamenu.
+    // Second tap actually follows the level 1 item's link.
+
+    $("a.ise-megamenu-link-level1").click(function(event) {
+      if (ise.usingFullWidthMenus()) {
+        var $menuElement = $(this).parent();
+        var menuState = ise.menuIsOpen($menuElement);
+        if (!menuState) {
+          ise.showDropdown($menuElement, true);
+          ise.eventPreventDefault(event);
+        }
+      }
+    });
+
+
+
+    // second level menu item behavior for mobile
+    $('a.ise-megamenu-link-level2').click(function(event) {
+      //console.log("inside click event");
+      if (ise.usingFullWidthMenus()==true) {
+        //console.log("inside click event full menu returned true");
+        var $menuElement = $(this).parent();
+        var menuState = ise.menuIsOpen($menuElement);
+        if (!menuState && $($menuElement).hasClass('expanded')) {
+          ise.showSubMenu($menuElement, true);
+          ise.eventPreventDefault(event);
+        }
+      }
+    });
+
+    //behavior for first level expand arrow
+    $("a.ise-megamenu-arrow").click(function(event) {
+      var $menuElement = $(this).parent();
+      var menuState = ise.menuIsOpen($menuElement);
+      if (!menuState) {
+        ise.showDropdown($menuElement, true);
+      } else {
+        ise.hideDropdown($menuElement, true);
+      }
+      ise.eventPreventDefault(event);
+    });
+
+
+    //behavior for second level expand arrow
+    $("a.ise-megamenu-sub-arrow").click(function(event) {
+      var $menuElement = $(this).parent();
+      var menuState = ise.menuIsOpen($menuElement);
+      if (!menuState) {
+        ise.showSubMenu($menuElement, true);
+      } else {
+        ise.hideSubMenu($menuElement, true);
+      }
+      ise.eventPreventDefault(event);
+    });
+
+  /*
+  * enable tabbing for 508 mobile
+  * auto displays the next item on focus(tab)
+  * this is to ensure that the tab position does not get reset
+  */
+  $("a.ise-megamenu-link-level2").focus(function(event) {
+      var $menuElement = $(this).parent();
+      //if this has sub menus, expand, else do nothing
+      if ($menuElement.hasClass('expanded')) {
+        var menuState = ise.menuIsOpen($menuElement);
+        if (!menuState) {
+          ise.showSubMenu($menuElement, true);
+        } else {
+          ise.hideSubMenu($menuElement, true);
+        }
+        ise.eventPreventDefault(event);
+      }
+    });
+
+    //unhides the 1st lvl siblings when focusin to continue tabbing.
+     $(".ise-megamenu-dropdown-links ul.ise-megamenu-level2-ul:last-child li:last-child a").focusin(function(){
+      $('li.ise-megamenu-top-level').show();
+    });
+
+    //unhides 2nd when last child of level 3 is focused to continue tabbing
+    $(".ise-megamenu-top-level li.expanded ul.ise-megamenu-level3-ul li:last-child a").focus(function(){
+      $(this).parents(".ise-megamenu-level2-ul").siblings().show();
+    });
+
+    //hides the current level 3 menu when leaving focus
+    $(".ise-megamenu-top-level li.expanded ul.ise-megamenu-level3-ul li:last-child a").focusout(function(){
+      $(this).parents('.ise-megamenu-level3-ul').hide();
+      ise.hideSubMenu($(this).parents('li.expanded'));
+      $(this).parents('li.expanded').children('a.sub-menu-close-link').remove();
+    });
+
+  } else {
+    // handle the top level menu items
+    $("li.ise-megamenu-top-level").hoverIntent({
+      over: function() { ise.showDropdown($(this)); },
+      out: function() { ise.hideDropdown($(this)); },
+      timeout: 300,
+      sensitivity: 3,
+      interval: 200
+    });
+    // the sub menu associated with the top level menu item
+    $("li.ise-megamenu-top-level li ul").hoverIntent({
+      over: function() {
+        ise.showDropdown($(this));
+      },
+      out: function() {
+        ise.hideDropdown($(this));
+      },
+      timeout: 300,
+      sensitivity: 3,
+      interval: 200
+    });
+    // the sub sub menus
+    $("li.ise-megamenu-top-level .ise-megamenu-dropdown-links li").hoverIntent({
+      //over: function() { ise.showDropdown($(this)); },
+      //out: function() { ise.hideDropdown($(this)); },
+      over: function() {
+        $(this).addClass('hover');
+        //console.log("this selector ->" + $(this).selector);
+      },
+      out: function() { $(this).removeClass('hover'); },
+      timeout: 300,
+      sensitivity: 3,
+      interval: 200
+    });
+
+    /*
+     * the below is for 508 menu compliance on pc view
+     * menu level 3 does not expand on keyboard tab without this code
+     */
+    $("li.ise-megamenu-top-level .ise-megamenu-dropdown-links li").focusin(function(){
+      $(this).addClass('hover');
+    });
+     $("li.ise-megamenu-top-level .ise-megamenu-dropdown-links li").focusout(function(){
+      $(this).removeClass('hover');
+    });
+
+
+    // If something gets focus that isn't part of the megamenu, close all megamenus
+    $("*").focus(function(event) {
+      if ($(this).parents("li.ise-megamenu-top-level").length === 0) {
+        ise.hideDropdown($("li.ise-megamenu-top-level"));
+      }
+    });
+  }//ends else
+
+
+  /*
+   * Menus should open/close as tab focus changes from menu to menu.
+    div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3
+   */
+
+  $("ul.ise-megamenu a").focus(function(event) {
+  //$('a.ise-megamenu-arrow').focus(function(event){
+    var $parentMenu = $(this).parents("li.ise-megamenu-top-level");
+
+    if (
+        !ise.menuIsOpen($parentMenu) && // make sure the menu isn't already open
+        !$(this).hasClass('ise-megamenu-link-level1') // if this IS the level 1 menu item then opening it here will cause it to be double opened
+      ) {
+      ise.hideDropdown($("li.ise-megamenu-top-level"));
+      ise.showDropdown($parentMenu);
+    }
+  });
+
+  var winWidth = $(window).width();
+  var winHeight = $(window).height();
+  var oldIE = false;
+  if ($('html').is('.ie6, .ie7, .ie8')) {
+    oldIE = true;
+  }
+
+  // Refreshs the page upon user window resize
+  // on ie8, this will be called regardless of the window being resized or element resized
+  // http://stackoverflow.com/questions/1852751/window-resize-event-firing-in-internet-explorer
+  // so we need to compare the initial window width and ending window width to actually determine that
+  // the window is resized
+  $(window).resize(function(){
+    var winNewWidth = $(window).width(),
+    winNewHeight = $(window).height();
+
+    // compare the new height and width with old one
+
+    if(winWidth!=winNewWidth || winHeight!=winNewHeight){
+      //console.log("resize detected");
+      //location.reload(); //works for all except firefox
+      //$(window).location = $(window).location;
+      //history.go(0);
+     // window.location.href = window.location.href; //works for all browsers
+      //ise.resetMenuState();
+
+      //Update the width and height
+      winWidth = winNewWidth;
+      winHeight = winNewHeight;
+    }
+    else{
+      //location.reload();
+      //console.log("all other browsers");
+      //$(window).location.reload();
+    }
+
+  });
+
+});
+
+/*
+jQuery("a.ise-megamenu-sub-arrow").mouseover(function(event) {
+            var src = $(this).attr("src").match(/[^\.]+/) + "-hover.png";
+            $(this).attr("src", src);
+            //console.log("on mouse over detected");
+        })
+        .mouseout(function() {
+            var src = $(this).attr("src").replace("-hover.png", ".png");
+            $(this).attr("src", src);
+            //console.log("on mouse out detected");
+        });
+*/
+
+(function ($) {
+  Drupal.behaviors.iseMegaMenu = {
+    attach: function() {
+      // behavior for the menu toggle button
+      $('a#ise-megamenu-mobile-menu-toggle:not(.imm-processed)')
+        .addClass('imm-processed')
+        .click(function() {
+          var path = Drupal.settings.basePath + Drupal.settings.iseMegaMenu.modulePath;
+            if ($(this).hasClass('opened')) {
+              // the menu is already open so close it
+              $('#zone-menu-wrapper').slideUp();
+              $('#menu-toggle-text').html(Drupal.settings.iseMegaMenu.openText).css('background-image', 'url(' + path + '/menu-down.png)');
+            }
+            else {
+              //resets menu state
+              ise.resetMenuState();
+              // the menu is not open so open it
+              $('#zone-menu-wrapper').slideDown();
+              $('#menu-toggle-text').html(Drupal.settings.iseMegaMenu.closeText).css('background-image', 'url(' + path + '/menu-up.png)');
+
+              // changes the menu icons to menu-left, which is generated by php to menu-down.png
+              var counter = 0;
+              var arrow = $('#block-ise-megamenu-ise-megamenu').find("a.ise-megamenu-arrow img").get(counter);
+              while (typeof arrow !=='undefined') {
+                arrow.src = arrow.src.replace('menu-down.png', 'menu-right.png');
+                counter = counter + 1;
+                arrow = $('#block-ise-megamenu-ise-megamenu').find("a.ise-megamenu-arrow img").get(counter);
+              }
+            }
+            $(this).toggleClass('opened');
+
+          return false;
+        });
+    }
+  }
+})(jQuery);
+
+/**
+ * convert a string containing a pixel calue to a string representing the number
+ */
+function pixToNum(string) {
+  number = string.replace('px', '')
+  return parseInt(number);
+}
+
+/**
+  * ie 10 does not support conditional css formating, so we add a class to the html when ie 10 is loaded
+  */
+if (Function('/*@cc_on return document.documentMode===10@*/')()){
+    document.documentElement.className+=' ie10';
+  }
+
+  /*
+  * 
+  * RHT Creating Access Keys for 508 Requirements #8292
+  * 
+  */
+
+(function ($) {
+  Drupal.behaviors.iseMegaMenuKeys = {
+    attach: function() {
+     $(".ise-megamenu-link-level1").each(
+	    function(){
+			$(this).attr("accesskey","3");
+			
+		
+		}
+	  );
+	}
+  }
+})(jQuery);

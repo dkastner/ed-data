@@ -1,0 +1,5757 @@
+/* Global: Always loaded, and loaded before other stylesheets. */
+
+body {
+    color: #494b4c;
+    font-size: 100%;
+	font-family: 'News Cycle', Arial, Tahoma, sans-serif ;
+
+}
+
+.stayconnected{
+ font-size:12.5px;
+ font-family: 'Droid Serif', serif !important;
+ border: 1px solid;
+}
+
+
+.context-contact table th,
+.context-general table th {
+  background-color: #578300;
+  border-style: solid;
+  border-color: #578300;
+}
+.context-contact table td,
+.context-general table td {
+  border: 1px;
+  border-color: #578300;
+  border-style: solid;
+}
+
+.context-general tr:nth-child(even) {background: #eef2e5; border:#578300}
+.context-general tr:nth-child(odd) {background: #FFF;border:#578300}
+.context-contact tr:nth-child(even) {background: #eef2e5; border:#578300}
+.context-contact tr:nth-child(odd) {background: #FFF;border:#578300}
+
+.context-preparing table th {
+  background-color: #578036;
+  border-style: solid;
+  border-color: #578036;
+}
+
+.context-preparing table thead {
+  background-color: #578036 !important;
+  border-style: solid !important;
+  border-color: #578036 !important;
+}
+
+.context-preparing table td {
+  border: 1px;
+  border-color: #578036;
+  border-style: solid;
+}
+
+.context-preparing tr:nth-child(odd) {background: #eef2eb; border:#578036}
+.context-preparing tr:nth-child(even) {background: #FFF;border:#578036}
+
+.context-contact table th p,
+.context-general table th p,
+.context-repay-loans table th p,
+.context-repaying table th p,
+.context-applying table th p,
+.context-eligibility table th p,
+.context-types-of-aid table th p,
+.context-preparing table th p{
+color:white;
+font-family: Arial;
+font-weight:bold;
+font-size:1.2 em;
+}
+
+.context-types-of-aid th{
+background-color: #917227 !important;
+border-color: #917227;
+  border-style: solid;
+  border: 1px;
+
+}
+
+.context-types-of-aid table thead{
+background-color: #917227;
+border-color: #917227;
+  border-style: solid;
+  border: 1px;
+
+}
+.context-types-of-aid table td {
+  border: 1px;
+  border-color: #917227;
+  border-style: solid;
+}
+
+.context-types-of-aid tr:nth-child(odd) {background: #f4f1e9; border:#917227}
+.context-types-of-aid tr:nth-child(even) {background: #FFF;border:#917227}
+
+.context-eligibility table th thead{
+background-color: #3d8076 !important;
+border-color: #3d8076;
+  border-style: solid;
+  border: 1px;
+
+}
+
+.context-eligibility table th{
+background-color: #3d8076 !important;
+border-color: #3d8076;
+  border-style: solid;
+  border: 1px;
+
+}
+
+
+.context-eligibility table td{
+  border: 1px;
+  border-color: #3d8076;
+  border-style: solid;
+  }
+.context-eligibility tr:nth-child(odd) {background: #ebf2f1; border:#3d8076}
+.context-eligibility tr:nth-child(even) {background: #FFF;border:#3d8076}
+
+.context-applying table th thead{
+background-color: #7a792f !important;
+border-color: #7a792f;
+  border-style: solid;
+  border: 1px;
+
+}
+
+.context-applying table th{
+background-color: #7a792f !important;
+border-color: #7a792f;
+  border-style: solid;
+  border: 1px;
+
+}
+
+
+.context-applying table td{
+border: 1px;
+border-color: #7a792f;
+  border-style: solid;
+
+}
+.context-applying tr:nth-child(odd) {background:#f1f1ea; border:#7a792f}
+.context-applying tr:nth-child(even) {background: #FFF;border:#7a792f}
+
+.context-repay-loans table th thead,
+.context-repaying table th{
+background-color: #994640 !important;
+border-color: #994640;
+  border-style: solid;
+  border: 1px;
+
+}
+
+
+.context-repay-loans table th,
+.context-repaying table th{
+background-color: #994640 !important;
+border-color: #994640;
+  border-style: solid;
+  border: 1px;
+
+}
+
+
+.context-repay-loans table td,
+.context-repaying table td{
+border: 1px;
+border-color: #994640;
+  border-style: solid;
+
+
+}
+
+.context-repaying tr:nth-child(odd) {background:#f5ecec; border:#994640}
+.context-repaying tr:nth-child(even) {background: #FFF;border:#994640}
+
+.context-repay-loans tr:nth-child(odd) {background: #f5ecec; border:#994640}
+.context-repay-loans tr:nth-child(even) {background: #FFF;border:#994640}
+
+#birth-text{
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px !important;
+color:#85AD33;
+}
+
+#login-table{
+border-spacing:0 !important;
+border:none !important;
+
+}
+
+@media screen and (min-width: 651px){
+#ise-megamenu-mobile-menu-toggle{
+display:none;
+}
+}
+
+
+@media (max-width:479px){
+.language-link{
+margin-left:0px !important;
+}
+}
+
+
+
+#block-menu-menu-top-menu{
+  margin-left:-340px\9 !important;
+  margin-left:-290px !important;
+  z-index:999999;
+}
+
+@media all and (max-width: 739px){
+  #block-menu-menu-top-menu{
+    margin-left:0 !important;
+    margin-right:20px;
+  }
+}
+
+/*@media screen and (-webkit-min-device-pixel-ratio:0){
+#block-menu-menu-top-menu{
+margin-left:-260px !important;
+}
+}*/
+webform-component-additional-comments{
+}
+
+
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(https://studentaid.ed.gov/sa/sites/all/themes/ise/css/PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+     margin-right:-18px;
+    background: #fff;
+    border: 1px solid #666;
+    color: #578300;
+    text-align: center;
+
+    font: 18px Arial, sans-serif;
+	position:relative;
+	left:-30px;
+	top:-5px;
+	float:left;
+}
+
+.numberLabel{
+  float:left;
+  margin-bottom:-50px;
+}
+
+
+
+@media screen and (max-width: 479px){
+.aosheader{
+width:280px !important;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 586px){
+.aosheader{
+width:280px !important;
+}
+}
+
+
+
+
+#nslds-login-block input.form-submit .readytoclick {
+    background-color: #ABC870;
+    background-image: linear-gradient(to bottom, #ABC870, #9DBA63);
+    border: 1px solid #96BA4B;
+}
+
+
+@media screen and (max-width: 600px){
+#nslds-login-block{
+background-color:#ffffff !important;
+}
+}
+
+@media all and (max-width: 330px){
+  #block-ise-nslds-nslds-login-block .item-list ul li{
+      margin:0;
+  }
+}
+
+
+
+.language-switcher-locale-url{
+margin-left:-140px !important;
+margin-left:-140px\9 !important;
+}
+
+@media all and (min-width: 320px) and (max-width: 650px){
+  #block-menu-menu-top-menu{
+    position:absolute;
+    margin-left:5px;
+    color:#000;
+  }
+  #logout-link{
+    font-size:10px;
+  }
+}
+
+@media all and (max-width: 650px){
+  .language-switcher-locale-url{
+    margin-left:80px !important;
+  }
+  .i18n-es .language-switcher-locale-url{
+    margin-left:130px !important;
+  }
+}
+
+@media all and (min-width: 651px) and (max-width: 739px){
+  .language-switcher-locale-url{
+    margin-left:3px !important;
+  }
+}
+
+
+h1 {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+    font-weight: normal !important;
+    font-size: 1.5em !important;
+}
+
+h1#page-title {
+	display: none;
+}
+
+h2, h2.block-title {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    letter-spacing: .02em;
+}
+
+h3 {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+	margin-bottom:-1px !important;
+}
+
+h4 {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+hr {
+	height: 1px;
+}
+
+p, .block-main li {
+    font-family: 'Droid Serif', serif;
+    /*RHT Repayment plan formatting fix */
+    /*font-size: 0.85em;*/
+    color: #494b4c;
+    padding-bottom: .2em; /* 03/05/2014 hchoi for defect id 58 */
+}
+
+.block-main p {
+	padding-top: .75em;
+	padding-bottom: 0em;
+       margin-bottom:5px; /* 03/05/2014 hchoi for defect id 58 */
+}
+
+#cboxContent #cboxLoadedContent p.p1 {font: 13px/1.5 Verdana,Helvetica,Arial,sans-serif !important;}
+
+a {
+    color: #267399;
+    text-decoration: underline;
+}
+
+a:visited, a:active {
+	color: #4432a3;
+}
+
+a:hover {
+	color: #994640;
+}
+
+a.anchor:before {
+	content: url('../images/bullet-down.png');
+	padding-right: 0.25em;
+}
+a.anchor, .collapse-text-fieldset a {
+	font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 1.0em;
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px){
+a.anchor, .collapse-text-fieldset a {
+font-size: 0.6em !important;
+}
+}
+
+
+
+a.top:after {
+	content: url('../images/bullet-up.png');
+	padding-left: 0.25em;
+}
+a.top {
+	color: #494b4c;
+	float: right;
+	font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+#section-content a:focus {
+	outline-style: dotted;
+	outline-width: thin;
+}
+
+.locale-untranslated {
+    text-decoration: none;
+}
+
+abbr, .abbr, acronym {
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+	border-bottom-color: blue;
+}
+
+cite {
+	/*font-weight: bold;	*/
+}
+
+/** #6387 **/
+small, sub, sup { font-size: .43em }
+
+sub             { vertical-align: sub }
+sup             { vertical-align: super }
+
+.block {
+    position: relative;
+   
+}
+
+.page-blog .block{
+   position:relative;
+   
+
+}
+  
+.node-type-blog .block{
+    position:relative;
+    z-index:0;
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+.node-type-blog .block{
+    position:relative;
+    z-index:0;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+.page-blog .block{
+   position:relative;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+.block-block-19{
+  position:relative;
+  z-index:0;
+}
+}
+
+.shadow {
+    position: absolute;
+    bottom: -10px;
+    height: 10px;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.breadcrumb {
+    font-family: Arial, Tahoma, sans-serif;
+	font-size: 1em;
+}
+
+.media-youtube-outer-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* User bar */
+#zone-user-wrapper {
+    height: 27px;
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+}
+@media (max-width:650px){
+#zone-user-wrapper {
+    height: 53px;
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#zone-user-wrapper {
+    height: 53px;
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown{
+z-index:30000;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown{
+z-index:30000;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1024px){
+#zone-user-wrapper {
+    height: 53px;
+    background: #eee;
+    border-bottom: 1px solid #aaa;
+}
+}
+
+
+#zone-user {
+    line-height: 26px;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+	font-size: 0.75em;
+}
+
+#zone-user a {
+ color: #000;
+ text-decoration: none;
+ padding-right: 2px;
+ padding-left: 2px;
+  font-family: "News Cycle",Arial,Tahoma,sans-serif !important;
+}
+
+#zone-user .block-menu-top-menu , #zone-user .block-language {
+ float: left;
+}
+
+#zone-user .block-menu-top-menu ul.menu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* Kosi M. -> 508 Visual Focus fixes */
+
+#block-views-home-block-1 .views-row .field-content a {display: inline-block; width: 100%;}
+
+#nslds-login-form a.login-X-link {margin: 10px 0;}
+
+#nslds-login-block a.othersites-X-link {
+display: inline-block;
+float: right;
+margin: 5px 15px 0 0;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li a {min-height: 52px;}
+
+#zone-user .block-menu-top-menu ul.menu li a:focus, #block-locale-language ul li a:focus, 
+form#search-block-form .form-submit:focus, #region-user-second #block-ise-nslds-nslds-login-block li a:focus, 
+#nslds-login-block .tabberlive ul.tabbernav li a:focus, #nslds-login-block .tabbertab div a:focus,
+.region-branding-inner .block-ise-logo p a:focus, ul.ise-megamenu li a:focus, 
+#block-views-home-block-1 .views-row .field-content a:focus, #node-page-16 a:focus,#node-page-16 button:focus, 
+#node-page-16 span:focus, #block-views-latest-news-block a:focus, .view-latest-news ul li a:focus,
+#nslds-login-form a.login-X-link:focus, #nslds-login-block a.othersites-X-link:focus, #login-intro a:focus, #nslds-login-form p:focus, 
+#nslds-login-form .italics-pin a:focus, #nslds-login-form .italics-learn a:focus
+{outline: 1px dotted DarkSlateGray;}
+
+.region-branding-inner .block-ise-logo p a {
+  display: inline-block;
+}
+
+form#search-block-form .form-text {
+	width: 200px;
+	background: transparent url("../../../../../sa/sites/all/themes/ise/images/glass.png") no-repeat scroll 5px center;
+	border: 1px solid #dedede !important;
+	height: 40px;
+	margin-right: 5px;
+	min-height: 40px;
+	padding: 10px 0 10px 25px;  
+}
+
+form#search-block-form .form-type-textfield .form-text:focus {
+  border-color: #66afe9 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6)!important;
+  outline: 0 none !important;
+} 
+
+
+/* END | Kosi M. -> 508 Visual Focus fixes */
+
+
+#zone-user .block-menu-top-menu , #zone-user .block-language {
+  float: left;
+}
+
+#zone-user .block-menu-top-menu li {
+  display: inline;
+  text-transform: uppercase;
+}
+
+#zone-user .block-language li {
+  display: inline;
+  text-transform: uppercase;
+  padding-left: 2pt;
+  padding-right: 2pt;
+  border-left: 1px solid #000;
+}
+
+#zone-user .block-language li.first {
+  border-left: none;
+}
+
+#zone-user ul,
+#zone-user p {
+    margin: 0;
+    padding: 0;
+}
+
+.region-user-first,
+.region-user-second {
+    min-height: 1px;
+}
+
+/* Branding */
+.block-ise-logo {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.block-ise-logo img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#block-search-form {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+}
+
+form#search-block-form {
+    background-color: white;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+form#search-block-form .form-submit {
+  border-radius: 0;
+  box-shadow: 0;
+  width: 29px;
+  height: 43px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent url(../../../../../sa/sites/all/themes/ise/images/search.png) no-repeat center top;
+  text-indent: -1000em;
+  text-shadow: 0;
+  cursor: pointer;
+}
+
+form#search-block-form .form-text {
+  text-shadow: 0;
+  border: 0;
+  width: 200px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size:0.75em !important;
+}
+
+form#search-block-form button:focus, form#search-block-form button:active,
+form#search-block-form input:focus, form#search-block-form input:active {
+  box-shadow: 0 0;
+}
+
+/* Kosi M. -> 508 Visual Focus fixes
+/*form#search-block-form .form-item-search-block-form {
+form#search-block-form .form-type-textfield {
+  height: 40px;
+  min-height: 40px;
+  background: transparent url(../images/glass.png) no-repeat 5px center;
+  padding: 10px 0px 10px 25px;
+  border: 1px solid #dedede;
+  margin-right: 5px;
+}
+*/
+
+/* Menu */
+#zone-menu-wrapper {
+    background: none;
+}
+body #zone-menu-wrapper {
+    display: none;
+}
+
+#region-menu {
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 100;
+}
+
+/* Container for the entire menu system */
+ul.ise-megamenu {
+    width: 100%;
+  margin: 0;
+  padding: 0;
+    position:relative;
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level {
+    float: left;
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-bg.png);
+    background-repeat: repeat-x;
+  height: 70px;
+  max-height: 70px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+  width: 100%;
+}
+
+ul.ise-megamenu a.ise-megamenu-link-level1 {
+  color: white;
+  text-decoration: none;
+  width: 90%;
+}
+
+ul.ise-megamenu a.ise-megamenu-arrow {
+  position: relative;
+  display: block;
+  top: -70px;
+  text-align: center;
+  float:right;
+  height:auto;
+  width:30px;
+}
+
+ul.ise-megamenu a.ise-megamenu-arrow img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Top level menu item container */
+ul.ise-megamenu li.ise-megamenu-top-level span {
+    color: white;
+  margin: 0 5px 0 9px;
+  padding: 0; /* padding on right side to clear the arrow */
+  height: 70px;
+  max-height: 70px;
+  display: table-cell;
+vertical-align:middle;
+text-align:center;
+  line-height: 1.1em;
+  width: 90%;
+}
+ul.ise-megamenu li.ise-megamenu-top-level.hover span {
+  background-image: none;
+}
+
+/* The 'hover' class is assigned to the top-level LI upon mouseover */
+ul.ise-megamenu li.ise-megamenu-top-level.hover,
+ul.ise-megamenu li.ise-megamenu-top-level.hover h2,
+ul.ise-megamenu li.ise-megamenu-top-level.hover small,
+ul.ise-megamenu li.ise-megamenu-top-level:hover,
+ul.ise-megamenu li.ise-megamenu-top-level:hover h2,
+ul.ise-megamenu li.ise-megamenu-top-level:hover small {
+  color: black;
+}
+
+/* Top level menu item name */
+ul.ise-megamenu li.ise-megamenu-top-level span h2 {
+  color: white;
+  margin: 0;
+/** #8413 **/
+  padding: 15px 5px;
+
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0px;
+  max-width: 81%;
+}
+
+/* Top level menu item description */
+ul.ise-megamenu li.ise-megamenu-top-level span small {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+/* Container for the entire dropdown area */
+div.ise-megamenu-dropdown {
+    border-top: 1px solid #d9d9d9;
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 277px;
+}
+
+div.ise-megamenu-dropdown a:focus,
+.block-menu-menu-footer-menu a:focus,
+.block-menu-footer-links a:focus {
+    background-color: #d9d9d9;
+}
+
+/* Container for the links area (left-hand side of dropdown) */
+div.ise-megamenu-dropdown-links {
+/*  float: left;*/
+}
+
+/* Container for the feature area (right-hand side of dropdown) */
+div.ise-megamenu-dropdown-feature {
+    display: none;
+    float: right;
+}
+
+/* Container for the site links */
+div.ise-megamenu-dropdown-links-menu {
+}
+
+/* Special link area (under the site links) */
+div.ise-megamenu-dropdown-links-special {
+  border-top: 1px solid #d9d9d9;
+  padding: 5px 0 5px 9px;
+  font-size: 0.95em;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: #313131;
+}
+div.ise-megamenu-dropdown-links-special p {
+    padding: 0;
+    margin: 0;
+}
+div.ise-megamenu-dropdown-links-special a {
+    text-decoration: none;
+    color: #267399;
+}
+
+/* Second- and third-level menu links */
+div.ise-megamenu-dropdown-links-menu a {
+    text-decoration: none;
+   /* padding: 2px 14px 6px 4px; */
+    padding-left: 15px;
+    padding-top: 14px;
+    padding-bottom:14px;
+    line-height:19px;
+}
+div.ise-megamenu-dropdown-links-menu li.expanded  {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+div.ise-megamenu-dropdown-links-menu li.expanded a {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/link-sub-right-arrow.png);
+  background-position: 95% center;
+  background-repeat: no-repeat;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/link-sub-left-arrow.png);
+  background-position: 5px center;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li a {
+  /* padding-left: 15px; */
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li li a {
+  padding-left: 5px;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded ul li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded ul li a {
+  background-image: none !important;
+  padding-left: 15px;
+
+}
+div.ise-megamenu-dropdown-links-menu li.expanded ul li a {
+  background-image: none;
+}
+div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/link-right-arrow.png);
+  background-position: 95% center;
+  background-repeat: no-repeat;
+}
+div.ise-megamenu-dropdown-links-menu li.expanded ul li a:hover {
+  background-image: none;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/link-left-arrow.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+}
+
+div.ise-megamenu-dropdown .ise-dropdown-column {
+    float: left;
+    width: 48%;
+}
+
+/* Second-level menu list */
+div.ise-megamenu-dropdown-links-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+  width: 48%;
+}
+
+/* Second-level menu items */
+div.ise-megamenu-dropdown-links-menu ul li {
+  position: relative;
+  width: 280px;
+
+  padding: 5px 0 0 5px;
+  line-height:normal; /* adds some spacing to the item without padding*/
+}
+
+div.ise-megamenu-dropdown-links-menu ul li {
+  padding: 0;
+}
+
+/* Second-level menu links */
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+    font-size: 9.5pt \9 !important;
+    font-size: 1em;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    display: block;
+    color: #494b4d;
+    min-width:75% \9 !important;
+  width:auto;
+}
+
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+    font-size: 9.5pt \9 !important;
+    font-size: 1em;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    display: block;
+    color: #494b4d;
+    min-width:75% \9 !important;
+  height:5%;  
+  width:auto;
+}
+}
+
+
+
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+    width: 262px;
+}
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2,
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3 {
+  letter-spacing: 0px;
+}
+
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+  /*width: auto; */
+}
+
+/* Third-level menu list */
+div.ise-megamenu-dropdown-links-menu ul li ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Third-level menu items */
+div.ise-megamenu-dropdown-links-menu ul li ul li {
+  font-weight: normal;
+/* padding-bottom: 8px; */
+/* margin-bottom: 5px; */
+margin-left:0;
+line-height: normal; /* adds spacing to item without the use of padding */
+
+}
+
+/* Third-level menu links */
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3 {
+    font-size: 0.95em;
+    font-size: 9.5pt\9 !important;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    display: block;
+    color: #494b4c;
+   /*padding-top: 5px; */
+    /*min-height:2.0em;*/
+}
+
+/*
+======================================================
+MEGA MENU PROMO TILES ::::::::::::::::::::::::::::::::
+======================================================
+*/
+.ise-megamenu-dropdown-feature .promo-tile {
+  width:277px;
+  min-height:145px; 
+  color:#494B4C;  
+}
+.ise-megamenu-dropdown-feature .promo-tile header, .ise-megamenu-dropdown-feature .promo-tile .header  { padding:12px 0px 12px 10px; }
+.ise-megamenu-dropdown-feature .promo-tile .promo-content {
+    padding:10px 0px 15px 10px;
+    /*padding:10px 0px 15px 5px;*/
+}
+
+.ise-megamenu-dropdown-feature .promo-tile,
+.ise-megamenu-dropdown-feature .promo-tile header,
+.ise-megamenu-dropdown-feature .promo-tile .header,
+.ise-megamenu-dropdown-feature .promo-tile .promo-content { overflow:hidden; position:relative; }
+
+.ise-megamenu-dropdown-feature .promo-tile header h3, .ise-megamenu-dropdown-feature .promo-tile .header h3  {
+  width:125px;
+  float:left;
+  margin:0;
+}
+
+.ise-megamenu-dropdown-feature .promo-tile p { 
+  width:125px;
+  float:left;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
+.ise-megamenu-dropdown-feature .promo-tile a { 
+  position:absolute;
+  z-index:400;
+  bottom:15px;
+  right:8px;
+  padding:8px 18px 8px 14px;
+  background-color: #313131;
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/link-right-arrow.png);
+  background-position: 95% center;
+  background-repeat: no-repeat;
+}
+
+/* Text */
+.ise-megamenu-dropdown-feature .promo-tile header h3, .ise-megamenu-dropdown-feature .promo-tile .header h3 {
+  font-size:1.12em; /* specified by FSA-WebDeveloper-Guide-v010 */
+  line-height:120%; 
+  color:#494B4C; /*color:#313131;*/
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  text-align:left;
+}
+.ise-megamenu-dropdown-feature .promo-tile p {
+  font-size:.75em; /* specified by FSA-WebDeveloper-Guide-v010 */
+  line-height:15px;
+  color:#494B4C; /*color:#313131;*/
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  text-align: right;
+}
+.ise-megamenu-dropdown-feature .promo-tile a {
+  font-size: .75em; /* specified by FSA-WebDeveloper-Guide-v010 */
+  font-family: Arial, Tahoma, sans-serif; /* specified by FSA-WebDeveloper-Guide-v010 */
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;  
+}
+
+
+.ise-megamenu-dropdown-feature .promo-tile .circle { 
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  width: 134px;
+  height: 138px;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.ise-megamenu-dropdown-feature .promo-tile .icon {
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  width: 117px;
+  height: 102px;
+  background-repeat: no-repeat;
+  z-index:300;
+}
+
+
+  
+/* Prepare for College */
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 .ise-megamenu-dropdown-feature .promo-tile { background-color:#C2E0A6; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 .ise-megamenu-dropdown-feature .promo-tile header, 
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 .ise-megamenu-dropdown-feature .promo-tile .header { background-color:#CEE6B8; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 .ise-megamenu-dropdown-feature .promo-tile .promo-content { background-color:#C2E0A6; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 .ise-megamenu-dropdown-feature .promo-tile .circle { background-image: url('../../../../../sa/sites/all/themes/ise/images/preparing-circle-bg.png'); }
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 .ise-megamenu-dropdown-feature .promo-tile .icon { 
+  background-image: url('../../../../../sa/sites/all/themes/ise/images/icon/checklist-icon.png');
+  background-position: 5px -5px;
+}
+
+/* Types of Aid */
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 .ise-megamenu-dropdown-feature .promo-tile { background-color:#D9C597; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 .ise-megamenu-dropdown-feature .promo-tile header,
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 .ise-megamenu-dropdown-feature .promo-tile .header { background-color:#DECEA9; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 .ise-megamenu-dropdown-feature .promo-tile .promo-content { background-color:#D9C597; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 .ise-megamenu-dropdown-feature .promo-tile .circle { background-image: url('../../../../../sa/sites/all/themes/ise/images/aid-circle-bg.png'); }
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 .ise-megamenu-dropdown-feature .promo-tile .icon { 
+  background-image: url('../../../../../sa/sites/all/themes/ise/images/icon/search-scholarships.png');
+  background-position: 5px -5px;  
+}
+/* Who Gets Aid */
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 .ise-megamenu-dropdown-feature .promo-tile { background-color:#A1C5C0;}
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 .ise-megamenu-dropdown-feature .promo-tile header,
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 .ise-megamenu-dropdown-feature .promo-tile .header { background-color:#B4CCC9; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 .ise-megamenu-dropdown-feature .promo-tile .promo-content { background-color:#A1C5C0; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 .ise-megamenu-dropdown-feature .promo-tile .circle { background-image: url('../../../../../sa/sites/all/themes/ise/images/eligibility-circle-bg.png'); }
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 .ise-megamenu-dropdown-feature .promo-tile .icon { 
+  background-image: url('../../../../../sa/sites/all/themes/ise/images/icon/resources.png');
+}
+
+/* FAFSA: Apply for Aid */
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 .ise-megamenu-dropdown-feature .promo-tile { background-color:#CCCB9C; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 .ise-megamenu-dropdown-feature .promo-tile header,
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 .ise-megamenu-dropdown-feature .promo-tile .header { background-color:#D1D0AB; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 .ise-megamenu-dropdown-feature .promo-tile .promo-content { background-color:#CCCB9C; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 .ise-megamenu-dropdown-feature .promo-tile .circle { background-image: url('../../../../../sa/sites/all/themes/ise/images/applying-circle-bg.png'); }
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 .ise-megamenu-dropdown-feature .promo-tile .icon { 
+  background-image: url('../../../../../sa/sites/all/themes/ise/images/icon/application.png');
+}
+
+/* Repay Your Loans */
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 .ise-megamenu-dropdown-feature .promo-tile { background-color:#E0AEA6; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 .ise-megamenu-dropdown-feature .promo-tile header,
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 .ise-megamenu-dropdown-feature .promo-tile .header { background-color:#E6BEB8; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 .ise-megamenu-dropdown-feature .promo-tile .promo-content { background-color:#E0AEA6; }
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 .ise-megamenu-dropdown-feature .promo-tile .circle { background-image: url('../../../../../sa/sites/all/themes/ise/images/repaying-circle-bg.png'); }
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 .ise-megamenu-dropdown-feature .promo-tile .icon { 
+  background-image: url('../../../../../sa/sites/all/themes/ise/images/icon/calculator.png');
+  background-position: 30% 50%; 
+}
+
+/* CUSTOM COLORS PER MENU */
+ul.ise-megamenu li.ise-megamenu-top-level.hover,
+ul.ise-megamenu li.ise-megamenu-top-level:hover {
+  background: white url('../../../../../sa/sites/all/themes/ise/images/menu-5x5.png') repeat-x top;
+}
+/* Prepare for College - #578036 */
+ul.ise-megamenu li.ise-megamenu-top-level-item-1.hover,
+ul.ise-megamenu li.ise-megamenu-top-level-item-1:hover {
+    background: white url('../../../../../sa/sites/all/themes/ise/images/preparing-5x5.png') repeat-x top;
+}
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown {
+    border-bottom: 5px solid #578036;
+}
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-1 ul:hover,
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: white;
+    background-color: #578036;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+@media (max-width:650px){
+
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-1 ul:hover,
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: #000000;
+    background-color: #ffffff;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+}
+
+
+
+/* keeps the current level 2 item highlighted while going down its submenu items */
+li.ise-megamenu-top-level-item-1 li.hover.expanded a.ise-megamenu-link-level2,
+li.ise-megamenu-top-level-item-1 li.hover.expanded div.ise-megamenu-dropdown-links-menu{
+    color: #ffffff; /*8263*/
+    background-color: #578036; /*8263*/
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/link-right-arrow.png);
+}
+
+/* formats third level header for first menu item (prepare for college)*/
+li.ise-megamenu-top-level-item-1 .selected{
+    color: #578036;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+/* Types of Aid - #917227 */
+ul.ise-megamenu li.ise-megamenu-top-level-item-2.hover,
+ul.ise-megamenu li.ise-megamenu-top-level-item-2:hover {
+    background: white url('../../../../../sa/sites/all/themes/ise/images/aid-5x5.png') repeat-x top;
+  color: black;
+}
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown {
+    border-bottom: 5px solid #917227;
+}
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-2 ul:hover,
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: white;
+    background-color: #917227;
+}
+
+@media (max-width:650px){
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-2 ul:hover,
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: #000000;
+    background-color: #ffffff;
+}
+}
+
+
+/* keeps the current level 2 item highlighted while going down its submenu items */
+li.ise-megamenu-top-level-item-2 li.hover.expanded a.ise-megamenu-link-level2,
+li.ise-megamenu-top-level-item-2 li.hover.expanded div.ise-megamenu-dropdown-links-menu{
+    color: white;
+    background-color: #917227;
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/link-right-arrow.png);
+}
+
+
+/* formats third level header for second menu item (types of aid)*/
+li.ise-megamenu-top-level-item-2 .selected{
+    color: #917227;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+/* Who Gets Aid - #3d8076 */
+ul.ise-megamenu li.ise-megamenu-top-level-item-3.hover,
+ul.ise-megamenu li.ise-megamenu-top-level-item-3:hover {
+    background: white url('../../../../../sa/sites/all/themes/ise/images/eligibility-5x5.png') repeat-x top;
+}
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown {
+    border-bottom: 5px solid #3d8076;
+}
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-3 ul:hover,
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: white;
+    background-color: #3d8076;
+}
+
+@media (max-width:650px){
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-3 ul:hover,
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: #000000;
+    background-color: #ffffff;
+}
+}
+
+
+/* keeps the current level 2 item highlighted while going down its submenu items */
+li.ise-megamenu-top-level-item-3 li.hover.expanded a.ise-megamenu-link-level2,
+li.ise-megamenu-top-level-item-3 li.hover.expanded div.ise-megamenu-dropdown-links-menu{
+    color: white;
+    background-color: #3d8076;
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/link-right-arrow.png);
+}
+
+/* formats third level header item for third menu item (who gets aid)*/
+li.ise-megamenu-top-level-item-3 .selected{
+    color:  #3d8076;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+/* FAFSA: Apply for Aid - #7a792f */
+ul.ise-megamenu li.ise-megamenu-top-level-item-4.hover,
+ul.ise-megamenu li.ise-megamenu-top-level-item-4:hover {
+    background: white url('../../../../../sa/sites/all/themes/ise/images/applying-5x5.png') repeat-x top;
+}
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown {
+    border-bottom: 5px solid #7a792f;
+}
+
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-4 ul:hover,
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: white;
+    background-color: #7a792f;
+}
+
+
+@media (max-width:650px){
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-4 ul:hover,
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: #000000;
+    background-color: #ffffff;
+}
+}
+
+
+
+/* keeps the current level 2 item highlighted while going down its submenu items */
+li.ise-megamenu-top-level-item-4 li.hover.expanded a.ise-megamenu-link-level2,
+li.ise-megamenu-top-level-item-4 li.hover.expanded div.ise-megamenu-dropdown-links-menu{
+    color: white;
+    background-color: #7a792f;
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/link-left-arrow.png);
+}
+
+
+/* formats 3 menu item header for fourth menu (fafsa apply for aid)*/
+li.ise-megamenu-top-level-item-4 .selected{
+    color: #7a792f;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+/* Repay Your Loans - #994640 */
+ul.ise-megamenu li.ise-megamenu-top-level-item-5.hover,
+ul.ise-megamenu li.ise-megamenu-top-level-item-5:hover {
+  background: white url('../../../../../sa/sites/all/themes/ise/images/repaying-5x5.png') repeat-x top;
+}
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown {
+    border-bottom: 5px solid #994640;
+}
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-5 ul:hover,
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: white;
+    background-color: #994640;
+}
+
+@media (max-width:650px){
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-5 ul:hover,
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu a:focus{
+    color: #000000;
+    background-color: #ffffff;
+}
+}
+/* keeps the current level 2 item highlighted while going down its submenu items */
+li.ise-megamenu-top-level-item-5 li.hover.expanded a.ise-megamenu-link-level2,
+li.ise-megamenu-top-level-item-5 li.hover.expanded div.ise-megamenu-dropdown-links-menu{
+    color: white;
+    background-color: #994640;
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/link-left-arrow.png);
+}
+
+/* formats level 3 header for menu item 5 (repay your loans)*/
+li.ise-megamenu-top-level-item-5 .selected{
+    color: #994640;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-top-level:hover {
+  color: black;
+  background: white;
+}
+
+
+@media screen and (max-width: 650px) {
+a#ise-megamenu-mobile-menu-toggle {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-bg.png);
+  color: white !important;
+  text-decoration: none !important;
+  width: 90px !important;
+  float: left !important;
+  margin-top: 10px !important;
+    }
+}
+@media screen and (min-width: 650px) {
+a#ise-megamenu-mobile-menu-toggle {
+
+    }
+}
+
+a#ise-megamenu-mobile-menu-toggle {
+display:none\9;
+}
+
+
+/* Preface */
+.front #zone-preface-wrapper {
+    background: #dedede url(../../../../../sa/sites/all/themes/ise/images/vertical-bg.png) repeat;
+}
+
+#zone-preface-wrapper {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.topic-preparing #block-views-preface-block .views-field-field-preface-text .field-content:before {
+   content: url(../images/heads/prepare_for_college.png);
+   float: left;
+   padding-right: 10px;
+}
+
+.topic-types-of-aid #block-views-preface-block .views-field-field-preface-text .field-content:before {
+   content: url(../images/heads/types_of_aid.png);
+   float: left;
+   padding-right: 10px;
+}
+
+.topic-eligibility #block-views-preface-block .views-field-field-preface-text .field-content:before {
+   content: url(../images/heads/qualify_for_aid.png);
+   float: left;
+   padding-right: 10px;
+}
+
+.topic-applying #block-views-preface-block .views-field-field-preface-text .field-content:before {
+   content: url(../images/heads/apply_for_aid.png);
+   float: left;
+   padding-right: 10px;
+}
+
+/* Kosi M. -> Hotfix for Repayment section - removed image reference from CSS and will add float to align */
+.topic-repaying #block-views-preface-block .views-field-field-preface-text .field-content:before {
+   content: url(../images/heads/manage_my_loans.png); 
+   float: left;
+   padding-right: 10px;
+}
+
+/*Defect 16508*/
+.topic-how-to-repay #block-views-preface-block .views-field-field-preface-text .field-content:before {
+   content: url(../images/heads/manage_my_loans.png); 
+   float: left;
+   padding-right: 10px;
+}
+
+.topic-how-to-repay .view-id-preface .preface-image {float: left;}
+
+#block-views-preface-block .views-row {
+    border: 1px solid #dedede;
+    background-color: white;
+    padding: 1px;
+}
+
+/*
+.preface-image,
+#block-views-preface-block .views-field-field-image .field-content {
+    display: none;
+    float: left;
+  padding-right: 10px;
+}
+*/
+
+#block-views-preface-block .views-field-field-preface-text .field-content {
+    float: left;
+    width: 100%;
+    margin: 5px;
+}
+#block-views-preface-block .views-field-field-preface-text p {
+    margin: 0;
+    line-height: 1.3em;
+    font-size: 1em;
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+}
+#block-views-preface-block .views-field-field-preface-text h1,
+#block-views-preface-block .views-field-field-preface-text h2,
+#block-views-preface-block .views-field-field-preface-text h3,
+#block-views-preface-block .views-field-field-preface-text h4 {
+    margin: 0 0 12px 0;
+    line-height: 1.1em;
+    font-size: 1.5em !important;
+    font-weight: normal !important;
+    
+}
+
+/* Kosi M. - Ticket 1907 -> Changed h1 and cite color on Ombudsman form page from green to red */
+.context-repay-loans.i18n-es .view-preface h1,
+.context-repay-loans.i18n-es .view-preface h1 cite,
+.context-repay-loans.i18n-es .field-type-text-with-summary cite
+{color: #994640;}
+
+/* Content */
+#zone-content {
+    margin-top: 10px;
+}
+
+.not-front .region-content-inner {
+  border: 1px solid #cccccc;
+}
+
+article .content h2,
+article .content h3,
+article .content h4,
+article .content p {
+    margin: 0 10px 10px;
+    line-height: 1.6em;
+}
+
+article .content hr {
+    background-color: #cccccc;
+    margin: 0;
+}
+
+article .content table {
+    
+    margin: 0;
+    /* Hack for IE8 with colspan in first row */
+    
+}
+
+article .content thead td {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+article .content td {
+   
+    vertical-align: top;
+    font-size:12px;
+}
+
+
+
+tr:hover td,
+tr.even:hover td.active,
+tr.odd:hover td.active {
+    background: none;
+}
+
+.region-content ul {
+    margin: 0 10px;
+}
+.region-content ol {
+    margin: 0 10px;
+}
+.region-content ul li {
+    margin-left: 15px;
+    padding-left: 0;
+    list-style-type: inherit;
+}
+
+.region-content table ul li {
+    margin-left: -10px;
+}
+
+/* special formatting for the 'Repayment Plans" page */
+.region-content #node-page-78 ul li {
+    margin-left: -15px;
+}
+
+.content-feature, .highlight {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    background-color: #fcf7ee;
+}
+
+.content-feature:after, .highlight:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content-feature img, .highlight img {
+    /*float: left;*/
+    margin: 10px;
+}
+
+/* Footer */
+#zone-footer {
+    margin-top: 10px;
+}
+
+/* Footer links */
+.block-menu-footer-links {
+    margin-top: 10px;
+    color: #aaa;
+}
+.block-menu-footer-links ul li {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+}
+.block-menu-footer-links ul li.last {
+    border-bottom: 1px solid #f0f0f0;
+}
+.block-menu-footer-links a,
+.block-menu-footer-links a:visited {
+    color: #888;
+    text-decoration: none;
+    /*font-size: 1.5em; */
+}
+
+/* RHT 17916 Social media icons */
+#region-footer-second .block {
+/*
+    /*margin-top: 5px;*/
+    width: 100%;
+    /** RHT 17916 **/
+    text-align: center;
+    margin: auto;
+*/
+}
+
+/* KM - R2.6 Fix to add visual focus to Blog (and other) footer social share links */
+#region-footer-second .block p a:focus {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset, 0 0 15px rgba(89, 161, 219, 1) !important;
+  outline: 0 none !important;
+}
+
+/* Main Footer Menu */
+#block-menu-menu-footer-menu {
+    display: none;
+}
+#block-menu-menu-footer-menu li li {
+    list-style-image: none;
+}
+
+#block-menu-menu-footer-menu{
+margin-top:-25px\9 !important;
+}
+
+/* Topic-based styling */
+body.topic-preparing h1, body.topic-preparing .section-content h2, body.topic-preparing .lexicon-term h4 a, body.topic-preparing h3, body.topic-preparing h4, body.topic-preparing hr, body.topic-preparing a.anchor, body.topic-preparing cite {
+    color: #578036;
+}
+
+body.topic-preparing hr {
+    /*background-color: #578036;*/
+}
+
+body.topic-preparing .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-preparing.png);
+}
+
+body.topic-preparing .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-preparing-sub.png);
+}
+
+body.topic-preparing .view-events-list .views-field-title,
+body.topic-preparing .view-events-list .views-field-field-location, 
+body.topic-preparing .view-events-list .views-field-nid a:link, 
+body.topic-preparing .view-events-list .views-field-nid a:visited {
+  color: #578036;
+}
+
+body.topic-types-of-aid h1, body.topic-types-of-aid .section-content h2, body.topic-types-of-aid .lexicon-term h4 a, body.topic-types-of-aid h3, body.topic-types-of-aid h4, body.topic-types-of-aid hr,  body.topic-types-of-aid a.anchor, body.topic-types-of-aid cite  {
+    color: #917227;
+}
+
+body.topic-types-of-aid hr {
+    /* background-color: #917227; */
+}
+
+body.topic-types-of-aid .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-types-of-aid.png);
+}
+
+body.topic-types-of-aid .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-types-of-aid-sub.png);
+}
+
+body.topic-types-of-aid .view-events-list .views-field-title,
+body.topic-types-of-aid .view-events-list .views-field-field-location, 
+body.topic-types-of-aid .view-events-list .views-field-nid a:link, 
+body.topic-types-of-aid .view-events-list .views-field-nid a:visited {
+  color: #917227;
+}
+  
+body.topic-eligibility h1, body.topic-eligibility .section-content h2, body.topic-eligibility .lexicon-term h4 a, body.topic-eligibility h3, body.topic-eligibility h4, body.topic-eligibility hr, body.topic-eligibility a.anchor, body.topic-eligibility cite  {
+    color: #3d8076;
+}
+
+body.topic-eligibility hr {
+    /* background-color: #3d8076;*/
+}
+
+body.topic-eligibility .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-eligibility.png);
+}
+
+body.topic-eligibility .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-eligibility-sub.png);
+}
+
+body.topic-eligibility .view-events-list .views-field-title,
+body.topic-eligibility .view-events-list .views-field-field-location, 
+body.topic-eligibility .view-events-list .views-field-nid a:link, 
+body.topic-eligibility .view-events-list .views-field-nid a:visited {
+    color: #3d8076;
+}
+  
+body.topic-applying h1, body.topic-applying .section-content h2, body.topic-applying .lexicon-term h4 a, body.topic-applying h3, body.topic-applying h4, body.topic-applying hr, body.topic-applying a.anchor, body.topic-applying cite {
+    color: #7a792f;
+}
+
+body.topic-applying hr {
+    /* background-color: #7a792f; */
+}
+
+body.topic-applying .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-applying.png);
+}
+
+body.topic-applying .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-applying-sub.png);
+}
+
+body.topic-applying .view-events-list .views-field-title,
+body.topic-applying .view-events-list .views-field-field-location, 
+body.topic-applying .view-events-list .views-field-nid a:link, 
+body.topic-applying .view-events-list .views-field-nid a:visited {
+  color: #7a792f;
+}
+  
+body.topic-repaying h1, body.topic-repaying .section-content h2, body.topic-repaying .lexicon-term h4 a, body.topic-repaying h3, body.topic-repaying h4, body.topic-repaying hr, body.topic-repaying a.anchor, body.topic-repaying cite,
+body.topic-how-to-repay h1, body.topic-how-to-repay .section-content h2, body.topic-how-to-repay .lexicon-term h4 a, body.topic-how-to-repay h3, body.topic-how-to-repay h4, body.topic-how-to-repay hr, body.topic-how-to-repay a.anchor, body.topic-how-to-repay cite 
+{
+    color: #994640;
+}
+
+body.topic-repaying hr {
+    /* background-color: #994640; */
+}
+/*Defect 16508*/
+body.topic-how-to-repay hr {
+    /* background-color: #994640; */
+}
+/**********/
+
+body.topic-repaying .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-repaying.png);
+}
+/*Defect 16508*/
+body.topic-how-to-repay .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-repaying.png);
+}
+/**********/
+body.topic-repaying .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-repaying-sub.png);
+}
+/*Defect 16508*/
+body.topic-how-to-repay .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-repaying-sub.png);
+}
+/**********/
+body.topic-repaying .view-events-list .views-field-title,
+body.topic-repaying .view-events-list .views-field-field-location, 
+body.topic-repaying .view-events-list .views-field-nid a:link, 
+body.topic-repaying .view-events-list .views-field-nid a:visited {
+  color: #994640;
+}
+/*Defect 16508*/
+body.topic-how-to-repay .view-events-list .views-field-title,
+body.topic-how-to-repay .view-events-list .views-field-field-location, 
+body.topic-how-to-repay .view-events-list .views-field-nid a:link, 
+body.topic-how-to-repay .view-events-list .views-field-nid a:visited {
+  color: #994640;
+}
+/**********/
+
+body.topic-general h1, body.topic-general .section-content h2, body.topic-general .lexicon-term h4 a, body.topic-general h3, body.topic-general h4, body.topic-general hr, body.topic-general a.anchor, body.topic-general cite  {
+    color: #669900;
+}
+
+/* Kosi M Ticket #1666 -> Fix to remove cite color/bolding from general areas such as 'Link to Us' */
+.context-general .field-item cite {
+color: inherit;
+font-weight: inherit;
+}
+
+body.topic-general hr {
+    /* background-color: #669900; */
+}
+
+body.topic-general .block-main ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-general.png);
+}
+
+body.topic-general .block-main ul li ul li {
+  list-style-image: url(../../../../../sa/sites/all/themes/ise/images/list-bullet-general-sub.png);
+}
+
+body.topic-general .view-events-list .views-field-title,
+body.topic-general .view-events-list .views-field-field-location, 
+body.topic-general .view-events-list .views-field-nid a:link, 
+body.topic-general .view-events-list .views-field-nid a:visited {
+  color: #669900;
+}
+  
+  
+/* Home page styles */
+body.front h1.title {
+    display: none;
+}
+.self-selection-tab {
+    width: 100%;
+    min-height: 180px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    border: 1px solid #dedede;
+    background-color: white;
+}
+
+
+
+
+
+.self-selection-tab img {
+    /*width: 45%;*/
+    margin: 1px 10px 1px 1px;
+    float: left;
+    max-width:224px;
+}
+
+@media all and (max-width: 700px) and (min-width: 320px){
+.self-selection-tab img {
+    width: 150px !important;
+    margin: 1px 10px 1px 1px;
+    float: left;
+    max-width:200px;
+}
+
+.self-selection-tab {
+    height: initial !important;
+    
+}
+}
+
+.self-selection-tab p {
+   /*margin: 9px 10px 10px 49%;*/
+   font-size: 0.95em;
+}
+
+
+@media all and (max-width: 700px) and (min-width: 320px){
+.self-selection-tab p {
+    width: 42% !important;
+    margin-top: -175px;
+    font-family: 'News Cycle', sans-serif;
+    position: relative;
+    left: 160px;
+}
+}
+/* Latest News block (Announcements ticker) */
+#block-views-latest-news-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#block-views-latest-news-block h2 {
+    color: white;
+    background-color: gray;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    margin: 0;
+    height: 40px;
+}
+#block-views-latest-news-block h2 a {
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    font-size: 14pt;
+}
+
+#views-ticker-fade-container-latest_news {
+    background-color: #669900;
+    width:98.5%;
+}
+
+#block-views-latest-news-block ul {
+    overflow: hidden;
+    height: 80px;
+}
+#block-views-latest-news-block li {
+    list-style-type: none;
+    margin-left: 10px;
+    height: 80px;
+    line-height: 40px;
+
+}
+
+#block-views-latest-news-block a {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: normal;
+    font-size: 12pt;
+    text-decoration: underline;
+    height: 80px;
+    line-height: 20px;
+}
+
+/* Kosi M. - Ticket 9946 -> Modified ticker announcement code to fix vertical alignment of announcement text" */
+.front #views-ticker-fade-container-latest_news ul#views-ticker-fade-latest_news li span.views-fade-tick-field 
+{display: block; 
+margin-top: 0.5em;
+margin-top: 0.1em\9;
+}
+
+#block-views-latest-news-block .liScroll-container {
+    background-color: #669900;
+    width: auto;
+    height: 40px;
+}
+#block-views-latest-news-block .liScroll-container .mask {
+    height: 20px;
+    max-height: 20px;
+    width: 96%;
+}
+
+/* Sidebar Second (Tiles) */
+
+/* Kosi M. - Ticket 11572 -> Fixed vertical alignment of right rail sidebar */ 
+.region-sidebar-second {
+    font-family: 'Droid Serif', serif;
+/*    font-size: 0.85em;*/
+    color: #494b4c;
+    padding-bottom: .5em;
+  margin-top: 0 !important;
+}
+
+/* SRH -- fix double bars */
+.block-glossary-terms-block {
+  border-top:0px !important;
+}
+
+/* Kosi M. - Ticket 11572 -> Fixed vertical alignment of right-rail sidebar */
+.region-sidebar-second .block {
+  border-top: 1px solid #ccc;
+  padding-bottom: 0.2em;
+  padding-top: 0;
+}
+
+/* Resources Block Tile */
+.view-resources .views-row {
+  margin: 0.25em 0pt 0.25em 0pt;
+  border-bottom: 1px solid #CCC;
+  padding: 0.5em 0 0.5em 0;
+  min-height: 70px;
+}
+
+.view-resources .file-icon {
+  padding-right: 1.5em;
+  float: left;
+}
+
+.view-resources .views-field-filename {
+    font-size: 0.9em;
+  font-family: 'Droid Serif', serif;
+  vertical-align: top;
+}
+
+.view-resources .views-field-uri a {
+  text-transform: uppercase;
+  font-family: 'Droid Serif', serif;
+  font-size: 0.85em;
+  background-color: red;
+    margin-top: 5px;
+    padding-right: 14px;
+}
+
+body.topic-preparing .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-preparing.png) no-repeat right 1px;
+}
+body.topic-types-of-aid .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-types-of-aid.png) no-repeat right 1px;
+}
+body.topic-eligibility .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-eligibility.png) no-repeat right 1px;
+}
+body.topic-applying .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-applying.png) no-repeat right 1px;
+}
+body.topic-repaying .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat right 1px;
+}
+/***Defect 16508***/
+body.topic-how-to-repay .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat right 1px;
+}
+/****/
+body.topic-general .view-resources .views-field-uri a {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-general.png) no-repeat right 1px;
+}    margin-top: 5px;
+
+
+/* Quick Links Tile */
+.block-ise-quick-resources-block-1 ul {
+    margin: 0;
+    padding: 0;
+}
+.block-ise-quick-resources-block-1 ul li {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 0.9em;
+    padding: 0 0 0px 18px;
+    margin: 0 0 2px 0;
+    background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat left 6px;
+}
+
+/*1502 RHT*/
+.contactustile ul li {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 0.9em;
+    padding: 0 0 0px 18px;
+    margin: 0 0 2px 0;
+    background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat left 6px;
+    list-style:none !important;
+}
+
+
+
+
+
+
+
+
+
+
+body.topic-preparing .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-preparing.png) no-repeat left 6px;
+}
+body.topic-types-of-aid .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-types-of-aid.png) no-repeat left 6px;
+}
+body.topic-eligibility .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-eligibility.png) no-repeat left 6px;
+}
+body.topic-applying .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-applying.png) no-repeat left 6px;
+}
+body.topic-repaying .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat left 6px;
+}
+/***Defect 16508****/
+body.topic-how-to-repay .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat left 6px;
+}
+/******/
+body.topic-general .block-ise-quick-resources-block-1 ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-general.png) no-repeat left 6px;
+}
+
+
+
+
+
+
+
+
+
+
+/*1502 RHT*/
+body.topic-preparing .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-preparing.png) no-repeat left 6px;
+}
+body.topic-types-of-aid .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-types-of-aid.png) no-repeat left 6px;
+}
+body.topic-eligibility .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-eligibility.png) no-repeat left 6px;
+}
+body.topic-applying .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-applying.png) no-repeat left 6px;
+}
+body.topic-repaying .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat left 6px;
+}
+/*****Defect 16508****/
+body.topic-how-to-repay .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-repaying.png) no-repeat left 6px;
+}
+/****/
+body.topic-general .contactustile ul li {
+  background: url(../../../../../sa/sites/all/themes/ise/images/arrow-bullet-general.png) no-repeat left 6px;
+}
+
+
+
+
+
+/* Facebook Like Tile */
+.region-sidebar-second h3.facebook {
+  margin-bottom: 0px;
+} 
+
+/* Twitter Feed Tile */
+.view-twitter-feed .views-row {
+    margin-top: 10px;
+}
+.view-twitter-feed .views-field-profile-image-url {
+    float: left;
+}
+.view-twitter-feed .views-field-text {
+    margin-left: 60px;
+    font-size: 0.9em;
+}
+.view-twitter-feed .views-field-created-time {
+    margin-left: 60px;
+    font-size: 0.8em;
+}
+
+a.button {
+  color: #FFF;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  height: 41px;
+  margin-left: 1.5em;
+  padding: 0.5em 1em 0.5em 1em; 
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body.topic-preparing a.button {
+    background-color: #578036;
+}
+
+body.topic-types-of-aid a.button {
+    background-color: #917227;
+}
+
+body.topic-eligibility a.button {
+    background-color: #3d8076;
+}
+
+body.topic-applying a.button {
+    background-color: #7a792f;
+}
+
+body.topic-repaying a.button {
+    background-color: #994640;
+}
+/**** Defect 16508****/
+body.topic-how-to-repay a.button {
+    background-color: #994640;
+}
+/****/
+body.topic-general a.button {
+    background-color: #669900;
+}
+
+
+/* Events Tile */
+.view-events-list .views-row {
+  background-image: url('../../../../../sa/sites/all/themes/ise/images/calendar-frame.png');
+  background-repeat: no-repeat;
+  min-height: 55px;
+  margin-top: 8px;
+  padding-bottom: 10px;
+} 
+
+.view-events-list .date {
+  float: left;
+  width: 51px;
+  margin-right: 10px;
+}
+.view-events-list .month {
+  width: 51px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  font-size: .75em;
+  display: block;
+  text-align: center;
+}
+
+.view-events-list .day {
+  font-family: 'Droid Serif', serif;
+  margin-top: -6px;
+  width: 51px;
+  text-align: center;
+  display: block;
+  
+}
+
+.view-events-list .views-field-title {
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  margin-left: 60px;
+}
+
+.view-events-list .views-field-nid {
+  /*font-family: 'News Cycle', Arial, Tahoma, sans-serif;*/
+  font-size: 0.9em;
+  margin-left: 60px;
+}
+
+/* Glossary Tile */
+span.lexicon-term {
+   cursor: auto;
+   border-bottom: none;
+}
+
+span.lexicon-term .description {
+    font-size: inherit;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+span.lexicon-term li {
+   margin-left: 15px;
+}
+
+/* End of Tiles */
+
+/* 
+ page */
+.lexicon-description {
+    display: none;
+}
+.lexicon-links {
+    background: none;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: inherit;
+    padding: 5px 10px;
+    border-bottom: 1px solid #dedede;
+}
+.lexicon-links a {
+    font-size: 1em;
+}
+.lexicon-list {
+    margin: 0 10px;
+}
+h2.lexicon-letter {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 3.5em;
+    margin: 0;
+    color: #669900;
+}
+.lexicon-list dl {
+
+}
+.lexicon-list dt {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 1.2em;
+    color: #669900;
+}
+.lexicon-list dd {
+    color: #494B4C;
+    font-family: 'Droid Serif', serif;
+    font-size: 1em;
+    font-style: inherit;
+    padding: 0;
+}
+a.lexicon_go_to_top_link:after {
+  content: url('../images/bullet-up.png');
+  padding-left: 0.25em;
+}
+a.lexicon_go_to_top_link {
+  color: #494b4c;
+  float: right;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+/* Clery Act page */
+/*
+.view-clery-act .views-exposed-form {
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 5px;
+}
+.view-clery-act .views-exposed-widgets {
+    margin: 10px;
+    line-height: 25px;
+}
+.view-clery-act .views-exposed-widget {
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+.view-clery-act .views-exposed-widget label {
+    font-weight: normal;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+.view-clery-act .view-empty {
+    padding: 10px;
+}
+.view-clery-act .views-exposed-widget div.views-widget {
+    display: inline;
+    float: left;
+}
+.view-clery-act .views-exposed-widget .form-submit {
+    margin: 0;
+}
+.view-clery-act h3 {
+    margin: 20px 10px 0 10px;
+}
+.view-clery-act .views-field-field-school {
+    margin: 10px 10px 0 10px;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 14pt;
+}
+.view-clery-act .views-field-title {
+    margin: 0 10px;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+.view-clery-act .views-field-field-documents ul {
+    padding-left: 10px;
+}
+*/
+
+/* Events List page */
+.view-events-list .views-exposed-form {
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 5px;
+}
+.view-events-list .views-exposed-widgets {
+    margin: 10px;
+    line-height: 25px;
+}
+.view-events-list .views-exposed-widget {
+    margin: 0;
+    padding: 0;
+}
+.view-events-list .views-exposed-widget label {
+    font-weight: normal;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+.view-events-list .view-empty {
+    padding: 10px;
+}
+.view-events-list .views-exposed-widget div.views-widget {
+    display: inline;
+    float: left;
+}
+.view-events-list .views-exposed-widget .form-submit {
+    margin: 0;
+}
+.view-events-list .views-field-field-event-image {
+    margin: 0 10px;
+    float: left;
+}
+.view-events-list table.views-table,
+.view-events-list table.views-table * {
+    border: none;
+    background: none;
+}
+.view-events-list table.views-table {
+    margin: 0 10px;
+    width: auto;
+    table-layout: fixed;
+}
+.view-events-list table.views-table td {
+    margin: 0;
+    padding: 10px 0;
+    vertical-align: top;
+}
+.view-events-list table.views-table caption {
+    text-align: left;
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 1.2em;
+    color: #669900;
+}
+.view-events-list td.views-field-field-event-image {
+    width: 120px;
+}
+.view-events-list td.views-field-field-event-image img {
+    margin-top: 5px;
+}
+.view-events-list table.views-table p,
+.view-events-list table.views-table h3,
+.view-events-list table.views-table a {
+    margin: 0;
+    padding: 0;
+}
+.view-events-list table.views-table p.event-details-link {
+    font-size: 0.8em;
+}
+.view-events-list table.views-table a {
+    text-decoration: none;
+}
+
+.event-details h3{
+display:none;
+}
+.views-exposed-widget {
+    margin: 0 10px;
+}
+
+/* Events Detail page */
+article.node-event {
+}
+article.node-event .event-heading {
+    margin-bottom: 10px;
+}
+article.node-event p.event-detail-info {
+    margin: 0 10px;
+    padding: 0;
+}
+article.node-event .event-content {
+    border-top: 1px solid #ccc;
+}
+article.node-event .event-picture {
+    border-bottom: 1px solid #ccc;
+}
+article.node-event .event-picture img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+article.node-event .event-gallery img {
+    border: 1px solid #ccc;
+    padding: 1px;
+    margin: 10px;
+}
+
+/* Webforms */
+form.webform-client-form {
+    margin: 10px;
+}
+
+form.webform-client-form .webform-component {
+	margin-left: 20px !important;
+    
+}
+
+#region-content form.webform-client-form label{
+ margin: 1px;
+}
+
+#region-content form.webform-client-form p,
+#region-content form.webform-client-form h2,
+#region-content form.webform-client-form h3,
+#region-content form.webform-client-form h4,
+#region-content form.webform-client-form select,
+ {
+
+}
+
+#region-content form.webform-client-form textarea {
+  display:inline;
+}
+
+#region-content form.webform-client-form input{
+  height:auto;
+  /** RHT 956 
+  width:174px;**/
+}
+   
+#region-content form.webform-client-form input[type=radio],
+{
+   
+  width: 15px;
+    height: 15px;
+    padding: 2%;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+
+
+
+
+
+#region-content form.webform-client-form input[type="checkbox"] {
+  height: 15px;
+  padding: 2%;
+  position: relative;
+  top: -1px;
+  vertical-align: bottom;
+  width: 15px;
+}
+
+@media all and  (max-width: 1050px){
+#region-content form.webform-client-form input[type=checkbox] {
+    /*RHT Leave us Feedback Fix */
+    /*height:5px;*/
+    padding: 2%;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+}
+
+form.webform-client-form label, form.webform-client-form legend {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+form.webform-client-form label.option {
+    font-family: 'Droid Serif', serif;
+    font-size: 0.85em;
+    margin: 0;
+}
+
+/* Site survey/feedback webform */
+
+/* "Please specify" type text fields for when "Other" is selected */
+#webform-component-typegroup--visitor-type-specify,
+#webform-component-sourcegroup--source-specify,
+#webform-component-infogroup--looking-for-specify,
+#webform-component-foundgroup--found-info-specify {
+    display: none;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+#webform-component-sourcegroup--source-specify,
+#webform-component-infogroup--looking-for-specify,
+#webform-component-foundgroup--found-info-specify {
+    margin: 0 0 0 25px;
+}
+
+#webform-component-satisfaction p {
+    font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#webform-component-how-did-you-hear-about-this-website,
+#webform-component-looking-for,
+#webform-component-found-info,
+#webform-component-satisfaction,
+#webform-component-recommend,
+#webform-component-comments-suggestions ,
+#webform-component-additional-comments-suggestions{
+    
+    padding-top: 10px;
+}
+
+/* Contact Us webform */
+
+
+
+#webform-client-form-125 .form-item, #webform-client-form-244 .form-item {
+    margin: 10px 0px 10px 0px;
+  padding-right:5px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    text-align: right;
+}
+
+#webform-client-form-125 p, #webform-client-form-244 p {
+    text-align: left;
+}
+
+#webform-component-contactus-question-type-label--contactus-question-type div.form-type-radio {
+     display: block;
+   background-color: inherit;
+   text-align: left;
+ }
+
+#webform-component-contactus-question-type-label--contactus-question-type div label, 
+#webform-component-contactus-question-type-label--contactus-question-type div.form-type-radio input,
+#webform-component-contactus-question-type-label--contactus-question-type div.form-type-radio label
+ {
+    display: inline;
+    text-align: left;
+    background-color: inherit;
+ 
+    
+}
+
+#webform-component-contactus-name,
+#webform-component-contactus-email,
+#webform-component-contactus-question-type-label,
+#webform-component-contactus-message {
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+#webform-component-contactus-name label,
+#webform-component-contactus-email label,
+#webform-component-contactus-question-type-label legend, 
+#webform-component-contactus-message label {
+    font-weight: normal;
+    display: block;
+    float: left;
+    width: auto;
+    min-height: 35px;
+    padding: 0 0 0 10px;
+    
+}
+
+
+#webform-component-contactus-name input,
+#webform-component-contactus-email input,
+#webform-component-contactus-question-type-label--contactus-question-type input {
+    height: 35px;
+    border: none;
+}
+#webform-component-contactus-name input,
+#webform-component-contactus-email input,
+#edit-submitted-contactus-question-type-label-contactus-question-type {
+    width: 100%;
+    display: block;
+    background-color: white;
+  padding-top:5px;
+  padding-left:5px;
+  margin-top:5px;
+}
+#webform-component-contactus-message:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#webform-component-contactus-message div.form-textarea-wrapper {
+    width: 100%;
+}
+#webform-component-contactus-message textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    resize: none;
+}
+
+/* Ombudsman Form */
+#webform-client-form-271 legend,
+#webform-client-form-161 legend {
+   color: #994640;
+}
+
+#webform-client-form-271 h1,
+#webform-client-form-161 h1 {
+   color: #994640 !important;
+}
+
+
+#webform-client-form-271 cite,
+#webform-client-form-161 cite {
+   color: #994640 !important;
+
+}
+
+
+
+
+#webform-client-form-271 .form-item ,
+#webform-client-form-161 .form-item {
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    overflow: hidden;
+   
+  
+}
+
+
+
+
+   
+
+
+
+#webform-client-form-271 label
+#webform-client-form-161 label {
+    font-weight: normal;
+    display: block;
+    float: left;
+    width: auto;
+    min-height: 35px;
+    padding: 0 0 0 10px;
+}
+
+#webform-client-form-271 input, #webform-client-form-271 select,
+#webform-client-form-161 input, #webform-client-form-161 select {
+    background-color: white;
+    height: 35px;
+    border-left: 1px solid #ccc;
+    font-size: 16px;
+  
+}
+
+
+#webform-client-form-271 .description,
+#webform-client-form-161 .description {
+    clear: both;
+}
+
+/* Calculator and ICR Calculator*/
+#fsa-calculator-form label {
+    display: inline;
+    font-weight: normal;
+}
+
+#fsa-calculator-form input.field-error{  
+    background: #f8dbdb;  
+    border-color: #e77776;  
+}  
+
+#fsa-calculator-form label.field-error:after {
+    color: #e77776;
+    content: " (error)";
+}
+
+#fsa-calculator-form .field label, #fsa-calculator-form .field input {
+    font-family: 'Droid Serif', serif;
+    font-size: 0.85em;
+    color: #494b4c;
+    padding-bottom: .5em;
+}
+
+#reset p {
+    text-align: center;
+    width: 100%;
+}
+
+.radio {
+    display: inline;
+}
+
+a.calculate {
+    color: white;
+    text-decoration: none;
+}
+
+#fsa-calculator-form div.field {
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    text-align: right;
+}
+
+#fsa-calculator-form label {
+    font-weight: normal;
+    display: block;
+    float: left;
+    width: auto;
+    min-height: 35px;
+    padding: 0 0 0 10px;
+}
+
+#fsa-calculator-form input {
+    display: block;
+    float: right;
+    border-left: 1px solid #ccc;
+    margin: 0px;
+    height: 35px;
+}
+
+#fsa-calculator-form div.radio {
+    display: block;
+    float: right;
+    border-left: 1px solid #ccc;
+    background-color: white;
+    text-align: left;
+    min-height: 35px;
+}
+
+#fsa-calculator-form div.radio label, #fsa-calculator-form div.radio input {
+    display: inline;
+    float: none;
+    text-align: left;    
+}
+
+#fsa-calculator-form div.radio input {
+    margin-left: 10px;
+    border: none;
+    
+    /* IE7/8 have to set the actual size of the radio button */
+    height: 16px;
+    width: 16px;
+}
+
+.fsa-calc-detail td,
+.fsa-calc-detail th {
+    font-family: 'Droid Serif', serif;
+    font-size: 0.85em;
+    color: #494b4c;
+}
+
+/* Budget Calculator */
+#budget {
+   width: 100%;
+   height: 100%;
+}
+
+#budget #expenses, #budget #incomes {
+   width: 100%;
+}
+
+#budget #expenses h3, #budget #incomes h3 {
+   margin: 0 auto;
+   text-align: center;
+   width: 100%;
+}
+
+#budget #totals #expenses-total-div, #budget #totals #income-total-div {
+   float: left;
+   width: 50%;
+   text-align: center;
+}
+
+#budget #totals #grand-total-div {
+   text-align: center;
+}
+
+#budget #totals {
+   clear: both;
+}
+
+#budget .detail {
+   margin-left: 25px;
+}
+
+#budget div.field {
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    text-align: right;
+}
+
+#budget label {
+    font-weight: normal;
+    display: inline;
+    float: left;
+    min-height: 35px;
+    padding: 0 10px 0 0;
+    text-align: right;
+    width: 45%;
+}
+
+#budget button {
+   border:none;
+   border-radius: 0px; 
+   background:transparent;
+   color: rgb(38, 115, 153); 
+   cursor: pointer;
+   font-family: 'Droid Serif',serif;
+   font-size: 1em;
+   font-weight: normal;
+   text-decoration: underline;
+   width: 95%;
+}
+
+#budget button:focus, #budget button:active {
+   box-shadow: none;
+   border: 1px dotted #000;
+}
+
+/* IBR Calculator */
+#ibr-calculator {
+  font-family: 'Droid Serif', serif;
+}
+
+#ibr-calculator div#transition1 h3, #ibr-calculator div#married h3, #ibr-calculator div#filed h3, #ibr-calculator div#spouse-loans h3, #ibr-calculator div#num-of-dep h3, #ibr-calculator div#choose-state h3 {
+   color: #FFF;
+}
+
+#ibr-calculator #general { 
+   text-align: center;
+   min-height: 130px;
+   width: 100%;
+}
+
+
+#ibr-calculator label {
+  display: inline;
+  font-weight: normal;
+}
+
+#ibr-calculator div#married, #ibr-calculator div#filed, #ibr-calculator div#spouse-loans, #ibr-calculator div#num-of-dep, #ibr-calculator div#choose-state {
+   background-color: #994640;
+   border-width:1px;  
+   border-style:outset;
+   border-left: 0px;
+   color: #FFF;
+   display: inline-block;
+   margin: 0 auto;
+   min-height: 165px;
+   overflow: auto;
+   text-align: left;
+   vertical-align: top;
+   width: auto; 
+   
+   /* IE7 is junk */
+   zoom: 1;
+   *display: inline;
+   /* end of IE7 hacks */   
+   
+}
+
+#ibr-calculator div#spouse-loans {
+   width: 130px; 
+}
+
+#ibr-calculator div#married .field, #ibr-calculator div#filed .field, #ibr-calculator div#spouse-loans .field, #ibr-calculator div#num-of-dep .field, #ibr-calculator div#choose-state .field {
+   display: block;
+   padding: 0 5px 0 5px;
+}
+
+#ibr-calculator div#spouse-loans p, #ibr-calculator div#num-of-dep p {
+   float: right;
+   color: #FFF;
+}
+
+#ibr-calculator div#transition1 {
+   background-color: #494b4c;
+   border-style: double;
+   border-width: 10px;
+   clear: both;
+   width: 70%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+#ibr-calculator div#transition1 h3 {
+   margin: 0;
+}
+
+#ibr-calculator div.divider {
+   background-color: #994640;
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-back-1.png');
+   background-repeat: repeat-x;
+   clear: both;
+   color: #FFF;
+   font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+   line-height: 32px;
+   min-height: 32px;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0 auto;
+   width: 70%;
+}
+
+#ibr-calculator div.div-wrapper {
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-back-2.png');
+   background-position:center bottom; 
+   background-repeat:no-repeat;
+   min-height: 46px;
+}
+
+#ibr-calculator div#loan-amounts {
+   text-align: center;
+   width: 100%;
+}
+
+#ibr-calculator div#your-loan-amount, #ibr-calculator div#spouse-loan-amount {
+   border: 1px solid #000;
+   text-align: left;
+   vertical-align: top;
+   width: 100%;
+}
+
+#ibr-calculator div#your-income {
+   border: 1px solid #000;
+   margin: 0 auto;
+   text-align: center;
+   width: 45%;
+}
+
+#ibr-calculator div#joint-income {
+   border: 1px solid #000;
+   margin: 0 auto;
+   text-align: center;
+   width: 90%;
+}
+
+#ibr-calculator #disclaimer {
+   display: block;
+   font-size: small;
+}
+
+#ibr-calculator div.help {
+background-color: #f5ecec;
+   border: 1px solid #000;
+   margin: 0 auto;
+   width: 80%;
+}
+
+#ibr-calculator .help-icon {
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-help.png');
+   background-repeat: no-repeat;
+   cursor: help;
+   display: inline-block;
+   float: right;
+   height: 20px;
+   overflow: hidden;
+   padding-right: 5px;
+   margin-top: 5px;
+   text-indent: -3000px;
+   width: 20px;
+}
+
+#ibr-calculator .close-help {
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-close.png');
+   background-repeat: no-repeat;
+   background-position:left bottom; 
+   cursor: pointer;
+   float: right;
+   height: 20px;
+   overflow: hidden;
+   padding-right: 5px;
+   padding-top: 5px;
+   text-indent: -3000px;
+   width: 20px;
+}
+
+#ibr-calculator #YouQualifyAmount, #ibr-calculator #SpouseQualifyAmount {
+   float: right;
+   font-weight: bold;
+   padding-right: 10px;
+}
+
+#ibr-calculator div#you-qualify, #ibr-calculator div#you-qualify-steps, #ibr-calculator div#servicer, #ibr-calculator div#you-no-qualify, #ibr-calculator div#next-steps, #ibr-calculator div#no-qualify-next {
+   background-color: #f5ecec;
+   border: 1px solid #000;
+   margin: 0 auto;
+   width: 80%;
+}
+
+#ibr-calculator #reset {
+   text-align: center;
+   width: 100%;
+}
+
+/* PAYE Calculator */
+#paye-calculator {
+  font-family: 'Droid Serif', serif;
+}
+
+#paye-calculator div#transition1 h3, #paye-calculator div#married h3, #paye-calculator div#filed h3, #paye-calculator div#spouse-loans h3, #paye-calculator div#num-of-dep h3, #paye-calculator div#choose-state h3 {
+   color: #FFF;
+}
+
+#paye-calculator #general { 
+   text-align: center;
+   min-height: 130px;
+   width: 100%;
+}
+
+
+#paye-calculator label {
+  display: inline;
+  font-weight: normal;
+}
+
+#paye-calculator div#married, #paye-calculator div#filed, #paye-calculator div#spouse-loans, #paye-calculator div#num-of-dep, #paye-calculator div#choose-state {
+   background-color: #994640;
+   border-width:1px;  
+   border-style:outset;
+   border-left: 0px;
+   color: #FFF;
+   display: inline-block;
+   margin: 0 auto;
+   min-height: 165px;
+   overflow: auto;
+   text-align: left;
+   vertical-align: top;
+   width: auto; 
+   
+   /* IE7 is junk */
+   zoom: 1;
+   *display: inline;
+   /* end of IE7 hacks */   
+   
+}
+
+#paye-calculator div#spouse-loans {
+   width: 150px; 
+}
+
+#paye-calculator div#married .field, #paye-calculator div#filed .field, #paye-calculator div#spouse-loans .field, #paye-calculator div#num-of-dep .field, #paye-calculator div#choose-state .field {
+   display: block;
+   padding: 0 5px 0 5px;
+}
+
+#paye-calculator div#spouse-loans p, #paye-calculator div#num-of-dep p {
+   float: right;
+   color: #FFF;
+}
+
+#paye-calculator div#transition1 {
+   background-color: #494b4c;
+   border-style: double;
+   border-width: 10px;
+   clear: both;
+   width: 70%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+#paye-calculator div#transition1 h3 {
+   margin: 0;
+}
+
+#paye-calculator div.divider {
+   background-color: #994640;
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-back-1.png');
+   background-repeat: repeat-x;
+   clear: both;
+   color: #FFF;
+   font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+   line-height: 32px;
+   min-height: 32px;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0 auto;
+   width: 70%;
+}
+
+#paye-calculator div.div-wrapper {
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-back-2.png');
+   background-position:center bottom; 
+   background-repeat:no-repeat;
+   min-height: 46px;
+}
+
+#paye-calculator div#loan-amounts {
+   text-align: center;
+   width: 100%;
+}
+
+#paye-calculator div#your-loan-amount, #paye-calculator div#spouse-loan-amount, #paye-calculator div#disbursement {
+   border: 1px solid #000;
+   text-align: left;
+   vertical-align: top;
+   width: 100%;
+}
+
+#paye-calculator div#your-income {
+   border: 1px solid #000;
+   margin: 0 auto;
+   text-align: center;
+   width: 45%;
+}
+
+#paye-calculator div#joint-income {
+   border: 1px solid #000;
+   margin: 0 auto;
+   text-align: center;
+   width: 90%;
+}
+
+#paye-calculator #disclaimer, #paye-calculator #disclaimer-spouse {
+   display: block;
+   font-size: small;
+}
+
+#paye-calculator div.help {
+background-color: #f5ecec;
+   border: 1px solid #000;
+   margin: 0 auto;
+   width: 80%;
+}
+
+#paye-calculator .help-icon {
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-help.png');
+   background-repeat: no-repeat;
+   cursor: help;
+   display: inline-block;
+   float: right;
+   height: 20px;
+   overflow: hidden;
+   padding-right: 5px;
+   margin-top: 5px;
+   text-indent: -3000px;
+   width: 20px;
+}
+
+#paye-calculator .close-help {
+   background-image: url('../../../../../sa/sites/all/themes/ise/images/calc-close.png');
+   background-repeat: no-repeat;
+   background-position:left bottom; 
+   cursor: pointer;
+   float: right;
+   height: 20px;
+   overflow: hidden;
+   padding-right: 5px;
+   padding-top: 5px;
+   text-indent: -3000px;
+   width: 20px;
+}
+
+#paye-calculator #YouQualifyAmount, #paye-calculator #SpouseQualifyAmount {
+   float: right;
+   font-weight: bold;
+   padding-right: 10px;
+}
+
+#paye-calculator .question-radio {
+   float: right;
+   padding-right: 10px;
+}
+
+#paye-calculator div#you-qualify, #paye-calculator div#you-qualify-steps, #paye-calculator div#servicer, #paye-calculator div#not-eligible-new-borrower, #paye-calculator div#you-no-qualify, #paye-calculator div#next-steps, #paye-calculator div#not-eligible-no-qualify-next, #paye-calculator div#no-qualify-next {
+   background-color: #f5ecec;
+   border: 1px solid #000;
+   margin: 0 auto;
+   width: 80%;
+}
+
+#paye-calculator #reset {
+   text-align: center;
+   width: 100%;
+}
+
+
+/* Pull Quotes Tile */
+.block-views-pull-quote-block {
+    background: white url('../../../../../sa/sites/all/themes/ise/images/pull-quote-bg.png') no-repeat left 15px;
+    min-height: 50px;
+}
+.block-views-pull-quote-block .view-content {
+    margin-left: 60px;
+}
+.block-views-pull-quote-block .views-field-body p {
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    margin-bottom: 0;
+}
+.block-views-pull-quote-block .views-field-field-quote-author {
+}
+
+/* Hide Facebook widget iframes */
+#fb_xdm_frame_http,
+#fb_xdm_frame_https {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+
+
+/*Mobile CSS begin*/
+@media screen and (max-width: 650px) {
+body.logged-in.alpha-grid-debug #zone-user-wrapper {
+  background: fuchsia;
+}
+}
+@media screen and (max-width: 650px) {
+#block-search-form {
+  width: 70%;
+  float: left;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown {
+  left: 0px;
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown {
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul,
+div.ise-megamenu-dropdown-links-menu ul li{
+  width: 100%;
+  margin:0;
+  border:0;
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+  padding: 25px 22px; /* makes the sub menu items the same height as the main menu item */
+  width:auto;
+  min-height:0;
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li.expanded a.ise-megamenu-link-level2{
+  width:auto;
+  /*max-width:76%; menu-heightb*/
+
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level3 {
+  width:auto;
+  min-height:0;
+}
+}
+@media screen and (max-width: 650px) {
+form#search-block-form .form-text {
+  width: 130px;
+  font-size:10px;
+}
+}
+@media screen and (max-width: 650px) {
+form#search-block-form label.element-invisible {
+  width: 100px;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level {
+  max-height: 70px;
+  height: auto;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level.hover {
+  max-height: none;
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li ul li {
+  padding-left: 10px;
+}
+}
+@media screen and (max-width: 650px) {
+.second-to-last .hover div.ise-megamenu-dropdown-links-menu ul li ul li{
+  padding-left: 20px;
+}
+}
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li a, .ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li a {
+  /*padding-left: 0; */
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown, li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: 0;
+}
+}
+
+/*
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a {
+  background-image: url(../images/menu-right.png);
+  background-position: 94% center;
+}
+*/
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu ul li.expanded a.ise-megamenu-link-level2,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu ul li.expanded a.ise-megamenu-link-level2{
+  width:auto;
+  max-width:76%;
+}
+}
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu ul li a.ise-megamenu-link-level2 {
+  width: auto;
+}
+}
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li a {
+   /* padding: 25px 5px; */
+
+}
+}
+/*
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-image: url(../images/menu-right-hover.png);
+  background-position: 94% center;
+  background-repeat: no-repeat;
+}
+*/
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded.hover a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded.hover a:hover {
+  background-image: none;
+}
+}
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded.hover a.sub-menu-close-link:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded.hover a.sub-menu-close-link:hover {
+   background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-left-hover.png);
+  background-position: 50% 50%;
+
+
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu li.expanded a,
+div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-position: 90% center;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu a.ise-megamenu-arrow {
+  right: 10px;
+  width: 30px;
+  height: 70px;
+  position: relative;
+  display: block;
+  top: -70px;
+  float: right;
+  text-align: center;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-bg.png) !important;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level.hover {
+  position: relative;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu a.ise-megamenu-link-level1 {
+  /*background-image: url(../images/menu-bg.png);*/
+  display: block;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level.hover,
+ul.ise-megamenu li.ise-megamenu-top-level.hover h2,
+ul.ise-megamenu li.ise-megamenu-top-level.hover small,
+ul.ise-megamenu li.ise-megamenu-top-level:hover,
+ul.ise-megamenu li.ise-megamenu-top-level:hover h2,
+ul.ise-megamenu li.ise-megamenu-top-level:hover small {
+  color: white;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level span {
+  margin-left: 30px;
+}
+}
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level span h2{
+  width: 100%;
+  padding:25px 5px;
+
+}
+}
+@media screen and (max-width: 650px) {
+/* left megamenu arrow */
+ul.ise-megamenu .ise-megamenu-top-level.hover a.ise-megamenu-arrow {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  border-right: solid 1px #ccc;
+  padding-right:15px;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  color: white;
+  background-color: brown;
+  background-image: none;
+  /*padding-left: 67px;*/
+  width:auto;
+  border-right:none;
+  margin-left:60px;
+  border-left:solid 1px #ccc; /* close left arrow button */
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #578036;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #917227;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #3d8076;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #7a792f;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu li.hover a.ise-megamenu-link-level2 {
+  background-color: #994640;
+}
+}
+@media screen and (max-width: 650px) {
+/* left arrow to toggle sub menu level 3 items */
+li.ise-megamenu-top-level div.ise-megamenu-dropdown-links-menu li.hover a.sub-menu-close-link {
+  background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-left-hover.png);
+  text-indent: -999em;
+  position: absolute;
+  left: -0;
+  padding-right: 0;
+  width:54px;
+  /* border-right: solid 1px grey; */
+  background-position: 50% 50%;
+  height: auto;
+  padding: 25px 3px;
+}
+}
+@media screen and (max-width: 650px) {
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded ul li a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded ul li a {
+  padding: 25px 5px;
+  /*margin-left: -20px;  moves the 3rd lvl item to run parallel with the parent item, affects last 2 menus*/
+}
+}
+@media screen and (max-width: 650px) {
+/* removes the .selected title from mobile view */
+li.ise-megamenu-top-level-item-1 .selected,
+li.ise-megamenu-top-level-item-2 .selected,
+li.ise-megamenu-top-level-item-3 .selected,
+li.ise-megamenu-top-level-item-4 .selected,
+li.ise-megamenu-top-level-item-5 .selected{
+  display:none;
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3{
+  padding: 25px 5px;
+  margin-left: -10px; /* moves the 3rd lvl item to run parallel with the parent item, affects first 3 menus */
+  max-height:16px;
+  min-height:16px;
+}
+}
+@media screen and (max-width: 650px) {
+/* removes hover affect from mobile view */
+li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown-links-menu a:hover,
+li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown-links-menu a:hover{
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+}
+@media screen and (max-width: 650px) {
+/* centers the left arrow for first 3 items */
+div.ise-megamenu-dropdown-links-menu a{
+  /* padding: 25px 5px; */
+  height:100%;
+  padding-top:0;
+  padding-bottom:0;
+  /*border-left: solid 1px grey; */
+}
+}
+@media screen and (max-width: 650px) {
+/* fix highlighting the entire UL for mobile */
+li.ise-megamenu-top-level-item-1 ul:hover,
+li.ise-megamenu-top-level-item-2 ul:hover,
+li.ise-megamenu-top-level-item-3 ul:hover,
+li.ise-megamenu-top-level-item-4 ul:hover,
+li.ise-megamenu-top-level-item-5 ul:hover{
+    color: white;
+    background-color: white;
+}
+}
+@media screen and (max-width: 650px) {
+/* removes line height from mobile view */
+div.ise-megamenu-dropdown-links-menu ul li,
+div.ise-megamenu-dropdown-links-menu ul li ul li{
+  line-height:100%;
+  width: auto;
+}
+}
+@media screen and (max-width: 650px) {
+div.ise-megamenu-dropdown-links-menu ul li{
+  border-bottom: solid 1px #ccc;
+  /*border-right: solid 1px grey;*/
+  /* border-left: solid 1px grey; */
+}
+}
+@media screen and (max-width: 650px) {
+/* removes bottom border on mobile */
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-3 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-4 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-5 div.ise-megamenu-dropdown{
+  border-bottom: none;
+}
+}
+@media screen and (max-width: 650px) {
+/* adds spacing when first level menu is expanded */
+ul.ise-megamenu li.ise-megamenu-top-level.hover span h2{
+  padding-left: 40px;
+}
+}
+/* redefines the right arrow used on mobile */
+/*
+div.ise-megamenu-dropdown-links-menu li.expanded a {
+  background-image: url(../images/menu-right.png);
+  background-position: 94% center;
+  background-repeat: no-repeat;
+}
+*/
+
+/*
+div.ise-megamenu-dropdown-links-menu li.expanded a:hover {
+  background-image: url(../images/menu-right-hover.png);
+  background-position: 94% center;
+  background-repeat: no-repeat;
+}*/
+
+/* moves the menu button farther right */
+
+
+/* moves the megamenu up closer to the menu button */
+@media screen and (max-width: 650px) {
+ul.ise-megamenu{
+  margin-top: -10px;
+}
+
+}
+@media screen and (max-width: 650px) {
+ise-megamenu-dropdown-links-menu li.expanded a{
+  background-image: none;
+}
+}
+/* controls the second level right arrow */
+@media screen and (max-width: 650px) {
+a.ise-megamenu-sub-arrow {
+  display:block;
+  right: 0px;
+  position:absolute;
+  float: right;
+  top: 0;
+  /*border-left:solid 1px grey; */
+  text-align: center;
+  width:50px;
+  background-image: none;
+}
+}
+@media screen and (max-width: 650px) {
+.ise-megamenu-sub-arrow img{
+  background-image: none;
+  padding: 25px 3px;
+  padding-right:12px;
+}
+}
+@media screen and (max-width: 650px) {
+/* removes default background arrow as seen on pc view */
+div.ise-megamenu-dropdown-links-menu li.expanded a,
+div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a,
+.ise-megamenu-top-level.last div.ise-megamenu-dropdown-links-menu li.expanded a:hover,
+.ise-megamenu-top-level.second-to-last div.ise-megamenu-dropdown-links-menu li.expanded a:hover{
+  background-image: none;
+}
+}
+@media screen and (max-width: 650px) {
+/* right megamenu arrow */
+ul.ise-megamenu .ise-megamenu-top-level:not(.hover) a.ise-megamenu-arrow{
+  right:0px;
+  width: 60px;
+  border-left: solid 1px #ccc;
+  top:-70px;
+}
+}
+@media screen and (max-width: 650px) {
+/* keeps the entire list highlighted on hover */
+li.ise-megamenu-top-level-item-1  li.expanded.hover{
+  background-color: #578036;
+  color:white;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-2  li.expanded.hover{
+  background-color: #917227;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-3  li.expanded.hover{
+  background-color: #3d8076;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-4  li.expanded.hover{
+  background-color: #7a792f;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-5  li.expanded.hover{
+  background-color: #994640;
+}
+}
+
+@media screen and (max-width: 650px) {
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown,
+ul.ise-megamenu li.ise-megamenu-top-level-item-2 div.ise-megamenu-dropdown li ul,
+ul.ise-megamenu li.ise-megamenu-top-level-item-1 div.ise-megamenu-dropdown{
+  /*border-bottom: solid 1px #ccc;*/
+}
+}
+@media screen and (max-width: 650px) {
+/* adds a border to expanded 2nd level */
+li.ise-megamenu-top-level .ise-megamenu-dropdown-links li.hover ul{
+  border-top: solid 1px #ccc;
+}
+}
+
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul,
+li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul{
+  margin-left:0;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul li a.ise-megamenu-link-level3,
+li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul li a.ise-megamenu-link-level3{
+  left: -291px;
+  padding-left:15px;
+}
+}
+@media screen and (max-width: 650px) {
+/* fix location of arrow on mobile */
+li.ise-megamenu-top-level.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: 0px;
+  top:0!important;
+}
+}
+@media screen and (max-width: 650px) {
+/* create box shadow for menu*/
+#block-ise-megamenu-ise-megamenu{
+  box-shadow: 7px 7px 7px grey;
+  margin-left:5px;
+  margin-right:5px;
+  border-left: solid 1px #ccc;
+  border-radius:5px;
+}
+}
+@media screen and (max-width: 650px) {
+/* adds border to right arrow */
+div.ise-megamenu-dropdown-links-menu ul li.expanded a.ise-megamenu-link-level2{
+  /* border-right: solid 1px grey; */
+}
+}
+@media screen and (max-width: 650px) {
+/* color the sub arrows */
+li.ise-megamenu-top-level-item-1 .ise-megamenu-sub-arrow{
+  background-color:#578036;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-2 .ise-megamenu-sub-arrow{
+  background-color:#917227;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-3 .ise-megamenu-sub-arrow{
+  background-color:#3d8076;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-4 .ise-megamenu-sub-arrow{
+  background-color:#7a792f;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+}
+@media screen and (max-width: 650px) {
+li.ise-megamenu-top-level-item-5 .ise-megamenu-sub-arrow{
+  background-color:#994640;
+  border-left:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+}
+}
+@media screen and (max-width: 650px) {
+/* class to make background of menu item white */
+a.ise-megamenu-link-level2.white{
+  background-color:white;
+  /*height:10% !important;  Check */
+}
+}
+@media screen and (max-width: 650px) {
+/* redefine level 1 items */
+ul.ise-megamenu li.ise-megamenu-top-level span {
+  display: block;
+  text-align:left;
+}
+}
+@media screen and (max-width: 650px) {
+/* adjusts the border on the arrows for ie10*/
+.ie10 ul.ise-megamenu a.ise-megamenu-arrow{
+  max-height:70px;
+  top: -70px;
+}
+}
+@media screen and (max-width: 650px) {
+#zone-footer.zone.zone-footer.clearfix.container-12{
+
+
+}
+}
+/*mobile CSS end*/
+
+
+
+
+/* Diana new Code 02/28/14 begin*/
+.error_class{
+  border: solid 2px #FF0000; 
+}
+
+.samelineDiv{
+margin-top:-15px !important;
+margin-bottom:-4px;
+font-size:18px !important;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+
+.samelineDiv a{
+font-size:18px !important;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+
+
+.error_msg{
+font-size:11px;
+color:#ff0000; 
+}
+
+#edit-submit.form-submit.ise-nslds-processed{
+margin-top:30px;
+}
+
+@media (max-width:700px){
+#edit-submit.form-submit.ise-nslds-processed{
+width:100% !important;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px){
+samelineDiv{
+padding-top:20px;
+padding-bottom:20px;
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 480px){
+.error_msg{
+font-size:11px;
+color:#ff0000; 
+float:left !important;
+}
+}
+
+
+/* Kosi M. -> CSS fix for ticket #8408 - text displaying properly in feature boxes */
+@media screen and (max-width: 398px) {
+.highlight p {clear: both;}
+}
+
+
+/* Diana new Code 02/28/14 end*/
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-menu-menu-top-menu{
+margin-left:-400px !important;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.language-switcher-locale-url{
+margin-left:-180px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.language-switcher-locale-url{
+margin-left:-200px !important;
+}
+}
+
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+#block-menu-menu-top-menu{
+margin-left:-450px !important;
+}
+}
+
+
+#nslds-login-block{
+background-color:#ffffff !important;
+}
+
+@media screen and (max-width: 600px) {
+#nslds-login-form{
+background-color:#ffffff;
+
+}
+}
+
+.tabbertab{
+background-color:#ffffff;
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#logout-link{
+top:15px;
+margin-left:0px;
+width:100%;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1024px){
+#logout-link{
+top:15px;
+margin-left:0px;
+width:100%;
+}
+}
+
+
+/*@media (device-height: 568px)
+and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait){
+#logout-link{
+position:absolute;
+margin-top:-13px !important;
+margin-left:-62px;
+width:72% !important;
+}
+}*/
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0){
+@media all and (min-width: 320px) and (max-width: 600px){
+#logout-link{
+position:absolute;
+margin-top:15px;
+margin-left:-50px;
+width:70px !important;
+}
+}
+}*/
+
+
+
+/* Login Box */
+
+
+
+
+.italics-pin{
+font-style:italic !important;
+font-size:13px !important;
+color:#494b4c !important;
+font-family: 'Droid Serif', serif !important;
+
+}
+
+
+.samelineDiv.italics-pin a{
+font-style:italic !important;
+font-size:13px !important;
+color:#0062a0;
+font-family: 'Droid Serif', serif !important;
+text-decoration:underline !important;
+}
+
+
+
+
+.samelineDiv.italics-pin{
+margin-top:-40px !important;
+margin-top:-45px\9 !important;
+font-style:italic !important;
+font-size:13px !important;
+color:#0062a0;
+font-family: 'Droid Serif', serif !important;
+text-decoration:underline !important;
+}
+
+
+
+.samelineDiv.italics-learn{
+font-style:italic !important;
+font-size:13px !important;
+color:#494b4c !important;
+font-family: 'Droid Serif', serif !important;
+margin-top:-5px;
+
+}
+
+.samelineDiv.italics-learn a{
+font-style:italic !important;
+text-decoration:underline !important;
+font-size:13px !important;
+color:#0062a0;
+font-family: 'Droid Serif', serif !important;
+margin-top:-5px;
+
+}
+
+
+.login-table td th {
+border-color:#ffffff !important;
+height:10px;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:0px;
+border-left-width:0px;
+}
+
+/*
+#input-dob{
+margin-top:-17px;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:0px;
+border-left-width:0px;
+margin-left:-10px;
+}
+*/
+.form-item.form-type-password.form-item-lname{
+float:left\9 !important;
+height:40px;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+}
+/*
+.form-item.form-type-password.form-item-dob{
+width:350px\9;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+
+}
+
+*/
+.form-item.form-type-password.form-item-ssn{
+margin-top:-15px;
+margin-top:-20px\9;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+}
+
+/*Error Messages mainly for FF */
+
+#ssn.error_msg{
+margin-top:-18px;
+margin-left:-4px;
+}
+
+#pin.error_msg{
+margin-top:-18px;
+margin-left:-4px;
+}
+
+#dob.error_msg{
+margin-top:15px;
+margin-left:-10px;
+}
+
+.error_msg{
+margin-top:-14px;
+margin-left:-10px;
+float:left;
+}
+
+
+#lname.error_msg{
+margin-bottom:-14px;
+margin-top:-1px;
+
+}
+/*Error Messages mainly for FF */
+
+#edit-lname{
+margin-left:3px\9 !important;
+}
+
+
+
+#edit-ssn{
+margin-left:3px\9 !important;
+}
+
+#edit-pin{
+margin-left:3px\9 !important;
+}
+
+
+.form-item.form-type-password.form-item-pin{
+margin-top:-30px;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+
+}
+
+
+#birthday{
+position:absolute;
+margin-top:-25px;
+height:60px;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+
+height:30px\9;
+border:none;
+}
+
+
+
+/*
+.form-item.form-type-password.form-item-birth-day{
+position:relative;
+margin-top:46px !important;
+margin-left:-160px;
+}
+
+.form-item.form-type-password.form-item-birth-year{
+position:relative;
+margin-top:46px !important;
+margin-left:-103px;
+}
+*/
+
+
+
+
+#logintable, #logintable tr td {
+border:none;
+background: #FFF;
+}
+
+
+
+#errorm, #errorm tr td {border:none;}
+
+/* IE 8 */
+/*@media all\0{
+#edit-birth-year{
+position:absolute;
+}
+}*/
+
+/* Can cause ipad issue*/
+/*@media all\0{
+.form-item.form-type-password.form-item-birth-year{
+position:absolute;
+margin-top:46px !important;
+margin-left:-110px !important;
+}
+}*/
+
+
+/*@media all\0{
+.form-item.form-type-password.form-item-birth-day{
+position:absolute;
+margin-top:46px !important;
+margin-left:-183px !important;
+}
+}*/
+
+
+
+@media all\0{
+.form-item.form-type-password.form-item-ssn{
+margin-top:20px !important;
+}
+}
+
+
+
+
+@media all\0{
+#birthday{
+margin-top:-30px;
+}
+}
+
+@media all\0{
+#ssn.error_msg{
+position:absolute;
+margin-top:-25px !important;
+margin-left:-5px;
+}
+}
+
+@media all\0{
+#pin.error_msg{
+position:absolute;
+margin-top:-25px !important;
+margin-left:-5px;
+}
+}
+
+
+
+@media all\0{
+#lname.error_msg{
+position:absolute;
+margin-top:-14px !important;
+margin-left:-5px;
+}
+}
+
+
+
+
+@media all\0{
+#dob.error_msg{
+position:absolute;
+margin-top:10px !important;
+margin-left:-7px;
+}
+}
+
+
+@media all\0{
+#input-dob{
+margin-top:-7px;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:0px;
+border-left-width:0px;
+margin-left:-10px;
+}
+}
+
+
+
+
+
+/* IE 8 */
+
+
+
+
+/* IE 9 */
+
+/*:root .form-item.form-type-password.form-item-birth-year{
+position:absolute\0;
+margin-top:-21px\0 !important;
+margin-left:85px\0 !important;
+}*/
+
+/*:root .form-item.form-type-password.form-item-birth-day{
+position:absolute\0;
+margin-top:46px\0 !important;
+margin-left:-170px\0 !important;
+}*/
+
+
+/*:root #edit-birth-year{
+position:absolute\0;
+margin-top:73px\0 !important;
+margin-left:-200px\0 !important;
+}*/
+
+:root .samelineDiv.italics-pin{
+margin-top:-20px\0 !important;
+font-style:italic\0 !important;
+font-size:13px\0 !important;
+color:#0062a0\0;
+font-family: 'Droid Serif', serif\0 !important;
+text-decoration:underline\0 !important;
+}
+
+
+
+:root .form-item.form-type-password.form-item-ssn{
+margin-top:20px\0 !important;
+}
+
+
+
+:root #edit-ssn{
+margin-left:-2px\0 !important;
+}
+
+:root #edit-pin{
+margin-left:-2px\0 !important;
+}
+
+:root #dob.error_msg{
+position:absolute\0;
+margin-top:18px\0 !important;
+}
+
+
+:root #dob.error_msg{
+margin-top:8px\0;
+}
+
+:root #ssn.error_msg{
+margin-top:-20px\0;
+margin-left:-8px\0 !important;
+}
+
+:root #pin.error_msg{
+margin-top:-25px\0 !important;
+margin-left:-8px\0 !important;
+}
+
+/* IE 9 */
+
+
+
+
+
+
+/* IE 9  This breaks chrome
+
+@media all and (monochrome:0){
+.form-item.form-type-password.form-item-birth-day{
+position:absolute;
+margin-top:-25px !important;
+margin-left:60px !important;
+}
+}
+
+
+@media all and (monochrome:0){
+#edit-lname{
+position:absolute;
+margin-left:5px;
+}
+}
+
+@media all and (monochrome:0){
+#edit-pin{
+position:absolute;
+margin-left:5px;
+}
+}
+
+IE 9 */
+
+
+/* Ipad */
+@media all and (min-width: 980px) and (max-width: 1024px){
+#pin.error_msg{
+margin-top:10px;
+}
+
+#lname.error_msg{
+margin-top:5px;
+}
+
+#edit-lname{
+position:absolute;
+margin-left:5px;
+}
+
+#edit-pin{
+position:absolute;
+margin-left:5px;
+}
+
+}
+
+/*iphone*/
+
+/*@media all and (min-width: 320px) and (max-width: 479px){
+#edit-birth-year{
+position:absolute;
+margin-top:27px;
+margin-left:-50px !important;
+}
+}*/
+
+
+/*@media all and (min-width: 320px) and (max-width: 479px){
+#edit-birth-day{
+position:absolute;
+margin-top:-39px;
+margin-left:170px !important;
+}
+}*/
+
+
+@media all and (min-width: 320px) and (max-width: 479px){
+
+.samelineDiv.italics-pin{
+margin-top:-20px !important;
+font-style:italic !important;
+font-size:13px !important;
+color:#0062a0;
+font-family: 'Droid Serif', serif !important;
+text-decoration:underline !important;
+}
+
+#input-dob{
+margin-top:-10px;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:0px;
+border-left-width:0px;
+margin-left:-10px;
+}
+
+#birthday{
+
+margin-top:-10px;
+height:60px;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+height:30px\9;
+border:none;
+}
+
+}
+
+/* Kosi M - Fixed NSLDS Login error labels rendering improperly in smartphone portrait view */
+
+@media all and (min-width: 320px) and (max-width: 700px){
+
+#birthday {position: relative !important; margin-top: -7px; height: auto !important;}
+
+#birthday div {margin-bottom: 0 !important;}
+
+#ssn.error_msg{
+positon:relative;
+margin:0 0 3.5em 0 !important;
+}
+
+.form-item.form-type-password.form-item-ssn {
+  position: relative !important;
+}
+
+#dob.error_msg{
+position:relative;
+margin: 0 !important;
+}
+
+#lname.error_msg{
+margin:1.5em 0 !important;
+}
+
+#edit-ssn{
+margin-left:2px;
+}
+
+#pin.error_msg{
+margin:2.5em 0 !important;
+}
+
+.form-item.form-type-password.form-item-ssn{
+position:relative;
+padding-top:10px;
+}
+
+.form-item.form-type-password.form-item-pin{
+position:absolute;
+margin-top:-25px !important;
+margin-bottom:20px; !important;
+}
+
+}
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#dob.error_msg{
+margin-top:25px !important;
+}
+}
+
+
+/*@media all and (min-width: 480px) and (max-width: 586px){
+#edit-birth-day{
+position:absolute;
+margin-top:-37px !important;
+margin-left:170px;
+}
+}*/
+
+/*@media all and (min-width: 480px) and (max-width: 586px){
+#edit-birth-year{
+position:absolute;
+margin-top:27px !important;
+margin-left:-60px;
+}
+}*/
+
+
+
+
+
+/*@media all and (min-width: 480px) and (max-width: 586px){
+#input-dob{
+margin-top:-10px;
+border-top-width:0px;
+border-right-width:0px;
+border-bottom-width:0px;
+border-left-width:0px;
+margin-left:-10px;
+}
+}*/
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#birthday{
+margin-top:0px;
+height:60px;
+font-family: 'News Cycle', Arial, Tahoma, sans-serif !important;
+font-size:20px;
+border:none;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#lname.error_msg{
+margin-top:20px !important;
+}
+}
+
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#pin.error_msg{
+margin-top:0px;
+margin-left:-2px !important;
+padding-right:20px !important;
+
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#ssn.error_msg{
+margin-top:70px;
+padding-right:50px !important;
+}
+}
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+.form-item.form-type-password.form-item-ssn{
+position:absolute;
+padding-top:0px;
+padding-bottom:5px;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 586px){
+
+.form-item.form-type-password.form-item-pin{
+margin-top:-20px !important;
+}
+}
+
+/*iphone*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*IE 10*/
+/*@media all and (-ms-high-contrast: none){
+.form-item.form-type-password.form-item-birth-day{
+position:absolute;
+margin-top:46px !important;
+margin-left:-160px !important;
+}
+}*/
+
+/*@media all and (-ms-high-contrast: none){
+.form-item.form-type-password.form-item-birth-year{
+position:absolute;
+margin-top:-20px !important;
+margin-left:103px !important;
+}
+}*/
+
+
+
+@media all and (-ms-high-contrast: none){
+.form-item.form-type-password.form-item-ssn{
+margin-top:65px;
+}
+}
+
+
+/*IE 10 */
+
+
+/*IE 11*/
+
+*::-ms-backdrop, .form-item.form-type-password.form-item-ssn{
+margin-top:40px;
+}
+
+/**::-ms-backdrop, .form-item.form-type-password.form-item-birth-day{
+margin-top:46px !important;
+margin-left:-160px !important;
+}*/
+
+/**::-ms-backdrop, .form-item.form-type-password.form-item-birth-year{
+margin-top:-20px !important;
+margin-left:100px !important;
+}*/
+
+*::-ms-backdrop, .form-item.form-type-password.form-item-dob{
+margin-top:20px !important;
+
+}
+
+*::-ms-backdrop, .form-item.form-type-password.form-item-ssn{
+margin-top:20px !important;
+
+}
+
+*::-ms-backdrop, .form-item.form-type-password.form-pin{
+margin-top:20px !important;
+
+}
+
+
+/*IE 11*/
+
+
+/* Android */
+
+/*@media screen and (-webkit-min-device-pixel-ratio:0){
+@media all and (min-width: 320px) and (max-width: 479px){
+#edit-birth-year{
+position:absolute;
+margin-left:160px !important;
+margin-top:-40px;
+}
+
+}
+
+}*/
+/* Android */
+
+/* New Contact Button */
+
+#contact-button{
+font-size:13.6px !important;
+width:60%;
+}
+
+
+#contact-button p{
+font-size:13.6px !important;
+}
+
+
+#contact-button a:link,
+#contact-button a:visited,
+#contact-button a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12.6px;
+    padding: 2px;
+}
+
+#contact-button a:link, 
+#contact-button a:visited, 
+#contact-button a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12.6px;
+    padding: 2px;
+}
+
+#contact-button {
+    border: 3px solid rgb(204, 204, 204);
+    padding: 0.5em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+
+#contact-button ext {
+    border: 3px solid rgb(204, 204, 204);
+    padding: 0.5em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+
+/* New Contact Button */
+
+
+#tiles-table-full, #tiles-table-full tr td {
+border:none !important;
+vertical-align:top !important;
+}
+
+#tiles-table-full-mobile, #tiles-table-full-mobile tr td {border:none !important;}
+border:none !important;
+font-size:11.6px !important;
+}
+
+
+#tiles-table-full-mobile{
+margin-bottom:-610px;
+border:none !important;
+}
+
+
+@media all and (max-width:700px){
+#tiles-table-full{
+display:none;
+}
+}
+
+@media (min-width:650px){
+#tiles-table-full-mobile{
+display:none;
+}
+}
+
+@media all\0{
+#tiles-table-full-mobile{
+display:none !important;
+}
+}
+
+#next_previous_table, #next_previous_table tr td {
+border:none;
+margin-bottom:-20px;
+width:100%;
+}
+
+@media (max-width:650px){
+#next_previous_table, #next_previous_table tr td {
+border:none;
+margin-top:-3px;
+margin-bottom:-10px;
+width:100%;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#next_previous_table{
+margin-top:-10px;
+}
+}
+
+
+
+
+
+
+
+
+/* 9147 
+
+
+@media (max-width:650px){
+#nslds-login-block input.form-submit{
+width:100% !important;
+}
+}
+
+9147 */
+
+
+
+/* 1653 */
+
+#webform-component-what-age-group-do-you-belong-to .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-typegroup .fieldset-legend{
+color:#458b00 !important;
+
+}
+@media only screen and (max-device-width:1042){
+#webform-component-typegroup--visitor-type{
+  margin-top:55px;
+}
+}
+@media only screen and (max-device-width:1042){
+#edit-submitted-what-age-group-do-you-belong-to-age-group{
+margin-top:35px;
+}
+}
+
+@media only screen and (max-device-width:1042){
+#edit-submitted-sourcegroup-source{
+margin-top:35px;
+}
+}
+
+@media only screen and (max-device-width:1042){
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-finding-information{
+margin-top:35px;
+}
+}
+
+@media only screen and (max-device-width:1042){
+#edit-submitted-how-likely-are-you-to-recommend-this-website-to-friends-family-colleagues-coworkers-or-others-recommend{
+margin-top:35px;
+}
+}
+
+#webform-component-sourcegroup .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-infogroup .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-foundgroup .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information-2 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information-3 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information-4 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information-5 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information-6 .fieldset-legend{
+color:#458b00 !important;
+}
+
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-understanding-information--understanding-info-comments .fieldset-legend{
+color:#458b00 !important;
+}
+
+
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design .fieldset-legend{
+color:#458b00 !important;
+}
+
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design-design-2 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design-design-3 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design-design-4 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design-design-5 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design-design-6 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-design-design--design-comments .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos .fieldset-legend{
+color:#458b00 !important;
+}
+
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos-2 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos-3 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos-4 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos-5 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos-6 .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-videos--videos-comments .fieldset-legend{
+color:#458b00 !important;
+}
+
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-charts-tables-and-images .fieldset-legend{
+color:#458b00 !important;
+}
+
+
+
+#webform-component-in-general-how-satisfied-are-you-with-the-sites-charts-tables-and-images--charts-tables-images .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-how-likely-are-you-to-recommend-this-website-to-friends-family-colleagues-coworkers-or-others .fieldset-legend{
+color:#458b00 !important;
+}
+
+#webform-component-comments-suggestions,
+#webform-component-other-comments-suggestions.fieldset-legend,
+#webform-component-comments-suggestions .fieldset-legend{
+color: #458b00 !important;
+margin-bottom:20px !important;
+font-weight:normal !important;
+}
+
+
+
+
+
+
+
+
+/* 1653 */
+
+
+
+@media all and (min-width: 320px) and (max-width: 586px){
+#undefinednav1{
+margin-left:-10px;
+}
+}
+
+
+@media all and (min-width: 1300px) and (max-width: 1900px){
+.confirmation{
+
+margin-left:-20px;
+
+}
+}
+
+/** 1661 **/
+.event-details h3{
+display:none;
+}
+/** 1661 **/
+
+
+
+/* feedbackform and contact submit button background*/
+
+
+
+#webform-client-form-357 input[type=button],
+#webform-client-form-244 input[type=button],
+#webform-client-form-125 input[type=button],
+#webform-client-form-126 input[type=button],
+#webform-client-form-357 input.form-submit,
+#webform-client-form-244 input.form-submit,
+#webform-client-form-125 input.form-submit,
+#webform-client-form-126 input.form-submit {
+background-image: url("../images/submitbuttonbackground.png");
+/*margin-bottom: 20px;
+margin-top:20px;*/
+text-transform: uppercase;
+border: 1px solid #a9c66d;
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
+font-size: 12px;
+text-decoration: none;
+display: inline-block;
+color: #FFFFFF;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3F8D78,endColorstr=#B3CA86);
+letter-spacing: 2px;
+height: 35px !important;
+width:200px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f',endColorstr='#4e7d0e');
+}
+
+
+#webform-client-form-357.form-textarea-wrapper textarea,
+#webform-client-form-126.form-textarea-wrapper textarea{
+  display:inline !important;
+}
+
+#webform-client-form-357 input[type=button],
+#webform-client-form-126 input[type=button]{
+  position: relative;
+  left:120px;
+  width:100px;
+  
+}
+
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-understanding-the-information,
+#webform-component-foundgroup,
+#webform-component-infogroup,
+#webform-component-what-age-group-do-you-belong-to--a-que-grupo-etario-pertenece,
+#webform-component-how-likely-are-you-to-recommend-this-website-to-friends-family-colleagues-coworkers-or-others--recommend,
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--charts-tables-images,
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--videos,
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--design,
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-understanding-information,
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-finding-information,
+#webform-component-sourcegroup--source,
+#webform-component-what-age-group-do-you-belong-to--age-group{
+   margin-left:20px;
+}
+
+#webform-client-form-357 input.form-submit,
+#webform-client-form-126 input.form-submit {
+
+  
+}
+
+@media screen and (max-width: 1024px){
+#webform-client-form-357 input.form-submit,
+#webform-client-form-126 input.form-submit {
+
+}
+#webform-client-form-357 input[type=button],
+#webform-client-form-126 input[type=button]{
+
+  /*position:relative;
+  top:28px !important;
+  margin-left: -315px;*/
+
+}
+}
+@media screen and (max-width: 768px){
+#webform-client-form-357 input.form-submit,
+#webform-client-form-126 input.form-submit {
+/* RHT #956
+  position:relative;
+  top:-80px; */
+  
+}
+
+#webform_client_form_126 .input.form-submit{
+width:200px;
+}
+
+
+#webform-client-form-357 input[type=button],
+#webform-client-form-126 input[type=button]{
+  
+  
+}
+}
+
+.feedbackItemWrapper{
+margin-bottom:-40px;
+
+  }
+
+  
+#webform-client-form-357.form-checkboxes .form-radios .form-item,
+#webform-client-form-126.form-checkboxes .form-radios .form-item {
+   margin-left: 1.4em;
+}
+
+
+  
+@media only screen and (max-device-width: 586px) {
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(https://studentaid.ed.gov/sa/sites/all/themes/ise/css/PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    margin-left:23px;
+    background: #fff;
+    border: 1px solid #666;
+    color: #578300;
+    text-align: center;
+    font: 18px Arial, sans-serif;
+  position:relative;
+  
+  top:-5px;
+  float:left;
+}
+
+.numberLabel{
+  float:left;
+  margin-bottom:50px;
+}
+
+#webform-client-form-357 input.form-submit,
+#webform-client-form-126 input.form-submit {
+
+  position:relative;
+  top:-20px;
+  left:0px;
+}
+
+.feedbackItemWrapper{
+margin-bottom:0px;
+
+  }
+
+  #webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-understanding-the-information.
+#webform-component-foundgroup,
+  #webform-component-infogroup,
+#webform-component-what-age-group-do-you-belong-to--a-que-grupo-etario-pertenece, 
+  #webform-component-how-likely-are-you-to-recommend-this-website-to-friends-family-colleagues-coworkers-or-others--recommend,
+  #webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--charts-tables-images,
+#webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--videos, 
+  #webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--design,
+  #webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-understanding-information,
+  #webform-component-in-general-how-satisfied-are-you-with-the-ease-of-finding-information--ease-of-finding-information,
+#webform-component-sourcegroup--source,
+#webform-component-what-age-group-do-you-belong-to--age-group{
+   margin-left:31px;
+}
+
+  }
+
+
+.preface-bold cite{
+font-weight:normal !important;
+text-decoration: none !important;
+}
+/* RHT 1685 */
+.views-field-field-preface-text cite{
+font-weight:normal !important;
+text-decoration: none !important;
+}
+
+
+
+.field.field-name-field-preface-text.field-type-text-long.field-label-hidden{
+display:none !important;
+}
+
+
+.placeholder.username{
+dislay:none !important;
+
+}
+
+#workbench-moderation-node-unpublish-form{
+margin-left:80px !important;
+}
+
+.element-invisible{
+display:none !important;
+}
+
+
+
+
+
+.lexicon-list .glossary_term {
+    color: #669900;
+    font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: 1.2em;
+}
+
+
+.lexicon-list .glossary_description {
+    color: #494b4c;
+    font-family: "Droid Serif",serif;
+    font-size: 1em;
+    font-style: inherit;
+    padding: 0;
+}
+
+.moderation-actions{
+display:none !important;
+}
+
+.workbench-info-block a{
+display:none !important;
+}
+
+
+/* SRH -- fix double bars */
+/* Tickets 9817 // 11572 */
+.block-glossary-terms-block {
+  border-top:1px solid #dedede!important;
+}
+.region-sidebar-second .block {
+  border-top: 1px solid #cccccc;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* Kosi M. - Ticket 9718 > Hide empty glossary div with double line */
+.region-sidebar-second .block.empty {display: none !important;}
+
+/* Resources Block Tile */
+.view-resources .views-row {
+  margin: 0.25em 0pt 0.25em 0pt;
+  border-bottom: 1px solid #CCC;
+  padding: 0.5em 0 0.5em 0;
+  min-height: 70px;
+}
+
+
+
+.context-prepare-for-college #block-menu-menu-footer-menu li.last.grid-2 {
+margin-top:-2px\9 !important;
+
+} 
+
+/** Defect 14661 **/
+@media screen and (max-width: 739px) {
+    .region-sidebar-second .block{
+  margin-top: 1em !important;
+}
+#block-views-ise-quick-resources-block-1 {
+    border-top: 0 !important;
+    padding-top: 0 !important;
+}
+.region-sidebar-second {
+    border: 1px solid #cccccc !important;
+    padding: 1em !important;
+    margin-top: 1em !important;
+}
+.block-glossary-terms-block {
+  border-top:0 !important;
+  padding-top: 0 !important;
+}
+}
+/**/
+
+/* ** Career Search Ticket Defect 14481 fix ** */
+div#careersearch a:hover > li {
+    color: #994640 !important;
+}
+div#careersearch a>li:visited {
+    color: #0062A0 !important;
+    text-decoration: underline !important;
+}
+
+/* ** Career Search Ticket 12799 fix ** */
+/* SRH Jan 2015 */
+
+
+/*******Defect 11285 *********** Ram*/
+/*.block-career-search{
+  margin-left:18px;
+}*/
+
+#block-career-search-career-search{
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0.5%;
+    /**margin-top:30px;
+    width:103.5%;
+    width:103.5%\9;
+    margin-left:-5px;**/
+
+}
+@media all and (min-width: 1025px) and (max-width: 1219px){
+#block-career-search-career-search {
+    margin-top: 30px;
+    width: 100%;
+    margin-left: -0.5%;
+}
+}
+@media all and (min-width: 320px) and (max-width: 699px){
+#block-career-search-career-search{
+width:100%;
+/*padding-right: 9px;
+padding-left: 9px;*/
+margin-left:-3px;
+
+}
+}
+@media all and (min-width: 320px) and (max-width: 711px){
+#block-career-search-career-search {
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0.5%;
+}
+}
+/**
+@media all and (min-width: 320px) and (max-width: 699px){
+#block-career-search-career-search #edit-keyword{
+width:240px;
+
+}
+}
+**/
+
+/* CSS Tweak for 1452 -> Phone and Tablet, Android, Video Width - Types of Aid - Types */
+.media_embed {
+  text-align: center;
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-career-search-career-search{
+width:100%;
+/*width:98%;
+padding-right: 9px;
+padding-left: 7px;
+margin-left:-3px;
+*/
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1024px){
+#block-career-search-career-search{
+width:100%;
+/*
+width:99%;
+padding-right: 9px;
+padding-left: 7px;
+margin-left:-3px;
+*/
+}
+}
+
+@media all and (max-width:700px){
+
+/* Kosi M. -> Responsive table code (global) for ticket #1455 where tables exceed viewport in tablet and mobile view */
+.context-general table, .context-general table th, .context-general table tr, .context-general table td, .context-general table th p, 
+.context-preparing table, .context-preparing table th, .context-preparing table tr, .context-preparing table td, .context-preparing table th p,
+.context-types-of-aid table, .context-types-of-aid table th, .context-types-of-aid table tr, .context-types-of-aid table td, .context-types-of-aid table th p,
+.context-eligibility table, .context-eligibility table th, .context-eligibility table tr, .context-eligibility table td, .context-eligibility table th p,
+.context-applying table, .context-applying table th, .context-applying table tr, .context-applying table td, .context-applying table th p,
+.context-repaying table, .context-repaying table th, .context-repaying table tr, .context-repaying table td, .context-repaying table th p
+{
+font-size: 90% !important;
+overflow: hidden !important;
+text-wrap: unrestricted !important;
+padding-left: 1px !important;
+padding-right: 1px !important;
+margin: 0 !important;
+}
+}
+
+/* Kosi M. -> Fix for login table styles rendering improperly site-wide */
+.context-contact table#logintable, .context-contact table#logintable td, .context-contact table#logintable table,
+.context-general table#logintable, .context-general table#logintable td, .context-general table#logintable table, 
+#nslds-login-block table#logintable, #nslds-login-block table#logintable td, #nslds-login-block table#logintable table
+
+{border: none !important;}
+
+.context-general table#logintable tr,
+#nslds-login-block table#logintable tr
+{background: none;}
+
+.context-general table#logintable table,
+#nslds-login-block table#logintable table
+{margin: 0;}
+
+.context-general table#logintable .form-item, 
+.context-general table#logintable .form-actions,
+#nslds-login-block table#logintable .form-item, 
+#nslds-login-block table#logintable .form-actions
+{margin: 0 0 1em 0;}
+
+.context-general table#logintable .form-type-password.form-item-lname,
+#nslds-login-block table#logintable .form-type-password.form-item-lname
+{margin: 2em 0 1em 0;}
+
+.context-general table#logintable label,
+#nslds-login-block table#logintable label 
+{
+  color: #85ad33;
+  font-family: "News Cycle",Arial,Tahoma,sans-serif !important;
+  font-size: 20px !important;
+}
+
+/* Kosi M. - CSS fix for error messages rendering improperly from above */
+.context-general table#logintable table#errorm {margin: 1em 0;}
+
+/* Kosi M. -> CSS fix for tables displaying improperly @ bottom of My Student Aid page on FSA Test */
+#tiles-table-full td {border:none; vertical-align: top; padding-left: 0.2em;}
+
+
+
+
+/** PAS Error Page **/
+
+#block-views-nslds-quick-links-block-4 h1{
+font-size:22px !important;
+color: #578036;
+margin-bottom:-4px;
+
+}
+
+#block-views-nslds-quick-links-block-4 a{
+font-size:14px !important;
+
+}
+
+
+
+#error_content{
+font-size:14px;
+font-family: "Droid Serif",serif;
+
+}
+
+
+/** Webform Clean Leave us Feedback up RHT **/
+@media all and (min-width: 320px) and (max-width: 384px){
+#webform-component-typegroup .fieldset-legend{
+/*position:relative;
+top: -35px !important;
+left: 17px;*/
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 670px){
+#edit-submitted-typegroup-visitor-type{
+width:97%;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width: 384px) and (-webkit-min-device-pixel-ratio:0) {
+#webform-component-typegroup .fieldset-legend{
+position:relative;
+top: -3px !important;
+left: 5px;
+}
+}
+
+
+@media all and (min-width: 320px) and (max-width: 670px){
+#webform-client-form-126 input.form-submit{
+}
+}
+
+
+@media all and (min-width: 320px) and (max-width: 670px){
+#webform-component-cancelar{
+margin-top:-8px;
+margin-left:0px;
+
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 670px){
+#webform-client-form-357 input.form-submit,
+#webform-client-form-125 input.form-submit {
+width:30%;
+}
+}
+
+@media all and (min-width: 380px) and (max-width: 670px){
+#webform-client-form-357 input[type=button],
+#webform-client-form-126 input[type=button]{
+}
+}
+
+#webform-component-number-1{
+margin-top:60px !important;
+}
+
+#webform-component-number-2{
+margin-top:60px !important;
+}
+
+#webform-component-number-3{
+margin-top:60px !important;
+}
+
+#webform-component-number-4{
+margin-top:60px !important;
+}
+
+#webform-component-number-5{
+margin-top:60px !important;
+}
+
+#webform-component-number-6{
+margin-top:60px !important;
+}
+
+#webform-component-number-7{
+margin-top:60px !important;
+}
+
+#webform-component-number-8{
+margin-top:60px !important;
+}
+
+#webform-component-number-9{
+margin-top:60px !important;
+}
+
+
+#webform-component-number-10{
+margin-top:60px !important;
+}
+
+
+#webform-component-number-11{
+margin-top:60px !important;
+}
+
+
+
+
+
+#webform-client-form-126 input.form-submit{
+position:relative;
+top:-51px;
+left:0px;
+width:100px;
+}
+
+#webform-client-form-357 input.form-submit{
+position:relative;
+top:-51px;
+left:0px;
+width:100px;
+}
+
+
+
+.context-leave-us-feedback .form-wrapper{
+/* RHT Leave us Feedback search button alignment fix */
+/*display:block !important;*/
+}
+
+
+
+.links.node-links.clearfix{
+display:none !important;
+}
+
+.tweet_Twitter .last{
+display:none !important;
+}
+
+
+.socialmediaicons{
+width:300px;
+margin-left:-40px;
+}
+
+/** RHT #1675 **/
+#section-content input[type=submit]{
+background-image: url("../images/submitbuttonbackground.png");
+color:#ffffff;
+width:100px;
+height:30px;
+
+}
+
+
+
+
+
+/* RHT Social Media Footer Begin */
+.socialmediafooter{
+/*
+width:200px;
+margin-left:-100px;
+margin-top: 7px !important;
+*/
+}
+
+
+@media all and (max-width: 670px) and (min-width: 320px){
+.socialmediafootera{
+  position:relative;
+  margin-top:5px !important;
+}
+}
+
+@media all and (max-width: 1024px) and (min-width: 768px){
+.socialmediafootera{
+  margin-left:-20px !important;
+  width:120px !important;
+}
+}
+
+
+.socialmediafootera{
+  position: relative;
+       top: -1.5px;
+  text-align:center;
+}
+
+.socialmediafooter{
+  position:absolute;
+  top: 5px;
+}
+
+.page-blog .socialmediafooter{
+  position:absolute;
+  top: 5px;
+}
+
+.node-type-blog .socialmediafooter{
+  position:absolute;
+  top: 5px;
+}
+
+.node-type-author-profile .socialmediafooter{
+  position:absolute;
+  top: 5px;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+.socialmediafooter{
+width: 115px !important;
+margin-left: 2px !important;
+}
+}
+
+/* RHT Social Media Footer End */
+
+
+/* RHT Forward Email Submit Button */
+
+#forward-form input[type=submit]{
+  background-image: url("../images/submitbuttonbackground.png");
+  color:#ffffff;
+  width: 121px;
+  height: 38px;
+}
+
+/* Kosi M Ticket #1685 -> Fix to remove cite color/bolding from general blog page sticky nav titles */
+body .stickywrap cite {color: #494b4e;}
+
+/* Kosi M Ticket #1685 -> Fix to remove cite color/bolding from general blog detail page body */
+.node-type-blog .pane-node-body p cite {color: #494b4c;}
+
+
+.node-type-blog .pane-content h2 {
+    font-size: 1.4em !important;
+letter-spacing: 0em;
+
+}
+
+.node-page .content h2{
+font-size: 1.4em !important;
+letter-spacing: 0em;
+
+}
+
+li.ise-megamenu-top-level {
+    margin-bottom: 0px !important;
+   
+}
+
+.page-node-139 .not-front .region-content-inner {
+    border: 1px solid #cccccc;
+    width: 98.5% !important;
+}
+
+.page-node-139 .region-content-inner {
+    border: 1px solid #cccccc;
+    width: 98.5% !important;
+}
+
+.page-node tbody td{
+  font-size:1em !important;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block{
+z-index:1000000;
+}
+
+/*****Defect 16508****/
+@media all and (max-width: 979px){
+  .context-repaying.context-repay-loans.topic-how-to-repay #block-system-main .field-item table tbody > tr:first-child > td{
+    width:100% !important;
+    display:block;
+  }
+  .context-repaying.context-repay-loans.topic-how-to-repay #block-system-main .field-item table tbody > tr:first-child > td:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+/******/
+
+/** defect 9825***/
+#node-page-591 p:nth-child(3) {
+    margin-left: 3em !important;
+}
+#node-page-591 a.anchor:before {
+    content: url(../images/bullet-down.png);
+    padding-right: 0.25em;
+    margin-left: -2.25em !important;
+}
+
+#node-page-87 a.anchor:before {
+    content: url(../images/bullet-down.png);
+    padding-right: 0.25em;
+    margin-left: -2.25em !important;
+}
+#node-page-87 .list_anchorlink {
+  margin-left: 3em !important;
+}
+.list_anchorlink {
+  margin-left: 1.75em !important;
+}
+a.anchor:before {
+    content: url(../images/bullet-down.png);
+    padding-right: 0.25em;
+    margin-left: -1.05em !important;
+}
+/******/
+
+/* Hide links in "Moderation Actions" column of node "Moderation" tab */
+/* Remove after 'ise_seven_theme_overrides' module has been deployed */
+.moderation-actions a{
+  position:absolute;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  height:0px;
+  width:0px;
+  margin:-1px;
+  padding:0;
+  border:0;
+  display:none !important;
+  visibility:hidden;
+}

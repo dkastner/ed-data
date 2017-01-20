@@ -1,0 +1,395 @@
+/**
+ * @file test
+ *
+ * JS code specific for interacting with the jStorage library and HTML 5 local
+ * storage
+ */
+ 
+ 
+ 
+
+(function($) {
+
+Drupal.NSLDS = Drupal.NSLDS || {};
+
+storageKey = 'nsldsDataStorage';
+
+
+// Start timers.
+function StartTimers() {
+    //warningTimer = setTimeout("IdleWarning()", timoutWarning);
+    //timeoutTimer = setTimeout("IdleTimeout()", timoutNow);
+}
+
+// Reset timers.
+function ResetTimers() {
+    //clearTimeout(warningTimer);
+    //clearTimeout(timeoutTimer);
+    //StartTimers();
+    //$("#timeout").dialog('close');
+}
+
+
+
+// Show idle timeout warning dialog.
+function Idle() {
+    var this_url=document.URL;
+	if (this_url.indexOf("/es/") !=-1) {
+	   $('#timeout_message').html("Su sesión ha estado inactiva durante "+Drupal.settings.iseNSLDS.timeout+" minutos. Para continuar con esta sesión por "+(Drupal.settings.iseNSLDS.timeout*1.5)+" minutos adicionales seleccione “Continuar”, o seleccione “Cerrar sesión” para finalizar la misma.<br>");
+
+   	 }else{
+       $('#timeout_message').html("Your session has been inactive for "+Drupal.settings.iseNSLDS.timeout+" minutes. To continue with this session for an additional "+(Drupal.settings.iseNSLDS.timeout*1.5)+" minutes, select “CONTINUE,” or select “LOG OUT” to end your session.<br>");
+
+	 }
+
+
+    $("#timeout").dialog({
+        modal: true
+    });
+
+	//At end of TTL (time to logout), if dialog box is open, close and jump to new location 
+	//Need to place this timer in the box.  On Chrome and IE, the focus shifts to the logout box.  This results in the timer 
+	//set on the page itself no longer working.  Firefox does not have this problem.  To avoid this, we set the timer in the modal
+	//window.
+    	ttl=(.5*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+	setTimeout(function() {
+		if ($("#timeout").dialog("isOpen")===true) {
+
+		  	$("#timeout").dialog('close');
+
+	        	var highestTimeoutId = setTimeout(";");
+      			for (var i = 0 ; i < highestTimeoutId ; i++) {
+        			clearTimeout(i); 
+      			}
+			Drupal.NSLDS.NSLDSLogout();
+		}//End checking if the logout dialog box is open (auto logout only when the dialog is open and ignored)
+        },ttl);
+
+
+}//End IDLE warning dialog box display
+
+
+
+
+
+$(document).ready(function() {
+   
+
+	var lang=Drupal.settings.lang;
+	var basepath=Drupal.settings.basepath;
+
+
+	//Duration of time until the warning is shown is set in the admin form for PAS.  See generally nslds module under ADMIN FORM.
+	if (Drupal.settings.iseNSLDS.timeout=="") {Drupal.settings.iseNSLDS.timeout=15;}
+
+
+   	warning_time_out=Drupal.settings.iseNSLDS.timeout*60*1000;
+    	ttl=(.5*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+
+
+
+  // if there is a TTL still set we will reset it to start time over again.
+
+  if (Drupal.NSLDS.NSLDSGetTTL()) {
+
+
+  //if (Drupal.settings.iv_user.length>15) {
+	
+    	Drupal.NSLDS.NSLDSRenewStorageTTL();
+
+	data = Drupal.NSLDS.NSLDSgetStorage();
+
+	 //set warning time out 
+
+
+	
+	//*******************************
+	//If this is an error account, it will not be properly logged in, nor will it have data.  If no data has been loaded, then flush the
+	//cache to ensure no future residual.  SRH  22 May to address Mindy's concern.
+	//GETCOOKIE function is defined in ise_nslds_login.js.
+
+
+	if (GetCookie("error")!="") {
+		data="";
+		$.jStorage.flush();
+		//This flag is used to determine if we skip the error routine or not.
+		document.cookie="have_data=false";
+	}
+
+	//********************************
+
+
+
+    if (data){
+
+   	warning_time_out=Drupal.settings.iseNSLDS.timeout*60*1000;
+    	ttl=(.5*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+
+   
+    	var lang=Drupal.settings.lang;
+
+
+	//Show idler if timeout is past
+    	setTimeout(function() {
+
+		Idle();	
+
+	},warning_time_out);
+	
+	var basepath=Drupal.settings.basepath;
+	if (lang=="en"){
+     		var newlocation =window.location.protocol+"//"+window.location.hostname +basepath;	 
+   	}else{
+       		var newlocation =window.location.protocol+"//"+window.location.hostname+basepath+"es/";
+    	}
+
+	//At end of TTL (time to logout), if dialog box is open, close and jump to new location 
+	setTimeout(function() {
+
+		if ($("#timeout").dialog("isOpen")===true) {
+
+	  		$("#timeout").dialog('close');
+
+	        	var highestTimeoutId = setTimeout(";");
+      			for (var i = 0 ; i < highestTimeoutId ; i++) {
+        			clearTimeout(i); 
+      			}
+       			window.location.href=newlocation;	   
+		}//End checking if the logout dialog box is open (auto logout only when the dialog is open and ignored)
+
+        },ttl);
+
+	var student_name=data['Student'].FirstName
+	student_name=student_name.toUpperCase();
+
+	if (lang=="en"){
+	   var title=student_name+"'S ACCOUNT";
+	   var alt_title=capitaliseFirstLetter(student_name)+"'s Account";
+		$('#logout-link').html("<a href='/' id='logout-link' >LOG OUT</a> ") ;
+	}else{
+	   var title="CUENTA DE "+student_name;
+	   var alt_title="Cuenta de "+capitaliseFirstLetter(student_name);
+	   $('#logout-link').html("<a href='/es' id='logout-link' >CERRAR SESIÓN</a> ") ;
+	}
+
+        $('#login-link').html(title);
+
+        $('#login-link').attr('alt', alt_title);
+        $('#login-link').attr('title', alt_title);
+	
+  }else { 
+      var data = $.parseJSON(Drupal.NSLDS.NSLDSgetStorage());
+      if (data){
+ 
+   	warning_time_out=Drupal.settings.iseNSLDS.timeout*60*1000;
+    	ttl=(.5*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+
+   
+    	var lang=Drupal.settings.lang;
+
+
+	//Show idler if timeout is past
+    	setTimeout(function() {
+
+		Idle();
+
+		Drupal.NSLDS.NSLDSRenewStorageTTL();
+
+
+	},warning_time_out);
+	
+	var basepath=Drupal.settings.basepath;
+	if (lang=="en"){
+     		var newlocation =window.location.protocol+"//"+window.location.hostname +basepath;	 
+   	}else{
+       		var newlocation =window.location.protocol+"//"+window.location.hostname+basepath+"es/";
+    	}
+
+	//At end of TTL (time to logout), if dialog box is open, close and jump to new location 
+	setTimeout(function() {
+		if ($("#timeout").dialog("isOpen")===true) {
+
+	  		$("#timeout").dialog('close');
+
+	        	var highestTimeoutId = setTimeout(";");
+      			for (var i = 0 ; i < highestTimeoutId ; i++) {
+        			clearTimeout(i); 
+      			}
+       			window.location.href=newlocation;	   
+		}//End checking if the logout dialog box is open (auto logout only when the dialog is open and ignored)
+
+        },ttl);
+
+
+     }//Data from .parseJSON
+
+   }//If original DATA is available
+
+ }//End testing NSLDSGetTTL
+  
+});
+
+
+/**
+ * Get the NSLDS data
+ */
+Drupal.NSLDS.NSLDSgetStorage = function() {
+  return $.jStorage.get(storageKey);
+}
+
+/**
+ * Set the NSLDS data
+ */
+Drupal.NSLDS.NSLDSSetStorage = function (value) {
+ 
+  storagekey='nsldsDataStorage';
+ 
+  if (typeof Drupal.settings.iseNSLDS !== 'undefined' &&
+      typeof Drupal.settings.iseNSLDS.timeout !== 'undefined' &&
+      Drupal.settings.iseNSLDS.timeout) {
+    var timeout = Drupal.settings.iseNSLDS.timeout;
+  }
+  else {
+    var timeout = 15;
+  }
+ 
+  $.jStorage.set(storageKey,value);
+  //_gaq.push(['_trackEvent', 'Logged In', 'Succesful login', 'nslds']);
+   
+  document.cookie="logged_in=true";
+  //alert ("on line 50, storage has been set");
+
+	StoreData=(100*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+
+	//This controls BACKGROUND clearing (flush) of student data.  If set too low, will logout (erase data) without indicating this on the screen.
+  	return $.jStorage.setTTL(storageKey, StoreData);
+}
+
+/**
+ * renew the TTL of the storage object
+ */
+Drupal.NSLDS.NSLDSRenewStorageTTL = function() {
+
+  	$("#timeout").dialog('close');
+
+	//Duration of time until the warning is shown is set in the admin form for PAS.  See generally nslds module under ADMIN FORM.
+	if (Drupal.settings.iseNSLDS.timeout=="") {Drupal.settings.iseNSLDS.timeout=15;}
+
+
+   	warning_time_out=Drupal.settings.iseNSLDS.timeout*60*1000;
+   	ttl= (.5*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+  
+   
+    	var lang=Drupal.settings.lang;
+
+
+	//Show idler is timeout is past
+    	setTimeout(function() {Idle();},warning_time_out);
+	
+	var basepath=Drupal.settings.basepath;
+	if (lang=="en"){
+     		var newlocation =window.location.protocol+"//"+window.location.hostname +basepath;	 
+   	}else{
+       		var newlocation =window.location.protocol+"//"+window.location.hostname+basepath+"es/";
+    	}
+	
+	//At end of TTL (time to logout), if dialog box is open, close and jump to new location 
+	setTimeout(function() {
+		if ($("#timeout").dialog("isOpen")===true) {
+
+		  	$("#timeout").dialog('close');
+
+	        	var highestTimeoutId = setTimeout(";");
+      			for (var i = 0 ; i < highestTimeoutId ; i++) {
+        			clearTimeout(i); 
+      			}
+       			window.location.href=newlocation;	   
+		}//End checking if the logout dialog box is open (auto logout only when the dialog is open and ignored)
+        },ttl);
+
+	StoreData=(100*Drupal.settings.iseNSLDS.timeout)*60 * 1000;
+
+	//This controls BACKGROUND clearing (flush) of student data.  If set too low, will logout (erase data) without indicating this on the screen.
+  	return $.jStorage.setTTL(storageKey, StoreData);
+}
+
+Drupal.NSLDS.NSLDSGetTTL = function() {
+
+
+  return $.jStorage.getTTL(storageKey);
+}
+
+
+Drupal.NSLDS.NSLDSLogout = function() {
+
+
+//This is overridden by the routine in nslds.login.js (see lines 614-637) -- or search for "log out"
+   var lang=Drupal.settings.lang;
+   var basepath=Drupal.settings.basepath;
+   $.jStorage.flush();
+   document.cookie="logged_in=false";
+	
+  var highestTimeoutId = setTimeout(";");
+
+  for (var i = 0 ; i < highestTimeoutId ; i++) {
+    clearTimeout(i); 
+  }
+
+  var current_window=window.location.href;
+  var login="";
+  
+  if (lang=="es"){
+	login="INICIAR SESIóN";
+  }else{
+	login="LOG IN"; 
+  }//End checking language
+
+  $('#login-link').html(login);
+  $('#logout-link').html("") ;
+
+
+	if (Drupal.settings.pas!=true) {
+  
+  		if ((current_window.indexOf("my-student-aid") !==-1)  || (current_window.indexOf("loan-detail") !==-1)  || (current_window.indexOf("grant-detail") !==-1)  || (current_window.indexOf("overpayment-detail") !==-1)) { 
+  			//only change to the front page if you are currently on a page viewing data.  
+   			if (lang=="en"){
+     				var newlocation =window.location.protocol+"//"+window.location.hostname +basepath;	 
+   			}else{
+       				var newlocation =window.location.protocol+"//"+window.location.hostname+basepath+"es/";
+    			}//Language check
+
+   			window.location.href=newlocation;
+		}//Are we on a secure page?
+
+	}else{
+
+		//If we are in the PAS system, then we neexd to redirect to PAS logout.
+		PasPath=Drupal.settings.pas_base_path;
+		PasJunction=Drupal.settings.pas_junction;
+
+		target="https://"+PasPath+"/pkmslogout";
+
+		//?appid="+Drupal.settings.return_app_id;
+
+		//target="https://testise.ed.gov/testise/pkmslogout";
+
+		//We cannot use headers because PAS caches the headers (i.e. they are already implemented).  A header redirect must be done PRIOR to anything else.
+
+   		window.location.href=target;
+   		
+
+		var link=document.createElement('a');
+
+		link.href=target;
+
+		document.body.appendChild('a');
+		link.click();
+
+
+	}//End checking to see if the logout should be PAS based or regular login based (pre-PAS) 
+   
+  $("#timeout").dialog('close');
+   
+  return true;
+}
+})(jQuery);

@@ -1,0 +1,124 @@
+/* Narrow: Loaded after global (mobile) and default. */
+body.logged-in.alpha-grid-debug #zone-user-wrapper {
+  background: blue;
+}
+
+body {
+    font-size: 100%;
+}
+
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level {
+	width: 139px; /* based on 700px total; 140px per menu; -1px for border */
+}
+
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level.first {
+    width: 138px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-6 li.ise-megamenu-top-level {
+	width: 116px; /* based on 700px total; 116px per menu; -1px for border */
+}
+
+ul.ise-megamenu.menu-item-count-6 li.ise-megamenu-top-level.first {
+    width: 113px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-7 li.ise-megamenu-top-level {
+	width: 99px; /* based on 700px total; 140px per menu; -1px for border */
+}
+
+ul.ise-megamenu.menu-item-count-7 li.ise-megamenu-top-level.first {
+    width: 98px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-8 li.ise-megamenu-top-level {
+	width: 86px; /* based on 700px total; 86px per menu; -1px for border */
+}
+
+ul.ise-megamenu.menu-item-count-8 li.ise-megamenu-top-level.first {
+    width: 89px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-9 li.ise-megamenu-top-level {
+	width: 76px; /* based on 700px total; 76px per menu; -1px for border */
+}
+
+ul.ise-megamenu.menu-item-count-9 li.ise-megamenu-top-level.first {
+    width: 82px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-10 li.ise-megamenu-top-level {
+	width: 70px; /* based on 700px total; 70px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-10 li.ise-megamenu-top-level {
+	width: 68px; /* based on 700px total; 140px per menu; -1px for border */
+}
+
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level.first {
+    width: 138px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level span small {
+    display: none;
+}
+
+ul.ise-megamenu a.ise-megamenu-link-level1 * {
+    width: 108px;
+}
+
+div.ise-megamenu-dropdown-links-menu {
+  /*  width: 423px; /* 700px width - 277px feature image */
+}
+
+div.ise-megamenu-dropdown-links-menu ul {
+  width: 100%;
+  padding: 0 0 0 0;
+}
+
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown,
+li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: -139px;
+}
+
+.self-selection-tab {
+    height: 400px;
+    width: 130px; /* 132px per box, -2px for border */
+}
+
+#block-views-preface-block .views-field-field-preface-text .field-content {
+    width: 482px; /* 700px - 178px image - 40px leeway for margins/padding */
+}
+
+/* IBR Calculator */
+
+#ibr-calculator #general { 
+}
+
+#ibr-calculator div#married, #ibr-calculator div#filed, #ibr-calculator div#num-of-dep, #ibr-calculator div#choose-state {
+   width: 20%;
+}
+
+#ibr-calculator div#your-loan-amount, #ibr-calculator div#spouse-loan-amount {
+   min-height: 450px;
+}
+
+/* PAYE Calculator */
+#paye-calculator #general { 
+}
+
+#paye-calculator div#married, #paye-calculator div#filed, #paye-calculator div#num-of-dep, #paye-calculator div#choose-state {
+   width: 20%;
+}
+
+#paye-calculator div#your-loan-amount, #paye-calculator div#spouse-loan-amount {
+   min-height: 450px;
+}
+
+/* Budget Calculator */
+#budget label {
+}
+
+form#search-block-form .form-text {
+	width: 150px;
+}

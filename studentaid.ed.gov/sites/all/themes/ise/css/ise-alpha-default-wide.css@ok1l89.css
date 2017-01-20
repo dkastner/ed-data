@@ -1,0 +1,84 @@
+/* Wide: Loaded after global (mobile), default, narrow, and normal. */
+body.logged-in.alpha-grid-debug #zone-user-wrapper {
+  background: green;
+}
+
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level {
+  width: 235px; /* based on 1180px total; 236px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-5 li.ise-megamenu-top-level.first {
+  width: 234px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-6 li.ise-megamenu-top-level {
+  width: 196px; /* based on 1180px total; 196px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-6 li.ise-megamenu-top-level.first {
+  width: 193px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-7 li.ise-megamenu-top-level {
+  width: 168px; /* based on 1180px total; 168px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-7 li.ise-megamenu-top-level.first {
+  width: 164px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-8 li.ise-megamenu-top-level {
+  width: 146px; /* based on 1180px total; 146px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-8 li.ise-megamenu-top-level.first {
+  width: 149px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-9 li.ise-megamenu-top-level {
+  width: 130px; /* based on 1180px total; 130px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-9 li.ise-megamenu-top-level.first {
+  width: 130px; /* -1px from normal width to compensate for second border */
+}
+
+ul.ise-megamenu.menu-item-count-10 li.ise-megamenu-top-level {
+  width: 117px; /* based on 1180px total; 117px per menu; -1px for border */
+}
+ul.ise-megamenu.menu-item-count-10 li.ise-megamenu-top-level.first {
+  width: 116px; /* -1px from normal width to compensate for second border */
+}
+
+
+ul.ise-megamenu a.ise-megamenu-link-level1 * {
+    width: 204px;
+}
+
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown,
+li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: -43px;
+}
+
+.self-selection-tab {
+    height: 380px;
+    width: 226px; /* 228px per box, -2px for border */
+}
+
+#block-views-preface-block .views-field-field-preface-text .field-content {
+    width: 962px; /* 1180px - 178px image - 40px leeway for margins/padding */
+}
+
+/* Ombudsman Form */
+#webform-client-form-161 {
+   width: 75%;
+}
+
+
+/* IBR Calculator */
+#ibr-calculator #general { 
+}
+
+/* PAYE Calculator */
+#paye-calculator #general { 
+}
+
+/* Budget Calculator */
+#budget label {
+}
