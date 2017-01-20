@@ -1,0 +1,1372 @@
+﻿<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+
+<php
+drupal_add_js(drupal_get_path('theme', 'omega') . '/collapse.js');
+drupal_add_js(drupal_get_path('theme', 'omega') . '/drupal.js');
+drupal_add_js(drupal_get_path('theme', 'omega') . '/jquery.js');
+
+
+?>
+
+
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../sites/all/themes/ise/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
+<link href="../../sites/all/themes/ise/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+<link rel="shortcut icon" href="../../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link href="../../sites/all/themes/ise/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
+<link href="../../favicon.ico" rel="shortcut icon" />
+<meta name="theme-color" content="#ffffff" />
+<link href="../../sites/all/themes/ise/images/manifest.json" rel="manifest" />
+<link href="../../sites/all/themes/ise/images/safari-pinned-tab.svg" rel="mask-icon" color="#8bc54a" />
+<meta name="description" content="Income-driven/income-based repayment plans set your monthly federal student loan payment at an amount intended to be affordable based on your income and family size." />
+<meta name="keywords" content="income calculator, loan repayment, student loan income-based repayment, student loan income, income based payments, income-based repayment, income repayment, student loans repayment, student loan payment plans, pay student loan, student loan payment calculator, loan repayment plan, income-driven repayment, repayment options, trouble making student loan payment, repayment calculator" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="../../../repay-loans/understand/plans/income-driven.html" />
+<link rel="shortlink" href="https://studentaid.ed.gov/node/594" />
+<meta property="og:site_name" content="Federal Student Aid" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://studentaid.ed.gov/repay-loans/understand/plans/income-driven" />
+<meta property="og:title" content="Income-Driven Plans" />
+<meta property="og:description" content="An income-driven repayment plan sets your monthly student loan payment at an amount that is intended to be affordable based on your income and family size. We offer four income-driven repayment plans: Revised Pay As You Earn Repayment Plan (REPAYE Plan) Pay As You Earn Repayment Plan (PAYE Plan) Income-Based Repayment Plan (IBR Plan) Income-Contingent Repayment Plan (ICR Plan) If you’d like to repay your federal student loans under an income-driven plan, you need to fill out an application." />
+<meta property="og:updated_time" content="2016-12-06T12:47:59-05:00" />
+<meta property="article:published_time" content="2016-12-06T12:47:59-05:00" />
+<meta property="article:modified_time" content="2016-12-06T12:47:59-05:00" />
+  <title>Income-Driven Plans | Federal Student Aid</title>  
+  <style type="text/css" media="all">
+@import url("https://studentaid.ed.gov/modules/system/system.base.css?ojxjnr");
+@import url("https://studentaid.ed.gov/modules/system/system.menus.css?ojxjnr");
+@import url("https://studentaid.ed.gov/modules/system/system.messages.css?ojxjnr");
+@import url("https://studentaid.ed.gov/modules/system/system.theme.css?ojxjnr");
+</style>
+<style type="text/css" media="all">
+@import url("../../../sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css@ojxjnr.css");
+@import url("../../../sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css@ojxjnr.css");
+@import url("../../../sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.accordion.min.css@ojxjnr.css");
+</style>
+<style type="text/css" media="all">
+@import url("../../../sites/all/modules/comment_notify/comment_notify.css@ojxjnr.css");
+@import url("../../../sites/all/modules/career_search/career_search.css@ojxjnr.css");
+@import url("https://studentaid.ed.gov/modules/comment/comment.css?ojxjnr");
+@import url("../../../sites/all/modules/date/date_api/date.css@ojxjnr.css");
+@import url("../../../sites/all/modules/date/date_popup/themes/datepicker.1.7.css@ojxjnr.css");
+@import url("https://studentaid.ed.gov/modules/field/theme/field.css?ojxjnr");
+@import url("../../../sites/all/modules/fsa_calculators/fsa_calculators.css@ojxjnr.css");
+@import url("../../../sites/all/modules/ise_megamenu/ise_megamenu.css@ojxjnr.css");
+@import url("../../../sites/all/modules/ise_nslds/ise_nslds.css@ojxjnr.css");
+@import url("../../../sites/all/modules/mollom/mollom.css@ojxjnr.css");
+@import url("https://studentaid.ed.gov/modules/node/node.css?ojxjnr");
+@import url("https://studentaid.ed.gov/modules/search/search.css?ojxjnr");
+@import url("https://studentaid.ed.gov/modules/user/user.css?ojxjnr");
+@import url("../../../sites/all/modules/views/css/views.css@ojxjnr.css");
+@import url("../../../sites/all/modules/ckeditor/css/ckeditor.css@ojxjnr.css");
+</style>
+<style type="text/css" media="all">
+@import url("../../../sites/all/modules/colorbox/styles/default/colorbox_default_style.css@ojxjnr.css");
+@import url("../../../sites/all/modules/ctools/css/ctools.css@ojxjnr.css");
+@import url("../../../sites/all/modules/lexicon/css/lexicon.css@ojxjnr.css");
+@import url("../../../sites/all/modules/panels/css/panels.css@ojxjnr.css");
+@import url("../../../sites/all/modules/extlink/extlink.css@ojxjnr.css");
+@import url("../../../sites/all/modules/forward/forward.css@ojxjnr.css");
+@import url("https://studentaid.ed.gov/modules/locale/locale.css?ojxjnr");
+</style>
+<style type="text/css" media="all">
+@import url("../../../sites/all/themes/ise/css/newscyclefont.css@ojxjnr.css");
+</style>
+<style type="text/css" media="all">
+@import url("../../../sites/all/themes/omega/alpha/css/alpha-reset.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/alpha/css/alpha-mobile.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/alpha/css/alpha-alpha.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/omega/css/formalize.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/omega/css/omega-text.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/omega/css/omega-branding.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/omega/css/omega-menu.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/omega/css/omega-forms.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/omega/css/omega-visuals.css@ojxjnr.css");
+@import url("../../../sites/all/themes/ise/css/blog-rt.css@ojxjnr.css");
+@import url("../../../sites/all/themes/ise/css/global.css@ojxjnr.css");
+</style>
+<style type="text/css" media="print">
+@import url("../../../sites/all/themes/ise/css/print.css@ojxjnr.css");
+</style>
+<style type="text/css" media="all">
+@import url("../../../sites/all/themes/ise/css/blog.css@ojxjnr.css");
+</style>
+<style type="text/css" media="all and (max-width: 600px)">
+@import url("../../../sites/all/themes/ise/css/ise-mobile.css@ojxjnr.css");
+</style>
+<style type="text/css" media="all and (min-width: 601px) and (max-width: 739px)">
+@import url("../../../sites/all/themes/ise/css/ise-tablet.css@ojxjnr.css");
+</style>
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="https://studentaid.ed.gov/sites/all/themes/ise/css/ie7.css?ojxjnr" media="all" />
+<![endif]-->
+
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" href="https://studentaid.ed.gov/sites/all/themes/ise/css/ie8.css?ojxjnr" media="all" />
+<![endif]-->
+
+<!--[if IE 9]>
+<link type="text/css" rel="stylesheet" href="https://studentaid.ed.gov/sites/all/themes/ise/css/ie9.css?ojxjnr" media="all" />
+<![endif]-->
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<style type="text/css" media="all">
+@import url("https://studentaid.ed.gov/sites/all/themes/ise/css/ise-alpha-default.css?ojxjnr");
+@import url("https://studentaid.ed.gov/sites/all/themes/ise/css/ise-alpha-default-normal.css?ojxjnr");
+@import url("https://studentaid.ed.gov/sites/all/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?ojxjnr");
+</style>
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/alpha/css/grid/alpha_default/fluid/alpha-default-fluid-12.css@ojxjnr.css");
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default.css@ojxjnr.css");
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default-narrow.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css@ojxjnr.css");
+</style>
+<!--<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 980px) and (min-device-width: 980px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default.css@ojxjnr.css");
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default-normal.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css@ojxjnr.css");
+</style>
+<!--<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 1220px)">
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default.css@ojxjnr.css");
+@import url("../../../sites/all/themes/ise/css/ise-alpha-default-wide.css@ojxjnr.css");
+@import url("../../../sites/all/themes/omega/alpha/css/grid/alpha_default/wide/alpha-default-wide-12.css@ojxjnr.css");
+</style>
+<!--<![endif]-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.5/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://studentaid.ed.gov/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://studentaid.ed.gov/misc/drupal.js?ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/json2.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/jstorage.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/jquery.tablesorter.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/blob.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/filesaver.js@ojxjnr"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/tabber.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/comment_notify/comment_notify.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/ise_nslds.login.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/ise_nslds.storage.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_nslds/js/ise_nslds.messages.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/fb/fb.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_megamenu/ise_megamenu.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_megamenu/jquery.hoverIntent.minified.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/media_colorbox/media_colorbox.js@ojxjnr"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function(){jQuery("#accordion").accordion();});
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../../sites/all/libraries/colorbox/colorbox/jquery.colorbox-min.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/colorbox/js/colorbox.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/colorbox/styles/default/colorbox_default_style.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/colorbox/js/colorbox_load.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/extlink/extlink.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/custom/ise_custom/fsa_custom.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/modules/google_analytics/googleanalytics.js@ojxjnr"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-33441427-1"]);_gaq.push(["_setDomainName", "none"]);_gaq.push(["_setAllowLinker", true]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../../sites/all/modules/ise_webtrends/ise_webtrends.prod.js@ojxjnr"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var usasearch_config = { siteHandle:'federalstudentaid' };
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//search.usa.gov/javascripts/remote.loader.js';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../../sites/all/themes/ise/js/ise.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/themes/ise/js/blog.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/themes/ise/js/custom.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/themes/omega/omega/js/jquery.formalize.js@ojxjnr"></script>
+<script type="text/javascript" src="../../../sites/all/themes/omega/omega/js/omega-mediaqueries.js@ojxjnr"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"ise","theme_token":"uhSj85R0eAfoYchoJ4S6x5vovMNRplhuZDuQNQFAubQ","js":{"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.5.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/ise_nslds\/js\/json2.js":1,"sites\/all\/modules\/ise_nslds\/js\/jstorage.js":1,"sites\/all\/modules\/ise_nslds\/js\/jquery.tablesorter.js":1,"sites\/all\/modules\/ise_nslds\/js\/blob.js":1,"sites\/all\/modules\/ise_nslds\/js\/filesaver.js":1,"https:\/\/ajax.googleapis.com\/ajax\/libs\/jqueryui\/1.8.11\/jquery-ui.min.js":1,"1":1,"sites\/all\/modules\/ise_nslds\/js\/tabber.js":1,"sites\/all\/modules\/comment_notify\/comment_notify.js":1,"sites\/all\/modules\/ise_nslds\/js\/ise_nslds.login.js":1,"sites\/all\/modules\/ise_nslds\/js\/ise_nslds.storage.js":1,"sites\/all\/modules\/ise_nslds\/js\/ise_nslds.messages.js":1,"sites\/all\/modules\/fb\/fb.js":1,"sites\/all\/modules\/ise_megamenu\/ise_megamenu.js":1,"sites\/all\/modules\/ise_megamenu\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/media_colorbox\/media_colorbox.js":1,"2":1,"sites\/all\/libraries\/colorbox\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_default_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/extlink\/extlink.js":1,"sites\/all\/modules\/custom\/ise_custom\/fsa_custom.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"3":1,"sites\/all\/modules\/ise_webtrends\/ise_webtrends.prod.js":1,"sites\/all\/themes\/ise\/js\/custom.js":1,"4":1,"5":1,"6":1,"7":1,"8":1,"sites\/all\/themes\/ise\/js\/ise.js":1,"sites\/all\/themes\/ise\/js\/blog.js":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/all\/modules\/comment_notify\/comment_notify.css":1,"sites\/all\/modules\/career_search\/career_search.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/fsa_calculators\/fsa_calculators.css":1,"sites\/all\/modules\/ise_megamenu\/ise_megamenu.css":1,"sites\/all\/modules\/ise_nslds\/ise_nslds.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_default_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/lexicon\/css\/lexicon.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/extlink\/extlink.css":1,"sites\/all\/modules\/forward\/forward.css":1,"modules\/locale\/locale.css":1,"sites\/all\/themes\/ise\/css\/newscyclefont.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/all\/themes\/ise\/css\/blog-rt.css":1,"sites\/all\/themes\/ise\/css\/global.css":1,"sites\/all\/themes\/ise\/css\/print.css":1,"sites\/all\/themes\/ise\/css\/blog.css":1,"sites\/all\/themes\/ise\/css\/ise-mobile.css":1,"sites\/all\/themes\/ise\/css\/ise-tablet.css":1,"sites\/all\/themes\/ise\/css\/ie7.css":1,"sites\/all\/themes\/ise\/css\/ie8.css":1,"sites\/all\/themes\/ise\/css\/ie9.css":1,"ie::normal::sites\/all\/themes\/ise\/css\/ise-alpha-default.css":1,"ie::normal::sites\/all\/themes\/ise\/css\/ise-alpha-default-normal.css":1,"ie::normal::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"fluid::sites\/all\/themes\/ise\/css\/ise-alpha-default.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/fluid\/alpha-default-fluid-12.css":1,"narrow::sites\/all\/themes\/ise\/css\/ise-alpha-default.css":1,"narrow::sites\/all\/themes\/ise\/css\/ise-alpha-default-narrow.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/narrow\/alpha-default-narrow-12.css":1,"normal::sites\/all\/themes\/ise\/css\/ise-alpha-default.css":1,"normal::sites\/all\/themes\/ise\/css\/ise-alpha-default-normal.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"wide::sites\/all\/themes\/ise\/css\/ise-alpha-default.css":1,"wide::sites\/all\/themes\/ise\/css\/ise-alpha-default-wide.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/wide\/alpha-default-wide-12.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"100%","maxHeight":"100%","fixed":true,"__drupal_alter_by_ref":["default"]},"iseMegaMenu":{"modulePath":"sites\/all\/modules\/ise_megamenu","closeText":"Close","openText":"Menu"},"pas_trigger_nslds_error":false,"remote_ip":"10.59.110.82","nslds_url":"https:\/\/studentaid.ed.gov\/nslds\/nslds_SA\/secure\/ISE\/","pas_login_address":"https:\/\/studentaid.ed.gov\/npas\/index.htm","pas":true,"pas_junction":"sa","pas_base_path":"studentaid.ed.gov","return_app_id":"studentaid","nslds_ga":"UA-33441427-1","iseNSLDS":{"timeout":"10","basepath":"\/","current_url":"10.59.110.21"},"extlink":{"extTarget":"_blank","extClass":"ext","extSubdomains":1,"extExclude":"myedaccount.com|myeddebt.com|disabilitydischarge.com|.gov","extInclude":"","extAlert":"_blank","extAlertText":"This link will take you to an external website. The U.S. Department of Education is not responsible for that site\u2019s content.","mailtoClass":0},"basepath":"\/","current_url":"10.59.110.21","timeout":15,"lang":"en","urlIsAjaxTrusted":{"\/node\/594\/":true,"\/\/search.usa.gov\/search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"2","trackCrossDomains":["origin3.studentaid.ed.gov","www.studentaid.ed.gov\/sa","studentaid.ed.gov\/sa","studentaid.gov\/sa"]},"omega":{"layouts":{"primary":"normal","order":["fluid","narrow","normal","wide"],"queries":{"fluid":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","narrow":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"all and (min-width: 980px) and (min-device-width: 980px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)","wide":"all and (min-width: 1220px)"}}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-594 node-type-page context-repaying i18n-en context-repay-loans topic-repaying">
+  <div id="skip-link">
+    <a href="index.html#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-user-wrapper" class="zone-wrapper zone-user-wrapper clearfix">  
+  <div id="zone-user" class="zone zone-user clearfix container-12">
+    <div class="grid-8 region region-user-first" id="region-user-first">
+  <div class="region-inner region-user-first-inner">
+      </div>
+</div><div class="grid-4 region region-user-second" id="region-user-second">
+  <div class="region-inner region-user-second-inner">
+    <div class="block block-menu block-menu-top-menu block-menu-menu-top-menu odd block-without-title" id="block-menu-menu-top-menu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first last leaf"><a href="../../../about.html" title="">About Us</a></li>
+</ul>    </div>
+  </div>
+</div><div class="block block-locale block-language block-locale-language even block-without-title" id="block-locale-language">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="language-switcher-locale-url"><li class="en first active"><a href="../../../repay-loans/understand/plans/income-driven.html" class="language-link active" xml:lang="en" title="Income-Driven Plans">English</a></li><li class="es last"><a href="../../../es/repay-loans/understand/plans/income-driven.html" class="language-link" xml:lang="es" title="Pago definido por los ingresos">Español</a></li></ul>    </div>
+  </div>
+</div><div class="block block-ise-nslds block-nslds-login-block block-ise-nslds-nslds-login-block odd block-without-title" id="block-ise-nslds-nslds-login-block">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="item-list"><ul><li class="first"><a href="index.html#" onclick="" id="login-link" title="Log In">LOG IN</a></li><li><a href="index.html#" id="logout-link" title="LogOut"></a></li><li class="last"><div id="timeout" style="display:none;"> <div id="timeout_message"> </div><button type="button" id="renew">CONTINUE</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button" id="leave_site">LOGOUT</button></div></li></ul></div><div id="nslds-login-block" style="display: none;"><div class="tabber"><div class="tabbertab "><h2>Log In to My Federal Student Aid</h2><form action="index.html" method="post" id="nslds-login-form" accept-charset="UTF-8"><div><div class="nslds nslds-messages login"></div><div class='login_X_link'><a href='index.html#' style='position:relative;float:right;padding-left:3px;' id='login_X_link'><img alt='CLOSE WINDOW' title='CLOSE WINDOW' src='../../sites/default/files/images/x.png'/></a></div><article id="login-intro" tabindex="0"><div class="aosheader" style="padding-bottom: 10px; background-color: #d1d1d1; margin-top: 10px; padding-left: 10px; width: 500px; padding-right: 10px; margin-left: -10px; padding-top: 10px">
+<p>View your federal student loan and grant history, and find out where to make your loan payment.&nbsp;Please note that My Federal Student Aid may be unavailable from Saturday nights at 7 p.m. through Sunday mornings at 11 a.m. Eastern time due to scheduled maintenance.</p>
+&nbsp;
+
+<p>Don’t have an FSA ID (username and password)—or forgot yours? <a href="https://fsaid.ed.gov/npas/pas/pub/CreateAccount?appid=studentaid" style="font-family: Droid Serif,serif !important; font-size: 12px !important"><u>Create or retrieve your FSA ID now.</u></a></p>
+&nbsp;
+
+<p><a href="../../../fafsa/filling-out/fsaid.html" style="font-family: Droid Serif,serif !important; font-size: 12px !important"><u>Learn more about the FSA ID.</u></a></p>
+</div>
+</article><input type="hidden" name="form_build_id" value="form-Xwj68zQ0d6jDZgpxrk8RQ94sJFqXr7lGFfhfi9eR9ZY" />
+<input type="hidden" name="form_id" value="nslds_login_form" />
+<td><div class="samelineDiv" title="Login"><input type="submit" id="edit-submit" name="op" value="LOG IN &gt;" class="form-submit" /></div></td></div></form></div><div class="tabbertab tabbertabhide"><h2>Access Our Other Sites</h2><a href='index.html#'><div style='position:relative;float:right;padding-left:3px;padding-right:1%' id='othersites_X_link'><img alt='CLOSE WINDOW' title='CLOSE WINDOW' src='../../sites/default/files/images/x.png'/></div></a><p>&nbsp;</p>
+
+<div class="aosheader" style="padding-bottom: 10px; background-color: #d1d1d1; margin-top: 10px; padding-left: 10px; width: 500px; padding-right: 10px; font-family: Cambria, serif; font-size: 14px; padding-top: 10px"><em>As we work to improve and expand what you can do here, visit our other sites:</em></div>
+
+<p>&nbsp;</p>
+
+<div style="padding-left: 10px">
+<p><u><a href="http://fafsa.ed.gov" onclick="_gaq.push(['_trackEvent', 'Clicked External Link from Other Sites box', 'Clicked on FAFSA from other sites box', 'visitor has clicked FAFSA link']);" style="color: #0099cc; text-decoration: underline" target="_blank">FAFSA.gov</a></u><br />
+<span style="font-family:cambria,serif; font-size:14px"><em>Submit a Free Application for Federal Student Aid (FAFSA<sup>®</sup>).</em></span></p>
+
+<p>&nbsp;</p>
+
+<p><a href="https://studentloans.gov/myDirectLoan/index.action" onclick="_gaq.push(['_trackEvent', 'Clicked External Link from Other Sites box', 'Clicked on StudentLoans.gov from other sites box', 'visitor has clicked StudentLoans.gov link']);" style="color: #0099cc; text-decoration: underline" target="_blank">StudentLoans.gov</a></p>
+
+<p style="line-height: 20.8px;"><span style="font-family: cambria, serif; font-size: 14px;"><em>Complete your Master Promissory Note, Loan Consolidation Application or counseling (entrance, financial awareness, and exit) or request a Direct PLUS Loan or an income–driven repayment plan.</em></span></p>
+
+<p>&nbsp;</p>
+
+<p><u><a href="https://myeddebt.ed.gov" onclick="_gaq.push(['_trackEvent', 'Clicked External Link from Other Sites box', 'Clicked on Myedebt from other Sites box', 'visitor has clicked Myedebt link']);" style="color: #0099cc; text-decoration: underline" target="_blank">Myeddebt.ed.gov</a></u></p>
+
+<p><span style="font-family:cambria,serif; font-size:14px"><em>Get information about your defaulted federal education debt.</em></span></p>
+
+<p><br />
+&nbsp;</p>
+</div>
+</div></div></div>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-8 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <section class="block block-ise-helper block-ise-logo block-ise-helper-ise-logo odd" id="block-ise-helper-ise-logo">
+  <div class="block-inner clearfix">
+              <h2 class="block-title"><none></h2>
+            
+    <div class="content clearfix">
+      <p><a href="../../../index.html" rel="home" title="Federal Student Aid"><img id="logo" src="../../../sites/all/themes/ise/logo.png" alt="Federal Student Aid, an office of the U.S. Department of Education: Proud sponsor of the American mind." title="Federal Student Aid" /></a></p>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-4 region region-search" id="region-search">
+  <div class="region-inner region-search-inner">
+    <div class="block block-search block-form block-search-form odd block-without-title" id="block-search-form">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="https://search.usa.gov/search" method="get" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-query">
+  <label class="element-invisible" for="edit-search-block-form--2">Search using USASearch </label>
+ <input class="usagov-search-autocomplete ui-autocomplete-input ui-corner-all form-text" autocomplete="off" placeholder="Search StudentAid.gov" type="text" id="edit-search-block-form--2" name="query" value="" size="15" maxlength="128" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit--2" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="affiliate" value="federalstudentaid" />
+</div>
+</div></form>    </div>
+  </div>
+</div><a href="index.html#" id="ise-megamenu-mobile-menu-toggle"><span id="menu-toggle-text">Menu</span></a>  </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <div class="block block-ise-megamenu block-ise-megamenu block-ise-megamenu-ise-megamenu odd block-without-title" id="block-ise-megamenu-ise-megamenu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="ise-megamenu menu-item-count-5"><li class="ise-megamenu-top-level ise-megamenu-top-level-item-1 first"><a href="../../../prepare-for-college.html" class="ise-megamenu-link-level1"><span><h2>Prepare for College</h2><small></small></span></a><a href="../../../prepare-for-college.html" class="ise-megamenu-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-down.png" alt="Expand menu" /></a><div class="ise-megamenu-dropdown"><div class="clearfix"><div class="ise-megamenu-dropdown-links clearfix"><div class="ise-megamenu-dropdown-links-menu clearfix"><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../prepare-for-college/careers.html" class="ise-megamenu-link-level2">Exploring Your Career Options</a><a href="../../../prepare-for-college/careers.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../prepare-for-college/careers/search.html" class="ise-megamenu-link-level3">Career Search</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../prepare-for-college/checklists.1.html" class="ise-megamenu-link-level2">Checklists for Academic and Financial Preparation</a><a href="../../../prepare-for-college/checklists.1.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../prepare-for-college/checklists/elementary-school.html" class="ise-megamenu-link-level3">Elementary School Checklists</a></li><li><a href="../../../prepare-for-college/checklists/middle-school.html" class="ise-megamenu-link-level3">Middle School Checklists</a></li><li><a href="../../../prepare-for-college/checklists/9th-grade.html" class="ise-megamenu-link-level3">9th Grade Checklists</a></li><li><a href="../../../prepare-for-college/checklists/10th-grade.html" class="ise-megamenu-link-level3">10th Grade Checklists</a></li><li><a href="../../../prepare-for-college/checklists/11th-grade.html" class="ise-megamenu-link-level3">11th Grade Checklists</a></li><li><a href="../../../prepare-for-college/checklists/12th-grade.html" class="ise-megamenu-link-level3">12th Grade Checklists</a></li><li><a href="../../../prepare-for-college/checklists/adult-student.html" class="ise-megamenu-link-level3">Adult Student Checklist</a></li><li><a href="../../../prepare-for-college/checklists/late-start.html" class="ise-megamenu-link-level3">Getting a Late Start? Last-minute Checklist</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../prepare-for-college/choosing-schools.html" class="ise-megamenu-link-level2">Choosing a School</a><a href="../../../prepare-for-college/choosing-schools.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../prepare-for-college/choosing-schools/types.html" class="ise-megamenu-link-level3">Types of Schools</a></li><li><a href="../../../prepare-for-college/choosing-schools/consider.html" class="ise-megamenu-link-level3">Things to Consider</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../prepare-for-college/tests.html" class="ise-megamenu-link-level2">Taking Required Tests</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../prepare-for-college/applying.html" class="ise-megamenu-link-level2">Applying to Schools</a></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../prepare-for-college/budgeting.html" class="ise-megamenu-link-level2">Budgeting</a><a href="../../../prepare-for-college/budgeting.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../prepare-for-college/budgeting/creating-your-budget.html" class="ise-megamenu-link-level3">Creating Your Budget</a></li><li><a href="../../../prepare-for-college/budgeting/budgeting-tips.html" class="ise-megamenu-link-level3">Budgeting Tips</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../prepare-for-college/help.html" class="ise-megamenu-link-level2">Finding Help</a></li></ul></div></div><div class="ise-megamenu-dropdown-feature clearfix">
+            <aside class="promo-tile" role="complementary">
+              <div class="header">
+                <h3>Checklists</h3>
+              </div>
+              <div class="promo-content">
+                <p>Whether you’re a student or parent, years away from college or just a few days away, we have checklists to help you get ready.</p>
+              </div>
+              <a href="../../../prepare-for-college/checklists.1.html" title="Learn more about Checklists"><strong>Learn more</strong></a>
+              <div class="icon"></div>
+              <div class="circle"></div>
+            </aside></div></div></div></li><li class="ise-megamenu-top-level ise-megamenu-top-level-item-2"><a href="../../../types.html" class="ise-megamenu-link-level1"><span><h2>Types of Aid</h2><small></small></span></a><a href="../../../types.html" class="ise-megamenu-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-down.png" alt="Expand menu" /></a><div class="ise-megamenu-dropdown"><div class="clearfix"><div class="ise-megamenu-dropdown-links clearfix"><div class="ise-megamenu-dropdown-links-menu clearfix"><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../types/grants-scholarships.html" class="ise-megamenu-link-level2">Grants and Scholarships</a><a href="../../../types/grants-scholarships.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../types/grants-scholarships/pell.html" class="ise-megamenu-link-level3">Federal Pell Grants</a></li><li><a href="../../../types/grants-scholarships/fseog.html" class="ise-megamenu-link-level3">FSEOG (Grants)</a></li><li><a href="../../../types/grants-scholarships/teach.html" class="ise-megamenu-link-level3">TEACH Grants</a></li><li><a href="../../../types/grants-scholarships/iraq-afghanistan-service.html" class="ise-megamenu-link-level3">Iraq and Afghanistan Service Grants</a></li><li><a href="../../../types/grants-scholarships/finding-scholarships.html" class="ise-megamenu-link-level3">Finding and Applying for Scholarships</a></li><li><a href="../../../types/grants-scholarships/military.html" class="ise-megamenu-link-level3">Aid for Military Families</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../types/loans.html" class="ise-megamenu-link-level2">Loans</a><a href="../../../types/loans.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../types/loans/subsidized-unsubsidized.html" class="ise-megamenu-link-level3">Subsidized and Unsubsidized Loans</a></li><li><a href="../../../types/loans/plus.html" class="ise-megamenu-link-level3">PLUS Loans</a></li><li><a href="../../../types/loans/perkins.html" class="ise-megamenu-link-level3">Perkins Loans</a></li><li><a href="../../../types/loans/federal-vs-private.html" class="ise-megamenu-link-level3">Federal Versus Private Loans</a></li><li><a href="../../../types/loans/interest-rates.html" class="ise-megamenu-link-level3">Interest Rates and Fees</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../types/work-study.html" class="ise-megamenu-link-level2">Work-Study Jobs</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../types/tax-benefits.html" class="ise-megamenu-link-level2">Tax Benefits</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../types/scams.html" class="ise-megamenu-link-level2">Avoiding Scams</a></li></ul></div></div><div class="ise-megamenu-dropdown-feature clearfix">
+            <aside class="promo-tile" role="complementary">
+              <div class="header">
+                <h3>Scholarship Search</h3>
+              </div>
+              <div class="promo-content">
+                <p>Learn how to find and apply for scholarships.</p>
+              </div>
+              <a href="../../../types/grants-scholarships/finding-scholarships.html" title="Learn more about Scholarship Search"><strong>Learn more</strong></a>
+              <div class="icon"></div>
+              <div class="circle"></div>
+            </aside></div></div></div></li><li class="ise-megamenu-top-level ise-megamenu-top-level-item-3"><a href="../../../eligibility.html" class="ise-megamenu-link-level1"><span><h2>Who Gets Aid</h2><small></small></span></a><a href="../../../eligibility.html" class="ise-megamenu-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-down.png" alt="Expand menu" /></a><div class="ise-megamenu-dropdown"><div class="clearfix"><div class="ise-megamenu-dropdown-links clearfix"><div class="ise-megamenu-dropdown-links-menu clearfix"><ul class="ise-megamenu-level2-ul"><li ><a href="../../../eligibility/basic-criteria.html" class="ise-megamenu-link-level2">Basic Eligibility Criteria</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../eligibility/non-us-citizens.html" class="ise-megamenu-link-level2">Non-U.S. Citizens</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../eligibility/criminal-convictions.html" class="ise-megamenu-link-level2">Students With Criminal Convictions</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../eligibility/intellectual-disabilities.html" class="ise-megamenu-link-level2">Students With Intellectual Disabilities</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../eligibility/staying-eligible.html" class="ise-megamenu-link-level2">Staying Eligible</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../eligibility/regain.html" class="ise-megamenu-link-level2">Regaining Eligibility</a></li></ul></div></div><div class="ise-megamenu-dropdown-feature clearfix">
+            <aside class="promo-tile" role="complementary">
+              <div class="header">
+                <h3>Eligibility</h3>
+              </div>
+              <div class="promo-content">
+                <p>Learn about the eligibility criteria for the federal student aid programs.</p>
+              </div>
+              <a href="../../../eligibility.html" title="Learn more about Eligibility"><strong>Learn more</strong></a>
+              <div class="icon"></div>
+              <div class="circle"></div>
+            </aside></div></div></div></li><li class="ise-megamenu-top-level ise-megamenu-top-level-item-4 second-to-last"><a href="../../../fafsa.1.html" class="ise-megamenu-link-level1"><span><h2>FAFSA: Applying for Aid</h2><small></small></span></a><a href="../../../fafsa.1.html" class="ise-megamenu-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-down.png" alt="Expand menu" /></a><div class="ise-megamenu-dropdown"><div class="clearfix"><div class="ise-megamenu-dropdown-links clearfix"><div class="ise-megamenu-dropdown-links-menu clearfix"><ul class="ise-megamenu-level2-ul"><li ><a href="../../../fafsa/estimate.html" class="ise-megamenu-link-level2">Estimate Your Aid</a></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../fafsa/filling-out.1.html" class="ise-megamenu-link-level2">Filling Out the FAFSA</a><a href="../../../fafsa/filling-out.1.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../fafsa/filling-out/fsaid.html" class="ise-megamenu-link-level3">The FSA ID</a></li><li><a href="../../../fafsa/filling-out/dependency.html" class="ise-megamenu-link-level3">Dependency Status</a></li><li><a href="../../../fafsa/filling-out/parent-info.html" class="ise-megamenu-link-level3">Reporting Parent Information</a></li><li><a href="../../../fafsa/filling-out/school-list.html" class="ise-megamenu-link-level3">Listing Colleges on the FAFSA</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../fafsa/next-steps.html" class="ise-megamenu-link-level2">Next Steps</a><a href="../../../fafsa/next-steps.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../fafsa/next-steps/student-aid-report.html" class="ise-megamenu-link-level3">Student Aid Report</a></li><li><a href="../../../fafsa/next-steps/correct-update.html" class="ise-megamenu-link-level3">Correcting or Updating Your FAFSA</a></li><li><a href="../../../fafsa/next-steps/how-calculated.html" class="ise-megamenu-link-level3">How Aid Is Calculated</a></li><li><a href="../../../fafsa/next-steps/comparing-aid-offers.html" class="ise-megamenu-link-level3">Comparing School Aid Offers</a></li><li><a href="../../../fafsa/next-steps/accept-aid.html" class="ise-megamenu-link-level3">Accepting Aid</a></li><li><a href="../../../fafsa/next-steps/receive-aid.html" class="ise-megamenu-link-level3">Receiving Aid</a></li><li><a href="../../../fafsa/next-steps/entrance-counseling.html" class="ise-megamenu-link-level3">Entrance Counseling</a></li></ul></li></ul></div></div><div class="ise-megamenu-dropdown-feature clearfix">
+            <aside class="promo-tile" role="complementary">
+              <div class="header">
+                <h3>Free Application for Federal Student Aid (FAFSA)</h3>
+              </div>
+              <div class="promo-content">
+                <p>Ready to fill out the FAFSA now? Go to the FAFSA website!</p>
+              </div>
+              <a href="http://fafsa.ed.gov/" title="Learn more about Free Application for Federal Student Aid (FAFSA)"><strong>Learn more</strong></a>
+              <div class="icon"></div>
+              <div class="circle"></div>
+            </aside></div></div></div></li><li class="ise-megamenu-top-level ise-megamenu-top-level-item-5 last"><a href="../../../repay-loans.html" class="ise-megamenu-link-level1"><span><h2>How to Repay Your Loans</h2><small></small></span></a><a href="../../../repay-loans.html" class="ise-megamenu-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-down.png" alt="Expand menu" /></a><div class="ise-megamenu-dropdown"><div class="clearfix"><div class="ise-megamenu-dropdown-links clearfix"><div class="ise-megamenu-dropdown-links-menu clearfix"><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../repay-loans/understand.html" class="ise-megamenu-link-level2">Understanding Repayment</a><a href="../../../repay-loans/understand.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../repay-loans/understand/servicers.html" class="ise-megamenu-link-level3">Loan Servicers</a></li><li><a href="../../../repay-loans/understand/plans.html" class="ise-megamenu-link-level3">Repayment Plans</a></li><li><a href="../../../repay-loans/understand/checklist.html" class="ise-megamenu-link-level3">Repayment Checklist</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../repay-loans/consolidation.html" class="ise-megamenu-link-level2">Loan Consolidation</a></li></ul><ul class="ise-megamenu-level2-ul"><li ><a href="../../../repay-loans/deferment-forbearance.html" class="ise-megamenu-link-level2">Deferment and Forbearance</a></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../repay-loans/forgiveness-cancellation.html" class="ise-megamenu-link-level2">Forgiveness, Cancellation, and Discharge</a><a href="../../../repay-loans/forgiveness-cancellation.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../repay-loans/forgiveness-cancellation/closed-school.html" class="ise-megamenu-link-level3">Closed School Discharge</a></li><li><a href="../../../repay-loans/forgiveness-cancellation/public-service.html" class="ise-megamenu-link-level3">Public Service Loan Forgiveness</a></li><li><a href="../../../repay-loans/forgiveness-cancellation/teacher.html" class="ise-megamenu-link-level3">Teacher Loan Forgiveness</a></li><li><a href="../../../repay-loans/forgiveness-cancellation/disability-discharge.html" class="ise-megamenu-link-level3">Total and Permanent Disability Discharge</a></li><li><a href="../../../repay-loans/forgiveness-cancellation/death.html" class="ise-megamenu-link-level3">Discharge Due to Death</a></li><li><a href="../../../repay-loans/forgiveness-cancellation/borrower-defense.html" class="ise-megamenu-link-level3">Borrower Defense to Repayment</a></li><li><a href="../../../repay-loans/forgiveness-cancellation/charts.html" class="ise-megamenu-link-level3">Forgiveness, Cancellation, and Discharge Charts</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../repay-loans/default.html" class="ise-megamenu-link-level2">Understanding Default</a><a href="../../../repay-loans/default.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../repay-loans/default/avoid.html" class="ise-megamenu-link-level3">Avoiding Default</a></li><li><a href="../../../repay-loans/default/collections.html" class="ise-megamenu-link-level3">Collections</a></li><li><a href="../../../repay-loans/default/get-out.html" class="ise-megamenu-link-level3">Getting out of Default</a></li></ul></li></ul><ul class="ise-megamenu-level2-ul"><li class="expanded"><a href="../../../repay-loans/disputes.html" class="ise-megamenu-link-level2">Resolving Disputes</a><a href="../../../repay-loans/disputes.html" class="ise-megamenu-sub-arrow"><img src="../../../sites/all/modules/ise_megamenu/menu-right-hover.png" alt="Expand menu" /></a><ul class="ise-megamenu-level3-ul"><li><a href="../../../repay-loans/disputes/prepare.html" class="ise-megamenu-link-level3">Getting Prepared Before Seeking Help</a></li></ul></li></ul></div></div><div class="ise-megamenu-dropdown-feature clearfix">
+            <aside class="promo-tile" role="complementary">
+              <div class="header">
+                <h3>Repayment Estimator</h3>
+              </div>
+              <div class="promo-content">
+                <p>Estimate your monthly loan payments and evaluate repayment plan options.  </p>
+              </div>
+              <a href="https://studentloans.gov/myDirectLoan/mobile/repayment/repaymentEstimator.action" title="Learn more about Repayment Estimator"><strong>Learn more</strong></a>
+              <div class="icon"></div>
+              <div class="circle"></div>
+            </aside></div></div></div></li></ul>    </div>
+  </div>
+</div>  </div>
+</div>
+  </div>
+</div><div id="zone-header-wrapper" class="zone-wrapper zone-header-wrapper clearfix">  
+  <div id="zone-header" class="zone zone-header clearfix container-12">
+    <div class="grid-6 region region-header-first" id="region-header-first">
+  <div class="region-inner region-header-first-inner">
+    <div class="block block-block block-7 block-block-7 odd block-without-title" id="block-block-7">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <script language="javascript" id="_fed_an_ua_tag" src="../../sites/all/themes/ise/js/DAP-UA.js@agency=ED&amp;subagency=FSA"></script>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
+  <div id="zone-preface" class="zone zone-preface clearfix container-12">    
+          <div id="breadcrumb" class="grid-12"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="../../../index.html">Home</a> » <a href="../../../repay-loans.html" title="How to Pay | Repayment Plans | Solve Problems">How to Repay Your Loans</a> » <a href="../../../repay-loans/understand.html">Understanding Repayment</a> » <a href="../../../repay-loans/understand/plans.html">Repayment Plans</a> » Income-Driven Plans</div></div>
+        
+        <a id="main-content"></a>
+    <div class="grid-12 region region-preface-first" id="region-preface-first">
+  <div class="region-inner region-preface-first-inner">
+    <div class="block block-views block-preface-block block-views-preface-block odd block-without-title" id="block-views-preface-block">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-preface view-id-preface view-display-id-block view-dom-id-2213c8744e2b9b81a0e3881d0a56a314">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last clearfix">
+      
+  <span class="views-field views-field-field-preface-text">        <span class="field-content"> <h1>If your federal student loan payments are high compared to your income, you may want to repay your loans under an income-driven repayment plan.</h1>
+<p>Most federal student loans are eligible for at least one income-driven repayment plan. If your income is low enough, your payment could be as low as $0 per month.</p>
+<p> </p>
+ </span>  </span>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+    <div class="grid-8 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+                <h1 class="title" id="page-title">Income-Driven Plans</h1>
+                <div class="tabs clearfix"></div>        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <article class="node node-page node-published node-not-promoted node-not-sticky author-mindy odd clearfix" id="node-page-594">
+
+
+
+    
+    
+    
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"> <p>An income-driven repayment plan sets your monthly student loan payment at an amount that is intended to be affordable based on your income and family size. We offer four income-driven repayment plans:</p>
+<ul><li>Revised Pay As You Earn Repayment Plan (REPAYE Plan)</li>
+<li>Pay As You Earn Repayment Plan (PAYE Plan)</li>
+<li>Income-Based Repayment Plan (IBR Plan)</li>
+<li>Income-Contingent Repayment Plan (ICR Plan)</li>
+</ul><p>If you’d like to repay your federal student loans under an income-driven plan, you need to fill out an application.</p>
+<p class="rtecenter"><a href="https://studentloans.gov/myDirectLoan/redirect.action?app=idr&amp;from=15SPRRPMT&amp;id=500" style="line-height: 20.7999992370605px;" target="_blank"><img alt="" class="attr__format__media_large attr__title__apply img__fid__1081 img__view_mode__media_large media-image now" src="../../../sites/default/files/styles/large/public/applynow.png" style="height:42px; width:228px" width="228" height="42" /></a><br />
+ </p>
+<span class="highlight">
+<p>Why pay for help with your federal student loans when your <cite title="A company that collects payments, responds to customer service inquiries, and performs other administrative tasks associated with maintaining a federal student loan on behalf of a lender. If you're unsure of who your federal student loan servicer is, you can look it up in My Federal Student Aid . https://studentaid.ed.gov/node/77">loan servicer</cite> will help you for FREE? Contact your servicer to apply for income-driven repayment plans, student <cite title="The cancellation of all or some portion of your remaining federal student loan balance. If your loan is forgiven, you are no longer responsible for repaying that remaining portion of the loan. ">loan forgiveness</cite>, and more. <a href="../../../repay-loans/understand/servicers.html" title="Loan Servicers">Learn more about loan servicers</a>.</p>
+<p>If you're seeking <a href="../../../repay-loans/forgiveness-cancellation/public-service.html">Public Service Loan Forgiveness</a>, you should repay your federal student loans under an income-driven repayment plan.</p>
+</span>
+<p><a class="anchor" href="index.html#monthly-payments">How is my monthly payment amount calculated under an income-driven repayment plan?</a><br /><a class="anchor" href="index.html#estimate">How do I estimate my payment amount?</a><br /><a class="anchor" href="index.html#repayment-period">How long will I be in repayment under each plan?</a><br /><a class="anchor" href="index.html#eligibility">Am I eligible for income-driven repayment?</a><br /><a class="anchor" href="index.html#consistent-payments">Will I always pay the same amount each month under an income-driven repayment plan?</a><br /><a class="anchor" href="index.html#eligible-loans">What types of federal student loans can I repay under an income-driven repayment plan?</a><br /><a class="anchor" href="index.html#pros-cons">Is an income-driven repayment plan right for me?</a><br /><a class="anchor" href="index.html#choose-plan">How do I decide which income-driven repayment plan to choose?</a><br /><a class="anchor" href="index.html#apply">How do I apply for an income-driven repayment plan?</a><br /><a class="anchor" href="index.html#help-repaying">What other options do I have if I need help repaying my student loans?</a><br /><a class="anchor" href="index.html#more-info">Where can I learn more about the income-driven repayment plans?</a></p>
+<hr /><h2><a id="monthly-payments" name="monthly-payments"></a>How is my monthly payment amount calculated under an income-driven repayment plan?</h2>
+<p>Generally, your payment amount under an income-driven repayment plan is a percentage of your <cite title="For Income-Based Repayment, Pay As You Earn, and loan rehabilitation, discretionary income is the difference between your income and 150 percent of the poverty guideline for your family size and state of residence.For Income-Contingent Repayment, discretionary income is the difference between your income and 100 percent of the poverty guideline for your family size and state of residence.The poverty guidelines are maintained by the U.S. Department of Health and Human Services and are available at www.aspe.hhs.gov/poverty . http://www.aspe.hhs.gov/poverty/index.cfm">discretionary income</cite>. The percentage is different depending on the plan. The chart below shows how payment amounts are determined under each income-driven plan. Depending on your income and family size, you may have no monthly payment at all.</p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><th>
+<p><strong>Income-Driven Repayment Plan</strong></p>
+</th>
+<th>
+<p><strong>Payment Amount</strong></p>
+</th>
+</tr><tr><td>
+<p>REPAYE Plan</p>
+</td>
+<td>
+<p>Generally 10 percent of your discretionary income.</p>
+</td>
+</tr><tr><td>
+<p>PAYE Plan</p>
+</td>
+<td>
+<p>Generally 10 percent of your discretionary income, but never more than the 10-year Standard Repayment Plan amount</p>
+</td>
+</tr><tr><td>
+<p>IBR Plan</p>
+</td>
+<td>
+<p>Generally 10 percent of your discretionary income if you're a <cite title="Someone who has no outstanding balance on a Direct Loan or Federal Family Education Loan (FFEL) Program loan when he or she receives a Direct Loan or FFEL Program loan on or after a specific date.">new borrower</cite> on or after July 1, 2014*, but never more than the 10-year Standard Repayment Plan amount</p>
+<p>Generally 15 percent of your discretionary income if you're not a new borrower on or after July 1, 2014, but never more than the 10-year Standard Repayment Plan amount</p>
+</td>
+</tr><tr><td>
+<p>ICR Plan</p>
+</td>
+<td>
+<p>The lesser of the following:</p>
+<ul><li>20 percent of your discretionary income or</li>
+<li>what you would pay on a repayment plan with a fixed payment over the course of 12 years, adjusted according to your income</li>
+</ul></td>
+</tr></tbody></table><p>*For the IBR Plan, you're considered a new borrower on or after July 1, 2014, if you had no outstanding balance on a <cite title="The federal program that provides loans to eligible student and parent borrowers under Title IV of the Higher Education Act. Funds are provided by the federal government to eligible borrowers through participating schools.">William D. Ford Federal Direct Loan (Direct Loan) Program</cite> loan or <cite title="Under this program, private lenders provided loans to students that were guaranteed by the federal government. These loans included Subsidized Federal Stafford Loans, Unsubsidized Federal Stafford Loans, FFEL PLUS Loans, and FFEL Consolidation Loans. Federal student loans under the FFEL Program are no longer made by private lenders. Instead, all new federal student loans come directly from the U.S. Department of Education under the Direct Loan Program.">Federal Family Education Loan (FFEL) Program</cite> loan when you received a Direct Loan on or after July 1, 2014. (Because no new <cite title="Federal Family Education Loan Program">FFEL Program</cite> loans have been made since June 30, 2010, only Direct Loan borrowers can qualify as new borrowers on or after July 1, 2014.)</p>
+<p><a class="top" href="index.html#page">Top</a></p>
+<div> </div>
+<hr /><h2><a id="estimate" name="estimate"></a>How do I estimate my payment amount?</h2>
+<p>Use our <a href="https://studentloans.gov/myDirectLoan/mobile/repayment/repaymentEstimator.action">Repayment Estimator</a>. The Repayment Estimator provides a comparison of estimated monthly payment amounts for all <cite title="A loan funded by the federal government to help pay for your education. A federal student loan is borrowed money you must repay with interest.">federal student loan</cite> repayment plans, including income-driven plans. This comparison is important because the income-driven plans may not provide you with the lowest payment amount based on your individual circumstances. Your payment may be lower under another repayment plan.</p>
+<p>To view sample payment amounts, look at the tables below.</p>
+<p>The following tables provide repayment estimates under the traditional and income-driven repayment plans. These figures are estimates based on an <cite title="The percentage at which interest is calculated on your loan(s).">interest rate</cite> of 6%, the average Direct Loan interest rate for undergraduate and graduate borrowers. The figures also assume a family size of one, that you live in the continental U.S., and that your income increases five percent each year. Various factors—including your interest rate, your loan debt, your income, and whether (and how quickly) your income rises—may cause your repayment to differ from the estimates shown in these tables. These figures use the 2016 Poverty Guidelines issued by the U.S. Department of Health and Human Services and Income Percentage Factors issued by the U.S. Department of Education.</p>
+<p><strong>Undergraduate Loan Debt* of $30,000 in Direct Unsubsidized Loans and Starting Income of $25,000</strong>
+<p style="display:none;"> </p>
+<table border="1" cellpadding="0" cellspacing="0"><thead><tr><th scope="col" style="width: 98px;">
+<p><strong>Repayment Plan </strong>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Initial Payment</strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Final Payment</strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Time in Repayment</strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Total Paid </strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Loan Forgiveness </strong></p>
+</th>
+</tr></thead><tbody><tr><td style="width:98px;">
+<p>Standard</p>
+</td>
+<td style="width:98px;">
+<p>$333</p>
+</td>
+<td style="width:98px;">
+<p>$333</p>
+</td>
+<td style="width:98px;">
+<p>10 years</p>
+</td>
+<td style="width:98px;">
+<p>$39,967</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>Graduated</p>
+</td>
+<td style="width:98px;">
+<p>$190</p>
+</td>
+<td style="width:98px;">
+<p>$571</p>
+</td>
+<td style="width:98px;">
+<p>10 years</p>
+</td>
+<td style="width:98px;">
+<p>$42,636</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>Extended-Fixed</p>
+</td>
+<td style="width:98px;">
+<p>Ineligible</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>Extended-Graduated</p>
+</td>
+<td style="width:98px;">
+<p>Ineligible</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>REPAYE</p>
+</td>
+<td style="width:98px;">
+<p>$60</p>
+</td>
+<td style="width:98px;">
+<p>$296</p>
+</td>
+<td style="width:98px;">
+<p>20 years</p>
+</td>
+<td style="width:98px;">
+<p>$32,358</p>
+</td>
+<td style="width:98px;">
+<p>$24,253</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>PAYE &amp; IBR (new borrowers)</p>
+</td>
+<td style="width:98px;">
+<p>$60</p>
+</td>
+<td style="width:98px;">
+<p>$296</p>
+</td>
+<td style="width:98px;">
+<p>20 years</p>
+</td>
+<td style="width:98px;">
+<p>$39,517</p>
+</td>
+<td style="width:98px;">
+<p>$27,823</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>IBR (not new borrowers)</p>
+</td>
+<td style="width:98px;">
+<p>$90</p>
+</td>
+<td style="width:98px;">
+<p>$333</p>
+</td>
+<td style="width:98px;">
+<p>21 years, 10 months</p>
+</td>
+<td style="width:98px;">
+<p>$61,006</p>
+</td>
+<td style="width:98px;">
+<p>$0</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>ICR</p>
+</td>
+<td style="width:98px;">
+<p>$195</p>
+</td>
+<td style="width:98px;">
+<p>$253</p>
+</td>
+<td style="width:98px;">
+<p>19 years, 6 months</p>
+</td>
+<td style="width:98px;">
+<p>$52,233</p>
+</td>
+<td style="width:98px;">
+<p>$0</p>
+</td>
+</tr></tbody></table><p>*Loan debt does not include any <cite title="The process of combining one or more loans into a single new loan.">consolidation</cite> loans. </p>
+<p><strong>Combined Undergraduate &amp; Graduate Loan Debt* of $60,000 in Direct Unsubsidized Loans and Starting Income of $40,000</strong></p>
+<table border="1" cellpadding="0" cellspacing="0"><thead><tr><th scope="col" style="width: 98px;">
+<p><strong>Repayment Plan </strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Initial Payment</strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Final Payment</strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Time in Repayment</strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Total Paid </strong></p>
+</th>
+<th scope="col" style="width: 98px;">
+<p><strong>Loan Forgiveness </strong></p>
+</th>
+</tr></thead><tbody><tr><td style="width:98px;">
+<p>Standard</p>
+</td>
+<td style="width:98px;">
+<p>$666</p>
+</td>
+<td style="width:98px;">
+<p>$666</p>
+</td>
+<td style="width:98px;">
+<p>10 years</p>
+</td>
+<td style="width:98px;">
+<p>$79,935</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>Graduated</p>
+</td>
+<td style="width:98px;">
+<p>$381</p>
+</td>
+<td style="width:98px;">
+<p>$1,143</p>
+</td>
+<td style="width:98px;">
+<p>10 years</p>
+</td>
+<td style="width:98px;">
+<p>$85,272</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>Extended-Fixed</p>
+</td>
+<td style="width:98px;">
+<p>$387</p>
+</td>
+<td style="width:98px;">
+<p>$387</p>
+</td>
+<td style="width:98px;">
+<p>25 years</p>
+</td>
+<td style="width:98px;">
+<p>$115,974</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>Extended-Graduated</p>
+</td>
+<td style="width:98px;">
+<p>$300</p>
+</td>
+<td style="width:98px;">
+<p>$582</p>
+</td>
+<td style="width:98px;">
+<p>25 years</p>
+</td>
+<td style="width:98px;">
+<p>$126,173</p>
+</td>
+<td style="width:98px;">
+<p>N/A</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>REPAYE</p>
+</td>
+<td style="width:98px;">
+<p>$185</p>
+</td>
+<td style="width:98px;">
+<p>$612</p>
+</td>
+<td style="width:98px;">
+<p>25 years</p>
+</td>
+<td style="width:98px;">
+<p>$131,444</p>
+</td>
+<td style="width:98px;">
+<p>$0</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>PAYE &amp; IBR (new borrowers)</p>
+</td>
+<td style="width:98px;">
+<p>$185</p>
+</td>
+<td style="width:98px;">
+<p>$612</p>
+</td>
+<td style="width:98px;">
+<p>20 years</p>
+</td>
+<td style="width:98px;">
+<p>$97,705</p>
+</td>
+<td style="width:98px;">
+<p>$41,814</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>IBR (not new borrowers)</p>
+</td>
+<td style="width:98px;">
+<p>$277</p>
+</td>
+<td style="width:98px;">
+<p>$666</p>
+</td>
+<td style="width:98px;">
+<p>18 years, 3 months</p>
+</td>
+<td style="width:98px;">
+<p>$107,905</p>
+</td>
+<td style="width:98px;">
+<p>$0</p>
+</td>
+</tr><tr><td style="width:98px;">
+<p>ICR</p>
+</td>
+<td style="width:98px;">
+<p>$469</p>
+</td>
+<td style="width:98px;">
+<p>$588</p>
+</td>
+<td style="width:98px;">
+<p>13 years, 9 months</p>
+</td>
+<td style="width:98px;">
+<p>$89,468</p>
+</td>
+<td style="width:98px;">
+<p>$0</p>
+</td>
+</tr></tbody></table><p>*Loan debt does not include any consolidation loans. </p>
+<p><a class="top" href="index.html#page">Top</a></p>
+<div> </div>
+<hr /><h2><a id="repayment-period" name="repayment-period"></a>How long will I be in repayment under each plan?</h2>
+<p>Income-driven repayment plans have different repayment periods.</p>
+<div>
+<table border="1" cellpadding="0" cellspacing="0"><tbody><tr><th>
+<p><strong>Income-Driven Repayment Plan</strong>
+</th>
+<th>
+<p><strong>Repayment Period</strong>
+</th>
+</tr><tr><td>
+<p>REPAYE Plan</p>
+</td>
+<td>
+<p>20 years if all loans you’re repaying under the plan were received for undergraduate study</p>
+<p>25 years if any loans you’re repaying under the plan were received for graduate or professional study</p>
+</td>
+</tr><tr><td>
+<p>PAYE Plan</p>
+</td>
+<td>
+<p>20 years</p>
+</td>
+</tr><tr><td>
+<p>IBR Plan</p>
+</td>
+<td>
+<p>20 years if you’re a new borrower on or after July 1, 2014</p>
+<p>25 years if you’re not a new borrower on or after July 1, 2014</p>
+</td>
+</tr><tr><td>
+<p>ICR Plan</p>
+</td>
+<td>
+<p>25 years</p>
+</td>
+</tr></tbody></table></div>
+<p>Under all four plans, any remaining loan balance is forgiven if your federal student loans aren't fully repaid at the end of the repayment period. For any income-driven repayment plan, periods of economic hardship <cite title="A postponement of payment on a loan that is allowed under certain conditions and during which interest does not accrue on Direct Subsidized Loans, Subsidized Federal Stafford Loans, and Federal Perkins Loans. All other federal student loans that are deferred will continue to accrue interest. Any unpaid interest that accrued during the deferment period may be added to the principal balance (capitalized) of the loan(s).">deferment</cite> and periods of repayment under certain other repayment plans will count toward your total repayment period. Whether you will have a balance left to be forgiven at the end of your repayment period depends on a number of factors, such as how quickly your income rises and how large your income is relative to your debt. Because of these factors, you may fully repay your loan before the end of your repayment period.</p>
+<p>If you’re making payments under an income-driven repayment plan and also working toward loan forgiveness under the <a href="../../../repay-loans/forgiveness-cancellation/public-service.html">Public Service Loan Forgiveness (PSLF) Program</a>, you may qualify for forgiveness of any remaining loan balance after you've made 10 years of qualifying payments, instead of 20 or 25 years. Qualifying payments for the PSLF Program include payments made under any of the income-driven repayment plans.</p>
+<p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="eligibility" name="eligibility"></a>Am I eligible for income-driven repayment?</h2>
+<p><a class="anchor" href="index.html#repaye">REPAYE Plan</a><br /><a class="anchor" href="index.html#ibr-pay-as-you-earn">PAYE and IBR Plans</a><br /><a class="anchor" href="index.html#icr">ICR Plan</a>
+<h3><a id="repaye" name="repaye"></a>REPAYE Plan</h3>
+<p>Any borrower with <a href="index.html#eligible-loans">eligible federal student loans</a> can make payments under this plan.</p>
+<h3><a id="ibr-pay-as-you-earn" name="ibr-pay-as-you-earn"></a>PAYE and IBR Plans</h3>
+<p>Each of these plans has an eligibility requirement you must meet to qualify for the plan. To qualify, the payment you would be required to make under the PAYE or IBR plan (based on your income and family size) must be less than what you would pay under the <a href="../../../repay-loans/understand/plans/standard.html">Standard Repayment Plan</a> with a 10-year repayment period.</p>
+<ul><li>If the amount you would have to pay under the PAYE or IBR plan (based on your income and family size) is more than what you would have to pay under the 10-year Standard Repayment Plan, you wouldn't benefit from having your monthly payment amount based on your income, so you don't qualify.</li>
+<li>Generally, you'll meet this requirement if your federal student loan debt is higher than your annual discretionary income or represents a significant portion of your annual income.</li>
+</ul><p>In addition to meeting the requirement described above, to qualify for the PAYE Plan you must also be a new borrower as of Oct. 1, 2007, and must have received a <cite title="Payment of federal student aid funds to the borrower by the school. Students generally receive their federal student loan in two or more disbursements.">disbursement</cite> of a Direct Loan on or after Oct. 1, 2011. You're a new borrower if you had no outstanding balance on a Direct Loan or FFEL Program loan when you received a Direct Loan or FFEL Program loan on or after Oct. 1, 2007.</p>
+<h3><a id="icr" name="icr"></a>ICR Plan</h3>
+<p>Any borrower with <a href="index.html#eligible-loans">eligible federal student loans</a> can make payments under this plan.</p>
+<p>This plan is the only available income-driven repayment option for parent <cite title="A loan available to graduate students and parents of dependent undergraduate students for which the borrower is fully responsible for paying the interest regardless of the loan status.">PLUS loan</cite> borrowers. Although PLUS loans made to parents can’t be repaid under any of the income-driven repayment plans (including the ICR Plan), parent borrowers may consolidate their Direct PLUS Loans or Federal PLUS Loans into a <cite title="A federal loan made by the U.S. Department of Education that allows you to combine one or more federal student loans into one new loan. As a result of consolidation, you will have to make only one payment each month on your federal loans, and the amount of time you have to repay your loan will be extended. ">Direct Consolidation Loan</cite> and then repay the new consolidation loan under the ICR Plan (though not under any other income-driven plan).</p>
+<p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="consistent-payments" name="consistent-payments"></a>Will I always pay the same amount each month under an income-driven repayment plan?</h2>
+<p>No. Under all of the income-driven repayment plans, your required monthly payment amount may increase or decrease if your income or family size changes from year to year. Each year you must “recertify” your income and family size. This means that you must provide your loan servicer with updated income and family size information so that your servicer can recalculate your payment. You must do this even if there has been no change in your income or family size.</p>
+<p>Your loan servicer will send you a reminder notice when it’s time for you to recertify. To recertify, you must submit another income-driven repayment plan application. On the application, you’ll be asked to select the reason you’re submitting the application. Respond that you are submitting documentation of your income for the annual recalculation of your payment amount.</p>
+<p>Although you’re required to recertify your income and family size only once each year, if your income or family size changes significantly before your annual certification date (for example, due to loss of employment), you can submit updated information and ask your servicer to recalculate your payment amount at any time. To do this, submit a new application for an income-driven repayment plan. When asked to select the reason for submitting the application, respond that you are submitting documentation early because you want your servicer to recalculate your payment immediately.</p>
+<h3>PAYE and IBR Plans</h3>
+<p>Under these plans, your monthly payment amount will be based on your income and family size when you first begin making payments, and at any time when your income is low enough that your calculated monthly payment amount would be less than the amount you would have to pay under the 10-year Standard Repayment Plan.</p>
+<p>If your income ever increases to the point that your calculated monthly payment amount would be more than what you would have to pay under the 10-year Standard Repayment Plan, you’ll remain on the PAYE or IBR plan, but your payment will no longer be based on your income. Instead, your required monthly payment will be the amount you would pay under the 10-year Standard Repayment Plan, based on the loan amount you owed when you first began repayment under the PAYE or IBR plan. Even if your income continues to increase, your monthly payment will never be more than the 10-year Standard Repayment Plan amount.</p>
+<p>During any period when your monthly payment is not based on your income, you still have the option of recertifying your income and family size. If you recertify and your income or family size changes so that your calculated monthly payment would once again be less than the 10-year Standard Repayment Plan amount, your servicer will recalculate your payment and you’ll return to making payments that are based on your income.</p>
+<h3>REPAYE and ICR Plans</h3>
+<p>Under the REPAYE and ICR Plans, your payment is always based on your income and family size, regardless of any changes in your income. This means that if your income increases over time, in some cases your payment may be higher than the amount you would have to pay under the 10-year Standard Repayment Plan.</p>
+<p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="eligible-loans" name="eligible-loans"></a>What types of federal student loans can I repay under an income-driven repayment plan?</h2>
+<p>The chart below shows the types of federal student loans that you can repay under each of the income-driven repayment plans.<strong> </strong>
+<table border="1" cellpadding="0" cellspacing="0"><thead><tr><th>
+<p><strong>Loan Type</strong>
+</th>
+<th>
+<p><strong>REPAYE Plan</strong></p>
+</th>
+<th>
+<p><strong>PAYE Plan</strong></p>
+</th>
+<th>
+<p><strong>IBR Plan</strong></p>
+</th>
+<th>
+<p><strong>ICR Plan</strong></p>
+</th>
+</tr></thead><tbody><tr><td>
+<p>Direct Subsidized Loans</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+</tr><tr><td>
+<p>Direct Unsubsidized Loans</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+</tr><tr><td>
+<p>Direct PLUS Loans made to graduate or professional students</p>
+<p> </p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+</tr><tr><td>
+<p>Direct PLUS Loans made to parents</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>Direct Consolidation Loans that did not repay any PLUS loans made to parents</p>
+<p> </p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+</tr><tr><td>
+<p>Direct Consolidation Loans that repaid PLUS loans made to parents</p>
+<p> </p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+</tr><tr><td>
+<p>Subsidized Federal Stafford Loans (from the FFEL Program)</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>Unsubsidized Federal Stafford Loans (from the FFEL Program)</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>FFEL PLUS Loans made to graduate or professional students</p>
+<p> </p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>FFEL PLUS Loans made to parents</p>
+<p> </p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>FFEL Consolidation Loans that did not repay any PLUS loans made to parents</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>FFEL Consolidation Loans that repaid PLUS loans made to parents</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Not eligible</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr><tr><td>
+<p>Federal Perkins Loans</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+<td>
+<p>Eligible if consolidated*</p>
+</td>
+</tr></tbody></table><p>*If a loan type is listed as “eligible if consolidated,” this means that if you consolidate that loan type into a Direct Consolidation Loan, you can then repay the consolidation loan under the income-driven plan. For example, only Direct Loans may be repaid under the REPAYE, PAYE, and ICR plans. However, if you consolidate a FFEL Program Loan or <cite title="A federal student loan, made by the recipient's school, for undergraduate and graduate students who demonstrate financial need. ">Federal Perkins Loan</cite> into a Direct Consolidation Loan, you may then be able to repay the Direct Consolidation Loan under the REPAYE, PAYE, and ICR Plan (depending on the type of loan that you consolidate). Note that consolidation is not the right choice for all borrowers or all loan types. In particular, you may lose certain loan benefits if you consolidate a Federal Perkins Loan. <a href="../../../repay-loans/consolidation.html">Find out more about loan consolidation</a>.</p>
+<p>Only federal student loans can be repaid under the income-driven plans. Private student loans are not eligible.</p>
+<p><a class="top" href="index.html#page">Top</a></p>
+<div> </div>
+<hr /><h2><a id="pros-cons" name="pros-cons"></a>Is an income-driven repayment plan right for me?</h2>
+<p>Income-driven repayment plans usually lower your federal student loan payments. However, whenever you make lower payments or extend your repayment period, you will likely pay more in interest over time—sometimes significantly more. In addition, under current Internal Revenue Service (IRS) rules, you may be required to pay income tax on any amount that's forgiven if you still have a remaining balance at the end of your repayment period.</p>
+<p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="choose-plan" name="choose-plan"></a>How do I decide which income-driven repayment plan to choose?</h2>
+<p>If you’ve decided that an income-driven repayment plan is right for you, you’ll want to choose the plan that provides the most benefit to you based on your individual circumstances. Although all four income-driven plans allow you to make a monthly payment based on your income, the plans differ in terms of who qualifies, how much you have to pay each month, the length of the repayment period, and the types of loans that can be repaid under the plan.</p>
+<p>If you have only Direct Loans, you can choose from all four income-driven repayment plans. If you’re not sure which plan to choose, you have the option of requesting the income-driven plan that provides the lowest payment amount. Your servicer will determine which plans you qualify for and will then place you on the plan with the lowest monthly payment.  </p>
+<p>If you have FFEL Program loans, your only income-driven repayment plan option is the IBR Plan. However, if you consolidate your FFEL Program loans into a Direct Consolidation Loan, you’ll then have access to the REPAYE, PAYE, and ICR plans. <a href="../../../repay-loans/consolidation.html">Find out more about loan consolidation</a>.</p>
+<p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="apply" name="apply"></a>How do I apply for an income-driven repayment plan?</h2>
+<p>Before you apply for an income-driven repayment plan, contact your loan servicer if you have any questions. Your loan servicer will help you decide whether one of these plans is right for you.</p>
+<p>To apply, you must submit an application called the <a href="https://studentloans.gov/myDirectLoan/redirect.action?app=idr&amp;from=15SPRRPMT&amp;id=500#" target="_blank">Income-Driven Repayment Plan Request</a>. You can submit the application online at StudentLoans.gov or on a paper form, which you can get from your loan servicer. The application allows you to select an income-driven repayment plan by name, or to request that your loan servicer determine what income-driven plan or plans you qualify for, and to place you on the income-driven plan with the lowest monthly payment amount.</p>
+<p>When you apply, you’ll be asked to provide income information that will be used to determine your eligibility for the PAYE or IBR plans and to calculate your monthly payment amount under all income-driven repayment plans. This may be either your <cite title="Your or your family's wages, salaries, interest, dividends, etc., minus certain deductions from income as reported on a federal income tax return. Commonly referred to as AGI.">adjusted gross income (AGI)</cite> or alternative documentation of income.</p>
+<p>Your AGI will be used if</p>
+<ul><li>you filed a federal income tax return in the past two years, and</li>
+<li>your current income isn’t significantly different from the income reported on your most recent federal income tax return.</li>
+</ul><p>You can provide your AGI in one of the following ways:</p>
+<ul><li>Apply using the <a href="https://studentloans.gov/myDirectLoan/redirect.action?app=idr&amp;from=15SPRRPMT&amp;id=500#" target="_blank">online Income-Driven Repayment Plan Request</a> and use the IRS Data Retrieval Tool in the application to transfer income information from your federal income tax return.</li>
+<li>Use the paper Income-Driven Repayment Plan Request and provide a paper copy of your most recently filed federal income tax return or IRS tax return transcript.</li>
+</ul><p>If you haven’t filed a federal income tax return in the past two years, or if your current income is significantly different from the income reported on your most recent federal income tax return (for example, if you lost your job or have experienced a drop in income), alternative documentation of your income will be used to determine your eligibility and calculate your monthly payment amount. You can provide alternative documentation in one of the following ways:</p>
+<ul><li>If you currently receive taxable income, you must submit a paper Income-Driven Repayment Plan Request with alternative documentation of your income, such as a pay stub.</li>
+<li>If you currently don’t have any income or if you receive only untaxed income, you can indicate that on the online or paper application. In this case, you’re not required to supply further documentation of your income.</li>
+</ul><p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="help-repaying" name="help-repaying"></a>What other options do I have if I need help repaying my student loans?</h2>
+<p>If an income-driven repayment plan isn’t right for you, contact your loan servicer to discuss other repayment options. You may be able to extend your repayment period through the <a href="../../../repay-loans/understand/plans/extended.html">Extended Repayment Plan</a> or through <a href="../../../repay-loans/consolidation.html">loan consolidation</a>. You may also be able to temporarily suspend repayment through a <a href="../../../repay-loans/deferment-forbearance.html">deferment or forbearance</a>.</p>
+<p><a class="top" href="index.html#page">Top</a>
+<div> </div>
+<hr /><h2><a id="more-info" name="more-info"></a>Where can I learn more about the income-driven repayment plans?</h2>
+<p>Want more information about the income-driven repayment plans? <a href="../../../sites/default/files/income-driven-repayment-q-and-a.pdf" target="_blank">Browse the <em>Income-Driven Repayment Plans: Frequently Asked Questions</em></a>.</p>
+<p><a class="top" href="index.html#page">Top</a>
+ </div></div></div>  </div>
+  
+  <div class="clearfix">
+          <nav class="links node-links clearfix"><ul class="links inline"><li class="forward_link first last"><a href="../../forward@path=repay-loans%252Funderstand%252Fplans%252Fincome-driven.html" title="Forward this page to a friend" class="forward-page"><img class="forward-icon" src="../../../sites/all/modules/forward/forward.gif" alt="" /></a></li></ul></nav>
+    
+      </div>
+
+
+
+
+
+
+</article>
+    </div>
+  </div>
+</div>      </div>
+</div>
+<aside class="grid-4 region region-sidebar-second" id="region-sidebar-second">
+  <div class="region-inner region-sidebar-second-inner">
+    <section class="block block-views block-ise-quick-resources-block-1 block-views-ise-quick-resources-block-1 odd" id="block-views-ise-quick-resources-block-1">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Quick Links</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-ise-quick-resources view-id-ise_quick_resources view-display-id-block_1 view-dom-id-cb8b54e78dd67d8acf2a5f732996df54">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-field-quicklink-1">        <div class="field-content"><a href="../../../repay-loans/understand/plans/standard.html">Standard Plan</a></div>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-field-quicklink-1">        <div class="field-content"><a href="../../../repay-loans/understand/plans/graduated.html">Graduated Plan</a></div>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-field-quicklink-1">        <div class="field-content"><a href="../../../repay-loans/understand/plans/extended.html">Extended Plan</a></div>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-field-quicklink-1">        <div class="field-content"><a href="../../../repay-loans/consolidation.html">Loan Consolidation</a></div>  </div></li>
+          <li class="views-row views-row-5 views-row-odd">  
+  <div class="views-field views-field-field-quicklink-1">        <div class="field-content"><a href="../../../repay-loans/forgiveness-cancellation/public-service.html">Public Service Loan Forgiveness</a></div>  </div></li>
+          <li class="views-row views-row-6 views-row-even views-row-last">  
+  <div class="views-field views-field-field-quicklink-1">        <div class="field-content"><a href="../../../contact/feedback.html">Leave Us Feedback</a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section><section class="block block-views block-resources-block block-views-resources-block even" id="block-views-resources-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Resources</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-resources view-id-resources view-display-id-block view-dom-id-79a1a7dddbf4be164a1d7847a95cc3d9">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-filemime">        <span class="field-content"><a href="../../../sites/default/files/income-driven-repayment-q-and-a.pdf"><img class="file-icon" alt="Portable Document Format" src="../../sites/all/themes/ise/images/fileicons/application-pdf.png" /></a></span>  </div>  
+  <div class="views-field views-field-filename">        <span class="field-content">Income-Driven Repayment Plans: Frequently Asked Questions</span>  </div>  
+  <div class="views-field views-field-uri">        <span class="field-content"><a href="../../../sites/default/files/income-driven-repayment-q-and-a.pdf">View File</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+       <p><a href="http://get.adobe.com/reader/" frame="_blank">Download Adobe Reader</a></p>
+     </div>
+  
+  
+</div>    </div>
+  </div>
+</section><div class="block block-views block-glossary-terms-block block-views-glossary-terms-block odd block-without-title" id="block-views-glossary-terms-block">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-glossary-terms view-id-glossary_terms view-display-id-block view-dom-id-6fafe5394c1ccadc5ed03df82607949f">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-body">        <div class="field-content"><h2>Glossary</h2><span class="lexicon-term"><h4><a href="../../../glossary.html#Loan_Servicer">Loan Servicer</a></h4><span class="description"><p>A company that collects payments, responds to customer service inquiries, and performs other administrative tasks associated with maintaining a federal student loan on behalf of a lender.&nbsp;If y...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Loan_Forgiveness">Loan Forgiveness</a></h4><span class="description"><p>The cancellation of all or some portion of your remaining federal student loan balance. If your loan is forgiven, you are no longer responsible for repaying that remaining portion of the loan.&nbsp...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Discretionary_Income">Discretionary Income</a></h4><span class="description"><p>For Income-Based Repayment, Pay As You Earn, and loan rehabilitation, discretionary income is the difference between your income and 150 percent of the poverty guideline for your family size and st...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#New_Borrower">New Borrower</a></h4><span class="description"><p>Someone who has no outstanding balance on a Direct Loan or Federal Family Education Loan (FFEL) Program loan when he or she receives a Direct Loan or FFEL Program loan on or after a specific date.<...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#William_D._Ford_Federal_Direct_Loan_Direct_Loan_Program">William D. Ford Federal Direct Loan (Direct Loan) Program</a></h4><span class="description"><p>The federal program that provides loans to eligible student and parent borrowers under Title IV of the Higher Education Act. Funds are provided by the federal government to eligible borrowers throu...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Direct_Loan">Direct Loan</a></h4><span class="description"><p>A federal student loan, made through the William D. Ford Federal Direct Loan Program, for which eligible students and parents borrow directly from the U.S. Department of Education at participating ...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Federal_Family_Education_Loan_FFEL_Program">Federal Family Education Loan (FFEL) Program</a></h4><span class="description"><p>Under this program, private lenders provided loans to students that were guaranteed by the federal government. These loans included Subsidized Federal Stafford Loans, Unsubsidized Federal Stafford ...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#FFEL_Program">FFEL Program</a></h4><span class="description"><p>Federal Family Education Loan Program</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Federal_Student_Loan">Federal Student Loan</a></h4><span class="description"><p>A loan funded by the federal government to help pay for your education. A federal student loan is borrowed money you must repay with interest.</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Interest_Rate">Interest Rate</a></h4><span class="description"><p>The percentage at which interest is calculated on your loan(s).</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Consolidation">Consolidation</a></h4><span class="description"><p>The process of combining one or more loans into a single new loan.</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Deferment">Deferment</a></h4><span class="description"><p>A postponement of payment on a loan that is allowed under certain conditions and during which interest does not accrue on Direct Subsidized Loans, Subsidized Federal Stafford Loans, and Federal Per...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Disbursement">Disbursement</a></h4><span class="description"><p>Payment of federal student aid funds to the borrower by the school. Students generally receive their federal student loan in two or more disbursements.</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#PLUS_Loan">PLUS Loan</a></h4><span class="description"><p>A loan available to graduate students and parents of dependent undergraduate students for which the borrower is fully responsible for paying the interest regardless of the loan status.</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Direct_Consolidation_Loan">Direct Consolidation Loan</a></h4><span class="description"><p>A federal loan made by the U.S. Department of Education that allows you to combine one or more federal student loans into one new loan. As a result of consolidation, you will have to make only one ...</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Federal_Perkins_Loan">Federal Perkins Loan</a></h4><span class="description"><p>A federal student loan, made by the recipient's school, for undergraduate and graduate students who demonstrate financial need.&nbsp;</p></span></span><span class="lexicon-term"><h4><a href="../../../glossary.html#Adjusted_Gross_Income_AGI">Adjusted Gross Income (AGI)</a></h4><span class="description"><p>Your or your family's wages, salaries, interest, dividends, etc., minus certain deductions from income as reported on a federal income tax return. Commonly referred to as AGI.<span style="font-fami...</p></span></span></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><section class="block block-block block-2 block-block-2 even" id="block-block-2">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Contact Us</h2>
+            
+    <div class="content clearfix">
+       <p>
+	<a href="https://studentaidhelp.ed.gov/app/home/site/studentaid" target="_blank">E-mail Us</a></p>
+<p>
+	<a href="https://studentaidhelp.ed.gov/app/home/site/studentaid" target="_blank">Call Us</a> </p>
+<p>
+	<a href="../../../contact/feedback.html">Complete Our Survey</a></p>
+     </div>
+  </div>
+</section>  </div>
+</aside>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-postscript-first" id="region-postscript-first">
+  <div class="region-inner region-postscript-first-inner">
+    <div class="block block-menu block-menu-footer-menu block-menu-menu-footer-menu odd block-without-title" id="block-menu-menu-footer-menu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first expanded grid-2 top"><a href="../../../prepare-for-college.html" title="">Prepare for College</a><ul class="menu"><li class="first leaf"><a href="../../../prepare-for-college/careers.html" title="">Explore Careers</a></li><li class="leaf"><a href="../../../prepare-for-college/careers/search.html" title="">Career Search</a></li><li class="leaf"><a href="../../../prepare-for-college/checklists.1.html" title="">Checklists to Get Ready</a></li><li class="leaf"><a href="../../../prepare-for-college/choosing-schools.html" title="">Choosing a School</a></li><li class="leaf"><a href="http://nces.ed.gov/collegenavigator/" title="">School Search</a></li><li class="leaf"><a href="../../../prepare-for-college/choosing-schools/consider/costs.html" title="">Understanding College Costs</a></li><li class="leaf"><a href="../../../prepare-for-college/applying.html" title="">Applying to Schools</a></li><li class="leaf"><a href="../../../prepare-for-college/budgeting.html" title="">Budgeting</a></li><li class="last leaf"><a href="../../../prepare-for-college/help.html" title="">Finding Help</a></li></ul></li><li class="expanded grid-2 top"><a href="../../../types.html" title="">Types of Aid</a><ul class="menu"><li class="first leaf"><a href="../../../types/grants-scholarships.html" title="">Grants and Scholarships</a></li><li class="leaf"><a href="../../../types/loans.html" title="">Loans</a></li><li class="leaf"><a href="../../../types/work-study.html" title="">Work-Study Jobs</a></li><li class="leaf"><a href="../../../types/grants-scholarships/military.html" title="">Aid for Military Families</a></li><li class="last leaf"><a href="../../../types/scams.html" title="">Avoiding Scams</a></li></ul></li><li class="expanded grid-2 top"><a href="../../../eligibility.html" title="">Who Gets Aid</a><ul class="menu"><li class="first leaf"><a href="../../../eligibility/basic-criteria.html" title="">Basic Eligibility Criteria</a></li><li class="leaf"><a href="../../../eligibility/non-us-citizens.html" title="">Non-U.S. Citizens</a></li><li class="leaf"><a href="../../../eligibility/staying-eligible.html" title="">Staying Eligible</a></li><li class="last leaf"><a href="../../../eligibility/regain.html" title="">Regaining Eligibility</a></li></ul></li><li class="expanded grid-2 top"><a href="../../../fafsa.1.html" title="">FAFSA: Applying for Aid</a><ul class="menu"><li class="first leaf"><a href="../../../fafsa/estimate.html" title="">Estimate Your Aid</a></li><li class="leaf"><a href="../../../fafsa/filling-out.1.html" title="">Filling Out the FAFSA</a></li><li class="leaf"><a href="../../../fafsa/filling-out/dependency.html" title="">Dependency Status</a></li><li class="leaf"><a href="../../../fafsa/filling-out/fsaid.html" title="">The FSA ID</a></li><li class="leaf"><a href="../../../fafsa/next-steps.html" title="">Next Steps After FAFSA</a></li><li class="leaf"><a href="../../../fafsa/next-steps/correct-update.html" title="">Correcting Your FAFSA</a></li><li class="leaf"><a href="../../../fafsa/next-steps/comparing-aid-offers.html" title="">Comparing School Aid Offers</a></li><li class="last leaf"><a href="../../../fafsa/next-steps/receive-aid.html" title="">Receiving Aid</a></li></ul></li><li class="expanded grid-2 top"><a href="../../../repay-loans.html" title="">How to Repay Your Loans</a><ul class="menu"><li class="first leaf"><a href="../../../repay-loans/understand.html#how-do-i-make-my-payments" title="">Making a Payment</a></li><li class="leaf"><a href="../../../repay-loans/understand/plans.html" title="">Repayment Plans</a></li><li class="leaf"><a href="../../../repay-loans/consolidation.html" title="">Loan Consolidation</a></li><li class="leaf"><a href="../../../repay-loans/deferment-forbearance.html" title="">Deferment and Forbearance</a></li><li class="leaf"><a href="../../../repay-loans/forgiveness-cancellation.html" title="">Forgiveness, Cancellation, and Discharge</a></li><li class="leaf"><a href="../../../repay-loans/default.html" title="">Understanding Default</a></li><li class="last leaf"><a href="../../../repay-loans/disputes/prepare.html" title="">Contact the Ombudsman</a></li></ul></li><li class="last expanded grid-2 top"><a href="../../../about.html">More Info</a><ul class="menu"><li class="first leaf"><a href="../../../about.html" title="">About Us</a></li><li class="leaf"><a href="../../../contact.1.html">Contact Us</a></li><li class="leaf"><a href="../../../contact/feedback.html">Leave Us Feedback</a></li><li class="leaf"><a href="../../../glossary.html" title="">Glossary</a></li><li class="leaf"><a href="../../../resources.html">Resources</a></li><li class="leaf"><a href="../../../announcements.html" title="">Announcements</a></li><li class="leaf"><a href="../../../events.html" title="">Events</a></li><li class="leaf"><a href="../../../about/link.html">Link to Us</a></li><li class="last leaf"><a href="../../../data-center.html">Data Center</a></li></ul></li></ul>    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-10 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <div class="block block-menu block-menu-footer-links block-menu-menu-footer-links odd block-without-title" id="block-menu-menu-footer-links">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="http://www2.ed.gov/policy/gen/leg/foia/foiatoc.html" title="">FOIA</a></li>
+<li class="leaf"><a href="../../../privacy.html" title="">Privacy</a></li>
+<li class="leaf"><a href="../../../notices.html" title="">Notices</a></li>
+<li class="leaf"><a href="http://usa.gov" title="">usa.gov</a></li>
+<li class="leaf"><a href="http://www.ed.gov" title="">ed.gov</a></li>
+<li class="last leaf"><a href="http://whitehouse.gov" title="">whitehouse.gov</a></li>
+</ul>    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-2 region region-footer-second" id="region-footer-second">
+  <div class="region-inner region-footer-second-inner">
+    <div class="block block-block socialmediafooter block-1 block-block-1 odd block-without-title" id="block-block-1">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+       <p><a href="http://www.facebook.com/FederalStudentAid" target="_blank"><img alt="Facebook" src="../../../sites/all/themes/ise/images/facebook.png" width="24" height="24" /></a> <a href="http://twitter.com/FAFSA" target="_blank"><img alt="Twitter" src="../../../sites/all/themes/ise/images/twitter-2.png" width="24" height="24" /></a> <a href="http://www.youtube.com/federalstudentaid" target="_blank"><img alt="YouTube" src="../../../sites/all/themes/ise/images/youtube.png" width="24" height="24" /></a> <a href="../../../blog.html" style="display: none;"><img alt="Blog" src="../../../sites/all/themes/ise/images/blog-2.png" width="24" height="24" /></a></p>
+     </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div></footer>  </div>  <div class="region region-page-bottom" id="region-page-bottom">
+  <div class="region-inner region-page-bottom-inner">
+    <div id="fb-root"></div>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if (typeof(FB) == 'undefined') {
+  jQuery.extend(Drupal.settings, {"fb":{"ajax_event_url":"https:\/\/studentaid.ed.gov\/fb\/ajax","fb_init_settings":{"xfbml":false,"cookie":true,"oauth":true,"channelUrl":"https:\/\/studentaid.ed.gov\/fb\/channel"},"controls":"","js_sdk_url":"https:\/\/connect.facebook.net\/en_US\/all.js"}});
+  var e = document.createElement('script');
+  e.async = true;
+  e.src = Drupal.settings.fb.js_sdk_url;
+  document.getElementById('fb-root').appendChild(e);
+}
+
+
+//--><!]]>
+
+</script>
+<!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2012 Webtrends Inc.  All rights reserved. -->
+<!-- Version: 9.4.0 -->
+<!-- Tag Builder Version: 4.1  -->
+<!-- Created: 6/15/2012 6:51:02 PM -->
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="https://statse.webtrendslive.com/dcsnruornuz5bdrr6z81vzufo_4h6q/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;DCS.dcscfg=1&amp;WT.tv=9.4.0&amp;dcssip=www.studentaid.ed.gov"/></div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
+
+  </div>
+</div></body>
+</html>
