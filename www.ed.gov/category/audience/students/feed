@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>Students</title>
+ <description> </description>
+ <link>https://www.ed.gov/</link>
+ <atom:link rel="self" href="https://www.ed.gov/category/audience/students/feed" />
+ <language>en</language>
+ <pubDate>Thu, 31 Jan 2013 12:27:07 -0500</pubDate>
+ <lastBuildDate>Fri, 13 Jan 2017 14:22:18 -0500</lastBuildDate>
+ <item> <title>1098-E Tax Form</title>
+ <link>https://www.ed.gov/1098-e</link>
+ <description>Student loan interest payments are reported on the IRS Form 1098-E, Student Loan Interest Statement.
+
+If you made federal student loan payments in 2014, you may be eligible to deduct a portion of the interest you paid on your 2014 federal tax return.</description>
+ <guid isPermaLink="false">https://www.ed.gov/1098-e</guid>
+ <pubDate>Thu, 31 Jan 2013 12:27:07 EST</pubDate>
+ <source url="https://www.ed.gov/category/audience/students/feed">Students</source>
+</item>
+</channel>
+</rss>

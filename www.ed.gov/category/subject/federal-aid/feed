@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>Federal Aid</title>
+ <description> </description>
+ <link>https://www.ed.gov/</link>
+ <atom:link rel="self" href="https://www.ed.gov/category/subject/federal-aid/feed" />
+ <language>en</language>
+ <pubDate>Mon, 12 Sep 2016 15:40:17 -0400</pubDate>
+ <lastBuildDate>Mon, 26 Sep 2016 09:14:49 -0400</lastBuildDate>
+ <item> <title>Louisiana Flooding Information</title>
+ <link>https://www.ed.gov/la-flooding</link>
+ <description>The Department has established a toll-free Louisiana Flooding Hotline (1-844-348-4082) and Louisiana Flooding email address (LA_Flooding_Help@ed.gov).
+
+The purpose of the hotline and email address is to provide answers to questions, make references to helpful resources, and share information.</description>
+ <guid isPermaLink="false">https://www.ed.gov/la-flooding</guid>
+ <pubDate>Mon, 12 Sep 2016 15:40:17 EDT</pubDate>
+ <source url="https://www.ed.gov/category/subject/federal-aid/feed">Federal Aid</source>
+</item>
+ <item> <title>$3.2 Million Grant Competition to Support Teaching, Studying of Native American Languages  Funds to Aid Preservation, Revitalization of Native Languages</title>
+ <link>https://www.ed.gov/news/press-releases/32-million-grant-competition-support-teaching-studying-native-american-languages-funds-aid-preservation-revitalization-native-languages</link>
+ <description>The U.S.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/32-million-grant-competition-support-teaching-studying-native-american-languages-funds-aid-preservation-revitalization-native-languages</guid>
+ <pubDate>Fri, 25 Mar 2016 13:13:26 EDT</pubDate>
+ <source url="https://www.ed.gov/category/subject/federal-aid/feed">Federal Aid</source>
+</item>
+</channel>
+</rss>

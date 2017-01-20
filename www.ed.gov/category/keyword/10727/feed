@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>Student Loan Default Rates</title>
+ <description> </description>
+ <link>https://www.ed.gov/</link>
+ <atom:link rel="self" href="https://www.ed.gov/category/keyword/10727/feed" />
+ <language>en</language>
+ <pubDate>Wed, 28 Sep 2016 12:56:23 -0400</pubDate>
+ <lastBuildDate>Wed, 28 Sep 2016 12:56:23 -0400</lastBuildDate>
+ <item> <title>National Student Loan Cohort Default Rate Declines Steadily</title>
+ <link>https://www.ed.gov/news/press-releases/national-student-loan-cohort-default-rate-declines-steadily</link>
+ <description>The U.S. Department of Education today announced that the three-year federal student loan cohort default rate dropped from 11.8 percent to 11.3 percent for students who entered repayment between fiscal years 2012 and 2013. The trend has moved downward since FY 2010, when the cohort default rate stood at 14.7 percent.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/national-student-loan-cohort-default-rate-declines-steadily</guid>
+ <pubDate>September 28, 2016</pubDate>
+ <source url="https://www.ed.gov/category/keyword/10727/feed">Student Loan Default Rates</source>
+</item>
+ <item> <title>First Official Three-Year Student Loan Default Rates Published</title>
+ <link>https://www.ed.gov/news/press-releases/first-official-three-year-student-loan-default-rates-published</link>
+ <description>The U.S. Department of Education today released official FY 2010 two-year and official FY 2009 three-year federal student loan cohort default rates. This is the first time the Department has issued an official three-year rate, which was 13.4 percent nationally for the FY 2009 cohort, a slight decrease from the trial three-year rate of 13.8 percent for the FY 2008 cohort.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/first-official-three-year-student-loan-default-rates-published</guid>
+ <pubDate>September 28, 2012</pubDate>
+ <source url="https://www.ed.gov/category/keyword/10727/feed">Student Loan Default Rates</source>
+</item>
+</channel>
+</rss>

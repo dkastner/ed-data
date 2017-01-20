@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>GoOpen</title>
+ <description> </description>
+ <link>https://www.ed.gov/</link>
+ <atom:link rel="self" href="https://www.ed.gov/category/keyword/goopen/feed" />
+ <language>en</language>
+ <pubDate>Fri, 26 Feb 2016 12:40:52 -0500</pubDate>
+ <lastBuildDate>Fri, 18 Mar 2016 16:09:35 -0400</lastBuildDate>
+ <item> <title>U.S. Department of Education Recognizes 14 States and 40 Districts Committing to #GoOpen with Educational Resources</title>
+ <link>https://www.ed.gov/news/press-releases/us-department-education-recognizes-13-states-and-40-districts-committing-goopen-educational-resources</link>
+ <description>The U.S. Department of Education today announced the launch of 14 statewide #GoOpen initiatives committed to supporting school districts and  educators as they transition to the use of high-quality, openly-licensed  educational resources in their schools.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/us-department-education-recognizes-13-states-and-40-districts-committing-goopen-educational-resources</guid>
+ <pubDate>Fri, 26 Feb 2016 12:40:52 EST</pubDate>
+ <source url="https://www.ed.gov/category/keyword/goopen/feed">GoOpen</source>
+</item>
+ <item> <title>U.S. Department of Education Launches Campaign to Encourage Schools to #GoOpen with Educational Resources</title>
+ <link>https://www.ed.gov/news/press-releases/us-department-education-launches-campaign-encourage-schools-goopen-educational-resources</link>
+ <description>The U.S. Department of Education announced today the launch of #GoOpen, a campaign to encourage states, school  districts and educators to use openly licensed educational materials.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/us-department-education-launches-campaign-encourage-schools-goopen-educational-resources</guid>
+ <pubDate>Thu, 29 Oct 2015 13:02:36 EDT</pubDate>
+ <source url="https://www.ed.gov/category/keyword/goopen/feed">GoOpen</source>
+</item>
+</channel>
+</rss>

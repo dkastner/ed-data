@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>Data Collection</title>
+ <description> </description>
+ <link>https://www.ed.gov/</link>
+ <atom:link rel="self" href="https://www.ed.gov/category/subject/data-collection/feed" />
+ <language>en</language>
+ <pubDate>Thu, 16 Jun 2016 15:09:19 -0400</pubDate>
+ <lastBuildDate>Tue, 20 Dec 2016 18:43:31 -0500</lastBuildDate>
+ <item> <title>Education Department Announces New Data Showing FAFSA Completion by District, State</title>
+ <link>https://www.ed.gov/news/press-releases/education-department-announces-new-data-showing-fafsa-completion-district-state</link>
+ <description>The U.S. Department of  Education’s Federal Student Aid Office (FSA) today posted a series of updates  to its data center,  a collection of key performance  data on the federal student aid portfolio.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/education-department-announces-new-data-showing-fafsa-completion-district-state</guid>
+ <pubDate>Thu, 16 Jun 2016 15:09:19 EDT</pubDate>
+ <source url="https://www.ed.gov/category/subject/data-collection/feed">Data Collection</source>
+</item>
+ <item> <title>U.S. Department of Education Releases School-Level Assessment Data in Reading and Math for All Schools for 2008-09 to 2010-11</title>
+ <link>https://www.ed.gov/news/press-releases/us-department-education-releases-school-level-assessment-data-reading-and-math-all-schools-2008-09-2010-11</link>
+ <description>The U.S. Department of Education announced today the release of student performance  data in reading and math for all schools in the country for school years 2008-09, 2009-10 and 2010-11. This is the first time the Department is releasing school-level state assessment data. The data are being released  as part of the Department’s ongoing transparency efforts.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/us-department-education-releases-school-level-assessment-data-reading-and-math-all-schools-2008-09-2010-11</guid>
+ <pubDate>Thu, 31 Jan 2013 17:12:50 EST</pubDate>
+ <source url="https://www.ed.gov/category/subject/data-collection/feed">Data Collection</source>
+</item>
+ <item> <title>Education Secretary Launches United States Education Dashboard</title>
+ <link>https://www.ed.gov/news/press-releases/education-secretary-launches-united-states-education-dashboard</link>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/education-secretary-launches-united-states-education-dashboard</guid>
+ <pubDate>Mon, 24 Jan 2011 16:35:18 EST</pubDate>
+ <source url="https://www.ed.gov/category/subject/data-collection/feed">Data Collection</source>
+</item>
+</channel>
+</rss>

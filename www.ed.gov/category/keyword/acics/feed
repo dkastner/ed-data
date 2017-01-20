@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> <channel> <title>ACICS</title>
+ <description> </description>
+ <link>https://www.ed.gov/</link>
+ <atom:link rel="self" href="https://www.ed.gov/category/keyword/acics/feed" />
+ <language>en</language>
+ <pubDate>Mon, 12 Dec 2016 18:16:49 -0500</pubDate>
+ <lastBuildDate>Tue, 20 Dec 2016 11:25:03 -0500</lastBuildDate>
+ <item> <title>Education Department Establishes Enhanced Federal Aid Participation Requirements for ACICS-accredited Colleges</title>
+ <link>https://www.ed.gov/news/press-releases/education-department-establishes-enhanced-federal-aid-participation-requirements-acics-accredited-colleges</link>
+ <description>Beginning today, the U.S. Department of Education will inform colleges accredited by the Accrediting Council on Independent Colleges and Schools (ACICS) of additional operating conditions required for continued participation in the federal student aid programs.</description>
+ <guid isPermaLink="false">https://www.ed.gov/news/press-releases/education-department-establishes-enhanced-federal-aid-participation-requirements-acics-accredited-colleges</guid>
+ <pubDate>Mon, 12 Dec 2016 18:16:49 EST</pubDate>
+ <source url="https://www.ed.gov/category/keyword/acics/feed">ACICS</source>
+</item>
+ <item> <title>Important Information on the Derecognition of ACICS</title>
+ <link>https://www.ed.gov/acics</link>
+ <description>On December 12, 2016, the Secretary upheld the decision of the Senior Department Official (SDO) to cease recognition of the Accrediting Council for Independent Colleges and Schools (ACICS) as an agency that can provide schools with a seal of approval for educational quality, which in turn makes schools eligible to participate in federal student aid programs.</description>
+ <guid isPermaLink="false">https://www.ed.gov/acics</guid>
+ <pubDate>Fri, 09 Dec 2016 11:42:17 EST</pubDate>
+ <source url="https://www.ed.gov/category/keyword/acics/feed">ACICS</source>
+</item>
+</channel>
+</rss>
