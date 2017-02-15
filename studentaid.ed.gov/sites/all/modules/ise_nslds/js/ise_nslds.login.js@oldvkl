@@ -1,0 +1,1238 @@
+/**
+ * @file test
+ *
+ * JS code specific to the login process
+ */
+
+function sleep(milisecs) {
+	var CurrentTime=new Date().getTime();
+	while (CurrentTime+milisecs>=new Date().getTime()) {}
+}//End sleep routine
+
+
+function ClickLogOut() {
+
+	if (Drupal.settings.pas==true) {
+
+		//Note:  There appears to be a problem with PAS.  Any address that is not relative is being ignored (i.e. http://www.google.com).
+		//However, relative links work (i.e. "/testise/about").  We left a message for Bob Werhle about this on 01 April 2015
+		//These two lines below replace the LOGOUT routine in nslds.storage.js
+		//Oddly, if you store the cookie first, the system will ignore the re-direct.
+
+	  	PasPath=Drupal.settings.pas_base_path; 
+		PasJunction=Drupal.settings.pas_junction;
+		var PasAppId=Drupal.settings.return_app_id;
+
+
+
+   		document.cookie="not_logged_in=true";
+   		document.cookie="logged_in=false";
+
+		//SRH
+   		document.cookie="have_data=0";
+
+		target="https://"+PasPath+"/pkmslogout?appid="+PasAppId;
+
+		//target="https://"+PasPath+"/pkmslogout";
+
+		window.location=target;
+
+		die;
+
+        }//Verify PAS is operational.  Does not apply, otherwise.
+
+		//If NOT PAS page, then store logged out and jump back to the home page manually.
+
+		target="/";
+   		document.cookie="logged_in=false";
+		window.location=target;
+
+}
+
+  function doOnOrientationChange()
+  {
+    switch(window.orientation) 
+    {
+      case -90:
+      case 90:
+      //  alert('landscape');
+	  $( "#lname-wrapper" ).removeClass( "portrait" ).addClass( "landscape" );
+        break;
+      default:
+	 $( "#lname-wrapper" ).removeClass( "landscape" ).addClass( "portrait" );
+         //alert('portrait');
+        break;
+    }
+	//location.reload();
+  }
+
+
+  function capitaliseFirstLetter(string){
+    var string=string.toLowerCase();
+     return string.charAt(0).toUpperCase()+string.slice(1);
+  }
+
+  function loadGA(){
+   var _gaq=_gaq || [];
+	if (Drupal.settings.pas==true) {
+		//The control for GA token is now in the admin panel (config/web services/PAS).  NOTE:  the code for this is in the nslds module.
+		//SRH Apr 2015
+	   _gaq.push(['_setAccount', Drupal.settings.nslds_ga]);
+	}else{
+		//If we are NOT using PAS, then use the old system (hardcoded)
+		if (Drupal.settings.current_url=='test.ise.ed.gov'){
+			_gaq.push(['_setAccount', 'UA-48974421-1']);
+		}else{
+			_gaq.push(['_setAccount', 'UA-33441427-1']);
+		}
+	}
+
+    (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js?';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		// _gaq.push(['_trackEvent', 'Manually loaded gaq function', 'gaq was not loaded so manually loaded', 'gaq was not loaded so manually loaded']);
+    })();
+
+	return _gaq;
+  }
+  
+  function getBrowser(){
+
+    var ua= navigator.userAgent, tem, 
+    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return 'IE '+(tem[1] || '');
+    }
+    if(M[1]=== 'Chrome'){
+        tem= ua.match(/\bOPR\/(\d+)/)
+        if(tem!= null) return 'Opera '+tem[1];
+    }
+    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+    return M.join(' ');
+
+}
+  
+  function getCookie(c_name) {
+    var i, x, y, ARRcookies = document.cookie.split(";");
+    for (i = 0; i < ARRcookies.length; i++) {
+        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g, "");
+        if (x == c_name) {
+            return unescape(y);
+        }
+    }
+}
+  
+function log(item, title) {
+  if (typeof console !== 'undefined' && typeof console.log == 'function') {
+    if (typeof title !== 'undefined') {
+      console.log(title);
+    }
+    console.log(item);
+  }
+}
+
+function openLogin(){
+
+
+	//The following values are sent from DRUPAL if this is a PAS login:
+
+	//Drupal.settings.pas = TRUE is this is a PAS login	
+
+	//Drupal.settings.use_richard  = if TRUE then we are using the RICHARD TRIMBLE test account
+	//Drupal.settings.use_maria = if TRUE then we are using the MARIA FLUX test account
+	//Drupal.settings.maria_token = iv-user token to be sent to NSLDS for MARIA (test)
+	//Drupal.settings.richard_token = iv-user token to be sent to NSLDS for RICHARD (test)
+  
+	//Drupal.settings.iv_user = iv-user arrount (when not test)
+	//Drupal.settings.remote_ip = remote IP of the user's system
+
+		
+	if (Drupal.settings.pas==1) {
+
+
+		//This is a PAS login
+
+		var iv_user=0;
+
+		TRUE_CLIENT_IP=Drupal.settings.remote_ip;
+
+		TargetData='Should be empty per Terry on 25 Mar 2015.  Not used.';
+
+		_gaq=loadGA();
+
+
+
+
+
+	     	// Load Data from NSLDS
+
+         	sendRequestToIseFeed(TargetData,_gaq,Drupal.settings.lang);
+
+		
+	} //End testing for PAS
+	
+ 
+ 
+
+if (isiPad() || isiPhone()){
+  try{
+	   sessionStorage.setItem("test", "true");
+	   }
+	catch (err){
+	  if (isiPad()){
+	    alert ("You must turn private browsing off to use this application.  Tap the “+” at the top right of your browser to open a new tab, and then tap “Private” at the bottom of the new page to remove the highlight.");
+	  }else{
+   	    alert ("You must turn private browsing off to use this application.  Tap the Bookmarks tab at the lower-right corner and then tap “Private” at the bottom of the new page to remove the highlight.");
+
+      }	  
+		
+	}
+ 		
+ }
+  return false;
+}
+
+/* this is for the switching of the login and the access our other sites tab */
+function switchtotab(n)
+{
+	if(!document.getElementsByClassName('tabbernav')[0].childNodes[n].classList.contains('tabberactive'))
+	{
+		document.getElementsByClassName('tabbernav')[0].childNodes[n].classList.add('tabberactive');
+	}
+	for(var i=0;i<document.getElementsByClassName('tabbernav')[0].childNodes.length;)
+	{
+		if(i===n)
+		{
+			break;
+		}
+		if(document.getElementsByClassName('tabbernav')[0].childNodes[i].classList.contains('tabberactive'))
+		{
+			document.getElementsByClassName('tabbernav')[0].childNodes[i].classList.remove('tabberactive');
+		}
+		i++;
+	}
+	if(document.getElementsByClassName('tabberlive')[0].childNodes[n+1].classList.contains('tabbertabhide'))
+	{
+		document.getElementsByClassName('tabberlive')[0].childNodes[n+1].classList.remove('tabbertabhide');
+	}
+	for(var i=1;i<document.getElementsByClassName('tabberlive')[0].childNodes.length;i++)
+	{
+		if(i===n+1)
+		{
+			break;
+		}
+		if(!document.getElementsByClassName('tabberlive')[0].childNodes[i].classList.contains('tabbertabhide'))
+		{
+			document.getElementsByClassName('tabberlive')[0].childNodes[i].classList.add('tabbertabhide');
+		}
+	}
+}
+ 
+
+function getBasePath(){
+
+   var basepath=Drupal.settings.basepath;
+   return basepath;
+}
+
+function getURL(){
+	if (Drupal.settings.pas!=1) {
+		var protoc=document.location.protocol;
+    		var current_url= protoc+"//"+Drupal.settings.current_url
+  	}else{
+		//PAS!
+		var current_url="https://"+Drupal.settings.pas_base_path;
+	}
+   return current_url;
+}
+
+function sendRequestToIseFeed(secondurl,_gaq,lang){
+
+
+
+	if (Drupal.settings.pas==1) {
+
+		// **************** NOTE:  ALL PAS related Drupal variables are set in nslds.module.
+
+	  	PasPath=Drupal.settings.pas_base_path;
+		PasJunction=Drupal.settings.pas_junction;
+
+
+
+		var url=Drupal.settings.nslds_url;
+		secondurl="";
+		target="https://"+PasPath+"/"+PasJunction+"/my-student-aid";
+		target_es="https://"+PasPath+"/"+PasJunction+"/es/my-student-aid";
+
+	}else{
+		//Traditional NON-PAS login.  Keep for archival and backup.  Triggered from test.ise.ed.gov (PAS = testise.ed.gov).  NOTE THE PERIOD!
+         	var url=getURL()+"/IseFeed/";
+		target="/my-student-aid";
+		target_es="/es/my-student-aid";
+
+	}
+
+
+	lang=Drupal.settings.lang;
+
+// RT 04/22/15 Use this to create Application unavailable message
+//url='bah bah blacksheep';
+
+
+
+
+	//Send a request out to NSLDS (when using PAS, this will go through the URL defined in nslds.module admin pages)
+	jQuery.post(url,secondurl, function(data,status,xhr) {
+       		
+		var dataAsText = JSON.stringify(data);
+		
+		//Uncomment the next line to show the data loaded.
+		//var response = prompt ('on line 94 second request This is the resulting file: you can copy and paste this',dataAsText);
+
+		  var error=false;
+		  var error_title="";
+
+		  var lang=Drupal.settings.lang;
+
+		//Clear any existing error codes;
+		error="";
+		error_title="";
+		document.cookie="error=;expires:-1";
+		document.cookie="have_data=;expires:-1";
+
+
+
+
+		for (key in data){
+			var value = data[key];
+			 
+		     	for (k in value){
+				//Error codes are returned from NSLDS
+				//The codes for this are controlled from the EMAIL from Keith, dated 25 Mar 2015
+				//NOTE:  We need to pass the ERROR code back, not the text.  Otherwise, we can't provide translation if the user
+				//switches languages on other pages.  ERROR code is now stored in SESSION.
+
+				switch (value[k]) {
+					case "Error":
+						error=true;
+					break;
+
+					case "001":
+						error_title=value[k];
+					break;
+
+					case "002":
+						error_title=value[k];
+					break;
+
+					case "003":
+						error_title=value[k];
+					break;
+
+					case "004":
+						error_title=value[k];
+					break;
+
+					case "005":
+						error_title=value[k];
+					break;
+
+				}//End SWITCH determining what, if any, error code is present.
+			 }//Cycle [value] through each array element inside the returned code
+		  }//Cycle [data] through each line returns from JSON
+
+
+			if (dataAsText.length<10) {
+				error=true;
+				if (lang=="en"){
+                    			error_title="Unable to connect to NSLDS: <a href='/"+PasJunction+"/log-in-help' >Trouble logging in ?</a>";
+				}else{
+					error_title="NSLDS Connectivo inválida: <a href='/"+PasJunction+"/es/log-in-help' >&#191Tiene dificultades para iniciar sesi&#243n?</a>";
+				}
+			}//End checking for null value returned.			
+
+
+
+			//Set the error code -- store it as a cookie.  NSLDS and PAS do not know what each is doing.  We have to get that error code back to a
+			//page that has the login box (in this case, the homepage) in order to display the code within the confines of that box (per the requirement
+			//docs...apparently, an alert box is a novel concept).
+
+
+
+			//Uncomment below code to test error system.  NSLDS will be returning new error codes in the PAS system.  We'll catch them here.  I hope.  Not clear where they are returned.
+			//SRH March 2015
+			//Change the trigger below in the ADMIN panel control for PAS Services (under config).  Code lives in the nslds.module
+			if (Drupal.settings.pas_trigger_nslds_error=="1") {
+				error=true;
+				error_title="NSLDS Connection Error:  Student Not Found";
+			}
+
+ 
+			if (error==false) {
+
+
+//console.log(data);
+				//Store the downloaded data on the user's system (think of this as a giant cookie)
+    				Drupal.NSLDS.NSLDSSetStorage(data);
+
+				 
+
+				//Trip the flag to show we got data from this run
+				document.cookie="have_data=1";
+
+				window.name="ISE";
+
+				document.cookie="logged_pas=true";
+
+				//Send us to the main "secure" landing page -> my-student-aid
+				//TARGET is set at the beginning of this function
+				var lang=Drupal.settings.lang;
+				if (lang=="es"){
+					window.location.href=target_es;
+				}else{
+		    			window.location.href=target;
+				}//End checking language
+
+				return;
+			}else{
+
+				//We have an error in the connection to NSLDS
+
+				//Use javascript to stash the error code.  This will be displayed from node.tpl (omega) back when the homepage is loaded.
+				//We can't display this now (just call the error display routine), as the error must be displayed in the login box.
+				//When the my-student-aid page is displayed (a) there is no login box, and (b) even if we put it on that page, an empty, broken
+				//my-student-aid page would be in the background.  Instead, we stash the error as a cookie, call the home page, and then 
+				//read the "error" cookie from within the homepage template, calling the jQuery routine to display the same at that time.
+				//March 2015
+
+				//Must set timezone so we don't set the cookie to expire before it is set.
+				var date = new Date();
+				date.setTime(date.getTime()+(250*1000));
+
+				document.cookie="error="+error_title+";expires="+date.toUTCString();
+
+
+
+				//We have to redirect back to the homepage...PAS defaults to my-student-aid otherwise.
+				//PAS variables are set at the top of this function.
+
+				var lang=Drupal.settings.lang;
+				if (lang=="es"){
+					window.location.href="https://"+PasPath+"/"+PasJunction+"/es/";
+				}else{
+		    			window.location.href="https://"+PasPath+"/"+PasJunction;
+				}//End checking language
+
+			}//End checking [error] for Error checking after connection to NSLDS
+
+   		}).fail(function(a,b,c) {
+
+				//Connection to NSLDS Failed 
+				error_title = '006';
+
+				//We have an error in the connection to NSLDS
+
+				//Use javascript to stash the error code.  This will be displayed from node.tpl (omega) back when the homepage is loaded.
+				//We can't display this now (just call the error display routine), as the error must be displayed in the login box.
+				//When the my-student-aid page is displayed (a) there is no login box, and (b) even if we put it on that page, an empty, broken
+				//my-student-aid page would be in the background.  Instead, we stash the error as a cookie, call the home page, and then 
+				//read the "error" cookie from within the homepage template, calling the jQuery routine to display the same at that time.
+				//March 2015
+
+
+
+				//Must set timezone so we don't set the cookie to expire before it is set.
+				var date = new Date();
+				date.setTime(date.getTime()+(250*1000));
+
+				document.cookie="error="+error_title+";expires="+date.toUTCString();
+
+
+				//We have to redirect back to the homepage...PAS defaults to my-student-aid otherwise.
+				//PAS variables are set at the top of this function.
+
+				var lang=Drupal.settings.lang;
+				if (lang=="es"){
+					window.location.href="https://"+PasPath+"/"+PasJunction+"/es/";
+				}else{
+		    			window.location.href="https://"+PasPath+"/"+PasJunction;
+				}//End checking language
+
+       		},"json");
+ 
+}
+
+
+function isiPhone(){
+
+    
+    return (
+        //Detect iPhone
+        (navigator.platform.indexOf("iPhone") != -1) 
+    );
+}
+
+function isiPad(){
+
+  
+    return (
+        //Detect iPhone
+        (navigator.platform.indexOf("iPad") != -1) 
+    );
+}
+
+
+
+
+//Send the cookie name whose value we want to retrieve to GetCookie
+//******************************************************************
+//SRH
+function GetCookie(cookie_name) {
+    var name = cookie_name + "=";
+    var cookies= document.cookie.split(';');
+  //Cycle through each cookie to find a match.
+    for(var i=0; i<cookies.length; i++) {
+        var c = cookies[i];
+        //Strip leading spaces
+        while (c.charAt(0)==' ')
+           c = c.substring(1);
+        //If there is a name hit, return the value
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }//Cycle through each cookie
+    return "";
+}//End function to return value of a cookie
+
+
+(function($) {
+$(document).ready(function() {
+ 
+	//SRH
+	
+	if (document.hasFocus()) {
+
+		var Referrer=document.referrer;
+
+		//alert("Referrer:"+Referrer);
+
+
+
+		//We use WINDOW.NAME to store data on a temp basis.  It is wiped when PAS is called (inconsistent with cookies in 
+		//ISE is set both at the point that it is first triggered below (ever allowing only one reset) or when NSLDS is loaded above
+
+		if (window.name!="ISE" || Referrer==Drupal.settings.pas_login_address) {
+
+			window.name="ISE";
+			//alert('Flush Cache');
+			//JS Flush is rather strong and has caused problems with wiping data we later need.  Not sure we want this here.
+			//$.jStorage.flush();
+			//This flag is used to determine if we skip the error routine or not.
+			//document.cookie="have_data=false";
+
+
+			//alert(Drupal.settings.iv_user);
+
+		} //End testing if NAME is set
+	} //End testing to see if we should reset the data in the cache.  
+
+
+//*********************************************
+
+     var logged_in= sessionStorage.getItem("logged_in");
+	 var using_pas=false;
+	try{
+	  var a=_gaq;
+	}
+	catch (err) {
+	   _gaq=loadGA()
+	  
+	}
+ 
+	// google analytics object
+	if (_gaq === 'undefined'){
+	    _gaq=loadGA()
+	}
+	//alert (" _gaq now is "+_gaq);
+	
+	try{
+	var cookie_logged_in=getCookie("logged_in");
+	}
+	catch (err){
+	//alert ("ther was an error"+err.message);
+	}
+	//alert ("cookie logged in"+cookie_logged_in);
+	if (!logged_in  && !cookie_logged_in){
+	   
+	   $.jStorage.flush();
+	   
+	   try{
+	   sessionStorage.setItem("logged_in", "true");
+	   }
+  	catch (err){
+	
+	}
+	   
+	}
+
+
+// Access some stored data
+
+	var data = Drupal.NSLDS.NSLDSgetStorage();
+	var open_login_box = location.search.split('login=')[1];
+	if ((screen.width < 550) || (screen.height < 550)) {
+    
+    var mobile=1;
+	//alert ("its mobile");
+	// window.addEventListener('orientationchange', doOnOrientationChange);
+	 $( "#lname-wrapper" ).addClass( "mobile" );
+	  $( "#lname-edit" ).addClass( "mobile" );
+	   $( "#lname-edit" ).addClass( "mobile" );
+      $( "#birthday" ).addClass( "mobile" );
+	   $( "#dob" ).addClass( "mobile" );
+	    $( "#ssn-wrapper" ).addClass( "mobile" );
+	  $( "#ssn-edit" ).addClass( "mobile" );
+	   $( "#ssn-edit" ).addClass( "mobile" );
+	    $( "#pin-wrapper" ).addClass( "mobile" );
+	  $( "#pin-edit" ).addClass( "mobile" );
+	   $( "#pin-edit" ).addClass( "mobile" );
+   
+   
+
+	
+  }
+	//var tabberOptions = {'onClick':function(){alert("clicky!");}};
+	//alert ("login param is "+open_login_box);
+	
+	var lang=Drupal.settings.lang;
+	var basepath=Drupal.settings.basepath;
+	if (lang=="es"){
+	 $( "#lname-wrapper" ).addClass( "spanish" );
+	  $( "#lname-edit" ).addClass( "spanish" );
+	   $( "#lname-edit" ).addClass( "spanish" );
+      $( "#birthday" ).addClass( "spanish" );
+	   $( "#dob" ).addClass( "spanish" );
+	    $( "#ssn-wrapper" ).addClass( "spanish" );
+	  $( "#ssn-edit" ).addClass( "spanish" );
+	   $( "#ssn-edit" ).addClass( "spanish" );
+	    $( "#pin-wrapper" ).addClass( "spanish" );
+	  $( "#pin-edit" ).addClass( "spanish" );
+	   $( "#pin-edit" ).addClass( "spanish" );
+   
+	}
+	// IF THE LOGIN BOX IS ALREADY OPEN 
+	if (open_login_box=="true"){
+	    if (null===data){
+		  
+	       $('#nslds-login-block').slideToggle();
+		  
+
+		   }else{
+		     
+	     	  if (lang=="es"){
+		        var newlocation=window.location.protocol+"//"+window.location.hostname +basepath+"es/my-student-aid";
+		     }else{
+		        var newlocation=window.location.protocol+"//"+window.location.hostname +basepath+"my-student-aid";
+		     }
+		    window.location=newlocation;
+		   }
+	}
+	
+	$('#undefinednav2').live('click',function(){
+	
+		_gaq.push(['_trackEvent', 'Toggled to other sites tab', 'Clicked other sites', 'visitor has clicked away from login box']);
+     
+	});
+	
+	$('#undefinednav1').live('click',function(){
+	
+	    //alert ("clicked on nav1");
+			_gaq.push(['_trackEvent', 'Toggled to login tab', 'Clicked LoginTab', 'visitor has clicked away from other sites tab in box']);
+     
+	});
+	
+	var clickHandler="click";
+	if ('ontouchstart' in document.documentElement){
+	   clickHandler="touchstart";
+	}
+	
+	
+
+
+	// THIS DEFINES WHAT HAPPENS WHEN YOU CLICK ON THE LOGIN BUTTON ON TOP
+
+    	$('#block-ise-nslds-nslds-login-block a#login-link:not(.ise-nslds-processed)')
+      .addClass('ise-nslds-processed')
+      .click(function() {
+
+
+		//Do we have user data?
+	    	var data = Drupal.NSLDS.NSLDSgetStorage();
+   
+
+		//If nothing, then show the login box.
+       		if (null===data){
+			   // DROP DOWN THE LOGIN BLOCK
+
+
+
+		       $('#nslds-login-block').slideToggle();
+			_gaq.push(['_trackEvent', 'Clicked Login', 'ClickedLoginTab', 'visitor has clicked link to open login box']);
+		}else{
+		   	// IF THERE IS DATA, PERSON IS ALREADY LOGGED IN, SO THIS BUTTON NOW SAYS VIEW MY ACCOUNT
+
+
+		     	var lang=Drupal.settings.lang;
+			var basepath=Drupal.settings.basepath;
+			_gaq.push(['_trackEvent', 'Clicked View My Account', 'Clicked on Name', 'visitor has clicked on their name on menu']);
+	
+			
+			//Jump to the display page for user data.
+
+
+			//Are we using PAS?
+			//These values are set in the nslds.module init() function, and also in the my-student-data() function
+
+			if (Drupal.settings.pas!=1) {
+			  	if (lang=="es"){
+			    		var newlocation=window.location.protocol+"//"+window.location.hostname +basepath+"es/my-student-aid";
+			  	}else{
+		    			var newlocation=window.location.protocol+"//"+window.location.hostname +basepath+"my-student-aid";	
+			  	}
+
+			    	window.location=newlocation;
+
+
+			}else{
+				//We ARE using PAS
+			  	PasPath=Drupal.settings.pas_base_path;
+				PasJunction=Drupal.settings.pas_junction;
+
+				target="https://"+PasPath+"/"+PasJunction+"/my-student-aid";
+				target_es="https://"+PasPath+"/"+PasJunction+"/es/my-student-aid";
+
+ 		if (lang=="es"){
+					window.location.href=target_es;
+				}else{
+		    			window.location.href=target;
+				}//End checking language
+
+			}//End checking for PAS
+
+		}//End checking if the user has loaded DATA
+		  
+	
+        return false;
+    });
+  
+  
+     $('#logout-link').click(function() {
+
+
+	if (Drupal.settings.pas==true) {
+
+
+		var login="";
+            	if (lang=="es"){
+			login="INICIAR SESIóN";
+			login_alt="Iniciar la sesión";
+	 	}else{
+			login="LOG IN"; 
+			login_alt="Log In";
+		}
+
+	    	$('#login-link').html(login);
+		$('#login-link').attr('alt',login_alt);
+		$('#login-link').attr('title',login_alt);
+	     	$('#logout-link').html("");
+		_gaq.push(['_trackEvent', 'Clicked Logout on Menu', 'Clicked to logout', 'visitor has clicked logout ']);
+     
+
+		//Note:  There appears to be a problem with PAS.  Any address that is not relative is being ignored (i.e. http://www.google.com).
+		//However, relative links work (i.e. "/testise/about").  We left a message for Bob Werhle about this on 01 April 2015
+		//These two lines below replace the LOGOUT routine in nslds.storage.js
+		//Oddly, if you store the cookie first, the system will ignore the re-direct.
+
+	  	PasPath=Drupal.settings.pas_base_path;
+		PasJunction=Drupal.settings.pas_junction;
+		var PasAppId=Drupal.settings.return_app_id;
+
+
+		target="https://"+PasPath+"/pkmslogout?appid="+PasAppId;
+
+
+		//target="https://"+PasPath+"/pkmslogout";
+
+
+   		$.jStorage.flush();
+
+		_gaq.push(['_trackEvent', 'Clicked Logout on Menu', 'Clicked to logout', 'visitor has clicked logout ']);
+
+
+   		document.cookie="logged_in=false";
+		window.location=target;
+
+		return false;
+	}else{
+
+		//NOT PAS   		
+	        var login="";
+            	if (lang=="es"){
+			login="INICIAR SESIóN";
+			login_alt="Iniciar la sesión";
+		}else{
+			login="LOG IN"; 
+			login_alt="Log In";
+		}
+
+	    	$('#login-link').html(login);
+		$('#login-link').attr('alt',login_alt);
+		$('#login-link').attr('title',login_alt);
+	     	$('#logout-link').html("");
+		_gaq.push(['_trackEvent', 'Clicked Logout on Menu', 'Clicked to logout', 'visitor has clicked logout ']);
+     
+
+		Drupal.NSLDS.NSLDSLogout();
+
+	} //End checking for PAS
+		
+		 
+    });
+	
+   // renew storage for 15 minutes more	
+	$('#renew').click(function() {
+
+
+       Drupal.NSLDS.NSLDSRenewStorageTTL();
+	 	_gaq.push(['_trackEvent', 'Clicked to Continue after 15 minutes', 'Clicked Renew', 'visitor has clicked link to renew session in nslds']);
+     
+	   
+ });
+  
+  $('#leave_site').click(function() {
+		//If the user EXITS the site after the 15 minute timer/timeout
+		//SRH 15 April.
+
+
+	if (Drupal.settings.pas==true) {
+
+	        var login="";
+            if (lang=="es"){
+			    login="INICIAR SESIóN";
+				login_alt="Iniciar la sesión";
+			}else{
+			   login="LOG IN"; 
+			   login_alt="Log In";
+			}
+	    $('#login-link').html(login);
+		 $('#login-link').attr('alt',login_alt);
+		 $('#login-link').attr('title',login_alt);
+	     $('#logout-link').html("");
+		_gaq.push(['_trackEvent', 'Clicked Logout on Menu', 'Clicked to logout', 'visitor has clicked logout ']);
+     
+
+		//Note:  There appears to be a problem with PAS.  Any address that is not relative is being ignored (i.e. http://www.google.com).
+		//However, relative links work (i.e. "/testise/about").  We left a message for Bob Werhle about this on 01 April 2015
+		//These two lines below replace the LOGOUT routine in nslds.storage.js
+		//Oddly, if you store the cookie first, the system will ignore the re-direct.
+
+	  	PasPath=Drupal.settings.pas_base_path;
+		PasJunction=Drupal.settings.pas_junction;
+
+
+		target="https://"+PasPath+"/pkmslogout";
+
+
+   		$.jStorage.flush();
+
+   		document.cookie="logged_in=false";
+		window.location=target;
+
+		return false;
+
+   		
+		  //Drupal.NSLDS.NSLDSLogout();
+		 
+		
+	}else{
+
+		//Not PAS!
+      		var login="";
+            	if (lang=="es"){
+			login="INICIAR SESIóN";
+		}else{
+			login="LOG IN"; 
+		}
+
+		$('#login-link').html(login);
+	     	$('#logout-link').html("") ;
+		_gaq.push(['_trackEvent', 'Clicked Logout on timeout box', 'Clicked Logout when timedout', 'visitor has clicked link to logout on timeout warning']);
+
+        	Drupal.NSLDS.NSLDSLogout();
+  
+ 	}	 
+   });
+
+
+
+
+
+   
+  
+    $('#login_X_link:not(.ise-nslds-processed)')
+         .addClass('ise-nslds-processed')
+        .click(function() {
+		
+		  $('.nslds-messages').replaceWith('<div class="nslds nslds-messages login"></div>');
+		  $('#nslds-login-form')[0].reset();
+          resetErrorMessages();
+        // make sure we have the form
+        $('#nslds-login-block').slideToggle();
+		   _gaq.push(['_trackEvent', 'Closed Login box ', 'Clicked X from login box', 'visitor has clicked link to close login box']);
+
+       
+        return false;
+    });
+  
+  $('#othersites_X_link')
+         
+        .click(function() {
+		//alert ("gaq is "+_gaq);
+			
+        $('#nslds-login-block').slideToggle();
+		 $('.nslds-messages').replaceWith('<div class="nslds nslds-messages login"></div>');
+		  $('#nslds-login-form')[0].reset();
+		_gaq.push(['_trackEvent', 'Closed Other sites ', 'Clicked X from other sites', 'visitor has clicked link to close other sites']);
+
+		
+        return false;
+    });
+   
+//autoadvance on date fields
+
+	
+  
+});
+  
+})(jQuery);
+
+
+
+
+
+
+
+function validatessn(ssn,req_field,error_msg){
+   var invalid_entry=false;
+    ssn=trim(ssn);
+       if (ssn.length==0){
+	      
+		    jQuery("#ssn").html(req_field);
+			invalid_entry=true;
+		}else{
+		  jQuery("#ssn").html("");
+		  if ((ssn.length >9) || (ssn.length<9) || isNaN(ssn)){
+            jQuery("#ssn").html(error_msg);
+		   jQuery('#edit-ssn').addClass('errorClass');
+		   var el = document.getElementById('edit-ssn');
+            el.scrollIntoView(true);
+			invalid_entry=true;
+		  }else{
+		     jQuery('#edit-ssn').removeClass("errorClass");  
+		  }	
+		}
+
+  return  invalid_entry;
+}
+
+
+function ltrim(s)
+{
+  return s;
+}
+
+
+function rtrim(s)
+{
+return s;
+ }
+
+
+function trim(s)
+{
+    return rtrim(ltrim(s));
+}
+
+
+function validatelast(text,req_field,error_msg){
+    var invalid_entry=false;
+	text=trim(text);
+	allowed_chars=["'","-","."];
+	if (text.length==1){
+		 var  alfabetical=validateAlpha(text);
+		 allowed_char=jQuery.inArray(text,allowed_chars)>                                         -1;
+		 if (!alfabetical && !allowed_char){
+            invalid_entry=true;
+			  jQuery("#lname").html(error_msg);
+		       jQuery('#edit-last').addClass('errorClass');
+			    var el = document.getElementById('edit-lname');
+            el.scrollIntoView(true);
+		 }else{
+		     jQuery("#lname").html('');
+         } 		 
+	}
+		
+       if (text.length==0){
+	      //two spaces are okay according to mindy
+	        jQuery("#lname").html(req_field);
+			 invalid_entry=true;
+			
+		}
+		
+		if (text.length==2){
+		   var validfirst=false;
+		   
+	       var validsecond=false;
+		  //the first character must be a space or a 
+		  
+		  var alpha=validateAlpha(text);
+		  jQuery("#lname").html("");
+		  if ((!alpha)){
+		    var firstchar=text.charAt(0);
+			alpha=validateAlpha(firstchar);
+			if (!alpha){
+			  invalid_entry=true;
+			   jQuery("#lname").html(error_msg);
+		       jQuery('#edit-last').addClass('errorClass');
+			    var el = document.getElementById('edit-lname');
+            el.scrollIntoView(true);
+			}
+         	// they are not both alphabetical so now will check if the second one is an allowed character
+           var secondchar=text.charAt(1);
+		   if (jQuery.inArray(secondchar,allowed_chars)===-1){
+		      invalid_entry=true;
+			   jQuery("#lname").html(error_msg);
+		       jQuery('#edit-last').addClass('errorClass');
+			    var el = document.getElementById('edit-lname');
+            el.scrollIntoView(true);
+			}
+		  }else{
+		     jQuery('#edit-last').removeClass("errorClass");  
+		  }
+         //if (((text.substr(1,1)=="'") || (text.substr(1,1)==".") || (text.substr(1,1)=="'") ||  (text.substr(1,1)=="-") || (text.substr(1,1)==" ")) && validfirst){
+		   //  validsecond=true;
+		  //}
+		  
+		}
+	
+  return  invalid_entry;
+}
+
+function validatepin(text,req_field,error_msg){
+    var invalid_entry=false;
+    text=trim(text);
+	   if (text.length==0){
+	         jQuery("#pin").html(req_field);
+				invalid_entry=true;
+		}else{
+		 
+		  jQuery("#pin").html("");
+		  if ((text.length >4) || (text.length<4) || isNaN(text)){
+         		   
+		   jQuery("#pin").html(error_msg);
+		   jQuery('#edit-pin').addClass('errorClass');
+			invalid_entry=true;
+		  }else{
+		     jQuery('#edit-pin').removeClass("errorClass");  
+		  }	
+		}
+	
+  return  invalid_entry;
+}
+
+function validatedob(text,req_field,error_msg){
+   
+   var invalid_entry=false;
+    text=trim(text);
+    if (text.length==0){
+	         jQuery("#dob").html(req_field);
+				invalid_entry=true;
+		}else{
+		 
+		  	var year=text.substr(0,4);
+	    	var month=text.substr(4,2);
+			var day=text.substr(6,2);
+			//javascript months are 0 based
+			var temp_month=month-1;
+			var source_date = new Date(year,temp_month,day,0,0,0);
+			
+			if(year != source_date.getFullYear())
+			{ 
+              invalid_entry=true;
+            }
+
+            if(temp_month != source_date.getMonth())
+                {
+                invalid_entry=true;
+				}
+
+			if(day != source_date.getDate())
+			{
+              invalid_entry=true;
+            }
+		  jQuery("#dob").html("");
+		  if ((text.length >8) || (text.length<8) || isNaN(text)){
+       
+			invalid_entry=true;
+		  }
+		  if (invalid_entry){
+		     jQuery("#dob").html(error_msg);
+			  var el = document.getElementById('edit-birth-month');
+            el.scrollIntoView(true);
+		  
+		  }
+		}
+  return  invalid_entry;
+}
+
+
+function resetErrorMessages(){
+    jQuery("#dob").html("");
+	jQuery("#pin").html("");
+	jQuery("#ssn").html("");
+	jQuery("#lname").html("");
+	return true;
+	
+}
+
+function validateAlpha(x){
+  var alphaOnly=1;
+    if (x!='') {
+	    var c=0;
+        for (c=0; c<x.length; c++) {
+            if (x.substr(c,1).match(/[^a-zA-Z]/) != null) {
+                alphaOnly=0;
+                break;
+             }
+        }
+    }
+    return alphaOnly;
+}
+
+function getSampleData(){
+       var sample_data_exist=true;
+	   var current_url= getURL()+Drupal.settings.basepath;
+			 
+		if (Drupal.settings.nsldsSampleData!=undefined){
+		  var data= JSON.parse(Drupal.settings.nsldsSampleData );
+		 
+		  alert ("using sample data, not really logging in ");
+		  Drupal.NSLDS.NSLDSSetStorage(data);
+		  var lang=Drupal.settings.lang;
+		  if (lang=="es"){
+		    var newlocation=current_url+"es/my-student-aid";
+		  }else{
+		    var newlocation=current_url+"my-student-aid";
+		  }
+		  window.location.href=newlocation
+		 
+		  
+         }else{
+		  sample_data_exists=false;
+		  //alert ("no sample data and did not log in");
+		 }
+		 return;
+}
+
+function getSpanishDownload(data){
+   
+
+	//These drupal settings are made in the ise_module on line 693 (after successful login)
+
+	var stringData=data;
+   	var spanish_template=Drupal.settings.spanish_template;
+   	var english_template=Drupal.settings.english_template;
+
+
+
+	//Had to change the split from "\r\n" to ":" as it was not working any longer once we removed the "fake content" in the templates.
+	//SRH April 2015.  Ticket 20269
+
+    lines = english_template.split(":");
+
+
+	//alert ("the lines are "+lines);
+	var engArray= new Array();
+	 for (i = 0; i < lines.length; i++) {
+	   //alert ("one line is "+lines[i]);
+		splitarray= lines[i].split(":");
+		engArray[i]=splitarray[0];
+	 }
+   
+ 
+    lines = spanish_template.split(":");
+	//alert ("the lines are "+lines);
+	var spanishArray= new Array();
+	 for (i = 0; i < lines.length; i++) {
+	  // alert ("one line in spanish is "+lines[i]);
+		splitarray= lines[i].split(":");
+		spanishArray[i]=splitarray[0];
+	 }
+
+
+	translation_array=array_combine(engArray,spanishArray);
+
+	spanish_data =strtr(stringData,translation_array);
+	
+
+	//SRH Feb 2014
+	//Ticket 13291
+	spanish_data=spanish_data.replace(/Loan Reaffirmation Date/g,"Fecha de ratificación");
+	spanish_data=spanish_data.replace(/Total DIRECT UNSUBSIDIZED (TEACH) Outstanding Principal/g,"Total DIRECT UNSUBSIDIZED (TEACH) Capital Pendiente");
+	spanish_data=spanish_data.replace(/Total DIRECT UNSUBSIDIZED (TEACH) Outstanding Interest/g,"Total DIRECT UNSUBSIDIZED (TEACH) Interés Pendiente");
+
+
+
+
+	spanish_data=spanish_data.replace(/Loan Subsidized Usage in Years/g,"Préstamo Periodo de Uso Subsidiado en Años");
+	spanish_data=spanish_data.replace(/Outstanding Principal/g,"Capital Pendiente");
+	spanish_data=spanish_data.replace(/Outstanding Interest/g,"Interés Pendiente");
+	spanish_data=spanish_data.replace(/Préstamo Estado Description/g,"Préstamo Descripción del Estado");
+	spanish_data=spanish_data.replace(/Préstamo Estado Effective Date/g,"Préstamo Fecha del Estado");
+	spanish_data=spanish_data.replace(/Préstamo Saldo del Interés Pendiente as of Date/g,"Préstamo Fecha del Saldo del Interés Pendiente");
+	spanish_data=spanish_data.replace(/Préstamo Saldo del Capital Pendiente as of Date/g,"Préstamo Fecha del Capital del Interés Pendiente");
+    spanish_data=spanish_data.replace(/Estudiante Dedicación de Estudios Effective Date/g,"Estudiante Fecha de Dedicación de Estudios");
+	
+	spanish_data=spanish_data.replace(/Overpayment Contact Type/g,"Ayuda en Exceso Tipo de Contacto");
+	spanish_data=spanish_data.replace(/Overpayment Contact Name/g,"Ayuda en Exceso Nombre de Contacto");
+	spanish_data=spanish_data.replace(/Overpayment Contact Street Address 1/g,"Ayuda en Exceso Contacto Domicilio 1");
+	spanish_data=spanish_data.replace(/Overpayment Contact Street Address 2/g,"Ayuda en Exceso Contacto Domicilio 2");
+	spanish_data=spanish_data.replace(/Overpayment Contact City/g,"Ayuda en Exceso Contacto Ciudad");
+	spanish_data=spanish_data.replace(/Overpayment Contact State Code/g,"Ayuda en Exceso Contacto Código de Estado");
+	spanish_data=spanish_data.replace(/Overpayment Contact Zip Code/g,"Ayuda en Exceso Código Postal");
+	spanish_data=spanish_data.replace(/Overpayment Contact Phone Number/g,"Ayuda en Exceso Numero de Teléfono");
+	spanish_data=spanish_data.replace(/Overpayment Contact Phone Extension/g,"Ayuda en Exceso Numero de Extensión");
+	spanish_data=spanish_data.replace(/Overpayment Contact Email Address/g,"Ayuda en Exceso Correo Electronico");
+	spanish_data=spanish_data.replace(/Overpayment Contact Web Site Address/g,"Ayuda en Exceso Sitio Web");
+	
+	//Used by J5 and I5 codes
+	spanish_data=spanish_data.replace(/Loan Repayment Plan IDR Plan Anniversary Date/g,"Préstamo IDR Plan Fecha de Aniversario del Plan de Pago");
+
+
+	//Additional cleanup of the txt file  Dec 2015
+	spanish_data=spanish_data.replace(/Loan Repayment Plan Type/g,"Préstamo Tipo de Plan de Pago");
+	spanish_data=spanish_data.replace(/Loan Most Recent Payment/g,"Préstamo Fecha Efectiva del Pago Mas Reciente");
+	spanish_data=spanish_data.replace(/Loan Next Payment Due Date/g,"Préstamo Fecha de Vencimiento del Pago Siguiente");
+	spanish_data=spanish_data.replace(/Loan Cumulative Payment Amount/g,"Préstamo Cantidad de Pago Acumulado");
+	spanish_data=spanish_data.replace(/Loan PSLF Cumulative Matched Months/g,"Préstamo PSLF Meses Emparejados Acumulativos");
+	spanish_data=spanish_data.replace(/Effective Date/g,"Fecha Effectivo");
+
+	
+	
+   return spanish_data;
+   
+}
+

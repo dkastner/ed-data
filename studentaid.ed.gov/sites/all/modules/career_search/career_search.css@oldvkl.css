@@ -1,0 +1,792 @@
+span, div,body,br{
+font-family: 'Droid Serif', serif;
+font-size:13.6px;
+}
+
+h2 {
+margin-bottom: 10px;
+}
+
+
+.image_class{
+     position: relative; overflow: hidden; width: 25px; height: 25px; margin: 2px auto 0;
+}
+
+@media all and (min-width: 320px) and (max-width: 700px){
+.image_class{
+     position: relative; overflow: hidden; width: 25px; height: 25px; margin: 2px auto 0;
+     margin-left:15px;
+}
+}
+
+@media all and (min-width: 760px) and (max-width: 980px){
+.image_class{
+     position: relative; overflow: hidden; width: 25px; height: 25px; margin: 2px auto 0;
+     margin-left:40px;
+}
+}
+
+@media all and (min-width: 981px) and (max-width: 1024px){
+.image_class{
+     position: relative; overflow: hidden; width: 25px; height: 25px; margin: 2px auto 0;
+     margin-left:40px;
+}
+}
+
+
+
+table#career_front{
+  border:none !important;
+  background-color:white;
+  
+  }
+
+#career_description{
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:13px;
+  margin-top:3px;
+  margin-bottom:13px;
+}
+
+#career_title{
+    font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: 1.75em;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+	color: #618e3c;
+	
+}
+
+#career_description h2 {
+margin-bottom: 4px;
+margin-top: 14px;
+
+}
+.job_outlook table{
+  border:none;
+}
+
+#job_outlook  ul li,
+#abilities  ul li,
+#technology  ul li,
+#skills  ul li,
+#explore_more  ul li,
+#education  ul li,
+#personality  ul li,
+#knowledge ul li {
+    margin-left: 17px ;
+	font-size: 13.6px;
+}
+
+.joboutlook tr td ,
+.careersearch tr td{
+   
+    /*vertical-align:top;*/
+	border:none;
+padding-top:10 !important;
+	
+}
+
+.joboutlook table{
+
+  border:none !important;
+  
+}
+
+.joboutlook {
+
+  border:none !important;
+  
+}
+
+#joboutlook{
+  border:none;
+}
+
+.colorborder tr td{
+   
+    vertical-align:top;
+	
+	
+}
+
+.careersearch table th {
+    border: none;
+    font-family: "News Cycle",Arial;
+}
+
+
+
+
+.careersearch tr:nth-child(even) {background: #f4f4f4; border:none}
+.careersearch tr:nth-child(odd) {background: #FFF;border:none}
+
+tr.careersearch,
+td.careersearch{
+  border:none;
+}
+
+td.colorborder{
+   border:none;
+   padding: 0;
+}
+
+
+#career-front table td{
+  border:none !important;
+}
+
+td.spacer{
+border-top:1px solid white;
+border-bottom:1px solid white;
+background-color:white;
+
+}
+
+td.spacer_front{
+
+border:none !important;
+background-color:white !important;
+}
+
+td.spacer_frontmobile{
+border-right:3px solid white;
+border-left:3px solid white;
+height:10px;
+background-color:white;
+
+}
+
+td.spacer_detailpage{
+border:3px solid white;
+
+height:2px;
+background-color:white;
+
+}
+	
+	
+p, .block-main li {
+    color: #494b4c;
+    font-family: "Droid Serif",serif;
+    font-size: 0.85em;
+    padding-bottom: !important;
+}
+
+H1 SPAN.titleb {
+ font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: x-large;
+	margin-left:15px;
+}
+
+.education_title {
+     font-family: "Droid Serif", serif;
+	font-size:13.6px;
+	font-weight:bold;
+   	color:#b38b30;
+}
+
+.borderless_table{
+  border:0px;
+}
+
+#keyword_search{
+
+   background-color:#F4F1E9;
+   font-family: 'Droid Serif', serif;
+   font-size:13.6px;
+   padding: 15px;
+   border:none;
+
+}
+
+#keyword_search h2{
+  
+   color:#b38b30;
+}
+
+#industry_search{
+background-color:#ECF2F2;
+font-family: 'Droid Serif', serif;
+   font-size:13.6px;
+    padding: 15px;
+	border:none;
+}
+#interest_search{
+background-color:#F5ECEC;
+font-family: 'Droid Serif', serif;
+   font-size:13.6px;
+    padding: 15px;
+	border:none;
+}
+
+/*******Defect 11285 ***********
+@media all and (min-width: 1210px) and (max-width: 1298px){
+#interest_search{
+width:257px;
+height:264px;
+}
+
+#interest_search #form-interests-form{
+margin-top:8px;
+}
+
+}
+*****************/
+
+#explore_more h2,
+#education h2,
+#personality h2,
+#knowledge h2{
+background-color:#F4F1E9;
+padding-left:17px;
+padding-bottom:10px;
+color:#b38b30;
+margin-bottom:5px;
+font-weight:bold;
+
+}
+
+.onet_info{
+ text-align:right;
+ float:right;
+}
+
+
+.info_start,
+.small_search_title{
+ color:#b38b30;
+ line-height: 80%;
+ font-family: 'Droid Serif', serif;
+
+}
+
+.all_start{
+  color:#b38b30;
+  font-family: 'Droid Serif', serif;
+  width:50%;
+  margin-top:15px;
+  margin-bottom:15px;
+  margin-left:15px;
+  line-height: 1.5em;
+
+}
+
+
+.small_search_career{
+color: #578036;
+line-height: 80%;
+ font-family: 'Droid Serif', serif;
+ }
+
+
+
+
+@media only screen and (min-width:1000px){
+.small_search_title{
+   position: absolute;
+   right: 100px;
+   top:27px;
+}
+.
+}
+
+
+@media only screen and (min-width:1000px){
+.small_search_career{
+   position: absolute;
+   right: 100px;
+   top:40px;
+}
+.
+}
+
+.career_info_start,
+.info_start{
+  margin-top:15px;
+  margin-bottom:15px;
+  margin-left:15px;
+  line-height: 1.5em; 
+}
+
+#job_outlook p,
+#abilities p,
+#technology p,
+#skills p,
+#explore_more p,
+#education p,
+#personality p,
+#knowledge p{
+  padding-left:17px;
+  padding-right:17px;
+   font-size: 13.6px;
+}
+
+#explore_more h3,
+#education h3,
+#personality h3,
+#knowledge h3{
+
+padding-left:10px;
+color:#b38b30;
+margin-bottom:5px;
+font-size: 17px;
+
+}
+
+#explore_more ul li,
+#education ul li,
+#personality ul li,
+#knowledge ul li{
+   list-style-image: url(../../../../sa/sites/all/modules/career_search/images/list-bullet-yellowbrown.png);
+}
+
+#technology h2,
+#skills h2{
+background-color:#ECF2F2;
+padding-left:10px;
+padding-bottom:10px;
+color:#618e3c;
+margin-bottom:5px;
+font-weight:bold;
+}
+
+#technology h3,
+#skills h3{
+
+padding-left:10px;
+color:#618e3c;
+margin-bottom:5px;
+font-size: 17px;
+}
+
+#technology ul li,
+#skills ul li{
+   list-style-image: url(../../../../sa/sites/all/modules/career_search/images/list-bullet-greenish.png);
+}
+
+#job_outlook h2,
+#abilities h2{
+background-color:#F5ECEC;
+padding-left:10px;
+padding-bottom:10px;
+color:#994640;
+margin-bottom:5px;
+font-weight:bold;
+}
+#educationblock{
+padding:15px;
+}
+
+#job_outlook h3,
+#abilities h3{
+
+padding-left:10px;
+margin-bottom:5px;
+color:#994640;
+font-size: 17px;
+
+}
+#job_outlook ul li,
+#abilities ul li{
+  list-style-image: url(../../../../sa/sites/all/modules/career_search/images/list-bullet-rust.png);
+
+}
+
+h2, h2.block-title {
+    font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: 1.4em;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+	color: #618e3c;
+	margin-bottom:5px;
+	margin-top:5px;
+	
+}
+
+#form-search-keyword-form input.form-submit {
+background-image: url("../../../../sa/sites/all/modules/career_search/images/button_one.png");
+margin-bottom: 20px;
+/*text-transform: uppercase;*/
+
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
+font-size: 12px;
+text-decoration: none;
+display: inline-block;
+color: #FFFFFF;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#917227,endColorstr=#a78e52);
+letter-spacing: 2px;
+height: 35px;
+width:200px;
+margin-top:20px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#917227',endColorstr='#a78e52');
+}
+
+#form-search-by-industry-form input.form-submit {
+background-image: url("../../../../sa/sites/all/modules/career_search/images/button_two.png");
+margin-bottom: 20px;
+margin-top:20px;
+/*text-transform: uppercase;*/
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
+font-size: 12px;
+text-decoration: none;
+display: inline-block;
+color: #FFFFFF;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3d8076,endColorstr=#649991);
+letter-spacing: 2px;
+height: 35px;
+width:200px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d8076',endColorstr='#649991');
+}
+
+#keywordsearch{
+  color:#578036;
+ font-family: "News Cycle",Arial,Tahoma,sans-serif;    font-size: x-large;
+	margin-left:15px;
+}
+	
+
+#green{
+color: #274;
+     font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: x-large;
+	margin-left:15px;
+}
+#greenbody{
+color: #274;
+     font-family: "News Cycle",Arial,Tahoma,sans-serif;
+   
+	margin-left:15px;
+}
+
+#bright{
+color: #ec833a;
+    font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: x-large;
+	margin-left:15px;
+}
+
+#brightbody{
+    color: #ec833a;
+ font-family: "News Cycle",Arial,Tahoma,sans-serif;
+	font-size: 15px;
+ 	margin-left:15px;
+}
+
+#industry{
+   /*color: #aa5022; RHT Removing to satisfy REQ ID 47855 */
+   color: #578036; /* RHT Adding new styling to satisfy REQ ID 47855 */
+   font-family: "News Cycle",Arial,Tahoma,sans-serif;
+   font-size: x-large;
+   margin-left:15px;
+}
+#industrybig{
+  /*color: #aa5022; RHT Removing to satisfy REQ ID 47855 */
+   color: #578036; /* RHT Adding new styling to satisfy REQ ID 47855 */
+  font-family: "News Cycle",Arial,Tahoma,sans-serif;
+  font-size: x-large;
+  font-weight:bold;
+  margin-left:15px;
+}
+
+#keywordsearchbig{
+  color: #578036;
+    font-family: "News Cycle",Arial,Tahoma,sans-serif;
+    font-size: x-large;
+	font-weight:bold;
+}
+#more_search{
+     border: 2px solid lightgrey;
+     border-radius: 25px;
+	 padding:15px;
+	 text-align:center;
+	 width:40%;
+	 background: #F2F2F2;
+	 
+ } 
+
+
+ 
+  #weather {
+   color: #494b4c; 
+   font-weight: bold; 
+   font-size: 14px;
+    padding-left:23px;
+   font-family:News Cycle;
+ 
+ }
+ 
+  #weather_description {
+   color: #994640; 
+   font-weight:bold;
+ 
+ }
+ 
+#salary{
+   padding-left:17px;
+   font-family: News Cycle;
+   font-size:12px;
+   margin-bottom:-7px;
+  
+ 
+ }
+  #salary_amount{
+   color: #994640; 
+   font-weight: bold; 
+   font-size: 24px;
+   padding-left:17px;
+   font-family:Droid Serif;
+   margin-top:-30px !important;
+ 
+ }
+ 
+#form-interests-form input.form-submit,
+#form-interests-form,
+#form-interests-form input[type="submit"] {
+background-image: url("../../../../sa/sites/all/modules/career_search/images/button_three.png");
+margin-bottom: 20px;
+/*text-transform: uppercase;*/
+
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
+font-size: 12px;
+text-decoration: none;
+display: inline-block;
+color: #FFFFFF;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#994640,endColorstr=#ad6b66);
+letter-spacing: 2px;
+height: 35px;
+width:200px;
+margin-top:30px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#994640',endColorstr='#ad6b66');
+}
+
+#small_industry_search input.form-submit{
+width:25px;
+margin-top:1px;
+}
+
+#small_industry_search input.form-submit,
+#small-form-search-keyword-form input.form-submit,
+#small-form-search-keyword-form,
+#small-form-search-keyword-form input[type="submit"] {
+background-image: url("../../../../sa/sites/all/modules/career_search/images/btn_right.png") !important;
+background-repeat:no-repeat;
+border:none;
+
+}
+
+#small-form-search-keyword-form input.form-submit,
+#small-form-search-keyword-form,
+#small-form-search-keyword-form input[type="submit"] {
+  margin-top:1px;
+  margin-left:-1px;
+}
+
+#small_industry_search{
+float:left;padding:15px;
+}
+
+
+#container1 {
+    float:left;
+    width:100%;
+   
+    position:relative;
+	
+
+   
+}
+
+
+.element {
+   
+    border: 1px solid #999;
+    float: left;
+    margin:18px;
+	width:30%;
+	vertical-align:top;
+   
+}
+
+.elementfat {
+   
+    border: 1px solid #999;
+    float: left;
+    margin:18px 25px 18px 18px;
+	width:46%;
+	vertical-align:top;
+   
+}
+
+@media only screen and (max-width : 1000px),
+only screen and (max-device-width : 1000px){
+    .element {width: 96%;
+	   margin-top: 10px;
+           margin-left:7px !important;
+	   vertical-align:top;
+	   border: 1px solid #999;
+	   }
+}
+
+@media only screen and (max-width : 1000px),
+only screen and (max-device-width : 1000px){
+    .elementfat {width: 95.6%;
+	   margin-top: 10px;
+           margin-left:7px !important;
+
+	   vertical-align:top;
+	   border: 1px solid #999;
+	   }
+}
+
+.onetinfo{
+  font-family:Droid Serif;
+}
+
+.container {
+    width: 100%;
+    
+	margin-top: -20px;
+	margin-bottom:10px;
+    overflow: hidden;
+	
+}
+.galleryItem {
+   
+    float: left;
+	width: 28%;
+    margin:  1% 1% 1% 1%; 
+    
+}
+/*******Defect 11285 *********** Ram*/
+@media only screen and (max-width : 1000px),
+only screen and (max-device-width : 1000px){
+    .galleryItem {
+     width:28%;
+     /*width: 95%;*/
+	   margin-top: 10px;}
+}
+@media all and (min-width: 712px) and (max-width: 979px){
+  input#edit-keyword {
+      width: 90% !important;
+  }
+  select#edit-industry {
+    width: 90% !important;
+  }
+  .galleryItem {
+    width: 27% !important; 
+  }
+  #form-search-by-industry-form input.form-submit{
+    width:90% !important;
+  }
+  #form-search-keyword-form input.form-submit{
+    width:90% !important;
+  }
+  #interest_search #form-interests-form {
+    width: 90% !important;
+}
+}
+
+@media all and (min-width: 687px) and (max-width: 711px){
+  .galleryItem {
+    width: 26% !important;
+  }
+}
+@media all and (min-width: 532px) and (max-width: 581px){
+  .galleryItem {
+    width: 26% !important;
+  }
+}
+
+@media all and (min-width: 638px) and (max-width: 686px){
+  #interest_search #form-interests-form {
+    width: 90% !important;
+    margin-top: 10px !important;
+  }
+}
+@media all and (min-width: 605px) and (max-width: 637px){
+  #form-search-by-industry-form input.form-submit {
+    margin-top: 0 !important;
+  }
+}
+@media all and (min-width: 532px) and (max-width: 599px){
+  #form-search-by-industry-form input.form-submit {
+    margin-top: 20px !important;
+  }
+}
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+    .galleryItem {
+      width: 100%;
+	    margin-top: 10px;
+	}
+}
+ 
+.info_start{ 
+ color: #578036 !important; /* Adding new styling to satisfy REQ ID 47855 RHT */
+}
+
+.small_search_title{ 
+ color: #578036 !important; /* Adding new styling to satisfy REQ ID 47855 RHT */
+}
+
+
+/* RHT Career Detail page Box Alignment Begin 05/31/15 BEGIN */
+
+
+@media all and (min-width: 320px) and (max-width: 480px){
+
+#container1{
+margin-left:0px !important;
+width:99.3%;
+
+}
+}
+
+@media all and (min-width: 1001px) and (max-width: 1219px){
+  #careersearch > #container1 > .element,
+  #careersearch > #container1 > #container1 > .element{
+    width:29%;
+  }
+  #careersearch > #container1 > .elementfat{
+    width:45%;
+  }
+}
+
+.not-connected-onet{
+margin-left:20px;
+font-weight:bold;
+border: 2px solid;
+padding: 20px;
+width: 50%;
+
+
+}
+
+
+/* RHT Career Detail page Box Alignment Begin 05/31/15 END */
+
+
+/* RHT #12687
+
+input#edit-keyword.form-text.text-label{
+color:#b2aeae;
+}
+
+
+input#edit-keyword.form-text.text-labela{
+color: #000000;
+}
+
+*/
+
+#workbench-info-block{
+display:none !important;
+}

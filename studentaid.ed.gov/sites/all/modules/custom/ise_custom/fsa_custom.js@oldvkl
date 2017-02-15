@@ -1,0 +1,65 @@
+//This file is used by all FSA/HHC routines for custom js processing.
+//Dec 2014  SRH  Collabralink/HHC 703-402-2723
+
+
+
+
+//jquery functionality -- applies on every page load.
+
+
+jQuery(document).ready(function($) {
+  //*****When the page first loads:
+
+/*
+	$('body').click(function(){
+		alert('test');
+	});
+
+*/
+
+
+	//If we are on the about us page, then disable lexicon in the preface heard area.  See ticket 1685
+	$(".views-field-field-preface-text .BasicParagraph cite").attr("title","");
+	$(".views-field-field-preface-text .BasicParagraph cite").attr("NOTES","See line 22 of custom.js for control of citations in the preface area.");
+
+ 
+
+function display_error(WhichText) {
+
+	//This function is called from the view: upload_report (account history), display: pending.
+	//Replaces bubbletip.  SRH March 2012
+
+	$ErrorCode=document.getElementById(WhichText+'_code').innerHTML; 
+	$ErrorText=document.getElementById(WhichText).innerHTML;
+	alert ($ErrorCode+'\n'+$ErrorText);
+}
+
+function SetAllCheckBoxes(FormName, FieldName, CheckValue) {
+
+//Toggle all checkboxes on the history page.
+	
+	//We use a checkbox to set the select boxes (these are placed on the table from within the account_history view)
+	CheckStatus=document.getElementById('ToggleAll').checked;
+
+	if (CheckStatus!="") {
+		CheckValue="true";
+	}else{
+		CheckValue="";
+	}
+
+	if(!document.forms[FormName])
+		return;
+	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+	if(!objCheckBoxes)
+		return;
+	var countCheckBoxes = objCheckBoxes.length;
+	if(!countCheckBoxes)
+		objCheckBoxes.checked = CheckValue;
+	else
+		// set the check value for all check boxes
+		for(var i = 0; i < countCheckBoxes; i++)
+			objCheckBoxes[i].checked = CheckValue;
+}
+
+
+});

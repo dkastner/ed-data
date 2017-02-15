@@ -1,0 +1,380 @@
+/* Default: Loaded before narrow, normal, and wide but not loaded for mobile. */
+body.logged-in.alpha-grid-debug #zone-user-wrapper {
+  background: red;
+}
+
+.block-ise-logo {
+    margin: 35px 0;
+}
+
+.block-ise-logo img {
+    float: left;
+}
+
+#block-search-form {
+    width: auto;
+    float: right;
+    margin: 45px 0 0 0;
+}
+form#search-block-form {
+    width: auto;
+    margin: 0;
+}
+
+#edit-submitted-loan-problem-description-military-veteran-1,
+#edit-submitted-military-veteran-1{
+  float:left;
+}
+
+#zone-menu-wrapper {
+    background-image: url(../../../../../sa/sites/all/themes/ise/images/menu-bg.png);
+    background-repeat: repeat-x;
+}
+body #zone-menu-wrapper {
+    display: block;
+}
+
+#region-menu {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level {
+	border-right: 1px solid #474747;
+}
+
+ul.ise-megamenu li.ise-megamenu-top-level.first {
+    border-left: 1px solid #474747;
+}
+
+/* Top level menu item container */
+ul.ise-megamenu li.ise-megamenu-top-level span {
+	margin: 0 5px;
+    background: none;
+}
+
+/* Container for the entire dropdown area */
+div.ise-megamenu-dropdown,
+div.ise-megamenu-dropdown li ul {
+  /*border-left: 1px solid #ccc; */
+  /* border-right: 1px solid #ccc; */
+	-moz-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+div.ise-megamenu-dropdown .ise-dropdown-column {
+    float: left;
+    width: 100%;
+}
+
+/* Container for the feature area (right-hand side of dropdown) */
+div.ise-megamenu-dropdown-feature {
+    display: block;
+}
+
+/* Home page styles */
+.self-selection-tab {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+.self-selection-tab p {
+    margin: 10px;
+}
+.self-selection-tab img {
+    width: 100%;
+    height: auto;
+}
+.self-selection-tab.views-row-last {
+    margin-right: 0;
+}
+
+/* Latest News block (Announcements ticker) */
+#block-views-latest-news-block {
+    height: 40px;
+}
+#block-views-latest-news-block ul {
+    height: 40px;
+}
+
+#block-views-latest-news-block li {
+    height: 40px;
+}
+
+#block-views-latest-news-block h2 {
+    float: left;
+    padding: 0 20px;
+    height: 40px;
+}
+#block-views-latest-news-block h2 a {
+    margin-top: 2px;
+}
+
+#block-views-latest-news-block a {
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+/* Preface */
+.preface-image,
+#block-views-preface-block .views-field-field-image .field-content {
+    display: inherit;
+}
+
+/* Footer links */
+.block-menu-footer-links ul li {
+    width: auto;
+    float: left;
+    padding: 0 8px;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid #aaa;
+    line-height: 0.7em
+}
+.block-menu-footer-links ul li.first {
+    padding-left: 0;
+}
+.block-menu-footer-links ul li.last {
+    padding-right: 0;
+    border: none;
+}
+.block-menu-footer-links a {
+    font-size: 0.7em;
+}
+
+#block-menu-menu-footer-menu {
+    display: block;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+       width:98.5%;
+}
+
+#block-menu-menu-footer-menu li {
+    display: inline;
+	font-family: 'News Cycle', sans-serif;
+/*	font-size: 14pt;*/
+	border-right: 1px solid #ccc;
+	padding-right: 5px;
+}
+
+#block-menu-menu-footer-menu li.top {
+    padding-bottom: 10px;
+}
+
+#block-menu-menu-footer-menu li.last { 
+	border-right: 0px;
+}
+
+#block-menu-menu-footer-menu li a { 
+	text-decoration: none;
+	color: #0062A0;
+}
+
+#block-menu-menu-footer-menu li a:hover { 
+	text-decoration: underline;
+	color: #0062A0;
+}
+
+#block-menu-menu-footer-menu li li { 
+	border-right: 0px;
+	display: block;
+	text-decoration: none;
+	font-family: 'News Cycle', sans-serif;
+/*	font-size: 12pt;*/
+	margin-left: 0;
+}
+
+#block-menu-menu-footer-menu li li a { 
+	color: #494b4c;
+	font-size: 0.85em;
+}
+
+#block-menu-menu-footer-menu li li a:hover { 
+	color: #494b4c;
+	text-decoration: underline;
+}
+
+/* Contact Us webform */
+
+#webform-component-contactus-name,
+#webform-component-contactus-email,
+#webform-component-contactus-question-type-label,
+#webform-component-contactus-message {
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+#webform-component-contactus-name label,
+#webform-component-contactus-email label,
+#webform-component-contactus-question-type-label legend,
+#webform-component-contactus-message label {
+    width: 25%;
+}
+#webform-component-contactus-question-type-label legend span {
+    float: right;
+}
+
+#webform-component-contactus-question-type-label--contactus-question-type div label, #webform-component-contactus-question-type-label--contactus-question-type 	div input {
+}
+
+#webform-component-contactus-name input,
+#webform-component-contactus-email input {
+    width: 70%;
+    display: block;
+    float: right;
+    border-left: 1px solid #ccc;
+}
+
+#webform-component-contactus-question-type-label--contactus-question-type {
+    width: 70%;
+    display: block;
+    float: right;
+    border-left: 1px solid #ccc;
+    min-height: 35px;
+}
+#edit-submitted-contactus-question-type-label-contactus-question-type {
+    text-align: left;
+    min-height: 35px;
+}
+#webform-component-contactus-message div.form-textarea-wrapper {
+    width: 70%;
+    float: right;
+}
+#webform-component-contactus-message textarea {
+    border-left: 1px solid #ccc;
+}
+
+/* Ombudsman Form */
+
+#edit-submitted-loan-problem-description-military-veteran-1{
+  width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+}
+
+#webform-client-form-271 label,
+#webform-client-form-161 label {
+   width: 25%;
+}
+
+#webform-client-form-271 input, #webform-client-form-271 select{
+    width: 79%;
+    display: block;
+    float: right;
+
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#webform-client-form-271 input, #webform-client-form-271 select{
+
+width: 95%;
+
+}
+}
+
+#webform-client-form-161 input, #webform-client-form-161 select {
+    width: 70%;
+    display: block;
+    float: right;
+}
+
+#webform-client-form-271 .form-textarea-wrapper,
+#webform-client-form-161 .form-textarea-wrapper{
+    width: 70%;
+    float: right;
+}
+
+#webform-client-form-271 #webform-component-name-and-ssn--date-of-birth .webform-container-inline,
+#webform-client-form-161 #webform-component-name-and-ssn--date-of-birth .webform-container-inline {
+    width: 70%;
+    display: block;
+    float: right;
+    border-left: 1px solid #ccc;
+    height: 35px;
+}
+
+#webform-client-form-271 ,
+#webform-client-form-161 #webform-component-name-and-ssn--date-of-birth .webform-container-inline div {
+   border-width: 0px;
+}
+
+
+#webform-client-form-271 select.month, #webform-client-form-271 select.day, #webform-client-form-271 select.year ,
+#webform-client-form-161 select.month, #webform-client-form-161 select.day, #webform-client-form-161 select.year {
+    width: 23%;
+    display: inline;
+    float: left;
+    height: 35px;
+}
+
+/* Calculators */
+#fsa-calculator-form label {
+    width: 25%;
+}
+
+#fsa-calculator-form input {
+    width: 70%;
+}
+
+#fsa-calculator-form div.radio {
+    width: 70%;
+}
+
+#fsa-calculator-form div.radio input{
+}
+
+/* Budget Calculator */
+#budget #expenses, #budget #incomes {
+   float: left;
+   width: 50%;
+}
+
+#budget #totals #expenses-total-div, #budget #totals #income-total-div {
+   float: left;
+   width: 50%;
+   text-align: center;
+}
+
+#budget input {
+    width: 50%;
+    display: block;
+    float: right;
+    border-left: 1px solid #ccc;
+    margin: 0px;
+    height: 35px;
+    text-align: right;
+}
+
+#budget label {
+}
+
+/* IBR Calculator */
+#ibr-calculator #general { 
+}
+
+#ibr-calculator div#your-loan-amount, #ibr-calculator div#spouse-loan-amount {
+   width: 45%;
+}
+
+/* PAYE Calculator */
+#paye-calculator #general { 
+}
+
+#paye-calculator div#your-loan-amount, #paye-calculator div#spouse-loan-amount {
+   width: 45%;
+}
+
+#webform-client-form-271.form-submit{
+   width:145px;
+}
+
+#webform-client-form-161 .form-submit{
+    width:100px;
+}
+

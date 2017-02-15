@@ -1,0 +1,4522 @@
+/********Defect 9972****/
+.ui-dialog-titlebar{
+    display: none !important;
+}
+
+.ui-icon-grip-diagonal-se {
+    display: none !important;
+}
+
+#leave_site, #renew {
+    background: rgba(0, 0, 0, 0) linear-gradient (to bottom, #578300 50%, #527c00 50%, #527c00 100%) repeat scroll 0 0 !important;
+    background: -moz-linear-gradient(top center,#578300 0%,#527c00 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#578300), color-stop(50%,#527c00), color-stop(100%,#527c00)) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#578300', endColorstr='#527c00',GradientType=0 ) !important;
+    background: linear-gradient(to bottom,  #578300 50%,#527c00 50%,#527c00 100%) !important;
+    background: -ms-linear-gradient(top,  #578300 50%,#527c00 50%,#527c00 100%) !important;
+    background: -o-linear-gradient(top,  #578300 50%,#527c00 50%,#527c00 100%) !important;
+    background: -webkit-linear-gradient(top,  #578300 50%,#527c00 50%,#527c00 100%) !important;
+    color: #ffffff !important;
+    font-family: Arial,Helvetica,Tahoma,sans-serif;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    border: 1px solid #a9c66d !important;
+    border-radius: 1px !important;
+}
+#leave_site: hover, #renew: hover {
+    background: rgba(0, 0, 0, 0) linear-gradient (to bottom, #527c00 50%, #578300 50%, #578300 100%) repeat scroll 0 0 !important;
+    background: -moz-linear-gradient(top center,#527c00 0%,#578300 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#527c00), color-stop(50%,#578300), color-stop(100%,#578300)) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#527c00', endColorstr='#578300',GradientType=0 ) !important;
+    background: linear-gradient(to bottom,  #527c00 50%,#578300 50%,#578300 100%) !important;
+    background: -ms-linear-gradient(top,  #527c00 50%,#578300 50%,#578300 100%) !important;
+    background: -o-linear-gradient(top,  #527c00 50%,#578300 50%,#578300 100%) !important;
+    background: -webkit-linear-gradient(top,  #527c00 50%,#578300 50%,#578300 100%) !important;
+    color: #ffffff !important;
+    font-family: Arial,Helvetica,Tahoma,sans-serif;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    border: 1px solid #a9c66d !important;
+    border-radius: 1px !important;
+}
+
+/*******/
+.contact-button{
+font-size:13.6px !important;
+width:315px;
+}
+
+
+.contact-button p{
+font-size:13.6px !important;
+}
+
+
+.contact-button a:link,
+.contact-button a:visited,
+.contact-button a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12.6px;
+    padding: 2px;
+}
+
+.contact-button a:link, 
+.contact-button a:visited, 
+.contact-button a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12.6px;
+    padding: 2px;
+}
+
+.contact-button {
+    border: 3px solid rgb(204, 204, 204);
+    padding: 0.5em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+
+.contact-button ext {
+    border: 3px solid rgb(204, 204, 204);
+    padding: 0.5em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+
+
+
+span, body {
+font-family: 'Droid Serif', serif;
+font-size:13.6px;
+}
+
+
+.samelineDiv{
+float: left;
+}
+
+#nslds-login-block .samelineDiv a {
+    color: #1B4E83;
+    text-decoration: none;
+}
+
+@media (max-width:700px){
+#login-intro {
+width:108% !important;
+}
+}
+
+#login-intro {
+margin: 20px 0 30px -20px; 
+background-color: #d1d1d1; 
+width: 500px; 
+font-family: Cambria,serif; 
+font-size: 14px; 
+padding: 10px;
+clear: both;
+}
+
+.error_msg_text {
+color: #000000 !important;
+display: inline-block;
+font-family: "News Cycle",Arial,Tahoma,sans-serif !important;
+font-size: 1em !important;
+line-height: 26px;
+}
+
+.login_trouble_link {text-decoration: underline !important;}
+
+.downloadtext{
+margin-top:-35px !important;
+}
+
+
+#details{
+font-family: 'Droid Serif', serif;
+font-size:13.6px;
+}
+.grey-table{
+margin-top:-9px;
+background-color:#eaeaea !important;
+//width:100%\9;
+height:30%\9 !important;
+}
+
+.page-my-student-aid-loan-detail .grey-table{
+  width:101%!important;
+}
+
+
+@media (max-width:479px){
+#grant-contact-details{
+margin-top:11px !important;
+}
+}
+
+
+#disbursement_data th{
+font-size:13.6px;
+}
+
+#myTable th{
+font-size:13.6px;
+}
+
+#program_explanation{
+font-size:13.6px;
+}
+@media (max-width:480px){
+#disbursement_data.tablesorter{
+width:50% !important;
+font-size:10px !important;
+border:none !important;
+}
+}
+
+
+@media all and (min-width: 320px) and (max-width: 568px){
+#mobile{
+width:100% !important;
+}
+}
+
+@media all and (min-width: 568px) and (max-width: 608px){
+.grey-celld{
+width:35% !important;
+margin-left:240px;
+margin-top:-20px;
+padding-bottom:25px;
+
+}
+}
+
+
+
+@media all and (min-width: 320px) and (max-width: 480px){
+.grey-celld{
+width:35% !important;
+font-size:8px;
+margin-left:160px;
+margin-top:-20px;
+padding-bottom:25px;
+
+}
+}
+
+
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.grey-cellc{
+border-left:none !important;
+}
+}
+
+
+#grey-box-left{
+font-size:13px;
+margin-top:-5px;
+font-size:13px\9 !important;
+font-family: 'Droid Serif', serif;
+width:91%;
+margin-left:5px;
+}
+
+@media screen and (max-width: 479px){
+.confirmation{
+padding-top:5px;
+padding-bottom:20px;
+}
+}
+
+
+@media all and (min-width: 480px) and (max-width: 568px){
+.confirmation{
+padding-top:5px;
+padding-bottom:20px;
+margin-left:80px;
+}
+}
+
+
+
+
+@media all and (min-width: 568px) and (max-width: 607px){
+.confirmation{
+margin-left:30px;
+}
+}
+
+.grey-cella{
+font-size:13px\9 !important;
+padding-bottom:-30px\9;
+
+}
+
+.grey-cellb{
+/*border-left-width:2px;
+border-left-color:#000000;*/
+
+}
+
+.grey-cellc{
+display:none;
+/*position:absolute\9;
+margin-left:-50px\9;
+margin-top:-20px\9;
+padding-bottom:-30px\9;
+border-left:solid 2px rgb(24,77,123) !important;
+position:absolute !important;
+width:220px;
+position:absolute\9 !important;
+margin-top:-10px;
+margin-left:-30px !important;
+margin-top:-80px\9 !important;
+margin-left:190px\9 !important;
+border-left:solid 2px rgb(24,77,123)\9;
+width:230px\9;
+padding:0px\9;
+height:30px\9 !important;
+padding-left:15px\9 !important;
+height:48px !important;
+padding-top:-5px;
+padding-top:-1px\9;
+padding-left:15px !important;*/
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.confirmation{
+margin-left:-10px !important;
+}
+}
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.grey-cellc{
+position:absolute !important;
+padding-top:-6px;
+margin-top:-100px;
+margin-left:160px !important;
+width:100px;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.grey-cellc{
+margin-top:-85px;
+border-left:none !important;
+width:90px;
+margin-left:-180px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.downloadtext{
+margin-left:-40px !important;
+padding-left:10px;
+width:110px;
+height:200px;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.downloadtext{
+margin-top:-20px;
+}
+}
+
+
+
+@media screen and (max-width: 600px){
+.grey-cellc{
+border-left:none !important;
+
+} 
+}
+
+@media all and (min-width: 768px) and (max-width: 1090px){
+.grey-celle{
+margin-top:-40px;
+margin-left:65px;
+
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.grey-cellc{
+margin-left:240px !important;
+}
+}
+
+
+
+
+
+#enrollment-status{
+margin-top:-25px;
+margin-bottom:-10px;
+margin-top:-10px\9;
+margin-bottom:-10px\9;
+font-size:13.6px !important;
+
+}
+
+#student-status{
+font-size:13.6px !important;
+}
+
+#student-enrollment-status{
+margin-top:-25px;
+margin-bottom:-10px;
+margin-top:-10px\9;
+margin-bottom:-10px\9;
+font-size:13.6px !important;
+
+}
+
+#enrollment-status-date{
+margin-top:-25px;
+margin-bottom:-10px;
+margin-top:-10px\9;
+margin-bottom:-10px\9;
+font-size:13.6px !important;
+}
+
+
+
+#details .top{
+margin-bottom:10px;
+}
+
+#detail-content{
+margin-top:-5px;
+}
+
+#repayment-expand img{
+margin-top:-35px;
+}
+
+#repayment-expand{
+margin-bottom:-5px;
+}
+
+
+#grant-contact-expand p{
+margin-bottom:-13px;
+font-size:13.6px;
+}
+
+#detail-content h1{
+margin-top:-30px !important;
+}
+
+#payment-expand{
+margin-bottom:-13px;
+}
+
+#overpayment-top {
+margin-bottom:-33px;
+}
+
+
+#grant-info{
+font-size:13.6px;
+}
+
+
+#grant-expand{
+margin-top:-13px;
+}
+
+
+
+
+
+#grant-contact-details{
+margin-top:-15px;
+margin-bottom:-35px;
+font-size:13.6px !important;
+}
+
+#student-status {
+    font-family: 'Droid Serif', serif;
+}
+
+
+#payment-detail{
+margin-bottom:-40px;
+margin-bottom:30px\9;
+font-size:13.6px !important;
+}
+
+#payment-detail p{
+font-size:13.6px !important;
+}
+
+
+#student-status{
+margin-top:-5px;
+margin-bottom:-5px;
+}
+
+
+#region-user-second #block-ise-nslds-nslds-login-block {
+float: right;
+}
+
+#nslds-login-block #tabberlive {
+width: 520px;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block li {
+float: left;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block li.first {
+    border: none;
+    background: #000;
+    height: 29px;
+    top: -1px;
+    position: relative;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block li.first a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+#nslds-login-block {
+    position: absolute;
+    top: 27px;
+    right: -1px;
+    border: 1px solid #dedede;
+    z-index: 599;
+    background: #fff;
+}
+
+form#nslds-login-form {
+    padding: 0 20px;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block .tabbertab.tabbertabhide {
+    display: none;
+}
+
+.tabberlive ul.tabbernav li {
+    list-style: none;
+    width: 50%;
+    display: block;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li a {
+    width: 200px;
+    display: block;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li {
+    background-color: #000;
+
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li a {
+    color: #fff;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li.tabberactive {
+    background-color: #fff;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li.tabberactive a {
+    color: #000;
+}
+
+#nslds-login-block .tabbertab {
+    width: 520px;
+/*padding:60px;*/
+    font-size: 20px;
+}
+
+#nslds-login-block p, .block-main li {
+    color: #494B4C;
+    font-family: 'Droid Serif',serif;
+    font-size: 0.85em;
+    padding: 10px;
+}
+
+.collapsible_header {
+  /*background:#E9F7FA; */
+    background: #cff;
+    border-color: #CFCBCB;
+    border: 1px;
+    border-style: solid;
+    font-weight: 700;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 20px;
+    font-family: 'Droid Serif', serif;
+    font-size:14px;
+   
+}
+
+/* 03/06/2014 hchoi for defect 119 */
+table td, table tfoot th, table tbody th {
+    border: 1px solid #CFCBCB;
+    font-family: 'Droid Serif', serif;
+    font-size: 13.6px;
+}
+
+table tbody th {
+	background: #fff;
+}
+
+table tbody  td.grey:hover {
+    background-color:#E6E6E6;
+	}
+
+
+table th {
+    border: 1px solid #CFCBCB;
+	font-family: "News Cycle", Arial;
+}
+
+table#noborder td {
+    border: 1px none #CFCBCB;
+}
+
+@media screen and (max-width: 600px){
+/* 03/06/2014 hchoi for defect 119 */
+table td, table tfoot th, table tbody th {
+    border: 0px !important;
+    
+}
+}
+/* NEW nslds-login-form begin */
+
+#nslds-login-form .form-item label {
+    line-height: 1em;
+    color: #669900;
+    font-weight: normal;
+    display: inline;
+    font-size: 20px;
+    font: inherit;
+}
+
+#nslds-login-form .node-form .form-text {
+    display: inline;
+    width: auto;
+}
+
+#nslds-login-form .description {
+    clear: left;
+    padding-top: 5px;
+    font-style: italic;
+}
+
+#nslds-login-form input[type="text"] {
+    display: inline-block;
+}
+
+#nslds-login-form .inline-fields {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#nslds-login-form .inline-fields .form-item, #nslds-login-form .form-actions {
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    
+}
+
+
+#nslds-login-block .samelineDiv {
+    display: inline-block;
+    width: 100%;
+    padding-top: .6em;
+    padding-bottom: .6em;
+}
+
+#nslds-login-block input.form-submit {
+    margin-bottom: 20px;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+    background: -moz-linear-gradient(top, #7db72f, #4e7d0e);
+    text-transform: uppercase;
+    border: 1px solid #a9c66d;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+  /*ext-shadow: -1px -1px 0 rgba(0,0,0,0.3);*/
+  /*font-weight:bold;*/
+    color: #FFFFFF;
+    background-color: #C1D695;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#C1D695), to(#B3CA86));
+    background-image: -webkit-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: -moz-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: -ms-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: -o-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: linear-gradient(to bottom, #C1D695, #B3CA86);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#C1D695, endColorstr=#B3CA86);
+    letter-spacing: 2px;
+    height: 35px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+
+#nslds-login-form #edit-submit {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+#nslds-login-block input.form-submit:hover {
+    border: 1px solid #96ba4b;
+    background-color: #abc870;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#abc870), to(#9dba63));
+    background-image: -webkit-linear-gradient(top, #abc870, #9dba63);
+    background-image: -moz-linear-gradient(top, #abc870, #9dba63);
+    background-image: -ms-linear-gradient(top, #abc870, #9dba63);
+    background-image: -o-linear-gradient(top, #abc870, #9dba63);
+    background-image: linear-gradient(to bottom, #abc870, #9dba63);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#abc870, endColorstr=#9dba63);
+}
+
+#nslds-login-block .description {
+    line-height: 15px;
+}
+
+#nslds-login-block .tabbertab h2 {
+    display: none;
+}
+
+
+
+/* NEW nslds-login-form end */
+
+
+.nslds-messages .messages {
+    clear: both;
+    padding-right: 40px;
+    position: relative;
+    top: 4px;
+}
+
+.nslds-messages .messages a.remove-message {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.remove-message .hidden-text {
+    text-indent: -999em;
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+/* 03/06/2014 hchoi for defect id 119 start rename th to thead th and removed the first line
+th {
+    border: 3px solid rgb(204, 204, 204);
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+*/
+
+thead th {
+    /*border: 3px solid rgb(204, 204, 204); */
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+.navigation {
+    border: 3px solid rgb(204, 204, 204);
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+
+tfoot {
+    border: 3px solid rgb(204, 204, 204);
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(247,247,239);
+    color: black!important;
+}
+
+tfoot tr.total,  tfoot tr.total th{
+    border: 3px solid rgb(204, 204, 204);
+    background-color: rgb(206,227,181);
+}
+
+#grey_boxes {
+    border: 3px solid black;
+    padding-right: 1em;
+    text-align: left;
+    font-size: 11em;
+    float: left;
+    color: black!important;
+}
+
+#alert {
+    width: 93%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top:-6px;
+    font-family: 'Droid Serif',serif;
+    font-size:14px;
+
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#alert {
+    width: 90% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top:-6px;
+    margin-bottom:5px;
+    font-family: 'Droid Serif',serif;
+    font-size:14px;
+
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1024px){
+#alert {
+    width: 92% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top:-6px;
+    margin-bottom:5px;
+    font-family: 'Droid Serif',serif;
+    font-size:14px;
+
+}
+}
+
+
+
+
+#alert img {
+    vertical-align: top;
+}
+
+.alert img {
+    vertical-align: top;
+}
+
+#loan-status {
+    float: left;
+    padding-right: 2%;
+    width: 50%;
+
+}
+
+#grant-contact-details,
+#details,
+#payment-detail,
+#repayment-details{
+  padding:2%;
+}
+
+#header1{
+margin-left:2%;
+width:90%;
+font-family: 'Droid Serif', serif;
+}
+
+#student-name{
+margin-left:2%;
+
+}
+
+
+
+
+.alert{
+background-color:rgb(154,70,65) !important;
+font-style:italic;
+font-family: 'Droid Serif', serif;
+font-size:14px;
+margin-top:-5px;
+margin-bottom:10px;
+
+}
+
+
+div.nslds_header_toggle_button{
+    background-image:;
+    background-position:center;
+    background-color: white;
+    position: absolute;
+    width:60px;
+    height:50px;
+    border:solid 0px red;
+    bottom: -10px;
+    right:10px;
+    border-radius:10px;
+  }
+
+  div.nslds_header_toggle_button:hover,
+  div.nslds_header_open_button:hover{
+    cursor: pointer;
+  }
+
+  div.nslds_header  {
+   display: inline-block;
+   position: relative;
+   z-index : 1;
+  }
+
+  div.nslds_welcome_message{
+    position: absolute;
+    height:100%;
+    width: 30%;
+    border: solid 0px green;
+    top: 0;
+    margin-left:750px\9 !important;
+    margin-left:630px\0 !important;
+    margin-left:640px;
+    /*right: 10%;*/
+    background: rgb(00, 153, 00); /* Fall-back for browsers that don't support rgba */
+    background: rgba(00, 153, 00, .5);
+}
+
+img.nslds_header_image {
+    border: solid 0px pink;
+}
+
+div.nslds_welcome_message h2 {
+    padding-left: 35px;
+    width:280px;
+    padding-left: 35px\9;
+    padding-top: -1px\9;
+    padding-top: 10px;
+    text-align: left;
+    padding-right: 100px;
+    border: solid 0px red;
+    margin: 0;
+    font-size: 2em;
+    font-family: "News Cycle", Arial;
+    color: white;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+div.nslds_welcome_message p {
+    padding-left: 35px;
+    padding-top: 15px;
+    text-align: left;
+    padding-right: 10px;
+    border: solid 0px red;
+    margin: 0;
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+    color: white;
+    font-size: .9em;
+}
+
+div.nslds_header_container {
+    width: 100%;
+    width: 140%\9;
+    border: solid 0px blue;
+}
+
+.alertbody {
+    font-size: 14px !important;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1%;
+    font-family: 'Droid Serif', serif;
+}
+
+.alerttext {
+    font-size: 19px !important;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 1%;
+    font-family: 'Droid Serif', serif;
+}
+
+.alertbody {
+    font-size: 15px !important;
+    padding-left: 1%;
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+    width:100%;
+}
+
+
+
+
+
+
+#program-info{
+    font-size: 13.6px !important;
+    
+     font-family: 'Droid Serif', serif;
+}
+
+@media (max-width:600px){
+#program-info{
+    font-size: 13px !important;
+   
+     font-family: 'Droid Serif', serif;
+}
+}
+
+.bold-serif{
+    font-size: 13.6px !important;
+    font-weight:bold;
+     font-family: 'Droid Serif', serif;
+}
+
+@media (max-width:600px){
+.bold-serif{
+    font-size: 13px !important;
+    font-weight:bold;
+     font-family: 'Droid Serif', serif;
+}
+}
+
+.serif{
+    font-size: 13.6px !important;
+    
+     font-family: 'Droid Serif', serif;
+}
+
+
+#nslds-frame-container {
+    font-family: 'Droid Serif', serif;
+    padding-left:5px;
+    padding-right:5px;
+}
+#nslds-frame-container h1{
+    margin-bottom:-1px;
+}
+
+
+
+#nonmobile{
+margin-top:-10px;
+}
+
+div.nslds_header_toggle_button {
+    background-image: url('../../../../sa/sites/all/modules/ise_nslds/images/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    border: solid 0px red;
+    bottom: -10px;
+    right: 10px;
+    border-radius: 10px;
+}
+
+.nounderline {
+    color: rgb(40,136,176);
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif;
+}
+
+div.nslds_header_open_button {
+    display: none;
+    background-image: url('../../../../sa/sites/all/modules/ise_nslds/images/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: green;
+    position: relative;
+    width: 60px;
+    height: 50px;
+    border: solid 0px red;
+    top: -10px;
+    top: -1px\9;
+    left: 900px;
+    border-radius: 10px;
+}
+
+#warning_detail_teach,
+#warning_detail_overpayment,
+#warning_detail,
+#warning_reaffirmation {
+    font-size: 12px;
+    padding: 1%;
+    background-color: rgb(245,236,236);
+    color: black;
+    display: none;
+    width: 50%;
+    float: left;
+    position: relative;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+}
+
+.alertbody  a:link,
+.alertbody  a:visited {
+    color: lightgrey;
+}
+
+#detail-content {
+    border-style: solid;
+    padding: 2%;
+}
+
+#nonmobile {
+    padding: 2%;
+}
+
+#footer {
+    position: relative;
+    font-family: Times New Roman;
+    font-weight: none\9 !important;
+    text-decoration: none\9 !important;
+}
+
+#navButtonPrevious {
+    text-align:center;
+    font-size: 7pt;
+    height: 19px;
+    height: 19px\9;
+    padding-top: 5px\9 !important;
+    padding: 2px;
+    width:170px;
+    background-color: #6d6f70 !important;
+}
+
+/*@media all and (min-width: 768px) and (max-width: 979px){
+#navButtonPrevious {
+margin-top: 9px;
+margin-left: -14px;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1279px){
+#navButtonPrevious {
+margin-top: 8px;
+margin-left: -16px;
+}
+}
+
+@media (max-width:320px){
+#navButtonPrevious {
+width:130px;
+margin-left: -10px;
+margin-top: 5px;
+height: 30px !important;
+margin-bottom:60px !important;
+}
+}*/
+
+/*@media all and (min-width: 481px) and (max-width: 568px){
+#navButtonPrevious {
+width:130px;
+margin-left: -13px;
+margin-top: 9px;
+height:25px;
+margin-bottom:60px !important;
+}
+}*/
+
+/*@media only screen and (min-device-width: 560px) and (max-device-width: 1136px){
+#navButtonPrevious {
+width:130px;
+margin-left: -16px !important;
+margin-top: -7px !important;
+height: 30px !important;
+margin-bottom:60px !important;
+}
+}*/
+
+
+#navButtonPrevious a:link, 
+#navButtonPrevious a:visited, 
+#navButtonPrevious a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff !important;
+    font-size: 7pt;
+    padding-top: 5px;
+    padding-left: 3px;
+}
+
+
+#navButtonNext {
+    font-size: 7pt;
+    text-align:center;
+    height: 19px;
+    height: 19px\9;
+    padding: 2px;
+    width:170px;
+    padding-top: 5px\9;
+    background-color: #6d6f70 !important;
+}
+
+/*@media (device-height: 568px)
+and (device-width: 321px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape){
+#navButtonNext {
+width:130px;
+margin-left: 350px !important;
+height: 30px !important;
+margin-top:-6px !important;
+margin-bottom:60px !important;
+}
+}*/
+
+@media (max-width:650px){
+#navButtonNext {
+width:110px;
+height: 22px !important;
+}
+}
+
+@media (max-width:650px){
+#navButtonPrevious {
+width:110px;
+height: 22px !important;
+}
+}
+
+
+
+.navigation a:link,
+.navigation a:visited,
+.navigation a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 7pt;
+    padding: 2px;
+}
+
+#navButtonNext a:link, 
+#navButtonNext a:visited, 
+#navButtonNext a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 7pt;
+    padding: 2px;
+}
+
+#region-postscript-first.grid-12.region.region-postscript-first {
+    margin-top: 25px;
+}
+
+
+
+/* Next and Previous Button CSS styling End RHT */
+
+
+
+
+#graph_grant_legend,
+#loan-legend {
+    /*position: absolute;
+    margin-top: -100px;
+    margin-top: -80px\9;
+    margin-left: 65%;*/
+
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#graph_grant_legend,
+#loan-legend {
+position:absolute;
+width:55% !important;
+margin-top: -70px;
+margin-left:430px;
+}
+}
+
+
+
+@media all and (min-width: 980px) and (max-width: 1279px){
+#graph_grant_legend,
+#loan-legend {
+ margin-top: -70px;
+}
+}
+
+#overpaymentexpand,
+#infoexpand,
+#teachexpand {
+    
+}
+
+
+/* Ralph's CSS Grid BEGIN */
+
+#block-menu-menu-footer-menu{
+font-weight:normal\9 !important;
+}
+
+
+#block-views-nslds-glossary-block{
+font-weight:normal\9 !important;
+font-family: 'Droid Serif',serif;
+width:100% !important;
+/*border-color:#bbb;
+border-style:solid;
+border-width:1px;
+padding:45px;
+margin-bottom:110px !important;*/
+}
+
+
+#block-views-nslds-glossary-block h2{
+font-size:1.2em;
+}
+
+#tiles-table-full h2{
+font-size: 1.2em !important;
+}
+
+#block-views-nslds-glossary-block .field-content{
+margin-top:-18px;
+margin-left:-25px;
+font-weight:normal\9 !important;
+
+}
+
+
+#block-views-nslds-glossary-block .block-title{
+margin-left:-7px !important;
+margin-top:-20px;
+margin-bottom:10px;
+font-size:1.2em !important;
+}
+
+#block-views-nslds-glossary-block .views-field.views-field-title{
+margin-bottom:-20px !important;
+font-family: "News Cycle", Arial;
+font-size:16px;
+
+}
+
+#block-views-nslds-glossary-block a:visited{
+color:#267399;
+}
+
+
+@media (max-width:479px){
+#block-views-nslds-glossary-block{
+width:70% !important;
+margin-top:40px;
+margin-bottom:610px !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+}
+}
+
+
+@media (max-width:479px){
+#block-views-nslds-glossary-block-1{
+width:70% !important;
+margin-top:80px;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+}
+}
+
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-glossary-block-1{
+width:70% !important;
+margin-top:60px;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+
+}
+}
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-glossary-block{
+width:70% !important;
+/*margin-top:40px;
+margin-bottom:530px !important;*/
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+
+}
+}
+
+
+
+#block-views-nslds-quick-links-block h1{
+font-family: "News Cycle", Arial;
+font-size:22px;
+color:#196ba5;
+}
+
+
+#block-views-nslds-quick-links-block .view-content{
+font-family: "News Cycle", Arial;
+margin-left:-33px;
+}
+
+#block-views-nslds-quick-links-block .item-list{
+font-family: "News Cycle", Arial;
+font-size:
+}
+
+
+
+.samelineDiv{
+float: left;
+}
+
+#nslds-login-block .samelineDiv a {
+    color: #1B4E83;
+    text-decoration: none;
+}
+
+
+.downloadtext{
+margin-top:-35px !important;
+}
+
+
+#details{
+font-family: 'Droid Serif', serif;
+font-size:13.6px;
+
+}
+
+.grey-table{
+margin-top:-9px;
+width:100%\9;
+height:30%\9 !important;
+}
+
+
+@media (max-width:479px){
+#grant-contact-details{
+margin-top:11px !important;
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 568px){
+#mobile{
+width:100% !important;
+background-color:#eaeaea;
+}
+}
+
+@media all and (min-width: 568px) and (max-width: 608px){
+.grey-celld{
+width:35% !important;
+border-left:solid 2px rgb(24,77,123) !important;
+margin-left:240px;
+margin-top:-20px;
+padding-bottom:25px;
+
+}
+}
+
+
+
+@media all and (min-width: 320px) and (max-width: 480px){
+.grey-celld{
+width:35% !important;
+font-size:8px;
+border-left:solid 2px rgb(24,77,123) !important;
+margin-left:160px;
+margin-top:-20px;
+padding-bottom:25px;
+
+}
+}
+
+
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.grey-cellc{
+border-left:none !important;
+}
+}
+
+
+#grey-box-left{
+font-size:13px;
+margin-top:-5px;
+font-size:13px\9 !important;
+font-family: 'Droid Serif', serif;
+width:91%;
+margin-left:5px;
+}
+
+
+
+
+@media all and (min-width: 568px) and (max-width: 607px){
+.confirmation{
+margin-left:30px;
+}
+}
+
+.grey-cella{
+font-size:13px\9 !important;
+padding-bottom:-30px\9;
+
+}
+
+.grey-cellb{
+/*border-left-width:2px;
+border-left-color:#000000;*/
+
+}
+
+.grey-cellc{
+/*position:absolute\9;
+margin-left:-50px\9;
+margin-top:-20px\9;
+padding-bottom:-30px\9;*/
+border-left:solid 2px rgb(24,77,123) !important;
+position:absolute !important;
+width:220px;
+position:absolute\9 !important;
+margin-top:-10px;
+margin-left:-30px !important;
+margin-top:-80px\9 !important;
+margin-left:190px\9 !important;
+border-left:solid 2px rgb(24,77,123)\9;
+width:230px\9;
+padding:0px\9;
+height:30px\9 !important;
+padding-left:15px\9 !important;
+height:48px !important;
+padding-top:-5px;
+padding-top:-1px\9;
+padding-left:15px !important;
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.grey-cellc{
+position:absolute !important;
+padding-top:-6px;
+margin-top:-100px;
+margin-left:160px !important;
+width:100px;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.grey-cellc{
+margin-top:-85px;
+border-left:none !important;
+width:90px;
+margin-left:-180px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.downloadtext{
+border-left:solid 2px rgb(24,77,123) !important;
+margin-left:-40px !important;
+padding-left:10px;
+width:110px;
+height:200px;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.downloadtext{
+margin-top:-20px;
+}
+}
+
+/*
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.downloadtext{
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.downloadtext{
+width:90px;
+}
+}
+
+
+
+*/
+
+
+@media screen and (max-width: 600px){
+.grey-cellc{
+border-left:none !important;
+
+} 
+}
+
+@media all and (min-width: 768px) and (max-width: 1090px){
+.grey-celle{
+margin-top:-40px;
+margin-left:65px;
+
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.grey-cellc{
+margin-left:240px !important;
+}
+}
+
+
+
+
+
+#enrollment-status{
+margin-top:-25px;
+margin-bottom:-10px;
+margin-top:-10px\9;
+margin-bottom:-10px\9;
+font-size:13.6px !important;
+
+}
+
+#student-status{
+font-size:13.6px !important;
+}
+
+#student-enrollment-status{
+margin-top:-25px;
+margin-bottom:-10px;
+margin-top:-10px\9;
+margin-bottom:-10px\9;
+font-size:13.6px !important;
+
+}
+
+#enrollment-status-date{
+margin-top:-25px;
+margin-bottom:-10px;
+margin-top:-10px\9;
+margin-bottom:-10px\9;
+font-size:13.6px !important;
+}
+
+
+
+#details .top{
+margin-bottom:10px;
+}
+
+#detail-content{
+margin-top:-5px;
+}
+
+#repayment-expand img{
+margin-top:-35px;
+}
+
+#repayment-expand{
+margin-bottom:-5px;
+}
+
+
+#grant-contact-expand p{
+margin-bottom:-13px;
+font-size:13.6px;
+}
+
+#detail-content h1{
+margin-top:-30px !important;
+font-size:24px !important;
+}
+
+#payment-expand{
+margin-bottom:-13px;
+}
+
+#overpayment-top {
+margin-bottom:-33px;
+}
+
+#grant-expand{
+
+}
+
+#loan-expand{
+  height:30px;
+
+}
+@media (max-width:479px){
+#loan-expand{
+  height:60px;
+  margin-bottom:5px;
+
+}
+}
+
+
+#grant-contact-details{
+margin-top:-15px;
+margin-bottom:-35px;
+font-size:13.6px !important;
+}
+
+#student-status {
+    font-family: 'Droid Serif', serif;
+}
+
+
+#payment-detail{
+margin-bottom:-40px;
+margin-bottom:30px\9;
+font-size:13.6px;
+}
+
+#student-status{
+margin-top:-5px;
+margin-bottom:-5px;
+}
+
+
+#region-user-second #block-ise-nslds-nslds-login-block {
+float: right;
+}
+
+#nslds-login-block #tabberlive {
+width: 520px;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block li {
+float: left;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block li.first {
+    border: none;
+    background: #000;
+    height: 29px;
+    top: -1px;
+    position: relative;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block li.first a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+#nslds-login-block {
+    position: absolute;
+    top: 27px;
+    right: -1px;
+    border: 1px solid #dedede;
+    z-index: 599;
+    background: #fff;
+}
+
+form#nslds-login-form {
+    padding: 0 20px;
+}
+
+#region-user-second #block-ise-nslds-nslds-login-block .tabbertab.tabbertabhide {
+    display: none;
+}
+
+.tabberlive ul.tabbernav li {
+    list-style: none;
+    width: 50%;
+    display: block;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li a {
+    width: 200px;
+    display: block;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li {
+    background-color: #000;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li a {
+    color: #fff;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li.tabberactive {
+    background-color: #fff;
+}
+
+#nslds-login-block .tabberlive ul.tabbernav li.tabberactive a {
+    color: #000;
+}
+
+#nslds-login-block .tabbertab {
+    width: 520px;
+/*padding:60px;*/
+    font-size: 20px;
+}
+
+#nslds-login-block p, .block-main li {
+    color: #494B4C;
+    font-family: 'Droid Serif',serif;
+    font-size: 0.85em;
+    padding: 10px;
+}
+
+.collapsible_header {
+  /*background:#E9F7FA; */
+    background: #cff;
+    border-color: #CFCBCB;
+    border: 1px;
+    border-style: solid;
+    font-weight: 700;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 20px;
+    font-family: 'Droid Serif', serif;
+	font-weight:strong;
+    font-size:14px;
+   
+}
+
+/* 03/06/2014 hchoi for defect 119 */
+table td, table tfoot th, table tbody th {
+    border: 1px solid #CFCBCB;
+    font-family: 'Droid Serif', serif;
+    font-size: 13.6px;
+}
+
+table tbody th {
+	background: #fff;
+}
+
+table th {
+    border: 1px solid #CFCBCB;
+	font-family: "News Cycle", Arial;
+}
+
+table#noborder td {
+    border: 1px none #CFCBCB;
+}
+
+@media screen and (max-width: 600px){
+/* 03/06/2014 hchoi for defect 119 */
+table td, table tfoot th, table tbody th {
+    border: 0px;
+    
+}
+}
+/* NEW nslds-login-form begin */
+
+#nslds-login-form .form-item label {
+    line-height: 1em;
+    color: #669900;
+    font-weight: normal;
+    display: inline;
+    font-size: 20px;
+    font: inherit;
+}
+
+#nslds-login-form .node-form .form-text {
+    display: inline;
+    width: auto;
+}
+
+#nslds-login-form .description {
+    clear: left;
+    padding-top: 5px;
+    font-style: italic;
+}
+
+#nslds-login-form input[type="text"] {
+    display: inline-block;
+}
+
+#nslds-login-form .inline-fields {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+#nslds-login-block .samelineDiv {
+    display: inline-block;
+    width: 100%;
+    padding-top: .6em;
+    padding-bottom: .6em;
+}
+
+#nslds-login-block input.form-submit {
+    margin-bottom: 20px;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+    background: -moz-linear-gradient(top, #7db72f, #4e7d0e);
+    text-transform: uppercase;
+    border: 1px solid #a9c66d;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+  /*ext-shadow: -1px -1px 0 rgba(0,0,0,0.3);*/
+  /*font-weight:bold;*/
+    color: #FFFFFF;
+    background-color: #C1D695;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#C1D695), to(#B3CA86));
+    background-image: -webkit-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: -moz-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: -ms-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: -o-linear-gradient(top, #C1D695, #B3CA86);
+    background-image: linear-gradient(to bottom, #C1D695, #B3CA86);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#C1D695, endColorstr=#B3CA86);
+    letter-spacing: 2px;
+    height: 35px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+
+#nslds-login-form #edit-submit {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+#nslds-login-block input.form-submit:hover {
+    border: 1px solid #96ba4b;
+    background-color: #abc870;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#abc870), to(#9dba63));
+    background-image: -webkit-linear-gradient(top, #abc870, #9dba63);
+    background-image: -moz-linear-gradient(top, #abc870, #9dba63);
+    background-image: -ms-linear-gradient(top, #abc870, #9dba63);
+    background-image: -o-linear-gradient(top, #abc870, #9dba63);
+    background-image: linear-gradient(to bottom, #abc870, #9dba63);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#abc870, endColorstr=#9dba63);
+}
+
+#nslds-login-block .description {
+    line-height: 15px;
+}
+
+#nslds-login-block .tabbertab h2 {
+    display: none;
+}
+
+
+
+/* NEW nslds-login-form end */
+
+#nslds-login-block{
+box-shadow: 10px 10px 5px #888888;
+border-top-width:5px;
+border-top-color:#85ad33;
+border-bottom-width:5px;
+border-bottom-color:#85ad33;
+
+}
+
+
+.nslds-messages .messages {
+    clear: both;
+    padding-right: 40px;
+    position: relative;
+    top: 4px;
+}
+
+.nslds-messages .messages a.remove-message {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.remove-message .hidden-text {
+    text-indent: -999em;
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+/* 03/06/2014 hchoi for defect id 119 start rename th to thead th and removed the first line
+th {
+    border: 3px solid rgb(204, 204, 204);
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+*/
+
+thead th {
+    /*border: 3px solid rgb(204, 204, 204); */
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+.navigation {
+    border: 3px solid rgb(204, 204, 204);
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(99,154,0) !important;
+    color: white !important;
+}
+
+tfoot {
+    border: 3px solid rgb(204, 204, 204);
+    padding-right: 1em;
+    text-align: left;
+    background-color: rgb(247,247,239);
+    color: black!important;
+}
+
+tfoot tr.total,  tfoot tr.total th{
+    border: 3px solid rgb(204, 204, 204);
+    background-color: rgb(206,227,181);
+}
+
+#grey_boxes {
+    border: 3px solid black;
+    padding-right: 1em;
+    text-align: left;
+    font-size: 11em;
+    float: left;
+    color: black!important;
+}
+
+#alert {
+    width: 93%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top:-6px;
+    font-family: 'Droid Serif',serif;
+    font-size:14px;
+
+}
+
+#alert img {
+    vertical-align: top;
+}
+
+.alert img {
+    vertical-align: top;
+}
+
+#loan-status {
+    float: left;
+    padding-right: 2%;
+    width: 50%;
+
+}
+
+#grant-contact-details,
+#details,
+#payment-detail,
+#repayment-details{
+  padding:2%;
+}
+
+#header1{
+margin-left:2%;
+width:90%;
+font-family: 'Droid Serif', serif;
+}
+
+#student-name{
+margin-left:2%;
+
+}
+
+
+
+/*
+.alert{
+background-color:rgb(154,70,65) !important;
+font-style:italic;
+font-family: 'Droid Serif', serif;
+font-size:14px;
+margin-top:-5px;
+margin-bottom:10px;
+
+}
+*/
+
+div.nslds_header_toggle_button{
+    background-image:;
+    background-position:center;
+    background-color: white;
+    position: absolute;
+    width:60px;
+    height:50px;
+    border:solid 0px red;
+    bottom: -10px;
+    right:10px;
+    border-radius:10px;
+  }
+
+  div.nslds_header_toggle_button:hover,
+  div.nslds_header_open_button:hover{
+    cursor: pointer;
+  }
+
+  div.nslds_header  {
+   display: inline-block;
+   position: relative;
+   z-index : 1;
+  }
+
+  div.nslds_welcome_message{
+    position: absolute;
+    height:100%;
+    width: 30%;
+    border: solid 0px green;
+    top: 0;
+    margin-left:750px\9 !important;
+    margin-left:630px\0 !important;
+    margin-left:640px;
+    /*right: 10%;*/
+    background: rgb(00, 153, 00); /* Fall-back for browsers that don't support rgba */
+    background: rgba(00, 153, 00, .5);
+}
+
+img.nslds_header_image {
+    border: solid 0px pink;
+}
+
+div.nslds_welcome_message h2 {
+    padding-left: 35px;
+    width:280px;
+    padding-left: 35px\9;
+    padding-top: -1px\9;
+    padding-top: 10px;
+    text-align: left;
+    padding-right: 100px;
+    border: solid 0px red;
+    margin: 0;
+    font-size: 2em;
+    font-family: "News Cycle", Arial;
+    color: white;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+div.nslds_welcome_message p {
+    padding-left: 35px;
+    padding-top: 15px;
+    text-align: left;
+    padding-right: 10px;
+    border: solid 0px red;
+    margin: 0;
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+    color: white;
+    font-size: .9em;
+}
+
+div.nslds_header_container {
+    width: 100%;
+    width: 140%\9;
+    border: solid 0px blue;
+}
+
+.alertbody {
+    font-size: 14px !important;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1%;
+    font-family: 'Droid Serif', serif;
+}
+
+.alerttext {
+    font-size: 19px !important;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 1%;
+    font-family: 'Droid Serif', serif;
+}
+
+.alertbody {
+    font-size: 15px !important;
+    padding-left: 1%;
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+    width:100%;
+}
+
+#loan-info{
+font-size: 13.6px ;
+}
+
+@media (max-width:600px){
+#loan-info{
+font-size: 13px ;
+}
+}
+
+#nslds-frame-container {
+    font-family: 'Droid Serif', serif;
+    padding-left:5px;
+    padding-right:5px;
+}
+#nslds-frame-container h1{
+    margin-bottom:-1px;
+font-family: "News Cycle", Arial;
+
+}
+
+#nonmobile{
+margin-top:-10px;
+}
+
+div.nslds_header_toggle_button {
+    background-image: url('../../../../sa/sites/all/modules/ise_nslds/images/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    border: solid 0px red;
+    bottom: -10px;
+    right: 10px;
+    border-radius: 10px;
+}
+
+.nounderline {
+    color: rgb(40,136,176);
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif;
+}
+
+div.nslds_header_open_button {
+    display: none;
+    background-image: url('../../../../sa/sites/all/modules/ise_nslds/images/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: green;
+    position: relative;
+    width: 60px;
+    height: 50px;
+    border: solid 0px red;
+    top: -10px;
+    top: -1px\9;
+    left: 900px;
+    border-radius: 10px;
+}
+
+#warning_detail_teach,
+#warning_detail_overpayment,
+#warning_detail {
+    font-size: 12px;
+    padding: 1%;
+    background-color: rgb(245,236,236);
+    color: black;
+    display: none;
+    width: 50%;
+    float: left;
+    position: relative;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+}
+
+.alertbody  a:link,
+.alertbody  a:visited {
+    color: lightgrey;
+}
+
+#detail-content {
+    border-style: solid;
+    padding: 2%;
+	font-size:13.6px;
+}
+
+@media (max-width:479px){
+#detail-content {
+    border-style: solid;
+    padding: 2%;
+	font-size:13px;
+}
+}
+
+
+#nonmobile {
+    padding: 2%;
+}
+
+#footer {
+    position: relative;
+    font-family: Times New Roman;
+    font-weight: none\9 !important;
+    text-decoration: none\9 !important;
+}
+
+
+
+
+#navButtonPrevious a:link, 
+#navButtonPrevious a:visited, 
+#navButtonPrevious a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff !important;
+    font-size: 7pt;
+    padding-top: 5px;
+    padding-left: 3px;
+}
+
+
+.navigation a:link,
+.navigation a:visited,
+.navigation a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 7pt;
+    padding: 2px;
+}
+
+#navButtonNext a:link, 
+#navButtonNext a:visited, 
+#navButtonNext a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 7pt;
+    padding: 2px;
+}
+
+#region-postscript-first.grid-12.region.region-postscript-first {
+    margin-top: 25px;
+}
+
+
+
+/* Next and Previous Button CSS styling End RHT */
+
+
+
+
+#graph_grant_legend,
+#loan-legend {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 65%;
+}
+
+#overpaymentexpand,
+#infoexpand,
+#teachexpand {
+    cursor: pointer;
+}
+
+
+/* Ralph's CSS Grid BEGIN */
+
+#block-menu-menu-footer-menu{
+font-weight:normal\9 !important;
+}
+
+
+/*#block-views-nslds-glossary-block{
+font-weight:normal\9 !important;
+font-family: 'Droid Serif',serif;
+width:50%;
+border-color:#bbb;
+border-style:solid;
+border-width:1px;
+padding:45px;
+margin-bottom:210px !important;
+}*/
+
+/*@media all and (min-width: 768px) and (max-width: 979px){
+#block-views-nslds-glossary-block{
+font-weight:normal\9 !important;
+font-family: 'Droid Serif',serif;
+width:45% !important;
+border-color:#bbb;
+border-style:solid;
+border-width:1px;
+padding:45px;
+margin-bottom:110px !important;
+}
+}*/
+
+/*@media all and (min-width: 980px) and (max-width: 1028px){
+#block-views-nslds-glossary-block{
+font-weight:normal\9 !important;
+font-family: 'Droid Serif',serif;
+width:45% !important;
+border-color:#bbb;
+border-style:solid;
+border-width:1px;
+padding:45px;
+margin-bottom:110px !important;
+}
+}*/
+
+
+#block-views-nslds-glossary-block h1{
+font-size:22px;
+}
+
+#block-views-nslds-glossary-block .field-content{
+margin-top:-18px;
+margin-left:-25px;
+font-weight:normal\9 !important;
+
+}
+
+
+#block-views-nslds-glossary-block .block-title{
+margin-left:-7px !important;
+margin-top:-20px;
+margin-bottom:10px;
+font-size: 1.2em !important;
+}
+
+#block-views-nslds-glossary-block .views-field.views-field-title{
+margin-bottom:-20px !important;
+font-family: "News Cycle", Arial;
+font-size: 1.2em !important;
+}
+
+#block-views-nslds-glossary-block a:visited{
+color:#267399;
+}
+
+
+@media (max-width:479px){
+#block-views-nslds-glossary-block-1{
+width:70% !important;
+margin-top:80px;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+}
+}
+
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-glossary-block-1{
+width:70% !important;
+margin-top:60px;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+
+}
+}
+
+
+#block-views-nslds-quick-links-block h1{
+font-family: "News Cycle", Arial;
+font-size:22px;
+color:#196ba5;
+}
+
+
+#block-views-nslds-quick-links-block .view-content{
+font-family: "News Cycle", Arial;
+margin-left:-33px;
+}
+
+#block-views-nslds-quick-links-block .item-list{
+font-family: "News Cycle", Arial;
+font-size:
+}
+
+
+/*#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+font-weight:normal\9 !important;
+height:200px;
+margin-top:1px;
+margin-top:-1px\9 !important;
+margin-left:70%;
+margin-left:660px\9;
+width:24% !important;
+width:210px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+border-width:1px;
+padding-top:20px;
+padding-top:20px\9;
+padding-left:40px;
+padding-right:30px;
+padding-bottom:40px\9;
+padding-bottom:45px;
+}*/
+
+
+@media (max-width:479px){
+#block-views-nslds-quick-links-block-1{
+margin-top:50px;
+}
+}
+
+@media (max-width:479px){
+#block-views-nslds-quick-links-block-2{
+margin-top:50px;
+}
+}
+
+
+@media (max-width:479px){
+#block-views-nslds-quick-links-block-3{
+margin-top:50px;
+}
+}
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-quick-links-block-1{
+margin-top:50px;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-quick-links-block-2{
+margin-top:50px;
+}
+}
+
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-quick-links-block-3{
+margin-top:50px;
+}
+}
+
+
+
+/*@media (max-width:479px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:220px;
+margin-top:3580px;
+margin-left:0px;
+width:76% !important;
+width:108px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:30px;
+padding-top:25px;
+font-size:10pt\9 !important;
+}
+}*/
+
+/*@media all and (min-width: 480px) and (max-width: 586px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:220px;
+margin-top:940px !important;
+margin-left:0px;
+width:76% !important;
+width:108px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:30px;
+padding-top:25px;
+font-size:10pt\9 !important;
+}
+}*/
+
+
+
+
+/*@media all and (min-width: 768px) and (max-width: 979px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:220px;
+margin-top:-2px !important;
+margin-left:450px !important;
+width:108px\9 !important;
+width:170px\0 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:38px;
+padding-top:25px;
+font-size:10pt\9 !important;
+}
+}*/
+
+
+/*@media all and (min-width: 980px) and (max-width: 1279px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:200px;
+margin-top:-2px !important;
+margin-top:-28px\0 !important;
+margin-left:635px !important;
+margin-left:62%\0 !important;
+width:108px\9 !important;
+width:270px\0 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:38px;
+padding-top:10px;
+font-size:10pt\9 !important;
+padding-bottom:20px\0;
+}
+}*/
+
+
+
+
+/*@media all and (min-width: 1280px) and (max-width: 1380px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:200px;
+margin-top:-2px !important;
+margin-left:815px !important;
+width:108px\9 !important;
+width:288px\0 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:38px;
+padding-top:10px;
+font-size:10pt\9 !important;
+}
+}*/
+
+#block-block-6 h2{
+font-family: "News Cycle", Arial;
+margin-left:10px;
+padding-top:20px\9;
+padding-bottom:25px\9;
+padding-top:25px;
+padding-bottom:25px;
+
+}
+
+#block-block-6 .block-ise-quick-resources-block-1.item-list{
+margin-left:10px;
+font-family: "News Cycle", Arial;
+line-height:20px\9;
+line-height:20px;
+
+}
+
+
+
+/*#block-block-6{
+position:absolute;
+font-weight:normal\9 !important;
+line-height:10px;
+margin-top:-1855px !important;
+margin-left:70%;
+margin-top:-1940px\9 !important;
+margin-left:659px\9;
+width:25% !important;
+width:243px\9 !important;
+text-align: left !important;
+border-style:solid;
+border-width:1px;
+border-color:#bbb;
+padding-left:20px;
+padding-right:40px;
+padding-right:20px\9;
+padding-bottom:50px !important;
+padding-bottom:90px\9 !important;
+padding-bottom:10px\0/;
+}*/
+
+/*
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-block-6{
+position:absolute;
+margin-top:-2550px !important;
+margin-left:450px !important;
+text-align: left !important;
+border-style:solid;
+border-width:1px;
+border-color:#bbb;
+padding-left:40px;
+padding-right:28px;
+padding-bottom:128px !important;
+}
+}*/
+
+/*
+@media all and (min-width: 980px) and (max-width: 1279px){
+#block-block-6{
+position:absolute;
+margin-top:-2050px !important;
+margin-left:635px !important;
+margin-left:62%\0 !important;
+width:118px\9 !important;
+width:288px\0 !important;
+text-align: left !important;
+border-style:solid;
+border-width:1px;
+border-color:#bbb;
+padding-left:40px;
+padding-right:28px;
+padding-right:20px\9;
+padding-bottom:110px !important;
+padding-bottom:33px\9;
+padding-bottom:17px\0;
+}
+}*/
+
+
+/*@media all and (min-width: 1280px) and (max-width: 1300px){
+#block-block-6{
+position:absolute;
+margin-left:815px !important;
+width:118px\9 !important;
+width:308px\0 !important;
+text-align: left !important;
+border-style:solid;
+border-width:1px;
+border-color:#bbb;
+padding-left:40px;
+padding-right:28px;
+padding-right:20px\9;
+padding-bottom:5px;
+padding-bottom:33px\9;
+padding-bottom:6px\0;
+}
+}*/
+
+/*@media (max-width:479px){
+#block-block-6{
+position:absolute;
+margin-top:-240px !important;
+margin-left:0px !important;
+width:76% !important;
+width:118px\9 !important;*/
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+padding-left:40px;
+padding-right:30px;
+padding-right:20px\9;
+padding-bottom:60px;
+padding-bottom:33px\9;
+}
+}*/
+
+/*@media all and (min-width: 480px) and (max-width: 586px){
+#block-block-6{
+position:absolute;
+margin-top:-240px !important;
+margin-left:0px !important;
+width:76% !important;
+width:118px\9 !important;*/
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+padding-left:40px;
+padding-right:30px;
+padding-right:20px\9;
+padding-bottom:60px;
+padding-bottom:33px\9;
+}
+}*/
+
+
+.confirmation{
+margin-left:49px\9 !important;
+}
+
+
+.block-ise-quick-resources-block-1.item-list{
+margin-left:-15px;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.grey-celle{
+width:200px;
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.grey-celle{
+background-color:#eaeaea !important;
+width:280px;
+height:90px;
+margin-top:-5px;
+margin-left:-10px !important;
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.grey-celle.confirmation{
+background-color:#eaeaea !important;
+width:200px;
+margin-left:10px !important;
+}
+}
+
+#login-link{
+  cursor:pointer;
+}
+
+#edit-submit{
+  cursor:pointer;
+}
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.confirmation{
+margin-left:3px !important;
+width:261px;
+}
+}
+
+
+
+@media all and (min-width: 320px) and (max-width: 568px){
+#mobile table{
+background-color:#eaeaea;
+}
+}
+
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.grey-celle img{
+background-color:#eaeaea;
+}
+}
+
+
+
+
+.block-title{
+color:#196ba5;
+}
+
+.nslds_welcome_message{
+font-size:11pt\9;
+}
+
+
+/* Ralph's CSS Grid END */
+
+
+
+
+
+
+/* ralphs edits */
+
+
+.ui-icon.ui-icon-triangle-1-e{
+position:absolute;
+margin-left:-18px;
+margin-top:6px;
+}
+
+/*.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+margin-top:-13px;
+}*/
+
+
+.tablesorter a{
+font-size:13.6px !important;
+display:initial; /* 03/07/2014 hchoi added */
+}
+.tablesorter a:link{
+text-decoration:underline !important;
+}
+
+
+#accordion_questions{
+margin-top: -20px;
+margin-top: -15px\9;
+margin-bottom: -30px;
+color:#0062a0;
+background-color:transparent !important;
+font-size:13.6px !important;
+cursor: pointer;
+
+}
+
+
+
+#question-expand1.questions.not-expanded:hover{
+cursor: pointer;
+}
+
+#question-expand2.questions.not-expanded:hover{
+cursor: pointer;
+}
+
+#question-expand3.questions.not-expanded:hover{
+cursor: pointer;
+}
+
+
+#question-expand1.questions.not-expanded{
+margin-bottom:-15px !important;
+color:#0062a0;
+}
+
+#question-expand2.questions.not-expanded{
+margin-bottom:-15px !important;
+color:#0062a0;
+}
+
+#question-expand3.questions.not-expanded{
+margin-bottom:-15px !important;
+color:#0062a0;
+}
+
+
+
+
+
+
+#question-expand1.questions{
+margin-bottom:-18px !important;
+color:#9B4674;
+}
+
+#question-expand2.questions{
+margin-bottom:-18px !important;
+color:#9B4674;
+}
+
+#question-expand3.questions{
+margin-bottom:-18px !important;
+color:#9B4674;
+}
+
+
+#question_title{
+font-size:14px;
+padding-top:24px;
+margin-top:-20px !important;
+margin-bottom:-5px;
+margin-top:-40px\9 !important; 
+margin-bottom:5px\9 !important;
+}
+
+
+
+
+.ui-icon.ui-icon-triangle-1-s{
+position:absolute;
+margin-left:-18px;
+}
+
+
+.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all{
+background-image: none;
+color:#0062a0;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:13.6px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top.ui-state-focus{
+background-image: none;
+color:#9B4674;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top{
+background-image: none;
+padding-left:10px;
+background-color:transparent !important;
+border-color:transparent;
+padding-bottom:5px;
+padding-top:20px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+background-image: none;
+background-color:transparent;
+border-color:transparent;
+padding-left:1%;
+font-size:13.6px;
+font-family: 'Droid Serif',serif;
+margin-top:-20px;
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active .field-item.even{
+margin-top:10px;
+}
+
+
+
+@media screen and (max-width: 600px){
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+}
+}
+
+
+
+
+@media screen and (max-width: 600px){
+#question_title{
+margin-top:-15px;
+margin-bottom:15px;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#question_title{
+margin-top:-9px;
+margin-bottom:15px;
+}
+}
+
+.ui-draggable{
+margin:0 auto;
+margin:30px auto 0;
+padding:6px; 
+border-radius: 7px;
+width:400px !important;
+height:auto;
+position:absolute !important;
+border-width:2px !important;
+border-color:#6d6f70 !important;
+
+}
+
+
+@media screen and (max-width: 600px){
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable{
+width:250px !important;
+
+}
+}
+
+
+
+.ui-dialog-content.ui-widget-content{
+font-family: 'Droid Serif',serif;
+font-size:13.6px;
+line-height:30px !important;
+padding-left:13px !important;
+padding-right:13px !important;
+padding-top:5px !important;
+padding-bottom:13px !important;
+border:0px !important;
+border-color:transparent !important;
+
+}
+
+.ui-icon.ui-icon-closethick{
+display:none;
+}
+
+
+#confirm_box{
+line-height:30px !important;
+border:0px !important;
+border-color:transparent !important;
+}
+
+.ui-dialog-buttonset{
+border-color:transparent !important;
+align:center !important;
+}
+
+
+.ui-button-text{
+font-family: 'Droid Serif',serif;
+font-size:13px;
+align:center;
+/*RHT Repayment Plan Formatting Fix*/
+padding-left:8px !important;
+padding-right:30px;
+border:0px !important;
+border-color:transparent !important;
+background-color:transparent !important;
+}
+
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix{
+border-color:transparent !important;
+margin-left:0px;
+width:220px;
+margin-top:-10px !important;
+padding-left:80px;
+margin-top:13px;
+background-color:transparent !important;
+
+}
+
+
+.page-my-student-aid .ui-dialog-buttonpane .ui-button{
+width: 100px !important;
+margin-left:5px;
+
+}
+
+
+.page-my-student-aid .ui-dialog-buttonpane{
+width:50% !important;
+}
+
+
+@media screen and (max-width: 600px){
+
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix{
+margin-left:30px !important;
+width:85% !important;
+text-align:center !important;
+
+}
+
+.ui-button-text{
+margin-left:-16px !important;
+
+}
+}
+
+.confirmation{
+cursor:pointer;
+}
+
+
+
+
+.ui-icon.ui-icon-triangle-1-s{
+position:absolute;
+margin-left:-18px;
+}
+
+
+.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all{
+background-image: none;
+color:#0062a0;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:13.6px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all.ui-state-hover.ui-state-focus{
+color:#0062a0;
+background-color:transparent !important;
+border-color:transparent;
+
+}
+
+
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top.ui-state-focus{
+background-image: none;
+color:#9B4674;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top{
+background-image: none;
+padding-left:10px;
+background-color:transparent !important;
+border-color:transparent;
+padding-bottom:5px;
+padding-top:20px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+background-image: none;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:1%;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+margin-top:-10px;
+
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active .field-item.even{
+margin-top:-10px;
+}
+
+
+
+@media screen and (max-width: 600px){
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+}
+}
+
+
+
+
+
+
+
+/* 01/24/14 Ralph Mobile CSS for Table in NSLDS BEGIN*/
+
+
+@media screen and (max-width: 600px){
+#alert{
+width:88% !important;
+}
+}
+
+@media (max-width:600px){
+#grey-box-left{
+font-size:53%;
+margin-top:-100px;
+width:87%;
+margin-left:-10px;
+background-color:transparent;
+}
+}
+
+
+
+
+@media screen and (max-width: 600px){
+#myTable{
+}
+}
+
+@media screen and (max-width: 600px){
+#myGrantTable{
+}
+}
+
+
+@media screen and (max-width: 600px){
+#myOverpaymentTable{
+}
+}
+
+@media screen and (max-width: 600px){
+#myOverpaymentTable{
+font-size:13px;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_header_image{
+width:733px !important;
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_header_image{
+width:982px !important;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_welcome_message{
+margin-left:410px !important;
+font-size:13px !important;
+width:40% !important;
+
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_header_open_button{
+margin-left:-300px !important;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+div.nslds_welcome_message h2{
+padding-top:8px !important;
+padding-left:15px;
+width:185px;
+font-size:13px;
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+div.nslds_welcome_message h2{
+padding-top:3px !important;
+width:420px;
+margin-bottom:-16px;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+div.nslds_welcome_message p{
+padding-left:15px;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_welcome_message{
+font-size:13px !important;
+}
+}
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_header_open_button{
+margin-top:10px !important;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-menu-menu-top-menu{
+margin-left:-120px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+#block-menu-menu-top-menu{
+margin-left:-150px;
+}
+}
+
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_header_open_button{
+margin-left:-35px !important;
+margin-top:8px;
+font-size:6px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_welcome_message h2{
+padding-top:13px !important;
+}
+}
+
+
+@media screen and (max-width: 600px){
+#nslds-frame-container{
+border:none !important;
+}
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.grey-cella{
+margin-top:50px;
+margin-left:-10px;
+}
+}
+
+
+
+
+
+/* 01/24/14 Ralph Mobile CSS for Table in NSLDS END*/
+
+
+
+/* Ralph Other FSA Sites Styling BEGIN */
+/*Updated by Moe 02.18.2014*/
+@media screen and (max-width: 600px){
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:200px !important;
+}
+
+#alert{
+width:88% !important;
+}
+
+
+.tabbernav{
+font-size:15px;
+}
+
+
+#myTable{
+font-size:55.5%;
+}
+
+#myGrantTable{
+font-size:68.5%;
+}
+
+#myOverpaymentTable{
+font-size:68.5%;
+}
+
+#myOverpaymentTable{
+font-size:68.5%;
+}
+
+.tabbertab{
+width:300px !important;
+}
+.tabbernav{
+font-size:8.5pt !important;
+}
+#nslds-login-block{
+font-size:5pt !important;
+}
+#nslds-login-form .form-item label {
+    color: #669900;
+    display: block;
+    font: inherit;
+}
+#nslds-login-form .form-item, .form-actions {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+#nslds-login-block .tabberlive ul.tabbernav li a{
+width:120px;
+}
+
+.otherBackgd{
+width:250px !important;
+}
+#nslds-login-form .inline-fields .form-item, #nslds-login-form .form-actions {
+    white-space: nowrap;
+	display: inline;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+/*#edit-birth-month{
+margin-top:5px;
+float: left;
+}
+#edit-birth-day{
+margin-top:5px;
+float: left;
+}
+#edit-birth-year{
+float:left !important;
+margin-top:5px;
+}*/
+#edit-ssn{
+/*margin-left:20px !important;*/
+float:left !important;
+}
+#edit-lname{
+/*float:left !important;
+margin-top:5px;
+width:60px;*/
+}
+#edit-pin{
+/*margin-left:210px !important;*/
+float:left !important;
+margin-top:5px;
+}
+
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+
+#edit-dob{
+float:right !important;
+}
+
+
+#edit-ssn{
+
+margin-top:5px;
+}
+#edit-lname{
+float:left !important;
+margin-top:5px;
+}
+#edit-pin{
+float:left !important;
+}
+}
+
+#edit-lname{
+margin-left:225px\9;
+}
+
+#edit-ssn{
+margin-left:180px\9;
+}
+
+#edit-pin{
+margin-left:140px\9;
+}
+
+/* Kosi M. -> Adding NSLDS login specific CSS override to fix display bug with fields in IE9 and below */
+#nslds-login-form #edit-lname,
+#nslds-login-form #edit-ssn,
+#nslds-login-form #edit-pin
+{margin-left:0px\9;}
+
+@media screen and (max-width: 320px){
+#block-ise-nslds-nslds-login-block{
+margin-left:30px;
+}
+
+/* Kosi M -> Quick fix to add spacing below ssn field in iPhone view */
+#nslds-login-form #edit-ssn {margin: 0 0 1em 0;}
+
+}
+
+
+
+/*Updated by Moe 02.18.2014*/
+/* Ralph Other FSA Sites Styling END */
+
+
+
+/* 02/27/2014 for graph hover Heather Choi added start defect ID #19 */
+div.intlinkHov[realvalue]:hover:after,div.intlinkHov[realvalue]:focus:after, div.linkHov[realvalue]:hover:after, div.linkHov[realvalue]:focus:after,div.grantlinkHov[realvalue]:hover:after ,div.grantlinkHov[realvalue]:focus:after{
+ content: attr(realvalue);
+ padding: 4px 8px;
+ color: #333;
+ position: absolute;
+ top: 100%;
+ background-color:lightblue;
+ z-index: 100;
+ width: 250px;
+ min-width:210px;
+  } 
+/* 02/27/2014 Heather Choi added end */
+
+
+
+
+
+
+
+
+/*@media (max-width:480px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:220px;
+margin-top:1480px !important;
+margin-left:0px;
+width:76% !important;
+width:108px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:30px;
+padding-top:25px;
+font-size:10pt\9 !important;
+}
+}
+
+@media all and (min-width: 481px) and (max-width: 586px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:220px;
+margin-top:640px !important;
+margin-left:0px;
+width:76% !important;
+width:108px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:30px;
+padding-top:25px;
+font-size:10pt\9 !important;
+}
+}*/
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:220px;
+margin-top:-2px !important;
+margin-left:450px !important;
+width:108px\9 !important;
+width:170px\0 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:38px;
+padding-top:25px;
+font-size:10pt\9 !important;
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1279px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:200px;
+margin-top:-2px !important;
+margin-top:-28px\0 !important;
+margin-left:635px !important;
+margin-left:62%\0 !important;
+width:108px\9 !important;
+width:270px\0 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:38px;
+padding-top:10px;
+font-size:10pt\9 !important;
+padding-bottom:20px\0;
+}
+}
+
+
+
+
+@media all and (min-width: 1280px) and (max-width: 1380px){
+#block-views-nslds-quick-links-block{
+font-family: "News Cycle", Arial;
+position:absolute;
+height:200px;
+margin-top:-2px !important;
+margin-left:815px !important;
+width:108px\9 !important;
+width:288px\0 !important;
+text-align: left !important;
+border-color:#bbb;
+border-style:solid;
+font-size:11pt\9;
+border-width:1px;
+padding-left:40px;
+padding-right:38px;
+padding-top:10px;
+font-size:10pt\9 !important;
+}
+}
+
+#block-block-6 h2{
+font-family: "News Cycle", Arial;
+margin-left:10px;
+
+}
+
+#block-block-6 .block-ise-quick-resources-block-1.item-list{
+margin-left:10px;
+font-family: "News Cycle", Arial;
+}
+
+
+
+
+
+
+
+/*
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-block-6{
+position:absolute;
+margin-top:-370px !important;
+margin-top:-411px\0 !important;
+margin-left:450px !important;
+width:118px\9 !important;
+width:189px\0 !important;
+text-align: left !important;
+border-style:solid;
+border-width:1px;
+border-color:#bbb;
+padding-left:40px;
+padding-right:28px;
+padding-right:20px\9;
+padding-bottom:128px !important;
+padding-bottom:33px\9;
+padding-bottom:48px\0;
+}
+}
+*/
+
+/*
+@media all and (min-width: 980px) and (max-width: 1279px){
+#block-block-6{
+position:absolute;
+margin-top:-350px !important;
+margin-left:635px !important;
+margin-left:62%\0 !important;
+width:118px\9 !important;
+width:288px\0 !important;
+text-align: left !important;
+border-style:solid;
+border-width:1px;
+border-color:#bbb;
+padding-left:40px;
+padding-right:28px;
+padding-right:20px\9;
+padding-bottom:110px !important;
+padding-bottom:33px\9;
+padding-bottom:17px\0;
+}
+}
+*/
+
+@media (max-width:479px){
+#block-block-6{
+/*RHT #1406
+
+position:absolute;
+margin-top:-330px !important;*/
+margin-left:0px !important;
+width:76% !important;
+width:118px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+padding-left:40px;
+padding-right:30px;
+padding-right:20px\9;
+padding-bottom:60px;
+padding-bottom:33px\9;
+}
+}
+
+@media all and (min-width: 480px) and (max-width: 586px){
+#block-block-6{
+position:absolute;
+margin-top:-240px !important;
+margin-left:0px !important;
+width:76% !important;
+width:118px\9 !important;
+text-align: left !important;
+border-color:#bbb;
+border-top-style:solid;
+border-left:none;
+border-right:none;
+border-bottom:none;
+padding-left:40px;
+padding-right:30px;
+padding-right:20px\9;
+padding-bottom:60px;
+padding-bottom:33px\9;
+}
+}
+
+
+
+
+
+.block-ise-quick-resources-block-1.item-list{
+margin-left:-15px;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.grey-celle{
+width:200px;
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 568px){
+.grey-celle{
+}
+}
+
+
+
+.block-title{
+color:#196ba5;
+}
+
+.nslds_welcome_message{
+font-size:11pt\9;
+}
+
+
+/* Ralph's CSS Grid END */
+
+
+
+
+
+
+/* ralphs edits */
+
+
+.ui-icon.ui-icon-triangle-1-e{
+position:absolute;
+margin-left:-18px;
+margin-top:6px;
+}
+
+/*.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+margin-top:-13px;
+}*/
+
+
+.tablesorter a{
+font-size:13.6px !important;
+display:initial; /* 03/07/2014 hchoi added */
+}
+.tablesorter a:link{
+text-decoration:underline !important;
+}
+
+
+#accordion_questions{
+margin-top: -20px;
+margin-top: -15px\9;
+margin-bottom: -30px;
+color:#0062a0;
+background-color:transparent !important;
+font-size:13.6px !important;
+}
+
+
+
+#question-expand1.questions.not-expanded{
+margin-bottom:-15px !important;
+color:#0062a0;
+}
+
+#question-expand2.questions.not-expanded{
+margin-bottom:-15px !important;
+color:#0062a0;
+}
+
+#question-expand3.questions.not-expanded{
+margin-bottom:-15px !important;
+color:#0062a0;
+}
+
+
+
+
+
+
+#question-expand1.questions{
+margin-bottom:-18px !important;
+color:#9B4674;
+}
+
+#question-expand2.questions{
+margin-bottom:-18px !important;
+color:#9B4674;
+}
+
+#question-expand3.questions{
+margin-bottom:-18px !important;
+color:#9B4674;
+}
+
+
+#question_title{
+font-size:18px;
+padding-top:24px;
+margin-top:-20px !important;
+margin-bottom:-5px;
+margin-top:-40px\9 !important; 
+margin-bottom:5px\9 !important;
+}
+
+
+
+
+.ui-icon.ui-icon-triangle-1-s{
+position:absolute;
+margin-left:-18px;
+}
+
+
+.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all{
+background-image: none;
+color:#0062a0;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:13.6px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top.ui-state-focus{
+background-image: none;
+color:#9B4674;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top{
+background-image: none;
+padding-left:10px;
+background-color:transparent !important;
+border-color:transparent;
+padding-bottom:5px;
+padding-top:20px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+background-image: none;
+background-color:transparent;
+border-color:transparent;
+padding-left:1%;
+font-size:13.6px;
+font-family: 'Droid Serif',serif;
+margin-top:-20px;
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active .field-item.even{
+margin-top:10px;
+}
+
+
+
+@media screen and (max-width: 600px){
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+}
+}
+
+
+
+
+@media screen and (max-width: 600px){
+#question_title{
+margin-top:-15px;
+margin-bottom:15px;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#question_title{
+margin-top:-9px;
+margin-bottom:15px;
+}
+}
+
+.ui-draggable{
+margin:0 auto;
+margin:30px auto 0;
+padding:6px; 
+border-radius: 7px;
+width:400px !important;
+height:auto;
+position:absolute !important;
+border-width:2px !important;
+border-color:#6d6f70 !important;
+
+}
+
+
+@media screen and (max-width: 600px){
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable{
+width:250px !important;
+
+}
+}
+
+
+
+.ui-dialog-content.ui-widget-content{
+font-family: 'Droid Serif',serif;
+font-size:13.6px;
+line-height:30px !important;
+padding-left:13px !important;
+padding-right:13px !important;
+padding-top:5px !important;
+padding-bottom:13px !important;
+border:0px !important;
+border-color:transparent !important;
+
+}
+
+.ui-icon.ui-icon-closethick{
+display:none;
+}
+
+
+#confirm_box{
+line-height:30px !important;
+border:0px !important;
+border-color:transparent !important;
+}
+
+.ui-dialog-buttonset{
+border-color:transparent !important;
+align:center !important;
+width: 260px;
+position: relative;
+left: 0px;
+}
+
+/*
+.ui-button-text{
+font-family: 'Droid Serif',serif;
+font-size:13px;
+align:center;
+padding-left:30px;
+padding-right:30px;
+border:0px !important;
+border-color:transparent !important;
+background-color:transparent !important;
+}
+*/
+
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix{
+border-color:transparent !important;
+margin-left:0px;
+width:320px;
+margin-top:-10px !important;
+padding-left:80px;
+margin-top:13px;
+background-color:transparent !important;
+
+}
+
+
+@media screen and (max-width: 600px){
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix{
+padding-left:0px;
+width:300px;
+background-color:transparent !important;
+}
+}
+
+
+.confirmation{
+cursor:pointer;
+}
+
+
+
+
+.ui-icon.ui-icon-triangle-1-s{
+position:absolute;
+margin-left:-18px;
+}
+
+
+.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all{
+background-image: none;
+color:#0062a0;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:13.6px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all.ui-state-hover.ui-state-focus{
+color:#0062a0;
+background-color:transparent !important;
+border-color:transparent;
+
+}
+
+
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top.ui-state-focus{
+background-image: none;
+color:#9B4674;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:10px;
+padding-bottom:5px;
+padding-top:5px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+line-height:11px !important;
+
+}
+
+.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top{
+background-image: none;
+padding-left:10px;
+background-color:transparent !important;
+border-color:transparent;
+padding-bottom:5px;
+padding-top:20px;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+background-image: none;
+background-color:transparent !important;
+border-color:transparent;
+padding-left:1%;
+font-size:14px;
+font-family: 'Droid Serif',serif;
+margin-top:-10px;
+
+}
+
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active .field-item.even{
+margin-top:-10px;
+}
+
+
+
+@media screen and (max-width: 600px){
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:auto !important;
+}
+}
+
+
+
+
+
+
+
+/* 01/24/14 Ralph Mobile CSS for Table in NSLDS BEGIN*/
+
+
+@media screen and (max-width: 600px){
+#alert{
+width:88% !important;
+}
+}
+
+@media (max-width:600px){
+#grey-box-left{
+font-size:53%;
+margin-top:-100px;
+width:87%;
+margin-left:-10px;
+background-color:transparent;
+}
+}
+
+
+
+
+@media screen and (max-width: 600px){
+#myTable{
+font-size:13px;
+}
+}
+
+@media screen and (max-width: 600px){
+#myGrantTable{
+font-size:13px%;
+}
+}
+
+
+@media screen and (max-width: 600px){
+#myOverpaymentTable{
+font-size:13px;
+}
+}
+
+@media screen and (max-width: 600px){
+#myOverpaymentTable{
+font-size:13px;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_header_image{
+width:733px !important;
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_header_image{
+width:982px !important;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_welcome_message{
+margin-left:410px !important;
+font-size:13px !important;
+width:40% !important;
+
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_header_open_button{
+margin-left:-300px !important;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+div.nslds_welcome_message h2{
+padding-top:8px !important;
+padding-left:15px;
+width:185px;
+font-size:13px;
+}
+}
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+div.nslds_welcome_message h2{
+padding-top:3px !important;
+width:165px;
+}
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+div.nslds_welcome_message p{
+padding-left:15px;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_welcome_message{
+font-size:13px !important;
+}
+}
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.nslds_header_open_button{
+margin-top:10px !important;
+}
+}
+
+
+@media all and (min-width: 768px) and (max-width: 979px){
+#block-menu-menu-top-menu{
+margin-left:-120px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+#block-menu-menu-top-menu{
+margin-left:-150px;
+}
+}
+
+
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_header_open_button{
+margin-left:-35px !important;
+margin-top:8px;
+font-size:6px !important;
+}
+}
+
+@media all and (min-width: 980px) and (max-width: 1090px){
+.nslds_welcome_message h2{
+padding-top:13px !important;
+}
+}
+
+
+@media screen and (max-width: 600px){
+#nslds-frame-container{
+border:none !important;
+}
+}
+
+.grey-cella{
+margin-left:50px;
+}
+
+@media all and (min-width: 768px) and (max-width: 979px){
+.grey-cella{
+margin-top:50px;
+margin-left:-10px;
+}
+}
+
+
+
+
+
+/* 01/24/14 Ralph Mobile CSS for Table in NSLDS END*/
+
+
+
+/* Ralph Other FSA Sites Styling BEGIN */
+/*Updated by Moe 02.18.2014*/
+@media screen and (max-width: 600px){
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+height:200px !important;
+}
+
+#alert{
+width:88% !important;
+}
+
+.tabbernav{
+font-size:15px;
+}
+
+
+#myTable{
+font-size:55.5%;
+}
+
+#myGrantTable{
+font-size:68.5%;
+}
+
+#myOverpaymentTable{
+font-size:68.5%;
+}
+
+#myOverpaymentTable{
+font-size:68.5%;
+}
+
+.tabbertab{
+width:300px !important;
+}
+.tabbernav{
+font-size:8.5pt !important;
+}
+#nslds-login-block{
+font-size:5pt !important;
+}
+#nslds-login-form .form-item label {
+    color: #669900;
+    display: block;
+    font: inherit;
+}
+#nslds-login-form .form-item, #nslds-login-form .form-actions {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+#nslds-login-block .tabberlive ul.tabbernav li a{
+width:120px;
+}
+
+.otherBackgd{
+width:93.5% !important;
+}
+#nslds-login-form .inline-fields .form-item, #nslds-login-form .form-actions {
+    white-space: nowrap;
+	display: inline;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 320px){
+#block-ise-nslds-nslds-login-block{
+margin-left:30px;
+}
+}
+
+
+
+/*Updated by Moe 02.18.2014*/
+/* Ralph Other FSA Sites Styling END */
+
+
+
+/* 02/27/2014 for graph hover Heather Choi added start defect ID #19 */
+div.intlinkHov[realvalue]:hover:after, div.linkHov[realvalue]:hover:after, div.grantlinkHov[realvalue]:hover:after {
+	content: attr(realvalue);
+	padding: 4px 8px;
+	color: #333;
+	position: absolute;
+	top: 100%;
+	background-color:lightblue;
+	z-index: 100;
+	width: 250px;
+	min-width:210px;
+  }
+
+
+#mobile table{
+background-image:#eaeaea;
+}
+
+
+
+/* 02/27/2014 Heather Choi added end */
+
+
+/*.questions.not-expanded{
+background-image: url('sites/all/themes/ise/images/menu-right.png');
+padding-left: 20px;
+background-image: url('images/down-arrow.png') no-repeat 0 0;
+left:0;
+right:0;
+margin:0;
+auto:0;
+
+}*/
+
+
+#questions h3{
+margin-bottom:122px !important;
+}
+
+#answer-expand2{
+top:-12px !important;
+}
+
+#answer-expand3{
+top:-12px !important;
+}
+
+table tbody th a, table tfoot th a{
+display:inline;
+}
+
+.glossary{
+font-size:13.6px !important;
+font-family: 'Droid Serif',serif;
+}
+
+.glossary h1{
+font-size:15px;
+font-family: "News Cycle", Arial;
+}
+
+
+/**/
+
+

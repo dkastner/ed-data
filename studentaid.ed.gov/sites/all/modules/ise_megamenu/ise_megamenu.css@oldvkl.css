@@ -1,0 +1,238 @@
+div.ise-megamenu-dropdown {
+  position: absolute;
+  left: -9999px;
+}
+
+/*li.ise-megamenu-top-level:hover div.ise-megamenu-dropdown,*/
+li.ise-megamenu-top-level.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: 0px;
+  top: -73px;
+  clear:right;
+}
+
+/* ie 10 formatting */
+.ie10 li.ise-megamenu-top-level.hover div.ise-megamenu-dropdown{
+  top:-70px;
+}
+
+.ie10 ul.ise-megamenu a.ise-megamenu-arrow{
+  max-height:63px;
+  top: -76px;
+}
+
+/*li.ise-megamenu-top-level.last:hover div.ise-megamenu-dropdown,*/
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown,
+li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: -43px;
+}
+
+li.ise-megamenu-top-level .ise-megamenu-dropdown-links li ul {
+  position: absolute;
+  left: -999em;
+}
+/*li.ise-megamenu-top-level .ise-megamenu-dropdown-links li:hover ul,*/
+li.ise-megamenu-top-level .ise-megamenu-dropdown-links li.hover ul {
+  position: absolute;
+  left: 276px;
+  background: white;
+  top: 0;
+  padding: 0px; /* removes the left & right spacing of sub menu items */
+}
+
+
+
+/*li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li:hover ul,*/
+li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul,
+li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul{
+  left: -291px;
+  margin-left:10px; /* moves the third level  menu to the right so it is next to its parent*/
+}
+
+
+
+/*body.responsive-layout-mobile li.ise-megamenu-top-level .ise-megamenu-dropdown-links li:hover ul,*/
+body.responsive-layout-mobile li.ise-megamenu-top-level .ise-megamenu-dropdown-links li.hover ul,
+/*body.responsive-layout-mobile li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li:hover ul,*/
+body.responsive-layout-mobile li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level .ise-megamenu-dropdown-links li ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li ul {
+  left: 0;
+  display: none;
+  height: auto;
+  position: relative;
+  width:auto;
+}
+
+
+
+a#ise-megamenu-mobile-menu-toggle #menu-toggle-text {
+  background: url('menu-down.png') 65px center no-repeat;
+  width: 65px;
+  display: block;
+  padding: 10px;
+}
+
+
+/* formatting the title in 3rd level items */
+li.ise-megamenu-title-level-item-1{
+  color:white;
+  background-color:#618e3c;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-2{
+  color:white;
+  background-color:#b38b30;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-3{
+  color:white;
+  background-color:#438c81;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-4{
+  color:white;
+  background-color:#99973a;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-5{
+  color:white;
+  background-color:#994640;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+div.ise-megamenu-dropdown {
+  position: absolute;
+  left: -9999px;
+}
+
+
+/*li.ise-megamenu-top-level.last:hover div.ise-megamenu-dropdown,*/
+li.ise-megamenu-top-level.last.hover div.ise-megamenu-dropdown,
+li.ise-megamenu-top-level.second-to-last.hover div.ise-megamenu-dropdown {
+  position: relative;
+  left: -43px;
+}
+
+li.ise-megamenu-top-level .ise-megamenu-dropdown-links li ul {
+  position: absolute;
+  left: -999em;
+}
+/*li.ise-megamenu-top-level .ise-megamenu-dropdown-links li:hover ul,*/
+li.ise-megamenu-top-level .ise-megamenu-dropdown-links li.hover ul {
+  position: absolute;
+  left: 276px;
+  background: white;
+  top: 0;
+  padding: 0px; /* removes the left & right spacing of sub menu items */
+}
+
+
+
+/*li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li:hover ul,*/
+li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul,
+li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul{
+  left: -290px;
+  margin-left:10px; /* moves the third level  menu to the right so it is next to its parent*/
+}
+
+
+
+/*body.responsive-layout-mobile li.ise-megamenu-top-level .ise-megamenu-dropdown-links li:hover ul,*/
+body.responsive-layout-mobile li.ise-megamenu-top-level .ise-megamenu-dropdown-links li.hover ul,
+/*body.responsive-layout-mobile li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li:hover ul,*/
+body.responsive-layout-mobile li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li.hover ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li.hover ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level .ise-megamenu-dropdown-links li ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level.last .ise-megamenu-dropdown-links li ul,
+body.responsive-layout-mobile li.ise-megamenu-top-level.second-to-last .ise-megamenu-dropdown-links li ul {
+  left: 0;
+  display: none;
+  height: auto;
+  position: relative;
+  width:auto;
+}
+
+
+/* formatting the title in 3rd level items */
+li.ise-megamenu-title-level-item-1{
+  color:white;
+  background-color:#618e3c;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-2{
+  color:white;
+  background-color:#b38b30;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-3{
+  color:white;
+  background-color:#438c81;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-4{
+  color:white;
+  background-color:#99973a;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+li.ise-megamenu-title-level-item-5{
+  color:white;
+  background-color:#994640;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+}
+
+/* controls sub menu item elements */
+div.ise-megamenu-dropdown-links-menu ul{
+  padding-bottom: 20px;
+}
+
+div.ise-megamenu-dropdown-links-menu ul li.selected{
+  padding-left:15px;
+  width: auto;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  line-height: normal;
+}
+
+/* hides the right arrow from pc view*/
+.ise-megamenu-sub-arrow {
+  display:none;
+}
+
+/* centers by add padding the text on level 3 menu */
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3{
+  padding-top:16px;
+}
+
+/* controls sub menu item elements */
+div.ise-megamenu-dropdown-links-menu ul{
+  padding-bottom: 20px;
+}
+
+div.ise-megamenu-dropdown-links-menu ul li.selected{
+  padding-left:15px;
+  width: auto;
+  font-family: 'News Cycle', Arial, Tahoma, sans-serif;
+  line-height: normal;
+}
+
+/* hides the right arrow from pc view*/
+.ise-megamenu-sub-arrow {
+  display:none;
+}
+
+/* centers by add padding the text on level 3 menu */
+div.ise-megamenu-dropdown-links-menu ul li ul li a.ise-megamenu-link-level3{
+  padding-top:14px;
+  padding-bottom: 14px;
+}
+
